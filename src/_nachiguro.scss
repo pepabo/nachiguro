@@ -128,6 +128,17 @@ random関数は使用しないでください。
 
 */
 
+$ncgr-sprockets: false !default;
+$ncgr-assets-prefix: 'nachiguro/assets/' !default;
+
+@function ncgr-asset-url($path) {
+  @if $ncgr-sprockets {
+    @return asset-url($ncgr-assets-prefix + $path);
+  } @else {
+    @return url($ncgr-assets-prefix + $path);
+  }
+}
+
 //「Foundation」は、スタイルシートを読み込む順番が変わると、意図しない表示になる可能性があります。
 
 @import 'foundation/animation';
