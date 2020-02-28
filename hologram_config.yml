@@ -1,0 +1,10 @@
+source: ./sass
+destination: ./styleguide
+dependencies:
+  - ./css
+documentation_assets: ./docs/assets
+custom_markdown: ./docs/markdown_renderer.rb
+exit_on_warnings: false
+pepagram:
+  title: 'Nachiguro'
+  author: 'SUZURI ❤️from 東京・渋谷'
