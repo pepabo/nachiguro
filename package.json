@@ -17,12 +17,6 @@
   },
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
-    "husky": "^4.2.3",
     "sass": "^1.26.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build"
-    }
   }
 }
