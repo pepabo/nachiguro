@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="SUZURI ❤️from 東京・渋谷">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>
+      Utility - Nachiguro
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/nachiguro.css">
+  </head>
+  <body>
+    <header class="ncgr-header ncgr-header--fixed">
+      <div class="ncgr-header__inner">
+        <div class="ncgr-header__row">
+          <div class="ncgr-header__brand ncgr-header__brand--developer">
+            <a class="ncgr-header__brand-link" href="index.html">
+              Nachiguro
+            </a>
+          </div>
+          <div class="ncgr-header__spacer"></div>
+          <div class="ncgr-header__navigation">
+          </div>
+        </div>
+      </div>
+      <nav class="ncgr-category-navigation">
+        <div class="ncgr-category-navigation__inner">
+          <ul class="ncgr-category-navigation__list">
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="animation.html">
+                    Animation
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="color.html">
+                    Color
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="components.html">
+                    Components
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="mixin.html">
+                    Mixin
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utilities.html">
+                    Utilities
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utility.html">
+                    Utility
+                  </a>
+                </li>
+              
+            
+              
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="ncgr-styleguide">
+      
+        <div class="ncgr-styleguide__nav">
+          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
+            
+              Utility
+            
+          </h2>
+          <nav class="ncgr-account-tab">
+            <ul class="ncgr-account-tab__list">
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#00-device-outline">Device</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#align">Align</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#border">Border</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#cursor">Cursor</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#is-hidden">Hidden</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#is-transparent">Transparent</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#is-visible">Visible</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#mar">Margin</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#pad">Padding</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#typography">Typography</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#width">Width</a>
+                </li>
+              
+            </li>
+          </nav>
+        </div>
+      
+      <div class="ncgr-styleguide__content">
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+<h1 id="00-device-outline" class="styleguide">Device</h1>
+
+<p>html 要素に以下の class を指定することで、スマホ版と PC 版ごとに表示・非表示を指定できます。</p>
+
+<ul>
+<li>if-phone-show
+
+<ul>
+<li>スマホ版のときは表示する</li>
+</ul></li>
+<li>if-phone-hide
+
+<ul>
+<li>スマホ版のときは隠す</li>
+</ul></li>
+<li>if-tablet-show
+
+<ul>
+<li>タブレット版のときは表示する</li>
+</ul></li>
+<li>if-tablet-hide
+
+<ul>
+<li>タブレット版のときは隠す</li>
+</ul></li>
+<li>if-pc-show
+
+<ul>
+<li>PC 版のときは表示する</li>
+</ul></li>
+<li>if-pc-hide
+
+<ul>
+<li>PC 版のときは隠す</li>
+</ul></li>
+</ul>
+
+<p>例えば、以下のように書くと</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <p>
+  サンプル1
+</p>
+<p class="if-phone-show">
+  サンプル2
+</p>
+<p class="if-phone-hide">
+  サンプル3
+</p>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;p&gt;</span>
+  サンプル1
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"if-phone-show"</span><span class="nt">&gt;</span>
+  サンプル2
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"if-phone-hide"</span><span class="nt">&gt;</span>
+  サンプル3
+<span class="nt">&lt;/p&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>スマホから見たときは「サンプル1」と「サンプル2」が表示され、PC から見たときは「サンプル1」と「サンプル3」が表示されます。</p>
+
+<p>また、これらの class を inline 要素に使用したいときは、以下のように .if-inline を指定します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <p>
+  スリ
+  <br class="if-phone-show if-phone-show--is_inline">
+  スリ
+</p>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;p&gt;</span>
+  スリ
+  <span class="nt">&lt;br</span> <span class="na">class=</span><span class="s">"if-phone-show if-phone-show--is_inline"</span><span class="nt">&gt;</span>
+  スリ
+<span class="nt">&lt;/p&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>スマホから見たときは「スリ」と「スリ」のあいだで改行して、PC から見たときは「スリ」と「スリ」のあいだで改行しません。</p>
+
+<h1 id="align" class="styleguide">Align</h1>
+
+<p>文字の揃えを変更したいときに使用するUtilityです。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-align-left">
+  左寄せ
+</div>
+<div class="ncgr-align-center">
+  真ん中寄せ
+</div>
+<div class="ncgr-align-right">
+  右寄せ
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-align-left"</span><span class="nt">&gt;</span>
+  左寄せ
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-align-center"</span><span class="nt">&gt;</span>
+  真ん中寄せ
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-align-right"</span><span class="nt">&gt;</span>
+  右寄せ
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="border" class="styleguide">Border</h1>
+
+<p>要素にborderをつけたいときに使用するUtilityです。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-border">
+  全方位にborder
+</div>
+<div class="ncgr-border-t">
+  上にborder
+</div>
+<div class="ncgr-border-r">
+  右にborder
+</div>
+<div class="ncgr-border-b">
+  下にborder
+</div>
+<div class="ncgr-border-l">
+  左にborder
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-border"</span><span class="nt">&gt;</span>
+  全方位にborder
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-border-t"</span><span class="nt">&gt;</span>
+  上にborder
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-border-r"</span><span class="nt">&gt;</span>
+  右にborder
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-border-b"</span><span class="nt">&gt;</span>
+  下にborder
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-border-l"</span><span class="nt">&gt;</span>
+  左にborder
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="cursor" class="styleguide">Cursor</h1>
+
+<p>cursorを変更したいときに使用するUtilityです。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-cursor-pointer">
+  ponter
+</div>
+<div class="ncgr-cursor-not-allowed">
+  not-allowed
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-cursor-pointer"</span><span class="nt">&gt;</span>
+  ponter
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-cursor-not-allowed"</span><span class="nt">&gt;</span>
+  not-allowed
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="is-hidden" class="styleguide">Hidden</h1>
+
+<p>要素を非表示にさせるユーティリティです。
+JSで要素を表示させたり消したりするときに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-is-hidden">
+  圧倒的非表示
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-is-hidden"</span><span class="nt">&gt;</span>
+  圧倒的非表示
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="is-transparent" class="styleguide">Transparent</h1>
+
+<p>ある要素のopacityを0にする時に使用します。
+要素は消えますが、高さは残ります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-is-transparent">
+  透明感
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-is-transparent"</span><span class="nt">&gt;</span>
+  透明感
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="is-visible" class="styleguide">Visible</h1>
+
+<p>要素を表示させるユーティリティです。
+JSで要素を表示させたり消したりするときに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-is-visible">
+  圧倒的表示
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-is-visible"</span><span class="nt">&gt;</span>
+  圧倒的表示
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="mar" class="styleguide">Margin</h1>
+
+<p>要素にmarginをつけたいときに使用するUtilityです。
+4, 8, 12, 16, 24, 48, 64からmarginの大きさを選びます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-mar-4">
+  全方位に4px
+</div>
+<div class="ncgr-mar-t-4">
+  上に4px
+</div>
+<div class="ncgr-mar-r-4">
+  右に4px
+</div>
+<div class="ncgr-mar-b-4">
+  下に4px
+</div>
+<div class="ncgr-mar-l-4">
+  左に4px
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-mar-4"</span><span class="nt">&gt;</span>
+  全方位に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-mar-t-4"</span><span class="nt">&gt;</span>
+  上に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-mar-r-4"</span><span class="nt">&gt;</span>
+  右に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-mar-b-4"</span><span class="nt">&gt;</span>
+  下に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-mar-l-4"</span><span class="nt">&gt;</span>
+  左に4px
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="pad" class="styleguide">Padding</h1>
+
+<p>要素にpaddingをつけたいときに使用するUtilityです。
+4, 8, 16, 24, 48, 64, 128からpaddingの大きさを選びます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-pad-4">
+  全方位に4px
+</div>
+<div class="ncgr-pad-t-4">
+  上に4px
+</div>
+<div class="ncgr-pad-r-4">
+  右に4px
+</div>
+<div class="ncgr-pad-b-4">
+  下に4px
+</div>
+<div class="ncgr-pad-l-4">
+  左に4px
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-4"</span><span class="nt">&gt;</span>
+  全方位に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-t-4"</span><span class="nt">&gt;</span>
+  上に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-r-4"</span><span class="nt">&gt;</span>
+  右に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-b-4"</span><span class="nt">&gt;</span>
+  下に4px
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-l-4"</span><span class="nt">&gt;</span>
+  左に4px
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="typography" class="styleguide">Typography</h1>
+
+<p>テキストのスタイルを変更する際に使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-typography-normal">Normal</div>
+<div class="ncgr-typography-bold">Bold</div>
+<div class="ncgr-typography-italic">Italic</div>
+<div class="ncgr-typography-light">Light</div>
+<div class="ncgr-typography-large">Large</div>
+<div class="ncgr-typography-medium">Medium</div>
+<div class="ncgr-typography-small">Small</div>
+<div class="ncgr-typography-danger">Danger</div>
+<div class="ncgr-typography-success">Success</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-normal"</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-bold"</span><span class="nt">&gt;</span>Bold<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-italic"</span><span class="nt">&gt;</span>Italic<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-large"</span><span class="nt">&gt;</span>Large<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-medium"</span><span class="nt">&gt;</span>Medium<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-small"</span><span class="nt">&gt;</span>Small<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-typography-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="width" class="styleguide">Width</h1>
+
+<p>要素のwidthを任意の比率で上書きするときに使用するUtilityです。
+例えば、<code>ncgr-w-100</code>を指定するとwidthは100%になります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              
+<div class="ncgr-w-100" style="background-color: #fbca4d;">
+  横幅100%
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-w-100"</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+  横幅100%
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+      </div><!-- end of .ncgr-styleguide__content -->
+      <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
+        <div class="ncgr-typography-small ncgr-mar-b-8">
+          最終更新日: 2020年2月28日
+        </div>
+        <div>
+          © 2020 SUZURI ❤️from 東京・渋谷
+        </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

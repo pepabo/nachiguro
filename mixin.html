@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="SUZURI ❤️from 東京・渋谷">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>
+      Mixin - Nachiguro
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/nachiguro.css">
+  </head>
+  <body>
+    <header class="ncgr-header ncgr-header--fixed">
+      <div class="ncgr-header__inner">
+        <div class="ncgr-header__row">
+          <div class="ncgr-header__brand ncgr-header__brand--developer">
+            <a class="ncgr-header__brand-link" href="index.html">
+              Nachiguro
+            </a>
+          </div>
+          <div class="ncgr-header__spacer"></div>
+          <div class="ncgr-header__navigation">
+          </div>
+        </div>
+      </div>
+      <nav class="ncgr-category-navigation">
+        <div class="ncgr-category-navigation__inner">
+          <ul class="ncgr-category-navigation__list">
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="animation.html">
+                    Animation
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="color.html">
+                    Color
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="components.html">
+                    Components
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="mixin.html">
+                    Mixin
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utilities.html">
+                    Utilities
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utility.html">
+                    Utility
+                  </a>
+                </li>
+              
+            
+              
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="ncgr-styleguide">
+      
+        <div class="ncgr-styleguide__nav">
+          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
+            
+              Mixin
+            
+          </h2>
+          <nav class="ncgr-account-tab">
+            <ul class="ncgr-account-tab__list">
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#breakpoint">Breakpoint</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#Shadow">Shadow</a>
+                </li>
+              
+            </li>
+          </nav>
+        </div>
+      
+      <div class="ncgr-styleguide__content">
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+<h1 id="breakpoint" class="styleguide">Breakpoint</h1>
+
+<p>mediaqueryのブレイクポイントをお手軽に呼び出せます。
+引数にはデバイスサイズに合わせて、mobile、table、desktopを指定します。
+mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p>
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__code">
+              <pre>@include mediaquery(mobile) {
+  padding: 4px;
+}
+@include mediaquery(tablet) {
+  padding: 8px;
+}
+@include mediaquery(desktop) {
+  padding: 16px;
+}
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>Retinaディスプレイを判定したいときは、<code>media-retina()</code>のmixinを使用します。</p>
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__code">
+              <pre>@include media-retina() {
+  background: url("hoge@2x.jpg");
+}
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="Shadow" class="styleguide">Shadow</h1>
+
+<p>影をつけたいときは、影をつけたい要素のスタイルシートで <code>shadow</code> mixin を読み込みます。
+0dp,2dp,3dp,4dp,6dp,8dp,16dp,24dpの値が指定でき、大きいほどレイヤーの位置が高くなります。
+引数を指定する必要はありません。</p>
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__code">
+              <pre>@include shadow-0dp();
+@include shadow-2dp();
+@include shadow-3dp();
+@include shadow-4dp();
+@include shadow-6dp();
+@include shadow-8dp();
+@include shadow-16dp();
+@include shadow-24dp();
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="brsh-shadow__0dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__2dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__3dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__4dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__6dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__8dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__16dp" style="width: 100px; height: 100px;"></div>
+<div class="ncgr-shadow__24dp" style="width: 100px; height: 100px;"></div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="c">&lt;!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"brsh-shadow__0dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__2dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__3dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__4dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__6dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__8dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__16dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__24dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+      </div><!-- end of .ncgr-styleguide__content -->
+      <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
+        <div class="ncgr-typography-small ncgr-mar-b-8">
+          最終更新日: 2020年2月28日
+        </div>
+        <div>
+          © 2020 SUZURI ❤️from 東京・渋谷
+        </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

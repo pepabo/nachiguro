@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="SUZURI ❤️from 東京・渋谷">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>
+      Components - Nachiguro
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/nachiguro.css">
+  </head>
+  <body>
+    <header class="ncgr-header ncgr-header--fixed">
+      <div class="ncgr-header__inner">
+        <div class="ncgr-header__row">
+          <div class="ncgr-header__brand ncgr-header__brand--developer">
+            <a class="ncgr-header__brand-link" href="index.html">
+              Nachiguro
+            </a>
+          </div>
+          <div class="ncgr-header__spacer"></div>
+          <div class="ncgr-header__navigation">
+          </div>
+        </div>
+      </div>
+      <nav class="ncgr-category-navigation">
+        <div class="ncgr-category-navigation__inner">
+          <ul class="ncgr-category-navigation__list">
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="animation.html">
+                    Animation
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="color.html">
+                    Color
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="components.html">
+                    Components
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="mixin.html">
+                    Mixin
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utilities.html">
+                    Utilities
+                  </a>
+                </li>
+              
+            
+              
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="utility.html">
+                    Utility
+                  </a>
+                </li>
+              
+            
+              
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="ncgr-styleguide">
+      
+        <div class="ncgr-styleguide__nav">
+          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
+            
+              Components
+            
+          </h2>
+          <nav class="ncgr-account-tab">
+            <ul class="ncgr-account-tab__list">
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#alert">Alert</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#avatar">Avatar</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#badge">Badge</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#breadcrumbs">Breadcrumbs</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#button">Button</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#card">Card</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#checkbox">Checkbox</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#choice-card">Choice Card</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#color-selector">Color Selector</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#columns">Columns</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#expansion-card">Expansion Card</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#heading">Heading</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#hint">Hint</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#icon-button">Icon Button</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#image">Image</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#label">Label</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#list">List</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#product-card">Product Card</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#radio">Radio</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#section">Section</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#selectbox">Selectbox</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#separator">Separator</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#sequence">Sequence</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#sheet">Sheet</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#square-radio">Square Radio</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#switch">Switch</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#tab">Tab</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#table">Table</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#text-link">Text Link</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#textfield">Textfield</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#uploader">Uploader</a>
+                </li>
+              
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#user-card">User Card</a>
+                </li>
+              
+            </li>
+          </nav>
+        </div>
+      
+      <div class="ncgr-styleguide__content">
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+<h1 id="alert" class="styleguide">Alert</h1>
+
+<p>お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-alert ncgr-alert--default">
+  デフォルト
+</div>
+<div class="ncgr-alert ncgr-alert--primary">
+  お得な情報
+</div>
+<div class="ncgr-alert ncgr-alert--success">
+  良好な状態
+</div>
+<div class="ncgr-alert ncgr-alert--warning">
+  注意喚起
+</div>
+<div class="ncgr-alert ncgr-alert--danger">
+  発生中のエラー
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--default"</span><span class="nt">&gt;</span>
+  デフォルト
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--primary"</span><span class="nt">&gt;</span>
+  お得な情報
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--success"</span><span class="nt">&gt;</span>
+  良好な状態
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--warning"</span><span class="nt">&gt;</span>
+  注意喚起
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--danger"</span><span class="nt">&gt;</span>
+  発生中のエラー
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="avatar" class="styleguide">Avatar</h1>
+
+<p>ある箇所が特定のユーザーが所有するものであることを表す場合に使用します。大きさはそのセクションでの重要度に合わせて「Small・Medium・Large」の3種類を使い分けます。</p>
+
+<p>ユーザー名が長すぎる場合は一覧画面など次のアクションでユーザー名が取得できる場合に限り、三点リーダーで省略することができます。</p>
+
+<p>さらにユーザー名を伝えることの優先順位が低いと判断できる場合は、ユーザー名自体を省略することも可能です。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <a class="ncgr-avatar ncgr-avatar--small" href="#">
+  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+  <span class="ncgr-avatar__name">surisurikun</span>
+</a>
+<a class="ncgr-avatar ncgr-avatar--medium" href="#">
+  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+  <span class="ncgr-avatar__name">surisurikun</span>
+</a>
+<a class="ncgr-avatar ncgr-avatar--large" href="#">
+  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+  <span class="ncgr-avatar__name">surisurikun</span>
+</a>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-avatar ncgr-avatar--small"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-avatar ncgr-avatar--medium"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-avatar ncgr-avatar--large"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="badge" class="styleguide">Badge</h1>
+
+<p>カートに商品が入ったときや、通知がついたときに表示されます。
+めったにありませんが、「1,000」など4桁以上になった場合は「1K」などの表示にして省略するようにします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <span class="ncgr-badge">
+  100
+</span>
+<span class="ncgr-badge">
+  1K
+</span>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-badge"</span><span class="nt">&gt;</span>
+  100
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-badge"</span><span class="nt">&gt;</span>
+  1K
+<span class="nt">&lt;/span&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="breadcrumbs" class="styleguide">Breadcrumbs</h1>
+
+<p>パンくずリストのコンポーネントです。
+ユーザーの現在位置をわかりやすくするため、またSEO対策のために用いられます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <ol class="ncgr-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+  <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a class="ncgr-breadcrumbs__link" itemtype="http://schema.org/Thing" itemprop="item" href="#">
+      <span itemprop="name">
+        トップ
+      </span>
+    </a>
+    <meta itemprop="position" content="1" />
+  </li>
+  <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a class="ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item" href="#">
+      <span itemprop="name">
+        アイテム
+      </span>
+    </a>
+    <meta itemprop="position" content="2" />
+  </li>
+</ol>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/BreadcrumbList"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__item"</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__link"</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/Thing"</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        トップ
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"position"</span> <span class="na">content=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__item"</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active"</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/Thing"</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        アイテム
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"position"</span> <span class="na">content=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="button" class="styleguide">Button</h1>
+
+<p><code>.ncgr-button</code> を指定した要素はボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button">タップ可能</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--active</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--active</code> をさらに指定すると、タップ中のボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--active">タップ中</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--fluid</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--fluid</code> をさらに指定すると、ボタンの幅が内容によって可変します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--fluid">タップ可能</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--small</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に<code>.ncgr-button--small</code> を指定すると小さいサイズのボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--small">タップ可能</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--small"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--light</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--light</code> を指定すると、色が薄いボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--light">タップ可能</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--disabled</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>disabled</code> または <code>.ncgr-button--disabled</code> を指定すると、タップできないボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--disabled">タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--disabled"</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--primary</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--primary</code> を指定すると、色が変わって Primary な意味を持つボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--primary ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--primary ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--secondary</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--secondary</code> を指定すると、色が変わって Secondary な意味を持つボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--secondary ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--secondary ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--secondary ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--secondary ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--secondary ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--success</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--success</code> を指定すると、色が変わって Warning な意味を持つボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--success ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--success ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--success ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--success ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--success ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--warning</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--warning</code> を指定すると、色が変わって Warning な意味を持つボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--warning ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--warning ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--warning ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--warning ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--warning ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--danger</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--danger</code> を指定すると、色が変わって Danger な意味を持つボタンになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--danger ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--danger ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--danger ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--danger ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--danger ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--default</h4>
+
+<p><code>.ncgr-button</code> を指定した要素に <code>.ncgr-button--default</code> を指定すると、デフォルトの色のボタンになります。</p>
+
+<p>デフォルトの色を指定したいことを示したい場合に使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--default ncgr-button--fluid">タップ可能</button>
+<button class="ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--light">タップ可能</button>
+<button class="ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--light ncgr-button--active">タップ中</button>
+<button class="ncgr-button ncgr-button--default ncgr-button--fluid" disabled>タップ禁止</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--default ncgr-button--fluid"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--light"</span><span class="nt">&gt;</span>タップ可能<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--default ncgr-button--fluid ncgr-button--light ncgr-button--active"</span><span class="nt">&gt;</span>タップ中<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--default ncgr-button--fluid"</span> <span class="na">disabled</span><span class="nt">&gt;</span>タップ禁止<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>.ncgr-button--{twitter or instagram or nicovideo}</h4>
+
+<p><code>.ncgr-button</code> を指定した要素にそれぞれの class を指定すると、各サービスのブランドカラーの文字色のボタンになります。</p>
+
+<p>おもにログインボタンとして使用することを想定して用意しています。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-button ncgr-button--twitter ncgr-button--light ncgr-button--fluid">
+  Twitter
+</button>
+<button class="ncgr-button ncgr-button--instagram ncgr-button--light ncgr-button--fluid">
+  Instagram
+</button>
+<button class="ncgr-button ncgr-button--nicovideo ncgr-button--light ncgr-button--fluid">
+  ニコニコ動画
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--twitter ncgr-button--light ncgr-button--fluid"</span><span class="nt">&gt;</span>
+  Twitter
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--instagram ncgr-button--light ncgr-button--fluid"</span><span class="nt">&gt;</span>
+  Instagram
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--nicovideo ncgr-button--light ncgr-button--fluid"</span><span class="nt">&gt;</span>
+  ニコニコ動画
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="card" class="styleguide">Card</h1>
+
+<p>カードは情報のまとまりを作るために使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-card">
+  <div class="ncgr-card__cover">
+    <img class="ncgr-card__cover-image" src="./images/components/card/sushi.jpg">
+  </div>
+  <header class="ncgr-card__header ncgr-pad-t-16 ncgr-pad-r-16 ncgr-pad-l-16">
+    <h2 class="ncgr-heading ncgr-heading--medium">寿司の盛り合わせ</h2>
+  </header>
+  <section class="ncgr-card__contents ncgr-pad-16">
+    サーモン、うに、いくら、かずのこ、まぐろ、鯛、ホッキ貝、えび
+  </section>
+  <footer class="ncgr-card__footer ncgr-pad-16">
+    <div class="ncgr-card__avatar">
+      <a class="ncgr-avatar ncgr-avatar--small" href="#">
+        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        <span class="ncgr-avatar__name">surisurikun</span>
+      </a>
+    </div>
+    <div class="ncgr-card__actions">
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fa fa-trash"></i>
+      </a>
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+    </div>
+  </footer>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card__cover"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-card__cover-image"</span> <span class="na">src=</span><span class="s">"./images/components/card/sushi.jpg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ncgr-card__header ncgr-pad-t-16 ncgr-pad-r-16 ncgr-pad-l-16"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>寿司の盛り合わせ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-card__contents ncgr-pad-16"</span><span class="nt">&gt;</span>
+    サーモン、うに、いくら、かずのこ、まぐろ、鯛、ホッキ貝、えび
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"ncgr-card__footer ncgr-pad-16"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card__avatar"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-avatar ncgr-avatar--small"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card__actions"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--black"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-trash"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--black"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p><code>ncgr-card--rounded</code>Modifierを追加すると、丸みを帯びたカードになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-card ncgr-card--rounded">
+  <div class="ncgr-pad-16">
+    丸みを帯びたカード
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card ncgr-card--rounded"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-16"</span><span class="nt">&gt;</span>
+    丸みを帯びたカード
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p><code>ncgr-card--shadow</code>Modifierを追加すると、カードにshadowがつきます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-card ncgr-card--rounded ncgr-card--shadow">
+  <div class="ncgr-pad-16">
+    丸みを帯びたシャドウ付きのカード
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card ncgr-card--rounded ncgr-card--shadow"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-16"</span><span class="nt">&gt;</span>
+    丸みを帯びたシャドウ付きのカード
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p><code>ncgr-card--tertiary-grouped-background</code>Modifierを追加すると、カードの中に入れ子になったカードを表現することができます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-card ncgr-card--tertiary-grouped-background ncgr-card--shadow">
+  <div class="ncgr-pad-16">
+    カードの中に入れ子になったカード
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card ncgr-card--tertiary-grouped-background ncgr-card--shadow"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-16"</span><span class="nt">&gt;</span>
+    カードの中に入れ子になったカード
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="checkbox" class="styleguide">Checkbox</h1>
+
+<p>オプションのオン/オフ切り替えなどをする際に使用します。
+オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    甲賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    伊賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    その他
+  </span>
+</label>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    甲賀流
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    伊賀流
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    その他
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>縦に並べる場合には、以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    甲賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    伊賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    その他
+  </span>
+</label>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox ncgr-checkbox--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    甲賀流
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox ncgr-checkbox--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    伊賀流
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-checkbox ncgr-checkbox--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"hoge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    その他
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="choice-card" class="styleguide">Choice Card</h1>
+
+<p>オモイデの一覧に使うカードのコンポーネントです。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <a class="ncgr-choice-card">
+  <div class="ncgr-choice-card__inner">
+    <img src="./images/components/choice-card/cover-image.png" width="100%">
+    <div class="ncgr-choice-card__info">
+      <p class="ncgr-choice-card__item-num">
+        50 アイテム
+      </p>
+      <p class="ncgr-choice-card__title">
+        忍者特集
+      </p>
+    </div>
+  </div>
+</a>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-choice-card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-choice-card__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/choice-card/cover-image.png"</span> <span class="na">width=</span><span class="s">"100%"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-choice-card__info"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ncgr-choice-card__item-num"</span><span class="nt">&gt;</span>
+        50 アイテム
+      <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ncgr-choice-card__title"</span><span class="nt">&gt;</span>
+        忍者特集
+      <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="color-selector" class="styleguide">Color Selector</h1>
+
+<p>色を選択するためのボタンです。
+<code>example
+&lt;span class=&quot;ncgr-color-selector&quot; style=&quot;background-color: white&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ncgr-color-selector disabled&quot; style=&quot;background-color: black&quot;&gt;&lt;/span&gt;
+</code></p>
+
+<h1 id="columns" class="styleguide">Columns</h1>
+
+<p>商品やショップのカードを均等に並べるカラムです。
+<code>ncgr-columns--4-2-2</code>などのModifierをつけることで、デスクトップは4カラム、タブレットは2カラム、モバイルは2カラムのレイアウトを作成することができます。</p>
+
+<p>他のカラム数が必要になった時は新しくModifierを作成します。</p>
+
+<p>また、カラムの中に入る要素は必ず<code>.ncgr-columns__item</code>の子要素として置き、
+カラムとコンテンツは分離させてカラムの役割だけをもたせます。</p>
+
+<p>以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-columns ncgr-columns--4-2-2">
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns ncgr-columns--4-2-2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-columns__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #fbca4d;"</span><span class="nt">&gt;</span>
+      box
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="expansion-card" class="styleguide">Expansion Card</h1>
+
+<p>少ない情報からさらに詳しい情報を見せたい場合に、伸縮するカードを使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-expansion-card">
+  <div class="ncgr-expansion-card__item">
+    <label class="ncgr-expansion-card__label" for="koga">甲賀流</label>
+    <input id="koga" class="ncgr-expansion-card__checkbox" type="checkbox">
+    <div class="ncgr-expansion-card__arrow">
+      <i class="fa fa-angle-down"></i>
+    </div>
+    <div class="ncgr-expansion-card__hidden">
+      <div class="ncgr-expansion-card__contents">
+        甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
+        山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
+        甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
+        しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<br>
+        なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。
+      </div>
+    </div>
+  </div>
+  <div class="ncgr-expansion-card__item">
+    <label class="ncgr-expansion-card__label" for="iga">伊賀流</label>
+    <input id="iga" class="ncgr-expansion-card__checkbox" type="checkbox">
+    <div class="ncgr-expansion-card__arrow">
+      <i class="fa fa-angle-down"></i>
+    </div>
+    <div class="ncgr-expansion-card__hidden">
+      <div class="ncgr-expansion-card__contents">
+        伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<br>
+        甲賀流と並んで忍術の中で最も有名な流派の一つである。<br>
+        根拠地は、現在の三重県伊賀市と名張市にあった。<br>
+        普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__label"</span> <span class="na">for=</span><span class="s">"koga"</span><span class="nt">&gt;</span>甲賀流<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"koga"</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__arrow"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__hidden"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__contents"</span><span class="nt">&gt;</span>
+        甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<span class="nt">&lt;br&gt;</span>
+        山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<span class="nt">&lt;br&gt;</span>
+        甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<span class="nt">&lt;br&gt;</span>
+        しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<span class="nt">&lt;br&gt;</span>
+        なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__label"</span> <span class="na">for=</span><span class="s">"iga"</span><span class="nt">&gt;</span>伊賀流<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"iga"</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__arrow"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__hidden"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-expansion-card__contents"</span><span class="nt">&gt;</span>
+        伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<span class="nt">&lt;br&gt;</span>
+        甲賀流と並んで忍術の中で最も有名な流派の一つである。<span class="nt">&lt;br&gt;</span>
+        根拠地は、現在の三重県伊賀市と名張市にあった。<span class="nt">&lt;br&gt;</span>
+        普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="heading" class="styleguide">Heading</h1>
+
+<p>見出しをマークアップするコンポーネントです。
+h1からh6、どのタグに関わらず大きさを調整できます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <h1 class="ncgr-heading ncgr-heading--large">忍者スリスリ君</h1>
+<h1 class="ncgr-heading ncgr-heading--medium">忍者スリスリ君</h1>
+<h1 class="ncgr-heading ncgr-heading--small">忍者スリスリ君</h1>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--large"</span><span class="nt">&gt;</span>忍者スリスリ君<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>忍者スリスリ君<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--small"</span><span class="nt">&gt;</span>忍者スリスリ君<span class="nt">&lt;/h1&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>見出しにボーダーをつける場合はspanで入れ子にして<code>.ncgr-heading__border</code>のclassをつけます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <h1 class="ncgr-heading ncgr-heading--large">
+  <span class="ncgr-heading__border">
+    忍者スリスリ君
+  </span>
+</h1>
+<h1 class="ncgr-heading ncgr-heading--medium">
+  <span class="ncgr-heading__border">
+    忍者スリスリ君
+  </span>
+</h1>
+<h1 class="ncgr-heading ncgr-heading--small">
+  <span class="ncgr-heading__border">
+    忍者スリスリ君
+  </span>
+</h1>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--large"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-heading__border"</span><span class="nt">&gt;</span>
+    忍者スリスリ君
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-heading__border"</span><span class="nt">&gt;</span>
+    忍者スリスリ君
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--small"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-heading__border"</span><span class="nt">&gt;</span>
+    忍者スリスリ君
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/h1&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="hint" class="styleguide">Hint</h1>
+
+<p>このコンポーネントを使うことで忍者スリスリくんというキャラクターを通してユーザーにコンテンツに対する一言コメントや、SUZURIを使う上でのヒントを教えます。</p>
+
+<p>ヒントは内容がないものから実用的なものまで様々に用意しています。
+「<a href="https://suzuri.jp/hint">https://suzuri.jp/hint</a>」にアクセスすることで確認できます。
+また、内容を変更する場合は<code>https://git.pepabo.com/suzuri/suzuri</code>の<code>config/locales/ja.hint.yml</code>、<code>config/locales/en.hint.yml</code>、を修正します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-hint">
+  <div class="ncgr-hint__sprite-anime">
+  </div>
+  <div class="ncgr-hint__content">
+    こんちくわマン！
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-hint"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-hint__sprite-anime"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-hint__content"</span><span class="nt">&gt;</span>
+    こんちくわマン！
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="icon-button" class="styleguide">Icon Button</h1>
+
+<p>Icon Buttonはある商品やユーザー情報に対してアクションをするボタンに使用します。</p>
+
+<p><code>.ncgr-icon-button--black</code>、<code>.ncgr-icon-button--white</code>のModifierをつけるとボタンに色がつきます。</p>
+
+<p>「Whiteボタン」はログインしているユーザー以外である他者からのアクション（ズッキュン・オモイデ追加）がメインである場合に使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-icon-button ncgr-icon-button--white">
+  <i class="fa fa-folder"></i>
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--white"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-folder"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>「Blackボタン」はログインしているユーザー自身（管理者）のアクション（編集・削除）に使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-icon-button ncgr-icon-button--black">
+  <i class="fas fa-pencil-alt"></i>
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--black"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>ズッキュンボタンはエモーショナルな気持ちを表現するために暖色系の色と♥が動くアニメーションを使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-icon-button ncgr-icon-button--favorite">
+  <i class="fa fa-heart"></i>
+  <span class="ncgr-pad-l-4">246</span>
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--favorite"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-heart"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-pad-l-4"</span><span class="nt">&gt;</span>246<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>プロフィール画像やカバー画像などの画像をアップロードする箇所には「Roundedボタン」を使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-icon-button ncgr-icon-button--black ncgr-icon-button--circle">
+  <i class="fas fa-pencil-alt"></i>
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--black ncgr-icon-button--circle"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>優先順位の低いアクションなどには「Transparentボタン」を使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <button class="ncgr-icon-button ncgr-icon-button--transparent">
+  <i class="fa fa-pencil-alt"></i>
+</button>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--transparent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="image" class="styleguide">Image</h1>
+
+<p>画像をマークアップするのに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <img class="ncgr-image" src="./images/components/image/image.png">
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-image"</span> <span class="na">src=</span><span class="s">"./images/components/image/image.png"</span><span class="nt">&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>100%にしたくない場合は<code>.ncgr-image--fluid</code>を付与します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <img class="ncgr-image ncgr-image--fluid" src="./images/components/image/image.png">
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-image ncgr-image--fluid"</span> <span class="na">src=</span><span class="s">"./images/components/image/image.png"</span><span class="nt">&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>画像を角丸にしたい場合は<code>.ncgr-image--rounded</code>を付与します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <img class="ncgr-image ncgr-image--rounded" src="./images/components/image/image.png">
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-image ncgr-image--rounded"</span> <span class="na">src=</span><span class="s">"./images/components/image/image.png"</span><span class="nt">&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="label" class="styleguide">Label</h1>
+
+<p>リストやテーブル、カードなどの状態を表すために使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <span class="ncgr-label ncgr-label--default">非表示</span>
+<span class="ncgr-label ncgr-label--primary">表示</span>
+<span class="ncgr-label ncgr-label--success">成功</span>
+<span class="ncgr-label ncgr-label--warning">注意</span>
+<span class="ncgr-label ncgr-label--danger">必須</span>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-label ncgr-label--default"</span><span class="nt">&gt;</span>非表示<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-label ncgr-label--primary"</span><span class="nt">&gt;</span>表示<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-label ncgr-label--success"</span><span class="nt">&gt;</span>成功<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-label ncgr-label--warning"</span><span class="nt">&gt;</span>注意<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-label ncgr-label--danger"</span><span class="nt">&gt;</span>必須<span class="nt">&lt;/span&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="list" class="styleguide">List</h1>
+
+<p><code>.ncgr-list</code>を指定すると黒丸のリストになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <ul class="ncgr-list">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>臨<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>兵<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>闘<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>者<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>皆<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>陣<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>烈<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>在<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>前<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p><code>.ncgr-list--decimal</code>を指定すると算用数字のリストになります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <ul class="ncgr-list ncgr-list--decimal">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-list ncgr-list--decimal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>臨<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>兵<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>闘<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>者<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>皆<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>陣<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>烈<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>在<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>前<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="product-card" class="styleguide">Product Card</h1>
+
+<p>Product Cardは商品画像が一番目立つように設計します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-product-card">
+  <a class="ncgr-product-card__thumbnail" href="#">
+    <div style="background-color: rgba(0,0,0,0.4);">
+      <img class="ncgr-product-card__image lens-image lazy animated fadeIn" src="./images/components/product-card/product.jpg">
+    </div>
+    <div class="ncgr-product-card__pickup-badge">
+      <img alt="ピックアップサレタヨ！" src="./images/components/product-card/pickup-badge.svg">
+    </div>
+  </a>
+  <div class="ncgr-product-card__actions">
+    <div class="ncgr-product-card__action">
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+    </div>
+    <div class="ncgr-product-card__action">
+      <button class="ncgr-icon-button ncgr-icon-button--white js-add-choice-button">
+        <i class="fa fa-folder"></i>
+      </button>
+    </div>
+    <div class="ncgr-product-card__action">
+      <button class="ncgr-icon-button ncgr-icon-button--favorite js-favorite-button">
+        <i class="fa fa-heart"></i>
+        <span class="ncgr-icon-button__num js-favorite-button-num">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="ncgr-product-card__info">
+    <a class="ncgr-product-card__name" href="#">
+      スリスリ君のパーカー
+    </a>
+    <div class="ncgr-product-card__price">
+      ¥1,580
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-product-card__thumbnail"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: rgba(0,0,0,0.4);"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-product-card__image lens-image lazy animated fadeIn"</span> <span class="na">src=</span><span class="s">"./images/components/product-card/product.jpg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__pickup-badge"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"ピックアップサレタヨ！"</span> <span class="na">src=</span><span class="s">"./images/components/product-card/pickup-badge.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__action"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--black"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__action"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--white js-add-choice-button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-folder"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__action"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button ncgr-icon-button--favorite js-favorite-button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-heart"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon-button__num js-favorite-button-num"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-product-card__name"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      スリスリ君のパーカー
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-product-card__price"</span><span class="nt">&gt;</span>
+      ¥1,580
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="radio" class="styleguide">Radio</h1>
+
+<p>オプションの選択をする際に使用します。
+リストから選択できる項目が1つだけの場合は、Radioの代わりにSwitchの使用を検討しましょう。
+また、使用可能なオプションを折りたたむことができる場合は、スペース節約のため、Radioの代わりSelectboxを使用することを検討しましょう。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <label class="ncgr-radio">
+  <input type="radio" name="example_radio" value="example-a" checked>
+  <span>伊賀流</span>
+</label>
+
+<label class="ncgr-radio">
+  <input type="radio" name="example_radio" value="example-b">
+  <span>甲賀流</span>
+</label>
+
+<label class="ncgr-radio">
+  <input type="radio" name="example_radio" value="example-c">
+  <span>その他</span>
+</label>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-a"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>伊賀流<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-b"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>甲賀流<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-c"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>その他<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>また、縦に並べる場合には、以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <label class="ncgr-radio ncgr-radio--vertical">
+  <input type="radio" name="example_radio" value="example-a" checked>
+  <span>伊賀流</span>
+</label>
+
+<label class="ncgr-radio ncgr-radio--vertical">
+  <input type="radio" name="example_radio" value="example-b">
+  <span>甲賀流</span>
+</label>
+
+<label class="ncgr-radio ncgr-radio--vertical">
+  <input type="radio" name="example_radio" value="example-c">
+  <span>その他</span>
+</label>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio ncgr-radio--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-a"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>伊賀流<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio ncgr-radio--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-b"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>甲賀流<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-radio ncgr-radio--vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"example_radio"</span> <span class="na">value=</span><span class="s">"example-c"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>その他<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="section" class="styleguide">Section</h1>
+
+<p>各セクションをマークアップするのに使用します。</p>
+
+<p>主に見出しコンポーネントの<code>.ncgr-heading--medium</code>とあわせて使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <section class="ncgr-section">
+  <div class="ncgr-section__inner">
+    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  </div>
+</section>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-section"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-section__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>近頃ウワサのあのショップ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>sectionの背景色は<code>.ncgr-section--background</code>、<code>.ncgr-section--secondary-background</code>、<code>.ncgr-section--grouped-background</code>のようにセマンティックカラーで指定します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <section class="ncgr-section ncgr-section--background">
+  <div class="ncgr-section__inner">
+    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  </div>
+</section>
+
+<section class="ncgr-section ncgr-section--secondary-background">
+  <div class="ncgr-section__inner">
+    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  </div>
+</section>
+
+<section class="ncgr-section ncgr-section--grouped-background">
+  <div class="ncgr-section__inner">
+    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  </div>
+</section>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-section ncgr-section--background"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-section__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>近頃ウワサのあのショップ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-section ncgr-section--secondary-background"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-section__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>近頃ウワサのあのショップ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-section ncgr-section--grouped-background"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-section__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>近頃ウワサのあのショップ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p><code>.ncgr-section__inner--narrow</code>をModifierで指定すると幅が最大幅の半分になります。
+文章を読むことが主要なコンテンツの場合は幅が広いと目を動かす距離が大きくなり、ユーザーに負担がかかるので幅を狭くして読みやすくします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <section class="ncgr-section">
+  <div class="ncgr-section__inner ncgr-section__inner--narrow">
+    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  </div>
+</section>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-section"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-section__inner ncgr-section__inner--narrow"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ncgr-heading ncgr-heading--medium"</span><span class="nt">&gt;</span>近頃ウワサのあのショップ<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="selectbox" class="styleguide">Selectbox</h1>
+
+<p>色やサイズなどの複数の選択肢からオプションの選択ができます。このコンポーネントは3つ以上の選択肢が存在する場合にのみ使用できます。2つまでの選択肢のときは一覧性が低くなってしまうので、Radioを使用するようにしましょう。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-selectbox">
+  <label class="ncgr-selectbox__label">種族</label>
+  <select id="tribe" name="tribe">
+    <option selected="selected" value="01">忍者</option>
+    <option value="02">人間</option>
+  </select>
+  <i class="fas fa-caret-down"></i>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-selectbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-selectbox__label"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-caret-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="separator" class="styleguide">Separator</h1>
+
+<p>各要素を区切るのに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <hr class="ncgr-separator">
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-separator"</span><span class="nt">&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="sequence" class="styleguide">Sequence</h1>
+
+<p>カート画面などで今の状態を表すコンポーネントです。
+<code>.ncgr-sequence__item</code>に<code>ncgr-sequence__item--active</code>のModifierを付与するとアクティブな状態になります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-sequence">
+  <ul class="ncgr-sequence__items">
+    <li class="ncgr-sequence__item ncgr-sequence__item--active">
+      入力
+    </li>
+    <li class="ncgr-sequence__item ncgr-sequence__item--active">
+      確認
+    </li>
+    <li class="ncgr-sequence__item">
+      完了
+    </li>
+  </ul>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-sequence"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-sequence__items"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-sequence__item ncgr-sequence__item--active"</span><span class="nt">&gt;</span>
+      入力
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-sequence__item ncgr-sequence__item--active"</span><span class="nt">&gt;</span>
+      確認
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-sequence__item"</span><span class="nt">&gt;</span>
+      完了
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="sheet" class="styleguide">Sheet</h1>
+
+<p>Sheetコンポーネントには画面の主要コンテンツを補完するコンテンツが表示されます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <input id="drawer-menu-trigger" type="checkbox" hidden="">
+<div class="ncgr-sheet ncgr-sheet--half">
+  <label class="ncgr-sheet__overlay" for="drawer-menu-trigger">
+  <section class="ncgr-sheet__sheet">
+    <header class="ncgr-sheet__header">
+    <main class="ncgr-sheet__contents">
+      コンテンツ
+    </main>
+  </section>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"drawer-menu-trigger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">hidden=</span><span class="s">""</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-sheet ncgr-sheet--half"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-sheet__overlay"</span> <span class="na">for=</span><span class="s">"drawer-menu-trigger"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"ncgr-sheet__sheet"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ncgr-sheet__header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"ncgr-sheet__contents"</span><span class="nt">&gt;</span>
+      コンテンツ
+    <span class="nt">&lt;/main&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="square-radio" class="styleguide">Square Radio</h1>
+
+<p>色や大きさ、アングル等を選択できるボタンコンポーネントです。</p>
+
+<p>色を選択する場合は以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <span class="ncgr-square-radio ncgr-square-radio--color" style="background-color: white"></span>
+<span class="ncgr-square-radio ncgr-square-radio--color selected" style="background-color: black"></span>
+<span class="ncgr-square-radio ncgr-square-radio--color disabled" style="background-color: red"></span>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-square-radio ncgr-square-radio--color"</span> <span class="na">style=</span><span class="s">"background-color: white"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-square-radio ncgr-square-radio--color selected"</span> <span class="na">style=</span><span class="s">"background-color: black"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-square-radio ncgr-square-radio--color disabled"</span> <span class="na">style=</span><span class="s">"background-color: red"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>画像で大きさ、アングルを選択する場合は以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <img class="ncgr-square-radio ncgr-square-radio--image" src="./images/components/square-radio/product1.jpg">
+<img class="ncgr-square-radio ncgr-square-radio--image selected" src="./images/components/square-radio/product2.jpg">
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-square-radio ncgr-square-radio--image"</span> <span class="na">src=</span><span class="s">"./images/components/square-radio/product1.jpg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-square-radio ncgr-square-radio--image selected"</span> <span class="na">src=</span><span class="s">"./images/components/square-radio/product2.jpg"</span><span class="nt">&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="switch" class="styleguide">Switch</h1>
+
+<p>ON/OFFが切り替えられるスイッチ式のボタンコンポーネントです。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-switch">
+  <input class="ncgr-switch__input tooltipstered" type="radio" value="false" checked="checked" name="profile[favorites_mail_unreceived]" id="profile_favorites_mail_unreceived_false"><label class="ncgr-switch__item ncgr-switch__item--on" for="profile_favorites_mail_unreceived_false">ON</label><input class="ncgr-switch__input tooltipstered" type="radio" value="true" name="profile[favorites_mail_unreceived]" id="profile_favorites_mail_unreceived_true"><label class="ncgr-switch__item ncgr-switch__item--off" for="profile_favorites_mail_unreceived_true">OFF</label>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-switch__input tooltipstered"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"false"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">name=</span><span class="s">"profile[favorites_mail_unreceived]"</span> <span class="na">id=</span><span class="s">"profile_favorites_mail_unreceived_false"</span><span class="nt">&gt;&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-switch__item ncgr-switch__item--on"</span> <span class="na">for=</span><span class="s">"profile_favorites_mail_unreceived_false"</span><span class="nt">&gt;</span>ON<span class="nt">&lt;/label&gt;&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-switch__input tooltipstered"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="na">name=</span><span class="s">"profile[favorites_mail_unreceived]"</span> <span class="na">id=</span><span class="s">"profile_favorites_mail_unreceived_true"</span><span class="nt">&gt;&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-switch__item ncgr-switch__item--off"</span> <span class="na">for=</span><span class="s">"profile_favorites_mail_unreceived_true"</span><span class="nt">&gt;</span>OFF<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="tab" class="styleguide">Tab</h1>
+
+<p>ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
+項目の数はなるべく5つ以下にとどめるようにし、どうしてもそれより数が多くなる場合は画面の高さを圧迫しないように、折り返すのではなく、横スクロールでアクセスできるようにします。</p>
+
+<p>左が一番優先順位が高くデフォルト位置であるべきであり、右に行くほど優先順位が低くなります。
+この場合、隠れてしまうボタンは基本的には押されない前提で設計するべきでしょう。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <ul class="ncgr-tab">
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link ncgr-tab__link--active" href="#">
+      アイテム
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      オモイデ
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      ズッキュン
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      ジャーナル
+    </a>
+  </li>
+</ul>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-tab"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link ncgr-tab__link--active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      アイテム
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      オモイデ
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      ズッキュン
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      ジャーナル
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="table" class="styleguide">Table</h1>
+
+<p>テーブルをマークアップするときに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+                <table class="ncgr-table">
+    <tbody>
+      <tr>
+        <th style="width: 60px;">流派</th>
+        <th>説明</th>
+      </tr>
+      <tr>
+        <td style="width: 60px;">伊賀</td>
+        <td>伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。甲賀流と並んで忍術の中で最も有名な流派の一つである。根拠地は、現在の三重県伊賀市と名張市にあった。普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。</td>
+      </tr>
+      <tr>
+        <td style="width: 60px;">甲賀</td>
+        <td>甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。甲賀は「こうか」と読むが、「こうが」と誤った読み方をされることも多い。</td>
+      </tr>
+    </tbody>
+  </table>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"ncgr-table"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">style=</span><span class="s">"width: 60px;"</span><span class="nt">&gt;</span>流派<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>説明<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">style=</span><span class="s">"width: 60px;"</span><span class="nt">&gt;</span>伊賀<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。甲賀流と並んで忍術の中で最も有名な流派の一つである。根拠地は、現在の三重県伊賀市と名張市にあった。普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td</span> <span class="na">style=</span><span class="s">"width: 60px;"</span><span class="nt">&gt;</span>甲賀<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。甲賀は「こうか」と読むが、「こうが」と誤った読み方をされることも多い。<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="text-link" class="styleguide">Text Link</h1>
+
+<p>テキストリンクをマークアップするときに使います。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <a class="ncgr-text-link" href="#">
+  テキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--primary" href="#">
+  青いテキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--white" href="#">
+  白いテキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--underline" href="#">
+  下線のついたテキストリンク
+</a>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-text-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  テキストリンク
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-text-link ncgr-text-link--primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  青いテキストリンク
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-text-link ncgr-text-link--white"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  白いテキストリンク
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-text-link ncgr-text-link--underline"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  下線のついたテキストリンク
+<span class="nt">&lt;/a&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="textfield" class="styleguide">Textfield</h1>
+
+<p>テキストフィールドのラベルはモバイルにおける省スペース化のため、テキストフィールドの枠上部に重なる形で配置します。
+Material Designではラベルがプレースホルダーの位置から上部にアニメーションしながら移動しますが、ラベルとプレースホルダーの意味付けが曖昧になるため、アニメーションさせません。
+SUZURIではあらゆるプラットフォームで同様の体験を提供するため、Web、iOS、Androidすべてのテキストフィールドは基本的にこのコンポーネントを使用します。</p>
+
+<p>textfield同士の間隔は基本的に<code>.ncgr-mar-b-16</code>のutilityで調整し、イレギュラーな場合のみ他のサイズのmarginのutilityで調整します。</p>
+
+<p>また、何を入力するかわかりやすいよう、記入例を<code>例）〇〇</code>の形でplaceholderに記入します。</p>
+
+<p>また、textareaの高さは指定せず、rowsで指定します。基本的には<code>rows=&quot;6&quot;</code>で指定します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+<div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">自己紹介</label>
+  <textarea class="ncgr-textfield__input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"例）スリスリ君"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>自己紹介<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>単体で使う小さなテキストフィールドを表示する場合は以下のようにマークアップします。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-textfield">
+  <input class="ncgr-textfield__input ncgr-textfield__input--small" type="text" name="name" placeholder="オモイデの名前">
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input ncgr-textfield__input--small"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"オモイデの名前"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<p>error・successの場合は以下のようにマークアップします。</p>
+
+<h4>error</h4>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input invalid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"例）スリスリ君"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h4>success</h4>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input valid" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input valid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"例）スリスリ君"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="uploader" class="styleguide">Uploader</h1>
+
+<p>画像をアップロードするために使用します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-uploader">
+  <div class="ncgr-uploader__inner">
+    <div class="ncgr-uploader__icon">
+      <i class="fas fa-image"></i>
+    </div>
+    <ul class="ncgr-mar-b-8 ncgr-typography-small ncgr-typography-light">
+      <li>.jpg .pngの形式ですか？</li>
+      <li>サイズは15MB以下ですか？</li>
+      <li>権利侵害していませんか？</li>
+    </ul>
+    <button class="ncgr-button ncgr-button--primary ncgr-button--fluid">
+      <i class="fas fa-upload"></i>
+      画像をアップロード
+    </button>
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-uploader"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-uploader__inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-uploader__icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-image"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-mar-b-8 ncgr-typography-small ncgr-typography-light"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>.jpg .pngの形式ですか？<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>サイズは15MB以下ですか？<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>権利侵害していませんか？<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-button ncgr-button--primary ncgr-button--fluid"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-upload"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      画像をアップロード
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="user-card" class="styleguide">User Card</h1>
+
+<p>「User Card」の上部にはクリエイターさんの商品を4枚並べ、そのクリエイターさんがどのようなラインナップのグッズを販売しているかわかるようにします。</p>
+
+<p>その下にはどのユーザーを示すカードなのか印象づけるためアバター画像を配置します。</p>
+
+<p>また、さらにクリエイターさんの情報を伝えるため、プロフィール文を2行表示します。文字数がオーバーする場合は三点リーダーで省略します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .ncgr-styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="ncgr-styleguide__preview">
+              <div class="ncgr-user-card">
+  <div class="ncgr-user-card__products-wrap">
+    <div class="ncgr-user-card__products">
+      <a class="ncgr-user-card__product" href="#">
+        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-1.jpg">
+      </a>
+      <a class="ncgr-user-card__product" href="#">
+        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-2.jpg">
+      </a>
+      <a class="ncgr-user-card__product" href="#">
+        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-3.jpg">
+      </a>
+      <a class="ncgr-user-card__product" href="#">
+        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-4.jpg">
+      </a>
+    </div>
+  </div>
+  <div class="ncgr-user-card__info">
+    <a class="ncgr-user-card__avatar">
+      <img class="ncgr-user-card__avatar-image" src="./images/components/user-card/avatar.png">
+    </a>
+    <a class="ncgr-user-card__name" href="#">
+      忍者スリスリくん ( surisurikun )
+    </a>
+    <p class="ncgr-user-card__profile ncgr-mar-t-8">
+      こんにちは！SUZURI の公式忍者・スリスリくんです。キミも忍者にならないか？
+    </p>
+  </div>
+</div>
+
+            </div>
+            <div class="ncgr-styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__products-wrap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__products"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-1.jpg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-2.jpg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-3.jpg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-4.jpg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__avatar"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__avatar-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/avatar.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__name"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      忍者スリスリくん ( surisurikun )
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ncgr-user-card__profile ncgr-mar-t-8"</span><span class="nt">&gt;</span>
+      こんにちは！SUZURI の公式忍者・スリスリくんです。キミも忍者にならないか？
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ncgr-styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+      </div><!-- end of .ncgr-styleguide__content -->
+      <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
+        <div class="ncgr-typography-small ncgr-mar-b-8">
+          最終更新日: 2020年2月28日
+        </div>
+        <div>
+          © 2020 SUZURI ❤️from 東京・渋谷
+        </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>
