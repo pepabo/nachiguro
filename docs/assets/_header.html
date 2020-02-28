@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="<%= @config['pepagram']['author'] %>">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>
+      <% if title && title != 'index' %><%= title.capitalize %> - <% end %><%= @config['pepagram']['title'] %>
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/nachiguro.css">
+  </head>
+  <body>
+    <header class="ncgr-header ncgr-header--fixed">
+      <div class="ncgr-header__inner">
+        <div class="ncgr-header__row">
+          <div class="ncgr-header__brand ncgr-header__brand--developer">
+            <a class="ncgr-header__brand-link" href="index.html">
+              <%= @config['pepagram']['title'] %>
+            </a>
+          </div>
+          <div class="ncgr-header__spacer"></div>
+          <div class="ncgr-header__navigation">
+          </div>
+        </div>
+      </div>
+      <nav class="ncgr-category-navigation">
+        <div class="ncgr-category-navigation__inner">
+          <ul class="ncgr-category-navigation__list">
+            <% @categories.sort.each do |category| %>
+              <% unless category[0] == 'index' %>
+                <li class="ncgr-category-navigation__list-item">
+                  <a class="ncgr-category-navigation__link" href="<%= category[1] %>">
+                    <%= category[0] %>
+                  </a>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="ncgr-styleguide">
+      <% if title %>
+        <div class="ncgr-styleguide__nav">
+          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
+            <% unless title == 'index' %>
+              <%= title %>
+            <% else %>
+              <%= @config['pepagram']['title'] %>
+            <% end %>
+          </h2>
+          <nav class="ncgr-account-tab">
+            <ul class="ncgr-account-tab__list">
+              <% @blocks.each do |block| %>
+                <li class="ncgr-account-tab__list-item">
+                  <a class="ncgr-account-tab__link" href="#<%= block[:name] %>"><%= block[:title] %></a>
+                </li>
+              <% end %>
+            </li>
+          </nav>
+        </div>
+      <% end %>
+      <div class="ncgr-styleguide__content">
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
