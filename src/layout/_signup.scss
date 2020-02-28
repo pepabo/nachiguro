@@ -1,0 +1,37 @@
+/*
+このスタイルシートは、SignupとSigninのスタイルについて指定する。
+*/
+
+#initial-div {
+  background-image: ncgr-asset-url('images/hint-surisuri.gif');
+  height: 2000px;
+  width: 100%;
+}
+#signup-or-login,
+#signup-form,
+#login-form {
+  animation: fade-in 1.0s;
+  &.ncgr-is-hidden {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ncgr-signup__logo {
+  svg {
+    width: 160px;
+  }
+}

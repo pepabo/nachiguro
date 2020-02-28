@@ -1,0 +1,58 @@
+body {
+  &.controller-texture_sources {
+    background: var(--color-secondary-500);
+    .tooltipster-content {
+      padding: 9px 10px 3px 10px !important;
+    }
+  }
+}
+
+.ncgr-kunshika__jingu-logo {
+  background-image: ncgr-asset-url('images/jingu-logo.png');
+  margin: 3em auto 1em auto;
+  display: block;
+  height: 132px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 95px;
+  background-size: cover;
+}
+
+#texture-source-tweets {
+  background: var(--color-white);
+  height: 400px;
+  overflow: auto;
+  border-radius: 8px;
+  ul {
+    li {
+      color: var(--color-black);
+      cursor: pointer;
+      line-height: 1.8;
+      padding: 0.75em 1em;
+      text-align: left;
+      animation-iteration-count: 3;
+      -webkit-animation-iteration-count: 3;
+      animation-duration: 0.15s;
+      -webkit-animation-duration: 0.15s;
+      &:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      img {
+        float: left;
+        margin: 0.25em 0.5em 0 0;
+        width: 1.5em;
+        border-radius: 100%;
+      }
+      &:nth-child(odd) {
+        background: var(--color-default-25);
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

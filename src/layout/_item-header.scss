@@ -1,0 +1,71 @@
+//= link_tree "images/search_by_item"
+
+.ncgr-item-header {
+  background-color: var(--color-secondary-background);
+  border-bottom: 1px solid var(--color-separator);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  @include mediaquery(mobile) {
+    background-size: cover;
+  }
+}
+
+$items: 't-shirt',
+        'ringer-t-shirt',
+        'long-sleeve-t-shirt',
+        'full-graphic-t-shirt',
+        'sweat',
+        'hoodie',
+        'tote-bag',
+        'sacoche',
+        'mug',
+        'note',
+        'sticker',
+        'smartphone-case',
+        'clear-smartphone-case',
+        'baby-rompers',
+        'baby-bib',
+        'wallet-phone-case',
+        'blanket',
+        'towel-handkerchief',
+        'can-badge',
+        'tarpaulin',
+        'acrylic-block',
+        'coach-jacket',
+        'book-style-smartphone-case',
+        'waist-pouch',
+        'zip-hoodie',
+        'kinchaku',
+        'big-shoulder-bag',
+        'water-glass';
+
+@each $item in $items {
+  .ncgr-item-header--#{$item} {
+    background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-desktop.jpg");
+    @include media-retina() {
+      background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-desktop@2x.jpg");
+    }
+    @include mediaquery(mobile) {
+      background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-mobile.jpg");
+      @include media-retina() {
+        background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.ncgr-item-header__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ncgr-item-header__heading {
+  color: var(--color-white);
+}

@@ -1,7 +1,8 @@
-source: ./sass
+source: ./src
 destination: ./styleguide
 dependencies:
-  - ./css
+  - ./dist
+  - ./assets
 documentation_assets: ./docs/assets
 custom_markdown: ./docs/markdown_renderer.rb
 exit_on_warnings: false

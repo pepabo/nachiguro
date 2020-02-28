@@ -2,9 +2,9 @@
   "name": "nachiguro",
   "version": "0.1.0",
   "description": "SUZURI CSS Framework",
-  "main": "css/nachiguro.css",
+  "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --style compressed --no-error-css sass/nachiguro.scss css/nachiguro.css"
+    "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,6 @@
   },
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
-    "husky": "^4.2.3",
     "sass": "^1.26.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build"
-    }
   }
 }

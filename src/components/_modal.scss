@@ -1,0 +1,78 @@
+.has-overlay {
+  overflow: hidden;
+  > body {
+    height: 100%;
+    overflow-y: scroll;
+    #gmocommonfooter {
+      visibility: hidden;
+    }
+  }
+}
+
+.ncgr-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: transform .25s ease-in-out, opacity 1ms .25s;
+  z-index: 2147483647;
+  display: block;
+  height: 100%;
+
+  &:target, &.is-active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: transform .25s ease-in-out;
+  }
+}
+
+.ncgr-modal__inner {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow: scroll;
+  position: absolute;
+  -webkit-overflow-scrolling: touch;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.ncgr-modal__close {
+  display: block;
+  overflow: hidden;
+  text-indent: -100px;
+  text-decoration: none;
+  height: 0;
+  &:after {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    content: '';
+    background-color: var(--color-close-button-background);
+    background-image: ncgr-asset-url('images/modal/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    text-indent: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 20;
+    @include mediaquery(tablet) {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      top: 12px;
+      right: auto;
+      left: 12px;
+    }
+  }
+}
