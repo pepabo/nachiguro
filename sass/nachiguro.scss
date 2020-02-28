@@ -137,15 +137,6 @@ random関数は使用しないでください。
 @import 'foundation/normalize';
 @import 'foundation/reset';
 @import 'foundation/shadow';
-@import 'foundation/typography';
-
-// Tooltipster スタイルシートを読み込む
-@import 'tooltipster/css/tooltipster';
-@import 'tooltipster/css/themes/tooltipster-noir';
-
-// Font Awesome スタイルシートを読み込む
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
 @import 'components/account-tab';
