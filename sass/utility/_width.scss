@@ -1,0 +1,21 @@
+/*doc
+---
+title: Width
+name: width
+category: Utility
+---
+
+要素のwidthを任意の比率で上書きするときに使用するUtilityです。
+例えば、`ncgr-w-100`を指定するとwidthは100%になります。
+
+```example
+
+<div class="ncgr-w-100" style="background-color: #fbca4d;">
+  横幅100%
+</div>
+```
+*/
+
+.ncgr-w-100 {
+  width: 100%;
+}

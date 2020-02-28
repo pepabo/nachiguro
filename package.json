@@ -1,0 +1,22 @@
+{
+  "name": "nachiguro",
+  "version": "0.1.0",
+  "description": "SUZURI CSS Framework",
+  "main": "css/nachiguro.css",
+  "scripts": {
+    "build": "sass --style compressed --no-error-css sass/nachiguro.scss css/nachiguro.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepabo/nachiguro.git"
+  },
+  "author": "SUZURI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pepabo/nachiguro/issues"
+  },
+  "homepage": "https://github.com/pepabo/nachiguro#readme",
+  "devDependencies": {
+    "sass": "^1.26.1"
+  }
+}

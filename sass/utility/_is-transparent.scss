@@ -1,0 +1,18 @@
+/*doc
+---
+title: Transparent
+name: is-transparent
+category: Utility
+---
+ある要素のopacityを0にする時に使用します。
+要素は消えますが、高さは残ります。
+
+```example
+<div class="ncgr-is-transparent">
+  透明感
+</div>
+```
+*/
+.ncgr-is-transparent {
+  opacity: 0;
+}

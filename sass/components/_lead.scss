@@ -1,0 +1,7 @@
+.ncgr-lead {
+  color: var(--color-default-200);
+  font-size: 16px;
+  @include mediaquery(mobile) {
+    padding: 0 16px;
+  }
+}

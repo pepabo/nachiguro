@@ -1,0 +1,96 @@
+/*doc
+---
+title: Device
+name: 00-device-outline
+category: Utility
+---
+
+html 要素に以下の class を指定することで、スマホ版と PC 版ごとに表示・非表示を指定できます。
+
+* if-phone-show
+  * スマホ版のときは表示する
+* if-phone-hide
+  * スマホ版のときは隠す
+* if-tablet-show
+  * タブレット版のときは表示する
+* if-tablet-hide
+  * タブレット版のときは隠す
+* if-pc-show
+  * PC 版のときは表示する
+* if-pc-hide
+  * PC 版のときは隠す
+
+例えば、以下のように書くと
+
+```example
+<p>
+  サンプル1
+</p>
+<p class="if-phone-show">
+  サンプル2
+</p>
+<p class="if-phone-hide">
+  サンプル3
+</p>
+```
+
+スマホから見たときは「サンプル1」と「サンプル2」が表示され、PC から見たときは「サンプル1」と「サンプル3」が表示されます。
+
+また、これらの class を inline 要素に使用したいときは、以下のように .if-inline を指定します。
+
+```example
+<p>
+  スリ
+  <br class="if-phone-show if-phone-show--is_inline">
+  スリ
+</p>
+```
+
+スマホから見たときは「スリ」と「スリ」のあいだで改行して、PC から見たときは「スリ」と「スリ」のあいだで改行しません。
+
+*/
+.if-phone-show,
+.if-tablet-show,
+.if-pc-show {
+  display: none;
+}
+
+.if-pc-hide {
+  display: none;
+  @include mediaquery(mobile) {
+    display: block;
+  }
+}
+.if-pc-show {
+  display: block;
+  @include mediaquery(mobile) {
+    display: none;
+  }
+  &.if-pc-show--is_inline {
+    display: inline;
+  }
+}
+
+@include mediaquery(tablet) {
+  .if-tablet-hide {
+    display: none;
+  }
+  .if-tablet-show {
+    display: block;
+    &.if-tablet-show--is_inline {
+      display: inline;
+    }
+  }
+}
+
+@include mediaquery(mobile) {
+  .if-phone-hide {
+    display: none;
+  }
+  .if-phone-show {
+    display: block;
+    &.if-phone-show--is_inline {
+      display: inline;
+    }
+  }
+}

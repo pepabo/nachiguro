@@ -1,0 +1,149 @@
+/*doc
+---
+title: Card
+name: card
+category: Components
+---
+
+カードは情報のまとまりを作るために使用します。
+
+```example
+<div class="ncgr-card">
+  <div class="ncgr-card__cover">
+    <img class="ncgr-card__cover-image" src="./images/components/card/sushi.jpg">
+  </div>
+  <header class="ncgr-card__header ncgr-pad-t-16 ncgr-pad-r-16 ncgr-pad-l-16">
+    <h2 class="ncgr-heading ncgr-heading--medium">寿司の盛り合わせ</h2>
+  </header>
+  <section class="ncgr-card__contents ncgr-pad-16">
+    サーモン、うに、いくら、かずのこ、まぐろ、鯛、ホッキ貝、えび
+  </section>
+  <footer class="ncgr-card__footer ncgr-pad-16">
+    <div class="ncgr-card__avatar">
+      <a class="ncgr-avatar ncgr-avatar--small" href="#">
+        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        <span class="ncgr-avatar__name">surisurikun</span>
+      </a>
+    </div>
+    <div class="ncgr-card__actions">
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fa fa-trash"></i>
+      </a>
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+    </div>
+  </footer>
+</div>
+```
+
+`ncgr-card--rounded`Modifierを追加すると、丸みを帯びたカードになります。
+
+```example
+<div class="ncgr-card ncgr-card--rounded">
+  <div class="ncgr-pad-16">
+    丸みを帯びたカード
+  </div>
+</div>
+```
+
+`ncgr-card--shadow`Modifierを追加すると、カードにshadowがつきます。
+
+```example
+<div class="ncgr-card ncgr-card--rounded ncgr-card--shadow">
+  <div class="ncgr-pad-16">
+    丸みを帯びたシャドウ付きのカード
+  </div>
+</div>
+```
+
+`ncgr-card--tertiary-grouped-background`Modifierを追加すると、カードの中に入れ子になったカードを表現することができます。
+
+```example
+<div class="ncgr-card ncgr-card--tertiary-grouped-background ncgr-card--shadow">
+  <div class="ncgr-pad-16">
+    カードの中に入れ子になったカード
+  </div>
+</div>
+```
+
+*/
+
+.ncgr-card {
+  background-color: var(--color-secondary-grouped-background);
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--color-label);
+  position: relative;
+}
+
+.ncgr-card--rounded {
+  border-radius: 8px;
+  .ncgr-card__cover-image {
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.ncgr-card--rounded-to-normal {
+  border-radius: 8px;
+  .ncgr-card__cover-image {
+    border-radius: 8px 8px 0 0;
+  }
+  @include mediaquery(tablet) {
+    border-radius: 0;
+    .ncgr-card__cover-image {
+      border-radius: 0;
+    }
+  }
+}
+
+.ncgr-card--shadow {
+  @include shadow-2dp();
+}
+
+.ncgr-card--tertiary-grouped-background {
+  background-color: var(--color-tertiary-grouped-background);
+}
+
+.ncgr-card__cover {
+  border-radius: 8px 8px 0 0;
+  background-color: var(--color-default-75);
+  width: 100%;
+}
+
+.ncgr-card__cover--white {
+  background-color: var(--color-white);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ncgr-card__cover-image {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.ncgr-card__footer {
+  border-top: 1px solid var(--color-separator);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ncgr-card__actions {
+  text-align: right;
+  flex: 1;
+}
+
+.ncgr-card--item-template {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .ncgr-card__contents {
+    flex-grow: 1;
+  }
+  .ncgr-card__footer {
+    box-sizing: border-box;
+    height: 64px;
+  }
+}

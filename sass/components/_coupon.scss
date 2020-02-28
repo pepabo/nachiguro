@@ -1,0 +1,68 @@
+.ncgr-coupon {
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  border-radius: 8px 0 0 8px;
+  background-image: asset-url('nachiguro/coupon/bg.svg');
+  background-position: right 24px bottom 0;
+  background-size: 170px;
+  background-repeat: no-repeat;
+  background-color: var(--color-warning-500);
+  padding: 24px;
+  color: var(--color-default-800);
+  position: relative;
+  &:after {
+    width: 8px;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-warning-500) 4px, transparent 0), linear-gradient(45deg, var(--color-warning-500) 4px, transparent 0);
+    background-size: 24px 24px;
+  }
+  @include mediaquery(tablet) {
+    background-size: 80px;
+    background-position: right 14px bottom 0;
+  }
+}
+
+.ncgr-coupon__name {
+  font-size: 16px;
+  font-weight: bold;
+  @include mediaquery(tablet) {
+    font-size: 14px;
+  }
+}
+
+.ncgr-coupon__not-available-with-sale {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ncgr-coupon__minimum-order-amount {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ncgr-coupon__amount {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+  @include mediaquery(tablet) {
+    font-size: 32px;
+  }
+}
+
+.ncgr-coupon__amount-text {
+  font-size: 24px;
+  @include mediaquery(tablet) {
+    font-size: 16px;
+  }
+}
+
+.ncgr-coupon__expires-at {
+  font-size: 16px;
+  line-height: 1.6;
+  @include mediaquery(tablet) {
+    font-size: 14px;
+  }
+}

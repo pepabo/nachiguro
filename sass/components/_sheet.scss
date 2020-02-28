@@ -1,0 +1,109 @@
+/*doc
+---
+title: Sheet
+name: sheet
+category: Components
+---
+
+Sheetコンポーネントには画面の主要コンテンツを補完するコンテンツが表示されます。
+
+```example
+<input id="drawer-menu-trigger" type="checkbox" hidden="">
+<div class="ncgr-sheet ncgr-sheet--half">
+  <label class="ncgr-sheet__overlay" for="drawer-menu-trigger">
+  <section class="ncgr-sheet__sheet">
+    <header class="ncgr-sheet__header">
+    <main class="ncgr-sheet__contents">
+      コンテンツ
+    </main>
+  </section>
+</div>
+```
+
+*/
+
+.ncgr-sheet {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  display: grid;
+  grid-template-areas: 'OVERLAY SHEET';
+  grid-template-columns: 3fr 1fr;
+  z-index: 100;
+  @include mediaquery(tablet) {
+    transform: translateY(100%);
+    grid-template-areas: 'OVERLAY' 'SHEET';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 16fr;
+  }
+}
+
+.ncgr-sheet--half {
+  @include mediaquery(tablet) {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+input[type="checkbox"]:checked + .ncgr-sheet {
+  transform: translateX(0);
+  @include mediaquery(tablet) {
+    transform: translateY(0);
+  }
+}
+
+.ncgr-sheet__overlay {
+  display: block;
+  grid-area: OVERLAY;
+}
+
+.ncgr-sheet__contents {
+  grid-area: SHEET;
+  background-color: var(--color-secondary-grouped-background);
+  height: 100%;
+  overflow-y: scroll;
+  @include shadow-16dp();
+  @include mediaquery(tablet) {
+    border-radius: 14px 14px 0 0;
+  }
+}
+
+.ncgr-sheet__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  widows: 100%;
+  background-color: var(--color-secondary-grouped-background);
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid var(--color-separator);
+  @include mediaquery(tablet) {
+    flex-direction: row-reverse;
+  }
+}
+
+.ncgr-sheet__heading {
+  flex-grow: 1;
+  padding-left: 16px;
+  @include mediaquery(tablet) {
+    padding-left: 0;
+  }
+}
+
+.ncgr-sheet__close {
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  color: var(--color-secondary-label);
+}
+
+.ncgr-sheet__body {
+  padding: 16px;
+}

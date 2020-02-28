@@ -1,0 +1,129 @@
+/*doc
+---
+title: Icon Button
+name: icon-button
+category: Components
+---
+
+Icon Buttonはある商品やユーザー情報に対してアクションをするボタンに使用します。
+
+`.ncgr-icon-button--black`、`.ncgr-icon-button--white`のModifierをつけるとボタンに色がつきます。
+
+「Whiteボタン」はログインしているユーザー以外である他者からのアクション（ズッキュン・オモイデ追加）がメインである場合に使用します。
+
+```example
+<button class="ncgr-icon-button ncgr-icon-button--white">
+  <i class="fa fa-folder"></i>
+</button>
+```
+
+「Blackボタン」はログインしているユーザー自身（管理者）のアクション（編集・削除）に使います。
+
+```example
+<button class="ncgr-icon-button ncgr-icon-button--black">
+  <i class="fas fa-pencil-alt"></i>
+</button>
+```
+
+ズッキュンボタンはエモーショナルな気持ちを表現するために暖色系の色と♥が動くアニメーションを使用します。
+
+```example
+<button class="ncgr-icon-button ncgr-icon-button--favorite">
+  <i class="fa fa-heart"></i>
+  <span class="ncgr-pad-l-4">246</span>
+</button>
+```
+
+プロフィール画像やカバー画像などの画像をアップロードする箇所には「Roundedボタン」を使用します。
+
+```example
+<button class="ncgr-icon-button ncgr-icon-button--black ncgr-icon-button--circle">
+  <i class="fas fa-pencil-alt"></i>
+</button>
+```
+
+優先順位の低いアクションなどには「Transparentボタン」を使用します。
+
+```example
+<button class="ncgr-icon-button ncgr-icon-button--transparent">
+  <i class="fa fa-pencil-alt"></i>
+</button>
+```
+
+*/
+
+.ncgr-icon-button {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  height: 32px;
+  text-align: center;
+  width: auto;
+  padding: 0 8px;
+  border-radius: 8px;
+  line-height: 34px;
+  min-width: 32px;
+  opacity: 0.9;
+  transition: all .2s ease-in-out;
+}
+
+.ncgr-icon-button--black {
+  background-color: var(--color-default-900);
+  color: var(--color-white);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  border-color: var(--color-default-900);
+}
+
+.ncgr-icon-button--white {
+  background-color: var(--color-white);
+  color: var(--color-default-500);
+}
+
+.ncgr-icon-button--bordered {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-default-75);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  color: var(--color-default-500);
+  &:hover {
+    border: 1px solid var(--color-default-200);
+  }
+}
+
+.ncgr-icon-button--transparent {
+  border: none;
+  background-color: transparent;
+  color: var(--color-default-500);
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+}
+
+.ncgr-icon-button--transparent-white {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.ncgr-icon-button--favorite {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-default-75);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  color: var(--color-danger-300);
+  &:hover {
+    border: 1px solid var(--color-default-200);
+  }
+}
+
+.ncgr-icon-button--favorite-inactive {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-default-75);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  color: var(--color-secondary-label);
+  &:hover {
+    border: 1px solid var(--color-default-200);
+  }
+}
+
+.ncgr-icon-button--circle {
+  width: 32px;
+  border-radius: 50%;
+}

@@ -1,0 +1,73 @@
+/*doc
+---
+title: Typography
+name: typography
+category: Utility
+---
+
+テキストのスタイルを変更する際に使用します。
+
+```example
+<div class="ncgr-typography-normal">Normal</div>
+<div class="ncgr-typography-bold">Bold</div>
+<div class="ncgr-typography-italic">Italic</div>
+<div class="ncgr-typography-light">Light</div>
+<div class="ncgr-typography-large">Large</div>
+<div class="ncgr-typography-medium">Medium</div>
+<div class="ncgr-typography-small">Small</div>
+<div class="ncgr-typography-danger">Danger</div>
+<div class="ncgr-typography-success">Success</div>
+```
+
+*/
+
+.ncgr-typography-normal {
+  font-weight: normal;
+}
+
+.ncgr-typography-bold {
+  font-weight: bold;
+}
+
+.ncgr-typography-italic {
+  font-style: italic;
+}
+
+.ncgr-typography-light {
+  color: var(--color-secondary-label);
+}
+
+.ncgr-typography-large {
+  font-size: 46px;
+  @include mediaquery(mobile) {
+    font-size: 28px;
+  }
+}
+
+.ncgr-typography-medium {
+  font-size: 30px;
+  @include mediaquery(mobile) {
+    font-size: 20px;
+  }
+}
+
+.ncgr-typography-small {
+  font-size: 13px;
+}
+
+.ncgr-typography-extra-small {
+  font-size: 11px;
+}
+
+.ncgr-typography-danger {
+  color: var(--color-danger-500);
+}
+
+.ncgr-typography-success {
+  color: var(--color-success-500);
+}
+
+/* YakuHanJPが縦書きの文字に未対応のため、従来のfont-familyを参照する */
+.ncgr-typography-vertical {
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
+}

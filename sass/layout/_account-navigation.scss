@@ -1,0 +1,79 @@
+.ncgr-account-navigation {
+  color: var(--color-white);
+  margin: 32px 0 32px 0;
+}
+
+.ncgr-account-navigation__item {
+  text-align: right;
+  z-index: 10;
+  a {
+    color: var(--color-white);
+  }
+}
+
+.ncgr-account-navigation__item--small {
+  display: block;
+  float: none;
+  margin: 0 0 0 16px;
+  @include mediaquery(tablet) {
+    display: block;
+    float: right;
+  }
+}
+
+.ncgr-account-navigation__item--hello {
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 16px 0 16px 0;
+}
+
+.ncgr-account-navigation__label {
+  margin: 0 auto;
+  margin-right: 0;
+  display: inline-block;
+  transition: margin-right 0.25s cubic-bezier(0, 1.2, 1, 1.2), opacity 0.25s ease-out;
+  padding: 4px 0 4px 0;
+  font-size: 40px;
+  &.inserting {
+    margin-right: -24px;
+    opacity: 0;
+  }
+  @include mediaquery(tablet) {
+    font-size: 32px;
+  }
+}
+
+.ncgr-account-navigation__label--small {
+  padding: 1em 0;
+  font-size: 16px;
+  @include mediaquery(tablet) {
+    padding: 12px 0 12px 0;
+    font-size: 12px;
+  }
+}
+
+.ncgr-account-navigation__close-button {
+  background-color: var(--color-secondary-500);
+  border: 0;
+  color: var(--color-white);
+  position: absolute;
+  top: 0;
+  right: 16px;
+  font-size: 14px;
+  padding: 8px 16px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 -4px 0 0 inset;
+  &:hover {
+    text-decoration: none;
+  }
+  @include mediaquery(tablet) {
+    right: 0;
+    font-size: 12px;
+    padding: 8px 12px;
+    box-shadow: none;
+  }
+}

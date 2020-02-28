@@ -1,0 +1,50 @@
+/*doc
+---
+title: Breakpoint
+name: breakpoint
+category: Mixin
+---
+
+mediaqueryのブレイクポイントをお手軽に呼び出せます。
+引数にはデバイスサイズに合わせて、mobile、table、desktopを指定します。
+mobileは480px、tabletは768px、desktopは1280pxで切り替わります。
+
+```css
+@include mediaquery(mobile) {
+  padding: 4px;
+}
+@include mediaquery(tablet) {
+  padding: 8px;
+}
+@include mediaquery(desktop) {
+  padding: 16px;
+}
+```
+
+Retinaディスプレイを判定したいときは、`media-retina()`のmixinを使用します。
+
+```css
+@include media-retina() {
+  background: url("hoge@2x.jpg");
+}
+```
+
+*/
+
+$breakpoints: (
+  'mobile': 'screen and (max-width: 480px)',
+  'tablet': 'screen and (max-width: 768px)',
+  'desktop': 'screen and (max-width: 1280px)',
+) !default;
+
+@mixin mediaquery($breakpoint: tablet) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin media-retina() {
+  @media only screen and (min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}

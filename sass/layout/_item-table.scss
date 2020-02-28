@@ -1,0 +1,102 @@
+.ncgr-item-table {
+  width: 100%;
+  display: table;
+  word-break: break-all;
+  word-wrap: break-all;
+}
+.ncgr-item-table__row {
+  display: table-row;
+  border: 0;
+  @include mediaquery(mobile) {
+    border-bottom: 1px solid var(--color-separator);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 16px 0;
+    position: relative;
+  }
+}
+.ncgr-item-table__cell {
+  display: table-cell;
+  padding: 12px 8px 12px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-separator);
+  @include mediaquery(mobile) {
+    display: block;
+    border-bottom: none;
+    padding: 0;
+  }
+}
+.ncgr-item-table__cell--remove {
+  text-align: center;
+  width: 1em;
+  @include mediaquery(mobile) {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+}
+.ncgr-item-table__cell--title {
+  text-align: left;
+  @include mediaquery(mobile) {
+    width: 60%;
+    flex-grow: 1;
+    padding: 0 24px 0 8px;
+    margin-bottom: 16px;
+  }
+}
+.ncgr-item-table__cell--image {
+  text-align: center;
+  white-space: nowrap;
+  line-height: 0;
+  overflow: hidden;
+  padding: 16px 4px 16px 0;
+  width: 64px;
+  @include mediaquery(mobile) {
+    white-space: normal;
+  }
+}
+.ncgr-item-table__cell--price,
+.ncgr-item-table__cell--quantity,
+.ncgr-item-table__cell--subtotal-price {
+  text-align: right;
+  @include mediaquery(mobile) {
+    width: 100%;
+  }
+}
+
+.ncgr-item-table__cell--price {
+  min-width: 5em;
+}
+
+.ncgr-item-table__cell--quantity {
+  min-width: 2em;
+  @include mediaquery(mobile) {
+    width: 152px;
+    padding-left: 72px;
+    box-sizing: border-box;
+  }
+}
+.ncgr-item-table__cell--subtotal-price {
+  flex: 1;
+  min-width: 5em;
+}
+.ncgr-item-table__link {
+  color: var(--color-label);
+  display: inline-block;
+  @include mediaquery(mobile) {
+    margin-bottom: 0;
+  }
+}
+.ncgr-item-table__image {
+  height: 64px;
+  width: 64px;
+  border-radius: 8px;
+}
+.ncgr-item-table__shipping-cost {
+  text-align: right;
+  padding: 16px 8px 16px 8px;
+  @include mediaquery(mobile) {
+    padding: 16px 0 16px 0;
+  }
+}

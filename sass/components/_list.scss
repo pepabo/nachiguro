@@ -1,0 +1,51 @@
+/*doc
+---
+title: List
+name: list
+category: Components
+---
+
+`.ncgr-list`を指定すると黒丸のリストになります。
+
+```example
+<ul class="ncgr-list">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+```
+
+`.ncgr-list--decimal`を指定すると算用数字のリストになります。
+
+```example
+<ul class="ncgr-list ncgr-list--decimal">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+```
+
+*/
+
+.ncgr-list {
+  list-style-type: disc;
+  margin-left: 24px;
+  line-height: 1.8;
+}
+
+.ncgr-list--decimal {
+  list-style-type: decimal;
+  list-style-position: outside;
+}

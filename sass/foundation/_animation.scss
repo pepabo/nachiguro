@@ -1,0 +1,215 @@
+/*doc
+---
+title: Getting Started
+name: Getting Started
+category: Animation
+---
+
+アニメーションしたいときは、アニメーションさせたい要素のスタイルシートで `animation` mixin を読み込みます。
+
+
+```css
+@include animation(slide-enter-left, 0.3s, 0, 1);
+```
+
+mixin の引数は、それぞれ以下の項目を指定できます。
+
+- animation-name (例: ```slide-enter-left```)
+  - 用意してある @keyframes の名前を書くことでアニメーションの動きを指定します。
+- animation-duration (例: ```0.3s```)
+  - アニメーションする秒数を指定します。
+- animation-delay (例: ```0```)
+  - アニメーションするタイミングを指定します。指定した秒数ぶん遅れてアニメーションします。
+- animation-iteration-count (例: ```1```)
+  - アニメーションする回数を指定します。```infinite``` を指定すると、無限に繰り返します。
+
+*/
+
+$animation-origin-size: 10px;
+$animation-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+@mixin animation($name, $duration: 1s, $delay: 0, $iteration-count: 1) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration-count;
+  animation-fill-mode: both;
+}
+
+/*doc
+---
+title: Slide Enter Top
+name: slide-enter-top
+category: Animation
+---
+上から下へ、非表示から表示するアニメーションです。
+
+```example
+<!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="ncgr-animation__slide-enter-top">
+  <img src="./images/foundation/animation/surisuri.svg" style="width: 200px; height: 200px;">
+</div>
+```
+
+*/
+
+@keyframes slide-enter-top {
+  0%,
+  100% {
+    transition-timing-function: $animation-transition-timing-function;
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, ($animation-origin-size * -2), 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ncgr-animation__slide-enter-top {
+  @include animation(slide-enter-top, 1s, 0, infinite);
+}
+
+/*doc
+---
+title: Slide Enter Left
+name: slide-enter-left
+category: Animation
+---
+左から右へ、非表示から表示するアニメーションです。
+
+```example
+<!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="ncgr-animation__slide-enter-left">
+  <img src="./images/foundation/animation/surisuri.svg" style="width: 200px; height: 200px;">
+</div>
+```
+
+*/
+
+@keyframes slide-enter-left {
+  0%,
+  100% {
+    transition-timing-function: $animation-transition-timing-function;
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(($animation-origin-size * -2), 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ncgr-animation__slide-enter-left {
+  @include animation(slide-enter-left, 1s, 0, infinite);
+}
+
+
+/*doc
+---
+title: Roll In
+name: roll-in
+category: Animation
+---
+左から右へ、回転しながら非表示から表示するアニメーションです。
+
+```example
+<!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="ncgr-animation__roll-in">
+  <img src="./images/foundation/animation/surisuri.svg" style="width: 200px; height: 200px;">
+</div>
+```
+
+*/
+
+
+@keyframes roll-in {
+  0%{
+    opacity: 0;
+    height: 0px;
+    transform: translate3d(-100%, 0, 0) rotateZ(-360deg);
+  }
+  5% {
+    height: auto;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ncgr-animation__roll-in {
+  @include animation(roll-in, 1s, 0, infinite);
+}
+
+
+/*doc
+---
+title: Roll Out
+name: roll-out
+category: Animation
+---
+左から右へ、回転しながら表示から非表示するアニメーションです。
+
+```example
+<!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="ncgr-animation__roll-out">
+  <img src="./images/foundation/animation/surisuri.svg" style="width: 200px; height: 200px;">
+</div>
+```
+
+*/
+
+
+@keyframes roll-out {
+  0% {
+    opacity: 1;
+    height: auto;
+  }
+  95%{
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotateZ(360deg);
+  }
+}
+
+.ncgr-animation__roll-out {
+  @include animation(roll-out, 1s, 0, infinite);
+}
+
+
+
+/*doc
+---
+title: Spin
+name: spin
+category: Animation
+---
+グルグルと回転するアニメーションです。
+
+```example
+<!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+<div class="ncgr-animation__spin">
+  <img src="./images/foundation/animation/surisuri.svg" style="width: 200px; height: 200px;">
+</div>
+```
+
+*/
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+.ncgr-animation__spin {
+  animation: spin 5s linear infinite;
+ -webkit-animation: spin 5s linear infinite;
+ -moz-animation: spin 5s linear infinite;
+}

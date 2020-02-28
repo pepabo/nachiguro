@@ -1,0 +1,28 @@
+.letter {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-danger-500);
+  z-index: 123456;
+  .letter-content {
+    padding: 64px;
+    text-align: center;
+    .letter-title {
+      margin-bottom: 16px;
+      font-size: 21px;
+      letter-spacing: 0.1;
+    }
+    .letter-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+  }
+}
+.ie .letter {
+  display: block;
+}

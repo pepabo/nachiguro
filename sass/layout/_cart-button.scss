@@ -1,0 +1,120 @@
+.ncgr-cart-button {
+  @include mediaquery(tablet) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 98;
+  }
+}
+
+.ncgr-cart-button__countdown {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-900);
+  width: auto;
+  padding: 0 16px 0 16px;
+  line-height: 28px;
+  height: 28px;
+  border-radius: 14px;
+  font-size: 14px;
+  display: inline-block;
+  @include mediaquery(tablet) {
+    font-size: 13px;
+  }
+}
+
+.ncgr-cart-button__countdown-time {
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.ncgr-cart-button__layout {
+  display: flex;
+  @include mediaquery(tablet) {
+    background-color: var(--color-secondary-grouped-background);
+    border-top: 1px solid var(--color-separator);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.ncgr-cart-button__left {
+  flex-grow: 1;
+}
+
+.ncgr-cart-button__left--with-countdown {
+  padding: 8px;
+  background-color: var(--color-primary-50);
+  text-align: center;
+  border-radius: 8px;
+  @include mediaquery(tablet) {
+    background-color: transparent;
+    text-align: left;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.ncgr-cart-button__right {
+  width: 52px;
+  height: 52px;
+  display: inline-block;
+  left: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+
+.ncgr-cart-button__favorite-button {
+  border-style: none;
+  letter-spacing: 0;
+  outline: 0;
+  overflow: visible;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  padding: 0;
+  background-color: transparent;
+  font-size: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  height: 36px;
+  text-align: center;
+  width: 52px;
+  line-height: 36px;
+  transition: all .2s ease-in-out;
+  color: var(--color-secondary-label);
+}
+
+.ncgr-cart-button__favorite {
+  height: 36px;
+}
+
+.ncgr-cart-button__favorite-icon {
+  fill: var(--color-secondary-label);
+}
+
+.ncgr-cart-button__favorite-count {
+  text-align: center;
+  font-size: 12px;
+  width: 52px;
+  height: 16px;
+  color: var(--color-secondary-label);
+  line-height: 12px;
+}
+
+.ncgr-cart-button__right--active {
+  .ncgr-cart-button__favorite-icon {
+    fill: var(--color-danger-500);
+  }
+  .ncgr-cart-button__favorite-count {
+    color: var(--color-danger-500);
+  }
+}

@@ -1,0 +1,56 @@
+.ncgr-people-card {
+  width: 100%;
+  margin-bottom: 64px;
+  border-radius: 8px;
+  min-height: 480px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: asset-url('nachiguro/people-card/bg.png');
+  @include media-retina() {
+    background-image: asset-url('nachiguro/people-card/bg@2x.png');
+  }
+  @include mediaquery(tablet) {
+    margin-bottom: 32px;
+    background-image: none;
+    @include media-retina() {
+      background-image: none;
+    }
+  }
+}
+
+.ncgr-people-card__inner {
+  padding: 24px;
+  max-width: 640px;
+  margin: 24px auto;
+  @include mediaquery(tablet) {
+    padding: 16px;
+    margin: 16px auto 16px auto;
+  }
+}
+
+.ncgr-people-card__header-image {
+  overflow: hidden;
+  width: 100%;
+  background: 50% no-repeat #efefef;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 33%;
+  }
+}
+
+.ncgr-people-card__price {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.ncgr-people-card__price-num {
+  font-size: 32px;
+}

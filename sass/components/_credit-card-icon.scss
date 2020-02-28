@@ -1,0 +1,18 @@
+.ncgr-credit-card-icon {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.ncgr-credit-card-icon__item {
+  width: 32px;
+  margin-right: 4px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ncgr-credit-card-icon__image {
+  width: 100%;
+  vertical-align: top;
+}

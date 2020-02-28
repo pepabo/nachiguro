@@ -1,0 +1,52 @@
+/*doc
+---
+title: Text Link
+name: text-link
+category: Components
+---
+
+テキストリンクをマークアップするときに使います。
+
+```example
+<a class="ncgr-text-link" href="#">
+  テキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--primary" href="#">
+  青いテキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--white" href="#">
+  白いテキストリンク
+</a>
+<a class="ncgr-text-link ncgr-text-link--underline" href="#">
+  下線のついたテキストリンク
+</a>
+```
+
+*/
+
+.ncgr-text-link {
+  color: var(--color-secondary-label);
+  display: inline-block;
+  &:hover {
+    color: var(--color-label);
+    text-decoration: underline;
+  }
+}
+
+.ncgr-text-link--primary {
+  color: var(--color-primary-500);
+  &:hover {
+    color: var(--color-primary-700);
+  }
+}
+
+.ncgr-text-link--white {
+  color: var(--color-white);
+  &:hover {
+    color: var(--color-white);
+  }
+}
+
+.ncgr-text-link--underline {
+  text-decoration: underline;
+}
