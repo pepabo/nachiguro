@@ -4,7 +4,7 @@
   "description": "SUZURI CSS Framework",
   "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --style compressed --no-error-css src/_nachiguro.scss dist/nachiguro.css"
+    "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css"
   },
   "repository": {
     "type": "git",
