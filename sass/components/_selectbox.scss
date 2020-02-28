@@ -1,0 +1,91 @@
+/*doc
+---
+title: Selectbox
+name: selectbox
+category: Components
+---
+
+色やサイズなどの複数の選択肢からオプションの選択ができます。このコンポーネントは3つ以上の選択肢が存在する場合にのみ使用できます。2つまでの選択肢のときは一覧性が低くなってしまうので、Radioを使用するようにしましょう。
+
+```example
+<div class="ncgr-selectbox">
+  <label class="ncgr-selectbox__label">種族</label>
+  <select id="tribe" name="tribe">
+    <option selected="selected" value="01">忍者</option>
+    <option value="02">人間</option>
+  </select>
+  <i class="fas fa-caret-down"></i>
+</div>
+```
+
+*/
+
+.ncgr-selectbox {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 52px;
+  line-height: 3;
+  background-color: var(--color-textfield-background);
+  border-radius: 8px;
+  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
+  box-sizing: border-box;
+  select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-color: var(--color-textfield-background);
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 40px 0 16px;
+    color: var(--color-label);
+    cursor: pointer;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  i {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    pointer-events: none;
+  }
+  &.invalid {
+    border: 2px solid var(--color-danger-500) !important;
+  }
+  &.valid {
+    border: 2px solid var(--color-success-500) !important;
+  }
+}
+
+.ncgr-selectbox--liquid {
+  width: 100%;
+}
+
+.ncgr-selectbox--disabled {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  .ncgr-selectbox__label,
+  select,
+  i {
+    color: var(--color-default-100);
+  }
+}
+
+.ncgr-selectbox__label {
+  background-color: var(--color-textfield-background);
+  color: var(--color-label);
+  height: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+  padding: 0 4px 0 4px;
+  position: absolute;
+  left: 16px;
+  top: -2px;
+  z-index: 2;
+  line-height: 6px;
+}

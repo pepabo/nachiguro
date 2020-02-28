@@ -1,0 +1,303 @@
+/*doc
+---
+title: Textfield
+name: textfield
+category: Components
+---
+
+テキストフィールドのラベルはモバイルにおける省スペース化のため、テキストフィールドの枠上部に重なる形で配置します。
+Material Designではラベルがプレースホルダーの位置から上部にアニメーションしながら移動しますが、ラベルとプレースホルダーの意味付けが曖昧になるため、アニメーションさせません。
+SUZURIではあらゆるプラットフォームで同様の体験を提供するため、Web、iOS、Androidすべてのテキストフィールドは基本的にこのコンポーネントを使用します。
+
+textfield同士の間隔は基本的に`.ncgr-mar-b-16`のutilityで調整し、イレギュラーな場合のみ他のサイズのmarginのutilityで調整します。
+
+また、何を入力するかわかりやすいよう、記入例を`例）〇〇`の形でplaceholderに記入します。
+
+また、textareaの高さは指定せず、rowsで指定します。基本的には`rows="6"`で指定します。
+
+```example
+<div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+<div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">自己紹介</label>
+  <textarea class="ncgr-textfield__input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+</div>
+```
+
+単体で使う小さなテキストフィールドを表示する場合は以下のようにマークアップします。
+
+```example
+<div class="ncgr-textfield">
+  <input class="ncgr-textfield__input ncgr-textfield__input--small" type="text" name="name" placeholder="オモイデの名前">
+</div>
+```
+
+error・successの場合は以下のようにマークアップします。
+
+#### error
+
+```example
+<div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+```
+
+#### success
+
+```example
+<div class="ncgr-textfield ncgr-mar-b-16">
+  <label class="ncgr-textfield__label" for="name">名前</label>
+  <input class="ncgr-textfield__input valid" type="text" name="name" placeholder="例）スリスリ君">
+</div>
+```
+
+
+*/
+
+.ncgr-textfield {
+  // data-hint属性に対してdisplay: inline-block;が指定されているのですべて置き換えたら消す。
+  display: block !important;
+  position: relative;
+}
+
+.ncgr-textfield--developer {
+  .ncgr-textfield__label {
+    color: var(--color-white);
+    background-color: var(--color-default-800);
+  }
+  .ncgr-textfield__input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.6);
+    }
+    &:focus {
+      border: 2px solid rgba(255, 255, 255, 1);
+    }
+    &:placeholder-shown {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.2);
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.2);
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.ncgr-textfield--disabled {
+  .ncgr-textfield__label {
+    color: var(--color-default-100);
+  }
+  .ncgr-textfield__input {
+    background-color: var(--color-white) !important;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    color: var(--color-default-100);
+    cursor: not-allowed;
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    &:focus {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.ncgr-textfield--readonly {
+  .ncgr-textfield__label {
+    left: 0;
+  }
+  .ncgr-textfield__input {
+    background-color: var(--color-white) !important;
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: var(--color-default-800);
+    padding: 16px 16px 16px 0;
+    cursor: not-allowed;
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0);
+    }
+    &:focus {
+      border: 2px solid rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+.ncgr-textfield__hint {
+  position: relative;
+  display: inline-block;
+}
+
+.ncgr-textfield__label {
+  background-color: var(--color-textfield-background);
+  color: var(--color-label);
+  height: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+  padding: 0 4px 0 4px;
+  position: absolute;
+  left: 16px;
+  top: 0;
+  z-index: 2;
+  line-height: 6px;
+}
+
+.ncgr-textfield__required-label {
+  display: inline-block;
+  padding: 2px 4px 2px 4px;
+  font-size: 10px;
+  line-height: 1;
+  vertical-align: top;
+  color: var(--color-danger-800);
+  background-color: var(--color-danger-50);
+  margin: -4px 0 0 2px;
+}
+
+.ncgr-textfield__input {
+  appearance: none;
+  border-radius: 8px;
+  background-color: var(--color-textfield-background);
+  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  margin: 0;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+  outline: none;
+
+  &:hover {
+    border: 2px solid rgba(var(--color-textfield-separator), 0.2);
+  }
+
+  &:focus {
+    border: 2px solid rgba(var(--color-textfield-separator), 0.4);
+  }
+
+  &[type='color'],
+  &[type='date'],
+  &[type='datetime-local'],
+  &[type='datetime'],
+  &[type='email'],
+  &[type='month'],
+  &[type='number'],
+  &[type='password'],
+  &[type='search'],
+  &[type='tel'],
+  &[type='text'],
+  &[type='time'],
+  &[type='url'],
+  &[type='week'] {
+    height: 54px;
+    line-height: 54px;
+  }
+  &:placeholder-shown {
+    color: var(--color-placeholder-text);
+  }
+
+  &::-webkit-input-placeholder {
+    color: var(--color-placeholder-text);
+  }
+
+  &:-moz-placeholder {
+    color: var(--color-placeholder-text);
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: var(--color-placeholder-text);
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--color-placeholder-text);
+  }
+
+  &.valid {
+    border: 2px solid var(--color-success-500);
+  }
+  &.invalid {
+    border: 2px solid var(--color-danger-500);
+  }
+  &.disabled {
+    background-color: var(--color-textfield-background);
+    border: 2px solid rgba(var(--color-textfield-separator), 0.1);
+    color: var(--color-default-75);
+    cursor: not-allowed;
+    &:hover {
+      border: 2px solid rgba(var(--color-textfield-separator), 0.1);
+    }
+    &:focus {
+      border: 2px solid rgba(var(--color-textfield-separator), 0.1);
+    }
+  }
+}
+
+.ncgr-textfield__input--name,
+.ncgr-textfield__input--zip-code,
+.ncgr-textfield__input--expiration-date,
+.ncgr-textfield__input--security-code {
+  width: 140px;
+}
+
+.ncgr-textfield__input--address,
+.ncgr-textfield__input--phone,
+.ncgr-textfield__input--email,
+.ncgr-textfield__input--credit-card-number {
+  width: 284px;
+}
+
+.ncgr-textfield__input--half {
+  width: 50%;
+  @include mediaquery(tablet) {
+    width: 100%;
+  }
+}
+
+.ncgr-textfield__input--num {
+  width: 80px;
+  float: right;
+  text-align: right;
+}
+
+.ncgr-textfield__input--small {
+  font-size: 14px;
+  padding: 8px 8px 8px 8px;
+
+  &[type='color'],
+  &[type='date'],
+  &[type='datetime-local'],
+  &[type='datetime'],
+  &[type='email'],
+  &[type='month'],
+  &[type='number'],
+  &[type='password'],
+  &[type='search'],
+  &[type='tel'],
+  &[type='text'],
+  &[type='time'],
+  &[type='url'],
+  &[type='week'] {
+    height: 32px;
+    line-height: 32px;
+  }
+}

@@ -1,0 +1,34 @@
+/*doc
+---
+title: Align
+name: align
+category: Utility
+---
+
+文字の揃えを変更したいときに使用するUtilityです。
+
+
+```example
+<div class="ncgr-align-left">
+  左寄せ
+</div>
+<div class="ncgr-align-center">
+  真ん中寄せ
+</div>
+<div class="ncgr-align-right">
+  右寄せ
+</div>
+```
+*/
+
+.ncgr-align-left {
+  text-align: left;
+}
+
+.ncgr-align-center {
+  text-align: center;
+}
+
+.ncgr-align-right {
+  text-align: right;
+}

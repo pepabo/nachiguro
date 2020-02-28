@@ -1,0 +1,40 @@
+/*doc
+---
+title: Image
+name: image
+category: Components
+---
+
+画像をマークアップするのに使います。
+
+```example
+<img class="ncgr-image" src="./images/components/image/image.png">
+```
+
+100%にしたくない場合は`.ncgr-image--fluid`を付与します。
+
+```example
+<img class="ncgr-image ncgr-image--fluid" src="./images/components/image/image.png">
+```
+
+画像を角丸にしたい場合は`.ncgr-image--rounded`を付与します。
+
+```example
+<img class="ncgr-image ncgr-image--rounded" src="./images/components/image/image.png">
+```
+
+*/
+
+.ncgr-image {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: top;
+}
+
+.ncgr-image--fluid {
+  width: auto;
+}
+
+.ncgr-image--rounded {
+  border-radius: 8px;
+}

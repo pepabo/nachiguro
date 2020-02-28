@@ -1,0 +1,25 @@
+.ncgr-adspolicy {
+  a {
+    color: var(--color-default-300);
+    text-decoration: underline;
+  }
+  div {
+    margin-bottom: 2em;
+  }
+  h3 {
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--color-separator);
+  }
+  p {
+    margin: 0.5em 0;
+  }
+  ul {
+    padding: 0.5em 0.25em;
+    margin-bottom: 0.5em;
+    li {
+      margin-left: 2em;
+      list-style-type: disc;
+    }
+  }
+}

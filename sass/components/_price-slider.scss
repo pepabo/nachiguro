@@ -1,0 +1,39 @@
+.ncgr-price-slider {
+  position: relative;
+  width: 100%;
+  height: 96px;
+}
+
+.ncgr-price-slider__bar {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+  background-color: rgba(var(--color-textfield-separator), 0.15);
+}
+
+.ncgr-price-slider__handle {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  display: block;
+  background-color: var(--color-secondary-500);
+  border-radius: 48px;
+  cursor: pointer;
+  margin-top: -20px;
+}
+
+.ncgr-price-slider__values {
+  position: absolute;
+  top: 52px;
+  left: -24px;
+  width: 96px;
+  text-align: center;
+}
+
+.ncgr-price-slider__value {
+  font-size: 20px;
+}

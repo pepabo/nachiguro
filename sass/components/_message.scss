@@ -1,0 +1,28 @@
+.msg,
+.alert {
+  background: var(--color-default-300);
+  display: block;
+  margin: 0 0 1em 0;
+  padding: 0.5em 1em;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -0.25em 0 inset;
+}
+.msg-error {
+  color: var(--color-white);
+  line-height: 1.62;
+  background: var(--color-danger-500);
+}
+.message-header {
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  color: var(--color-white);
+  background: var(--color-success-500);
+  z-index: 2147483646;
+  cursor: pointer;
+  p {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,26 @@
+/*doc
+---
+title: Cursor
+name: cursor
+category: Utility
+---
+
+cursorを変更したいときに使用するUtilityです。
+
+```example
+<div class="ncgr-cursor-pointer">
+  ponter
+</div>
+<div class="ncgr-cursor-not-allowed">
+  not-allowed
+</div>
+```
+*/
+
+.ncgr-cursor-pointer {
+  cursor: pointer;
+}
+
+.ncgr-cursor-not-allowed {
+  cursor: not-allowed;
+}

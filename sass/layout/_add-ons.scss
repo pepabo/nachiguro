@@ -1,0 +1,27 @@
+.ncgr-add-ons__items {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ncgr-add-ons__item {
+  margin-right: 24px;
+  width: 150px;
+  @include mediaquery(tablet){
+    width: 120px;
+  }
+}
+
+.ncgr-add-ons__item:last-child {
+  padding-right: 16px;
+  margin-right: 0;
+}
+
+.ncgr-add-ons__image {
+  width: 150px;
+  height: 150px;
+  background: var(--color-white);
+  @include mediaquery(tablet){
+    width: 120px;
+    height: 120px;
+  }
+}

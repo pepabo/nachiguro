@@ -1,0 +1,43 @@
+/*doc
+---
+title: Border
+name: border
+category: Utility
+---
+
+要素にborderをつけたいときに使用するUtilityです。
+
+```example
+<div class="ncgr-border">
+  全方位にborder
+</div>
+<div class="ncgr-border-t">
+  上にborder
+</div>
+<div class="ncgr-border-r">
+  右にborder
+</div>
+<div class="ncgr-border-b">
+  下にborder
+</div>
+<div class="ncgr-border-l">
+  左にborder
+</div>
+```
+*/
+
+.ncgr-border {
+  border: 1px solid var(--color-separator);
+}
+.ncgr-border-t {
+  border-top: 1px solid var(--color-separator);
+}
+.ncgr-border-r {
+  border-right: 1px solid var(--color-separator);
+}
+.ncgr-border-b {
+  border-bottom: 1px solid var(--color-separator);
+}
+.ncgr-border-l {
+  border-left: 1px solid var(--color-separator);
+}

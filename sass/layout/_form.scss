@@ -1,0 +1,43 @@
+.ncgr-form__layout {
+  display: flex;
+  @include mediaquery(mobile) {
+    display: block;
+  }
+}
+.ncgr-form__item {
+  width: 50%;
+  &:nth-child(1) {
+    padding-right: 12px;
+  }
+  &:nth-child(2) {
+    padding-left: 12px;
+  }
+  @include mediaquery(mobile) {
+    width: 100%;
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+    &:nth-child(2) {
+      padding-left: 0;
+    }
+  }
+}
+.ncgr-form__label {
+  color: var(--color-label);
+  font-weight: bold;
+  font-size: 12px;
+  text-align: left;
+}
+
+.ncgr-form__label--developer {
+  color: var(--color-white);
+}
+
+.ncgr-form__label--disabled {
+  opacity: 0.3;
+}
+
+.ncgr-form__hint {
+  // data-hint属性に対してdisplay: inline-block;が指定されているのですべて置き換えたら消す。
+  display: block !important;
+}

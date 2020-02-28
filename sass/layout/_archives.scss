@@ -1,0 +1,26 @@
+.ncgr-archives__section-header {
+  padding: 48px 0 48px 24px;
+  @include mediaquery(tablet) {
+    padding: 32px 0 32px 16px;
+  }
+}
+
+.ncgr-archives__banner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  @include shadow-2dp();
+}
+
+.ncgr-archives__section-bottom {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 64px 0;
+}
+
+.ncgr-archives__hint-content {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+  left: 0;
+}

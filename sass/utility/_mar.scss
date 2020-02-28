@@ -1,0 +1,48 @@
+/*doc
+---
+title: Margin
+name: mar
+category: Utility
+---
+
+要素にmarginをつけたいときに使用するUtilityです。
+4, 8, 12, 16, 24, 48, 64からmarginの大きさを選びます。
+
+```example
+<div class="ncgr-mar-4">
+  全方位に4px
+</div>
+<div class="ncgr-mar-t-4">
+  上に4px
+</div>
+<div class="ncgr-mar-r-4">
+  右に4px
+</div>
+<div class="ncgr-mar-b-4">
+  下に4px
+</div>
+<div class="ncgr-mar-l-4">
+  左に4px
+</div>
+```
+*/
+
+$margins: 0, 4, 8, 12, 16, 24, 32, 48, 56, 64;
+
+@each $margin in $margins {
+  .ncgr-mar-#{$margin} {
+    margin: #{$margin}px;
+  }
+  .ncgr-mar-t-#{$margin} {
+    margin-top: #{$margin}px;
+  }
+  .ncgr-mar-r-#{$margin} {
+    margin-right: #{$margin}px;
+  }
+  .ncgr-mar-b-#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+  .ncgr-mar-l-#{$margin} {
+    margin-left: #{$margin}px;
+  }
+}

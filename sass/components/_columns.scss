@@ -1,0 +1,104 @@
+/*doc
+---
+title: Columns
+name: columns
+category: Components
+---
+
+商品やショップのカードを均等に並べるカラムです。
+`ncgr-columns--4-2-2`などのModifierをつけることで、デスクトップは4カラム、タブレットは2カラム、モバイルは2カラムのレイアウトを作成することができます。
+
+他のカラム数が必要になった時は新しくModifierを作成します。
+
+また、カラムの中に入る要素は必ず`.ncgr-columns__item`の子要素として置き、
+カラムとコンテンツは分離させてカラムの役割だけをもたせます。
+
+以下のようにマークアップします。
+
+```example
+<div class="ncgr-columns ncgr-columns--4-2-2">
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+  <div class="ncgr-columns__item">
+    <div style="background-color: #fbca4d;">
+      box
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.ncgr-columns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12px 0 12px;
+  @include mediaquery(tablet) {
+    padding: 0 8px 0 8px;
+  }
+  .ncgr-columns__item {
+    padding: 0 12px 24px 12px;
+    box-sizing: border-box;
+    @include mediaquery(tablet) {
+      padding: 0 8px 16px 8px;
+    }
+  }
+}
+
+@mixin ncgr-columns($desktop-column-num, $tablet-column-num, $mobile-column-num) {
+  .ncgr-columns--#{$desktop-column-num}-#{$tablet-column-num}-#{$mobile-column-num} {
+    .ncgr-columns__item {
+      width: 100 / $desktop-column-num * 1%;
+      @include mediaquery(tablet) {
+        width: 100 / $tablet-column-num * 1%;
+      }
+      @include mediaquery(mobile) {
+        width: 100 / $mobile-column-num * 1%;
+      }
+    }
+  }
+}
+
+@include ncgr-columns(2, 1, 1);
+@include ncgr-columns(2, 2, 1);
+@include ncgr-columns(2, 2, 2);
+@include ncgr-columns(3, 1, 1);
+@include ncgr-columns(3, 2, 1);
+@include ncgr-columns(3, 2, 2);
+@include ncgr-columns(4, 1, 1);
+@include ncgr-columns(4, 2, 1);
+@include ncgr-columns(4, 2, 2);
+@include ncgr-columns(5, 3, 2);

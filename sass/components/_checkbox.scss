@@ -1,0 +1,137 @@
+/*doc
+---
+title: Checkbox
+name: checkbox
+category: Components
+---
+
+オプションのオン/オフ切り替えなどをする際に使用します。
+オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
+
+```example
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    甲賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    伊賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    その他
+  </span>
+</label>
+```
+
+縦に並べる場合には、以下のようにマークアップします。
+
+```example
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    甲賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    伊賀流
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge">
+  <span>
+    <i class="fas fa-check"></i>
+    その他
+  </span>
+</label>
+```
+
+*/
+
+.ncgr-checkbox {
+  position: relative;
+  display: inline-block;
+  padding: 8px 24px 8px 24px;
+  cursor: pointer;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  span {
+    padding: 0 4px 0 4px;
+    font-size: 16px;
+    font-weight: bold;
+    &::before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-textfield-background);
+      border-radius: 4px;
+      border: 2px solid rgba(var(--color-textfield-separator), 0.15);
+      transition-property: background-color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+    }
+    &:hover::before {
+      border-color: rgba(var(--color-textfield-separator), 0.2);
+    }
+    i {
+      position: absolute;
+      top: 15px;
+      left: ((20px - 14px) / 2);
+      width: 14px;
+      height: 14px;
+      font-size: 14px;
+      color: transparent;
+      z-index: 1;
+    }
+  }
+
+  input:checked + span {
+    &::before {
+      background: var(--color-primary-500);
+      border-color: var(--color-primary-500);
+    }
+    &::after {
+      opacity: 1;
+    }
+    i {
+      color: var(--color-white);
+    }
+  }
+
+  input:disabled + span {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.ncgr-checkbox--vertical {
+  display: block;
+}

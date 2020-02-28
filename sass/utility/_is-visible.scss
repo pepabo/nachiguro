@@ -1,0 +1,38 @@
+/*doc
+---
+title: Visible
+name: is-visible
+category: Utility
+---
+
+要素を表示させるユーティリティです。
+JSで要素を表示させたり消したりするときに使います。
+
+```example
+<div class="ncgr-is-visible">
+  圧倒的表示
+</div>
+```
+*/
+
+.ncgr-is-visible {
+  display: block;
+}
+
+.ncgr-is-visible-in-light {
+  display: block;
+}
+
+.ncgr-is-visible-in-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ncgr-is-visible-in-light {
+    display: none;
+  }
+  
+  .ncgr-is-visible-in-dark {
+    display: block;
+  }
+}

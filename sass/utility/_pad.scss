@@ -1,0 +1,48 @@
+/*doc
+---
+title: Padding
+name: pad
+category: Utility
+---
+
+要素にpaddingをつけたいときに使用するUtilityです。
+4, 8, 16, 24, 48, 64, 128からpaddingの大きさを選びます。
+
+```example
+<div class="ncgr-pad-4">
+  全方位に4px
+</div>
+<div class="ncgr-pad-t-4">
+  上に4px
+</div>
+<div class="ncgr-pad-r-4">
+  右に4px
+</div>
+<div class="ncgr-pad-b-4">
+  下に4px
+</div>
+<div class="ncgr-pad-l-4">
+  左に4px
+</div>
+```
+*/
+
+$paddings: 0, 4, 8, 16, 24, 32, 48, 56, 64, 128;
+
+@each $padding in $paddings {
+  .ncgr-pad-#{$padding} {
+    padding: #{$padding}px;
+  }
+  .ncgr-pad-t-#{$padding} {
+    padding-top: #{$padding}px;
+  }
+  .ncgr-pad-r-#{$padding} {
+    padding-right: #{$padding}px;
+  }
+  .ncgr-pad-b-#{$padding} {
+    padding-bottom: #{$padding}px;
+  }
+  .ncgr-pad-l-#{$padding} {
+    padding-left: #{$padding}px;
+  }
+}

@@ -1,0 +1,164 @@
+/*doc
+---
+title: Product Card
+name: product-card
+category: Components
+---
+
+Product Cardは商品画像が一番目立つように設計します。
+
+```example
+<div class="ncgr-product-card">
+  <a class="ncgr-product-card__thumbnail" href="#">
+    <div style="background-color: rgba(0,0,0,0.4);">
+      <img class="ncgr-product-card__image lens-image lazy animated fadeIn" src="./images/components/product-card/product.jpg">
+    </div>
+    <div class="ncgr-product-card__pickup-badge">
+      <img alt="ピックアップサレタヨ！" src="./images/components/product-card/pickup-badge.svg">
+    </div>
+  </a>
+  <div class="ncgr-product-card__actions">
+    <div class="ncgr-product-card__action">
+      <a class="ncgr-icon-button ncgr-icon-button--black" href="#">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+    </div>
+    <div class="ncgr-product-card__action">
+      <button class="ncgr-icon-button ncgr-icon-button--white js-add-choice-button">
+        <i class="fa fa-folder"></i>
+      </button>
+    </div>
+    <div class="ncgr-product-card__action">
+      <button class="ncgr-icon-button ncgr-icon-button--favorite js-favorite-button">
+        <i class="fa fa-heart"></i>
+        <span class="ncgr-icon-button__num js-favorite-button-num">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="ncgr-product-card__info">
+    <a class="ncgr-product-card__name" href="#">
+      スリスリ君のパーカー
+    </a>
+    <div class="ncgr-product-card__price">
+      ¥1,580
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.ncgr-product-card {
+  position: relative;
+}
+
+.ncgr-product-card--secondary-grouped-background {
+  background-color: var(--color-secondary-grouped-background);
+}
+
+.ncgr-product-card__thumbnail {
+  border-radius: 8px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.ncgr-product-card__thumbnail img {
+  transform: scale(1.01,1.01);
+}
+
+.ncgr-product-card__pickup-badge {
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+  z-index: 1;
+  img {
+    width: 100px;
+    vertical-align: top;
+    @include mediaquery(mobile) {
+      width: 80px;
+    }
+  }
+}
+
+.ncgr-product-card__background {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ncgr-product-card__image {
+  cursor: pointer;
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.1s ease-in-out;
+  transform: scale(1.00001);
+}
+
+.ncgr-product-card__label {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  @include mediaquery(mobile) {
+    left: 4px;
+    top: 4px;
+  }
+}
+
+.ncgr-product-card__actions {
+  display: flex;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  @include mediaquery(mobile) {
+    right: 4px;
+    top: 4px;
+  }
+}
+
+.ncgr-product-card__action {
+  padding-right: 4px;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.ncgr-product-card__info {
+  padding: 12px 0 12px 0;
+}
+
+.ncgr-product-card__item-name {
+  color: var(--color-secondary-label);
+  font-size: 13px;
+}
+
+.ncgr-product-card__name {
+  color: var(--color-label);
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ncgr-product-card__price {
+  color: var(--color-label);
+  font-size: 13px;
+  padding-bottom: 4px;
+}
+
+.ncgr-product-card__quantity-limit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ncgr-product-card__quantity-limit-form {
+  width: 56px;
+}
+
+.ncgr-product-card__quantity-limit-text {
+  padding-left: 4px;
+}

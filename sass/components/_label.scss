@@ -1,0 +1,62 @@
+/*doc
+---
+title: Label
+name: label
+category: Components
+---
+
+リストやテーブル、カードなどの状態を表すために使用します。
+
+```example
+<span class="ncgr-label ncgr-label--default">非表示</span>
+<span class="ncgr-label ncgr-label--primary">表示</span>
+<span class="ncgr-label ncgr-label--success">成功</span>
+<span class="ncgr-label ncgr-label--warning">注意</span>
+<span class="ncgr-label ncgr-label--danger">必須</span>
+```
+
+*/
+
+.ncgr-label {
+  display: inline-block;
+  padding: 4px 8px 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  vertical-align: top;
+  &.ncgr-label--default {
+    color: var(--color-default-900);
+    background-color: var(--color-default-50);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-default-200);
+    }
+  }
+  &.ncgr-label--primary {
+    color: var(--color-primary-900);
+    background-color: var(--color-primary-50);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-primary-200);
+    }
+  }
+  &.ncgr-label--success {
+    color: var(--color-success-900);
+    background-color: var(--color-success-50);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-success-200);
+    }
+  }
+  &.ncgr-label--warning {
+    color: var(--color-warning-900);
+    background-color: var(--color-warning-50);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-warning-200);
+    }
+  }
+  &.ncgr-label--danger {
+    color: var(--color-danger-900);
+    background-color: var(--color-danger-50);
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-danger-200);
+    }
+  }
+}

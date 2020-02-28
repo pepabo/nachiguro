@@ -1,0 +1,124 @@
+.ncgr-header {
+  background-color: var(--color-secondary-grouped-background);
+  width: 100%;
+}
+
+.ncgr-header--fixed {
+  position: fixed;
+  z-index: 100;
+}
+
+.ncgr-header__inner {
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid var(--color-separator);
+  box-sizing: border-box;
+}
+
+.ncgr-header--developer {
+  background-color: var(--color-default-800);
+  position: fixed;
+  z-index: 100;
+  .ncgr-header__inner {
+    border-bottom: 1px solid var(--color-default-600);
+  }
+}
+
+.ncgr-header__row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 52px;
+  margin: 0 auto;
+}
+
+.ncgr-header__brand {
+  box-sizing: border-box;
+  line-height: 52px;
+  padding: 0 12px 0 24px;
+  font-weight: bold;
+  font-size: 16px;
+  @include mediaquery(tablet) {
+    padding: 0 8px 0 16px;
+  }
+}
+
+.ncgr-header__brand-link {
+  color: var(--color-label);
+  display: flex;
+  align-items: center;
+  height: 52px;
+  cursor: pointer;
+  svg {
+    margin: 0;
+    width: 88px;
+  }
+}
+
+.ncgr-header__spacer {
+  flex-grow: 1;
+}
+
+.ncgr-header__navigation {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+}
+
+.ncgr-header__navigation-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.ncgr-header__navigation-link--favorite {
+  font-size: 18px;
+}
+
+.ncgr-header__button {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 -4px 0 0 inset;
+  box-sizing: border-box;
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  height: 52px;
+  line-height: 52px;
+  min-width: 52px;
+  padding: 0 12px;
+  text-align: center;
+  display: inline-block;
+}
+
+.ncgr-header__button--primary {
+  background-color: var(--color-primary-500);
+  &:hover {
+    background-color: var(--color-primary-600);
+  }
+}
+
+.ncgr-header__button--secondary {
+  background-color: var(--color-secondary-500);
+  &:hover {
+    background-color: var(--color-secondary-600);
+  }
+}
+
+.ncgr-header__button-text {
+  padding-left: 4px;
+}
+
+.ncgr-header__badge {
+  position: absolute;
+}
+
+.ncgr-header__badge--cart {
+  right: 0;
+  top: 0;
+}
+
+.ncgr-header__badge--activity {
+  left: 24px;
+  top: 0;
+}

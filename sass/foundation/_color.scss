@@ -1,0 +1,441 @@
+/*doc
+---
+title: Primary
+name: 01-color-primary
+category: Color
+---
+
+[color:--color-primary-25:#F2F8FC]
+[color:--color-primary-50:#E6F2F8]
+[color:--color-primary-75:#CCE5F1]
+[color:--color-primary-100:#B3D7EB]
+[color:--color-primary-200:#80BDDD]
+[color:--color-primary-300:#4DA3CF]
+[color:--color-primary-400:#268FC5]
+[color:--color-primary-500:#007BBB]
+[color:--color-primary-600:#006FA8]
+[color:--color-primary-700:#006296]
+[color:--color-primary-800:#005683]
+[color:--color-primary-900:#00507A]
+
+*/
+
+:root {
+  --color-primary-25: #F2F8FC;
+  --color-primary-50: #E6F2F8;
+  --color-primary-75: #CCE5F1;
+  --color-primary-100: #B3D7EB;
+  --color-primary-200: #80BDDD;
+  --color-primary-300: #4DA3CF;
+  --color-primary-400: #268FC5;
+  --color-primary-500: #007BBB;
+  --color-primary-600: #006FA8;
+  --color-primary-700: #006296;
+  --color-primary-800: #005683;
+  --color-primary-900: #00507A;
+}
+
+/*doc
+---
+title: Secondary
+name: 02-color-secondary
+category: Color
+---
+
+[color:--color-secondary-25:#FEF6F3]
+[color:--color-secondary-50:#FCEDE8]
+[color:--color-secondary-75:#FADBD1]
+[color:--color-secondary-100:#F7C8BA]
+[color:--color-secondary-200:#F2A48C]
+[color:--color-secondary-300:#ED805D]
+[color:--color-secondary-400:#E9643B]
+[color:--color-secondary-500:#E54918]
+[color:--color-secondary-600:#CE4216]
+[color:--color-secondary-700:#B73A13]
+[color:--color-secondary-800:#A03311]
+[color:--color-secondary-900:#952F10]
+
+*/
+
+:root {
+  --color-secondary-25: #FEF6F3;
+  --color-secondary-50: #FCEDE8;
+  --color-secondary-75: #FADBD1;
+  --color-secondary-100: #F7C8BA;
+  --color-secondary-200: #F2A48C;
+  --color-secondary-300: #ED805D;
+  --color-secondary-400: #E9643B;
+  --color-secondary-500: #E54918;
+  --color-secondary-600: #CE4216;
+  --color-secondary-700: #B73A13;
+  --color-secondary-800: #A03311;
+  --color-secondary-900: #952F10;
+}
+
+/*doc
+---
+title: Success
+name: 03-color-success
+category: Color
+---
+
+[color:--color-success-25:#F6FbF6]
+[color:--color-success-50:#EDF7ED]
+[color:--color-success-75:#DBEEDC]
+[color:--color-success-100:#C9E7CA]
+[color:--color-success-200:#A5D7A7]
+[color:--color-success-300:#81C684]
+[color:--color-success-400:#66BA69]
+[color:--color-success-500:#4BAE4F]
+[color:--color-success-600:#449D47]
+[color:--color-success-700:#3C8B3F]
+[color:--color-success-800:#357A37]
+[color:--color-success-900:#317133]
+
+*/
+
+:root {
+  --color-success-25: #F6FbF6;
+  --color-success-50: #EDF7ED;
+  --color-success-75: #DBEEDC;
+  --color-success-100: #C9E7CA;
+  --color-success-200: #A5D7A7;
+  --color-success-300: #81C684;
+  --color-success-400: #66BA69;
+  --color-success-500: #4BAE4F;
+  --color-success-600: #449D47;
+  --color-success-700: #3C8B3F;
+  --color-success-800: #357A37;
+  --color-success-900: #317133;
+}
+
+/*doc
+---
+title: Warning
+name: 04-color-warning
+category: Color
+---
+
+[color:--color-warning-25:#FFFCF6]
+[color:--color-warning-50:#FFFAED]
+[color:--color-warning-75:#FEF4DB]
+[color:--color-warning-100:#FEEFCA]
+[color:--color-warning-200:#FDE5A6]
+[color:--color-warning-300:#FCDA82]
+[color:--color-warning-400:#FCD268]
+[color:--color-warning-500:#FBCA4D]
+[color:--color-warning-600:#E2B645]
+[color:--color-warning-700:#C9A23E]
+[color:--color-warning-800:#B08D36]
+[color:--color-warning-900:#A38332]
+
+*/
+
+:root {
+  --color-warning-25: #FFFCF6;
+  --color-warning-50: #FFFAED;
+  --color-warning-75: #FEF4DB;
+  --color-warning-100: #FEEFCA;
+  --color-warning-200: #FDE5A6;
+  --color-warning-300: #FCDA82;
+  --color-warning-400: #FCD268;
+  --color-warning-500: #FBCA4D;
+  --color-warning-600: #E2B645;
+  --color-warning-700: #C9A23E;
+  --color-warning-800: #B08D36;
+  --color-warning-900: #A38332;
+}
+
+/*doc
+---
+title: Danger
+name: 05-color-danger
+category: Color
+---
+
+[color:--color-danger-25:#FEF5F4]
+[color:--color-danger-50:#FDEBEA]
+[color:--color-danger-75:#FAD7D4]
+[color:--color-danger-100:#F8C4BF]
+[color:--color-danger-200:#F49C94]
+[color:--color-danger-300:#EF7469]
+[color:--color-danger-400:#EB5749]
+[color:--color-danger-500:#E83929]
+[color:--color-danger-600:#D13325]
+[color:--color-danger-700:#BA2E21]
+[color:--color-danger-800:#A2281D]
+[color:--color-danger-900:#97251B]
+
+*/
+
+:root {
+  --color-danger-25: #FEF5F4;
+  --color-danger-50: #FDEBEA;
+  --color-danger-75: #FAD7D4;
+  --color-danger-100: #F8C4BF;
+  --color-danger-200: #F49C94;
+  --color-danger-300: #EF7469;
+  --color-danger-400: #EB5749;
+  --color-danger-500: #E83929;
+  --color-danger-600: #D13325;
+  --color-danger-700: #BA2E21;
+  --color-danger-800: #A2281D;
+  --color-danger-900: #97251B;
+}
+
+/*doc
+---
+title: Default
+name: 06-color-default
+category: Color
+---
+
+[color:--color-default-25:#F7F7F7]
+[color:--color-default-50:#EFEFEF]
+[color:--color-default-75:#DFDFDF]
+[color:--color-default-100:#D0D0D0]
+[color:--color-default-200:#B0B0B0]
+[color:--color-default-300:#909090]
+[color:--color-default-400:#797979]
+[color:--color-default-500:#616161]
+[color:--color-default-600:#575757]
+[color:--color-default-700:#4E4E4E]
+[color:--color-default-800:#444444]
+[color:--color-default-900:#3F3F3F]
+
+*/
+
+:root {
+  --color-default-25: #F7F7F7;
+  --color-default-50: #EFEFEF;
+  --color-default-75: #DFDFDF;
+  --color-default-100: #D0D0D0;
+  --color-default-200: #B0B0B0;
+  --color-default-300: #909090;
+  --color-default-400: #797979;
+  --color-default-500: #616161;
+  --color-default-600: #575757;
+  --color-default-700: #4E4E4E;
+  --color-default-800: #444444;
+  --color-default-900: #3F3F3F;
+}
+
+/*doc
+---
+title: Black & White
+name: 07-color-black-and-white
+category: Color
+---
+
+[color:--color-white:#FFFFFF]
+[color:--color-black:#000000]
+
+*/
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+/*doc
+---
+title: Social
+name: 08-color-social
+category: Color
+---
+
+[color:--color-white:#FFFFFF]
+[color:--color-black:#000000]
+[color:--color-brand-twitter:#55ACEE]
+[color:--color-brand-facebook:#305097]
+[color:--color-brand-instagram:#2A5B83]
+[color:--color-brand-line:#00C300]
+[color:--color-brand-nicovideo:#EFB10A]
+
+*/
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-brand-twitter: #55ACEE;
+  --color-brand-twitter-dark: #4D9BD6;
+  --color-brand-twitter-darkest: #4182B4;
+  --color-brand-instagram: #2a5b83;
+  --color-brand-instagram-dark: #204665;
+  --color-brand-instagram-darkest: #204665;
+  --color-brand-nicovideo: #EFB10A;
+  --color-brand-nicovideo-dark: #D79F09;
+  --color-brand-nicovideo-darkest: #C29009;
+  --color-brand-facebook:#305097;
+  --color-brand-line:#00C300;
+}
+
+/*doc
+---
+title: Apple
+name: 09-color-apple
+category: Color
+---
+
+[color:--color-apple-dark-secondary:#1C1C1E]
+[color:--color-apple-dark-tertiary:#2C2C2E]
+[color:--color-apple-dark-separator:#38383A]
+
+ダークモードが適用されているときに使うAppleのSystem Colorです。
+Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて消すかもしれません。
+
+*/
+
+:root {
+  --color-apple-dark-secondary: #1C1C1E;
+  --color-apple-dark-tertiary: #2C2C2E;
+  --color-apple-dark-separator: #38383A;
+}
+
+/*doc
+---
+title: Semantic
+name: 10-semantic-color
+category: Color
+---
+
+基本はAppleのダークモードのシステム色に基づいてセマンティックカラーを設計します。
+
+背景色や文字色などのモノトーン色を指定するときは、直接色をハードコーディングするのではなく、セマンティックカラーをCSS Variablesで指定します。
+
+```scss
+. background {
+  boackground-color: var(--color-separator);
+}
+```
+
+指定できるセマンティックカラーは以下のとおりです。
+
+#### label
+
+[color:light:#444444]
+[color:dark:#FFFFFF]
+
+#### secondary-label
+
+[color:light:#B0B0B0]
+[color:dark:#797979]
+
+#### placeholder-text
+
+[color:light:#D0D0D0]
+[color:dark:#616161]
+
+#### background
+
+[color:light:#FFFFFF]
+[color:dark:#000000]
+
+#### secondary-background
+
+[color:light:#FFFFFF]
+[color:dark:#1C1C1E]
+
+#### tertiary-background
+
+[color:light:#FFFFFF]
+[color:dark:#2C2C2E]
+
+#### grouped-background
+
+[color:light:#F7F7F7]
+[color:dark:#000000]
+
+#### secondary-grouped-background
+
+[color:light:#FFFFFF]
+[color:dark:#1C1C1E]
+
+#### tertiary-grouped-background
+
+[color:light:#F7F7F7]
+[color:dark:#2C2C2E]
+
+#### separator
+
+[color:light:#EFEFEF]
+[color:dark:#3F3F3F]
+
+#### search-bar-background
+
+[color:light:#DFDFDF]
+[color:dark:#2C2C2E]
+
+#### textfield-background
+
+[color:light:#FFFFFF]
+[color:dark:#2C2C2E]
+
+#### textfield-separator
+
+[color:light:#000000]
+[color:dark:#FFFFFF]
+
+#### segmented-control-background
+
+[color:light:#D0D0D0]
+[color:dark:#1C1C1E]
+
+#### square-radio-separator
+
+[color:light:#DFDFDF]
+[color:dark:#2C2C2E]
+
+#### pagenation-background
+
+[color:light:#000000]
+[color:dark:#FFFFFF]
+
+#### close-button-background
+
+[color:light:#D0D0D0]
+[color:dark:#2C2C2E]
+
+*/
+
+:root {
+  --color-label: var(--color-default-800);
+  --color-secondary-label: var(--color-default-200);
+  --color-placeholder-text: rgba(0, 0, 0, 0.2);
+  --color-background: var(--color-white);
+  --color-secondary-background: var(--color-default-50);
+  --color-tertiary-background: var(--color-white);
+  --color-grouped-background: var(--color-default-50);
+  --color-secondary-grouped-background: var(--color-white);
+  --color-tertiary-grouped-background: var(--color-default-50);
+  --color-separator: var(--color-default-75);
+  --color-search-bar-background: var(--color-default-75);
+  --color-textfield-background: var(--color-white);
+  --color-textfield-separator: 0, 0, 0;
+  --color-segmented-control-background: var(--color-default-100);
+  --color-square-radio-separator: var(--color-default-75);
+  --color-pagenation-background: 0, 0, 0;
+  --color-close-button-background: var(--color-default-100);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-label: var(--color-white);
+    --color-secondary-label: var(--color-default-400);
+    --color-placeholder-text: rgba(255, 255, 255, 0.2);
+    --color-background: var(--color-black);
+    --color-secondary-background: var(--color-apple-dark-secondary);
+    --color-tertiary-background: var(--color-apple-dark-tertiary);
+    --color-grouped-background: var(--color-black);
+    --color-secondary-grouped-background: var(--color-apple-dark-secondary);
+    --color-tertiary-grouped-background: var(--color-apple-dark-tertiary);
+    --color-separator: var(--color-apple-dark-separator);
+    --color-search-bar-background: var(--color-apple-dark-tertiary);
+    --color-textfield-background: var(--color-apple-dark-tertiary);
+    --color-textfield-separator: 255, 255, 255;
+    --color-segmented-control-background: var(--color-apple-dark-tertiary);
+    --color-square-radio-separator: var(--color-apple-dark-tertiary);
+    --color-pagenation-background: 255, 255, 255;
+    --color-close-button-background: var(--color-apple-dark-tertiary);
+  }
+}
