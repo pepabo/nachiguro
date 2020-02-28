@@ -207,7 +207,7 @@ category: Components
 
 .ncgr-button--loading,
 .ncgr-button--loading[type="submit"] {
-  background-image: asset-url('indicator-button.gif');
+  background-image: ncgr-asset-url('images/indicator-button.gif');
   background-position: center;
   background-repeat: no-repeat;
   text-indent: -9999px;

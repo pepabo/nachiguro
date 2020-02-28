@@ -1,10 +1,10 @@
 /* SUZURI オリジナルフォントの読み込み */
 @font-face {
 	font-family: SuzuriIcons;
-	src: asset-url('fontface/suzuri-icons/suzuri-icons.eot') format('oldIE'),
-	asset-url('fontface/suzuri-icons/suzuri-icons.ttf') format('truetype'),
-	asset-url('fontface/suzuri-icons/suzuri-icons.woff') format('woff'),
-	asset-url('fontface/suzuri-icons/suzuri-icons.svg') format('svg');
+	src: ncgr-asset-url('fonts/suzuri-icons/suzuri-icons.eot') format('oldIE'),
+	ncgr-asset-url('fonts/suzuri-icons/suzuri-icons.ttf') format('truetype'),
+	ncgr-asset-url('fonts/suzuri-icons/suzuri-icons.woff') format('woff'),
+	ncgr-asset-url('fonts/suzuri-icons/suzuri-icons.svg') format('svg');
 }
 
 /* icomoonにアイコンを追加したら追記する。

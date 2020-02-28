@@ -11,18 +11,18 @@
 .ncgr-footer-app-banner--yellow {
   background-color: #FFD362;
   @include mediaquery(tablet) {
-    background-image: asset-url('banner/footer/app/footer-app-banner-yellow-phone-tablet.png');
+    background-image: ncgr-asset-url('images/footer/app/footer-app-banner-yellow-phone-tablet.png');
     @include media-retina() {
-      background-image: asset-url("banner/footer/app/footer-app-banner-yellow-phone-tablet@2x.png");
+      background-image: ncgr-asset-url("images/footer/app/footer-app-banner-yellow-phone-tablet@2x.png");
     }
     background-repeat: no-repeat;
     background-size: contain;
     height: 600px;
   }
   @include mediaquery(mobile) {
-    background-image: asset-url('banner/footer/app/footer-app-banner-yellow-phone.png');
+    background-image: ncgr-asset-url('images/footer/app/footer-app-banner-yellow-phone.png');
     @include media-retina() {
-      background-image: asset-url("banner/footer/app/footer-app-banner-yellow-phone@2x.png");
+      background-image: ncgr-asset-url("images/footer/app/footer-app-banner-yellow-phone@2x.png");
     }
     background-repeat: no-repeat;
     background-size: contain;
@@ -209,9 +209,9 @@
 .ncgr-footer-app-banner--white {
   background-color: #F1F0EE;
   @include mediaquery(mobile) {
-    background-image: asset-url('banner/footer/app/footer-app-banner-white-phone-mobile.png');
+    background-image: ncgr-asset-url('images/footer/app/footer-app-banner-white-phone-mobile.png');
     @include media-retina() {
-      background-image: asset-url("banner/footer/app/footer-app-banner-white-phone-mobile@2x.png");
+      background-image: ncgr-asset-url("images/footer/app/footer-app-banner-white-phone-mobile@2x.png");
     }
     height: 580px;
     background-repeat: no-repeat;
@@ -280,18 +280,18 @@
 // sky
 
 .ncgr-footer-app-banner--sky {
-  background-image: asset-url('banner/footer/app/footer-app-banner-sky-bg-pc.jpg');
+  background-image: ncgr-asset-url('images/footer/app/footer-app-banner-sky-bg-pc.jpg');
   @include media-retina() {
-    background-image: asset-url("banner/footer/app/footer-app-banner-sky-bg-pc@2x.jpg");
+    background-image: ncgr-asset-url("images/footer/app/footer-app-banner-sky-bg-pc@2x.jpg");
   }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 85%;
   @include mediaquery(mobile) {
-    background-image: asset-url("banner/footer/app/footer-app-banner-sky-bg-sp.jpg");
+    background-image: ncgr-asset-url("images/footer/app/footer-app-banner-sky-bg-sp.jpg");
     background-position: right;
     @include media-retina() {
-      background-image: asset-url("banner/footer/app/footer-app-banner-sky-bg-sp@2x.jpg");
+      background-image: ncgr-asset-url("images/footer/app/footer-app-banner-sky-bg-sp@2x.jpg");
     }
   }
 }

@@ -45,14 +45,14 @@ $items: 't-shirt',
 
 @each $item in $items {
   .ncgr-item-header--#{$item} {
-    background-image: asset-url("search_by_item/#{$item}/bg-desktop.jpg");
+    background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-desktop.jpg");
     @include media-retina() {
-      background-image: asset-url("search_by_item/#{$item}/bg-desktop@2x.jpg");
+      background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-desktop@2x.jpg");
     }
     @include mediaquery(mobile) {
-      background-image: asset-url("search_by_item/#{$item}/bg-mobile.jpg");
+      background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-mobile.jpg");
       @include media-retina() {
-        background-image: asset-url("search_by_item/#{$item}/bg-mobile@2x.jpg");
+        background-image: ncgr-asset-url("images/search_by_item/#{$item}/bg-mobile@2x.jpg");
       }
     }
   }
