@@ -11,9 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
+
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
 
       - uses: actions/cache@v1
         with:
@@ -21,6 +32,11 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+
+      - name: Build CSS
+        run: |
+          npm ci
+          npm run build
 
       - name: Generate
         run: |
