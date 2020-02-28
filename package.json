@@ -2,9 +2,9 @@
   "name": "nachiguro",
   "version": "0.1.0",
   "description": "SUZURI CSS Framework",
-  "main": "css/nachiguro.css",
+  "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --style compressed --no-error-css sass/nachiguro.scss css/nachiguro.css"
+    "build": "sass --style compressed --no-error-css src/_nachiguro.scss dist/nachiguro.css"
   },
   "repository": {
     "type": "git",
