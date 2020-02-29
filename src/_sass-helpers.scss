@@ -1,0 +1,10 @@
+$ncgr-sprockets: false !default;
+$ncgr-assets-prefix: 'nachiguro/assets/' !default;
+
+@function ncgr-asset-url($path) {
+  @if $ncgr-sprockets {
+    @return asset-url($ncgr-assets-prefix + $path);
+  } @else {
+    @return url($ncgr-assets-prefix + $path);
+  }
+}
