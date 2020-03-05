@@ -65,17 +65,18 @@ JSでDOMを操作する場合は接頭辞`js-`をつけます。
 
 ```html
 <div class="ncgr-block js-ncgr-block">ブロック</div>
-<style>
-  .ncgr-block {
-    color: red;
-  }
-</style>
-<script>
-  $('.js-ncgr-block').on('click', function() {
-    console.log('クリック！');
-  });
-</script>
+```
 
+```css
+.ncgr-block {
+  color: red;
+}
+```
+
+```javascript
+$('.js-ncgr-block').on('click', function() {
+  console.log('クリック！');
+});
 ```
 
 #### margin,paddingの引数
@@ -135,112 +136,26 @@ random関数は使用しないでください。
 @import 'foundation/animation';
 @import 'foundation/breakpoint';
 @import 'foundation/color';
-@import 'foundation/icon';
 @import 'foundation/normalize';
 @import 'foundation/reset';
 @import 'foundation/shadow';
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
-@import 'components/account-tab';
-@import 'components/alert';
 @import 'components/avatar';
-@import 'components/avatar-dialog';
-@import 'components/badge';
-@import 'components/balloon';
 @import 'components/button';
-@import 'components/breadcrumbs';
 @import 'components/card';
-@import 'components/carousel';
-@import 'components/category-menu';
-@import 'components/category-navigation';
-@import 'components/checkbox';
-@import 'components/check-icon';
-@import 'components/choice-card';
-@import 'components/choice-dialog';
-@import 'components/color-selector';
 @import 'components/columns';
-@import 'components/coupon';
-@import 'components/credit-card-icon';
-@import 'components/expansion-card';
-@import 'components/flying-emoji';
-@import 'components/glitch-text';
-@import 'components/grid';
 @import 'components/heading';
 @import 'components/hint';
-@import 'components/icon-button';
 @import 'components/image';
-@import 'components/indicator';
-@import 'components/journal';
-@import 'components/label';
-@import 'components/lead';
 @import 'components/list';
-@import 'components/logo';
-@import 'components/message';
-@import 'components/modal';
-@import 'components/pagenation';
-@import 'components/pie-progress';
-@import 'components/price-slider';
 @import 'components/product-card';
-@import 'components/product-tweet-card';
-@import 'components/radio';
-@import 'components/search-bar';
 @import 'components/section';
-@import 'components/selectbox';
-@import 'components/separator';
-@import 'components/sequence';
-@import 'components/share-buttons';
-@import 'components/sheet';
-@import 'components/snackbar';
-@import 'components/sort-menu';
-@import 'components/spoofing-notification';
-@import 'components/square-radio';
-@import 'components/switch';
-@import 'components/tab';
 @import 'components/table';
-@import 'components/terms-checkbox';
-@import 'components/textfield';
 @import 'components/text-link';
-@import 'components/uploader';
-@import 'components/user-card';
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
-@import 'layout/account-navigation';
-@import 'layout/activity';
-@import 'layout/add-ons';
-@import 'layout/adspolicy';
-@import 'layout/archives';
-@import 'layout/bank-accounts';
-@import 'layout/cart-button';
-@import 'layout/cart-modal';
-@import 'layout/choice-header';
-@import 'layout/developer';
-@import 'layout/empty-state';
-@import 'layout/facebook-dpa-feed';
-@import 'layout/favorites';
-@import 'layout/feature-banner';
-@import 'layout/footer';
-@import 'layout/footer-app-banner';
-@import 'layout/form';
 @import 'layout/header';
-@import 'layout/item-header';
-@import 'layout/item-table';
-@import 'layout/kunshika';
-@import 'layout/letters-to-ie';
-@import 'layout/materials';
-@import 'layout/notification';
-@import 'layout/orders';
-@import 'layout/overlay';
-@import 'layout/people-card';
-@import 'layout/print';
-@import 'layout/product';
-@import 'layout/profile';
-@import 'layout/purchases';
-@import 'layout/settings';
-@import 'layout/signup';
-@import 'layout/styleguide';
-@import 'layout/terms';
-@import 'layout/top';
-@import 'layout/trading';
 
 //「Utility」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
 @import 'utility/align';
