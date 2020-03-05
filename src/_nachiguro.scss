@@ -65,17 +65,18 @@ JSでDOMを操作する場合は接頭辞`js-`をつけます。
 
 ```html
 <div class="ncgr-block js-ncgr-block">ブロック</div>
-<style>
-  .ncgr-block {
-    color: red;
-  }
-</style>
-<script>
-  $('.js-ncgr-block').on('click', function() {
-    console.log('クリック！');
-  });
-</script>
+```
 
+```css
+.ncgr-block {
+  color: red;
+}
+```
+
+```javascript
+$('.js-ncgr-block').on('click', function() {
+  console.log('クリック！');
+});
 ```
 
 #### margin,paddingの引数
