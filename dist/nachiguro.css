@@ -11146,6 +11146,30 @@ body.overflow-hidden {
   }
 }
 
+.ncgr-product__product-choice-card-carousel-list {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.ncgr-product__product-choice-card-carousel-item {
+  margin-right: 16px;
+  width: 100%;
+}
+
+.ncgr-product__product-choice-card-carousel-item:last-child {
+  padding-right: 16px;
+  margin-right: 0;
+}
+
+.ncgr-product__product-choice-card-carousel-card {
+  width: 230px;
+}
+@media screen and (max-width: 480px) {
+  .ncgr-product__product-choice-card-carousel-card {
+    width: 150px;
+  }
+}
+
 .ncgr-product__image {
   overflow: hidden;
   position: relative;
