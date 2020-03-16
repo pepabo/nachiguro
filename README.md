@@ -16,7 +16,7 @@ SUZURI でも新しくブランチを作り、`package.json` を開いてくだ�
   },
 ```
 
-のように変え (`<>` の記号は実際には書かないでください) 、 `docker-compose run --rm app npm install` コマンドを実行してください。
+のように変え (`<>` の記号は実際には書かないでください) 、 `docker-compose run --rm app npm update` コマンドを実行してください。
 
 nachiguro に新たに push した commit をローカルの SUZURI に反映するときにもこのコマンドを実行してください。
 
@@ -48,7 +48,7 @@ SUZURI 側では、さきほど変更確認用に作成したブランチで `pa
   },
 ```
 
-と書き換えて `npm install` を実行し、
+と書き換えて `npm update` を実行し、
 
 ```
 git add package*.json
