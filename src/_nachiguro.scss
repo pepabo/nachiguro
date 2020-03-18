@@ -144,6 +144,7 @@ random関数は使用しないでください。
 @import 'components/avatar';
 @import 'components/button';
 @import 'components/card';
+@import 'components/color-selector';
 @import 'components/columns';
 @import 'components/credit-card-icon';
 @import 'components/expansion-card';
@@ -170,6 +171,7 @@ random関数は使用しないでください。
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
 @import 'layout/header';
+@import 'layout/form';
 
 //「Utility」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
 @import 'utility/align';
