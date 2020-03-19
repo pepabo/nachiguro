@@ -100,15 +100,21 @@ category: Components
     &:hover::before {
       border-color: rgba(var(--color-textfield-separator), 0.2);
     }
-    i {
+    i,
+    svg {
       position: absolute;
       top: 15px;
       left: ((20px - 14px) / 2);
       width: 14px;
       height: 14px;
       font-size: 14px;
-      color: transparent;
       z-index: 1;
+    }
+    i {
+      color: transparent;
+    }
+    svg {
+      fill-opacity: 0;
     }
   }
 
@@ -122,6 +128,9 @@ category: Components
     }
     i {
       color: var(--color-white);
+    }
+    svg {
+      fill-opacity: 1;
     }
   }
 
