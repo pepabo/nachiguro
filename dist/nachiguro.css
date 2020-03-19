@@ -6351,7 +6351,8 @@ category: Components
 .ncgr-selectbox select::-ms-expand {
   display: none;
 }
-.ncgr-selectbox i {
+.ncgr-selectbox i,
+.ncgr-selectbox svg {
   position: absolute;
   top: 16px;
   right: 16px;
