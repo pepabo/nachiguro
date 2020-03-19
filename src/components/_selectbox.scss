@@ -47,7 +47,8 @@ category: Components
   select::-ms-expand {
     display: none;
   }
-  i {
+  i,
+  svg {
     position: absolute;
     top: 16px;
     right: 16px;
