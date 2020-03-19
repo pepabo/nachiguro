@@ -2945,15 +2945,24 @@ category: Components
 .ncgr-checkbox span:hover::before {
   border-color: rgba(var(--color-textfield-separator), 0.2);
 }
-.ncgr-checkbox span i {
+.ncgr-checkbox span i,
+.ncgr-checkbox span svg {
   position: absolute;
   top: 15px;
   left: 3px;
   width: 14px;
   height: 14px;
   font-size: 14px;
-  color: transparent;
   z-index: 1;
+}
+.ncgr-checkbox span i {
+  color: transparent;
+}
+.ncgr-checkbox span svg {
+  fill-opacity: 0;
+}
+.ncgr-checkbox span path {
+  fill: var(--color-white);
 }
 .ncgr-checkbox input:checked + span::before {
   background: var(--color-primary-500);
@@ -2964,6 +2973,9 @@ category: Components
 }
 .ncgr-checkbox input:checked + span i {
   color: var(--color-white);
+}
+.ncgr-checkbox input:checked + span svg {
+  fill-opacity: 1;
 }
 .ncgr-checkbox input:disabled + span::before {
   opacity: 0.3;
