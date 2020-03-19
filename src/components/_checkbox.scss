@@ -116,6 +116,9 @@ category: Components
     svg {
       fill-opacity: 0;
     }
+    path {
+      fill: var(--color-white);
+    }
   }
 
   input:checked + span {
