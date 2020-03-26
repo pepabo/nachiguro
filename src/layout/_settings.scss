@@ -24,3 +24,33 @@
     padding: 0 16px;
   }
 }
+
+
+.ncgr-settings__tfa-qr-code {
+  background-color: var(--color-white);
+  display: inline-block;
+  padding: 4px;
+}
+
+.ncgr-settings__tfa-secret-key {
+  display: flex;
+  border-radius: 8px;
+  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
+}
+
+.ncgr-settings__tfa-recovery-code-card {
+  width: 60%;
+  margin: auto;
+  @include mediaquery(tablet) {
+    width: 100%;
+  }
+}
+
+.ncgr-settings__tfa-recovery-code-flexbox {
+  display: flex;
+  justify-content: center;
+}
+
+.ncgr-settings__tfa-copy-button {
+  display: block
+}
