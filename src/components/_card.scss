@@ -95,7 +95,7 @@ category: Components
       border-radius: 0;
     }
   }
-}　
+}
 
 .ncgr-card--shadow {
   @include shadow-2dp();
@@ -103,10 +103,6 @@ category: Components
 
 .ncgr-card--tertiary-grouped-background {
   background-color: var(--color-tertiary-grouped-background);
-}
-
-.ncgr-card--lightgray-font-color {
-  color: var(--color-default-800);
 }
 
 .ncgr-card__cover {
