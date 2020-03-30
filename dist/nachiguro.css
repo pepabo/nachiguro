@@ -1328,7 +1328,7 @@ category: Mixin
 .controller-account-bank_accounts .ncgr-account-tab__list-item--bank-accounts:first-child .ncgr-account-tab__link,
 .controller-account-mail_receive_settings .ncgr-account-tab__list-item--mail-receive-settings:first-child .ncgr-account-tab__link,
 .controller-account-authorized_apps .ncgr-account-tab__list-item--authorized-apps:first-child .ncgr-account-tab__link,
-.controller-account-coupons .ncgr-account-tab__list-item--coupons:first-child .ncgr-account-tab__link,
+.controller-account-two_factor_authentications .ncgr-account-tab__list-item--two-factor-authentications:first-child .ncgr-account-tab__link,
 .controller-account-facebook_dpa_feeds .ncgr-account-tab__list-item--facebook-dpa-feeds:first-child .ncgr-account-tab__link {
     margin: 0 8px 0 0;
   }
@@ -1340,7 +1340,7 @@ category: Mixin
 .controller-account-bank_accounts .ncgr-account-tab__list-item--bank-accounts:last-child .ncgr-account-tab__link,
 .controller-account-mail_receive_settings .ncgr-account-tab__list-item--mail-receive-settings:last-child .ncgr-account-tab__link,
 .controller-account-authorized_apps .ncgr-account-tab__list-item--authorized-apps:last-child .ncgr-account-tab__link,
-.controller-account-coupons .ncgr-account-tab__list-item--coupons:last-child .ncgr-account-tab__link,
+.controller-account-two_factor_authentications .ncgr-account-tab__list-item--two-factor-authentications:last-child .ncgr-account-tab__link,
 .controller-account-facebook_dpa_feeds .ncgr-account-tab__list-item--facebook-dpa-feeds:last-child .ncgr-account-tab__link {
     margin: 0 0 0 8px;
   }
@@ -1351,7 +1351,7 @@ category: Mixin
 .controller-account-bank_accounts .ncgr-account-tab__list-item--bank-accounts .ncgr-account-tab__link,
 .controller-account-mail_receive_settings .ncgr-account-tab__list-item--mail-receive-settings .ncgr-account-tab__link,
 .controller-account-authorized_apps .ncgr-account-tab__list-item--authorized-apps .ncgr-account-tab__link,
-.controller-account-coupons .ncgr-account-tab__list-item--coupons .ncgr-account-tab__link,
+.controller-account-two_factor_authentications .ncgr-account-tab__list-item--two-factor-authentications .ncgr-account-tab__link,
 .controller-account-facebook_dpa_feeds .ncgr-account-tab__list-item--facebook-dpa-feeds .ncgr-account-tab__link {
   color: var(--color-label);
 }
@@ -1362,7 +1362,7 @@ category: Mixin
 .controller-account-bank_accounts .ncgr-account-tab__list-item--bank-accounts .ncgr-account-tab__link,
 .controller-account-mail_receive_settings .ncgr-account-tab__list-item--mail-receive-settings .ncgr-account-tab__link,
 .controller-account-authorized_apps .ncgr-account-tab__list-item--authorized-apps .ncgr-account-tab__link,
-.controller-account-coupons .ncgr-account-tab__list-item--coupons .ncgr-account-tab__link,
+.controller-account-two_factor_authentications .ncgr-account-tab__list-item--two-factor-authentications .ncgr-account-tab__link,
 .controller-account-facebook_dpa_feeds .ncgr-account-tab__list-item--facebook-dpa-feeds .ncgr-account-tab__link {
     color: var(--color-label);
     background-color: var(--color-segmented-control-background);
