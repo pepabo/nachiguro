@@ -28,7 +28,7 @@
   cursor: pointer;
   color: var(--color-secondary-label);
   padding: 0 12px 0 12px;
-  &:hover {	
+  &:hover {
     color: var(--color-label);
   }
   @include mediaquery(tablet) {
@@ -54,7 +54,7 @@
 .controller-account-bank_accounts .ncgr-account-tab__list-item--bank-accounts,
 .controller-account-mail_receive_settings .ncgr-account-tab__list-item--mail-receive-settings,
 .controller-account-authorized_apps .ncgr-account-tab__list-item--authorized-apps,
-.controller-account-coupons .ncgr-account-tab__list-item--coupons,
+.controller-account-coupons .ncgr-account-tab__list-item--two-factor-authentication,
 .controller-account-facebook_dpa_feeds .ncgr-account-tab__list-item--facebook-dpa-feeds {
   &:first-child {
     .ncgr-account-tab__link {
