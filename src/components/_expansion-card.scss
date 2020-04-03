@@ -103,6 +103,7 @@ category: Components
   position: absolute;
   right: 16px;
   top: 18px;
+  pointer-events: none;
 }
 
 .ncgr-expansion-card__checkbox:checked ~ .ncgr-expansion-card__arrow {
