@@ -1,0 +1,71 @@
+/*doc
+---
+title: Grid
+name: grid
+category: Utility
+---
+
+グリッドレイアウトを実現します。
+columnsコンポーネントと役割がかぶっていますが、gridコンポーネントの方がmediaqueryやgutterを柔軟に使用できるので今後はこちらを使います。
+
+```example
+<div class="ncgr-grid">
+  <div class="ncgr-grid__cell-3 ncgr-grid__cell-6--tablet ncgr-grid__cell-12--mobile">
+    1
+  </div>
+  <div class="ncgr-grid__cell-3 ncgr-grid__cell-6--tablet ncgr-grid__cell-12--mobile">
+    2
+  </div>
+  <div class="ncgr-grid__cell-3 ncgr-grid__cell-6--tablet ncgr-grid__cell-12--mobile">
+    3
+  </div>
+  <div class="ncgr-grid__cell-3 ncgr-grid__cell-6--tablet ncgr-grid__cell-12--mobile">
+    4
+  </div>
+</div>
+```
+
+*/
+
+.ncgr-grid {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ncgr-grid--gutters-16 {
+  margin: 0 -8px 0 -8px;
+}
+
+@for $i from 1 through 12 {
+  .ncgr-grid__cell-#{$i} {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    flex-basis: calc(#{$i} / 12 * 100%);
+    max-width: calc(#{$i} / 12 * 100%);
+  }
+
+  .ncgr-grid--gutters-16 > .ncgr-grid__cell-#{$i} {
+    padding: 0 8px 16px 8px;
+  }
+}
+
+@include mediaquery(tablet) {
+  @for $i from 1 through 12 {
+    .ncgr-grid__cell-#{$i}--tablet {
+      flex-basis: calc(#{$i} / 12 * 100%);
+      max-width: calc(#{$i} / 12 * 100%);
+    }
+  }
+}
+
+@include mediaquery(mobile) {
+  @for $i from 1 through 12 {
+    .ncgr-grid__cell-#{$i}--mobile {
+      flex-basis: calc(#{$i} / 12 * 100%);
+      max-width: calc(#{$i} / 12 * 100%);
+    }
+  }
+}
