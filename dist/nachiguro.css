@@ -4903,52 +4903,52 @@ html 要素に以下の class を指定することで、スマホ版と PC 版�
 .if-phone-show,
 .if-tablet-show,
 .if-pc-show {
-  display: none;
+  display: none !important;
 }
 
 .if-pc-hide {
-  display: none;
+  display: none !important;
 }
 @media screen and (max-width: 480px) {
   .if-pc-hide {
-    display: block;
+    display: block !important;
   }
 }
 
 .if-pc-show {
-  display: block;
+  display: block !important;
 }
 @media screen and (max-width: 480px) {
   .if-pc-show {
-    display: none;
+    display: none !important;
   }
 }
 .if-pc-show.if-pc-show--is_inline {
-  display: inline;
+  display: inline !important;
 }
 
 @media screen and (max-width: 768px) {
   .if-tablet-hide {
-    display: none;
+    display: none !important;
   }
 
   .if-tablet-show {
-    display: block;
+    display: block !important;
   }
   .if-tablet-show.if-tablet-show--is_inline {
-    display: inline;
+    display: inline !important;
   }
 }
 @media screen and (max-width: 480px) {
   .if-phone-hide {
-    display: none;
+    display: none !important;
   }
 
   .if-phone-show {
-    display: block;
+    display: block !important;
   }
   .if-phone-show.if-phone-show--is_inline {
-    display: inline;
+    display: inline !important;
   }
 }
 /*doc
