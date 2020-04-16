@@ -1361,6 +1361,95 @@ category: Mixin
 
 /*doc
 ---
+title: Alert
+name: alert
+category: Components
+---
+
+お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。
+
+```example
+<div class="ncgr-alert ncgr-alert--default">
+  デフォルト
+</div>
+<div class="ncgr-alert ncgr-alert--primary">
+  お得な情報
+</div>
+<div class="ncgr-alert ncgr-alert--success">
+  良好な状態
+</div>
+<div class="ncgr-alert ncgr-alert--warning">
+  注意喚起
+</div>
+<div class="ncgr-alert ncgr-alert--danger">
+  発生中のエラー
+</div>
+```
+
+*/
+.ncgr-alert {
+  background-color: var(--color-default-50);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--color-default-900);
+  font-weight: bold;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert {
+    background-color: var(--color-default-200);
+  }
+}
+.ncgr-alert.ncgr-alert--default {
+  background-color: var(--color-default-50);
+  color: var(--color-default-900);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.ncgr-alert--default {
+    background-color: var(--color-default-200);
+  }
+}
+.ncgr-alert.ncgr-alert--primary {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-900);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.ncgr-alert--primary {
+    background-color: var(--color-primary-200);
+  }
+}
+.ncgr-alert.ncgr-alert--success {
+  background-color: var(--color-success-50);
+  color: var(--color-success-900);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.ncgr-alert--success {
+    background-color: var(--color-success-200);
+  }
+}
+.ncgr-alert.ncgr-alert--warning {
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-900);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.ncgr-alert--warning {
+    background-color: var(--color-warning-200);
+  }
+}
+.ncgr-alert.ncgr-alert--danger {
+  background-color: var(--color-danger-50);
+  color: var(--color-danger-900);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.ncgr-alert--danger {
+    background-color: var(--color-danger-200);
+  }
+}
+
+/*doc
+---
 title: Avatar
 name: avatar
 category: Components
