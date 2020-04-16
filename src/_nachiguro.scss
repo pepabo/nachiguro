@@ -132,7 +132,6 @@ random関数は使用しないでください。
 @import 'sass-helpers';
 
 //「Foundation」は、スタイルシートを読み込む順番が変わると、意図しない表示になる可能性があります。
-
 @import 'foundation/animation';
 @import 'foundation/breakpoint';
 @import 'foundation/color';
@@ -141,6 +140,7 @@ random関数は使用しないでください。
 @import 'foundation/shadow';
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
+@import 'components/alert';
 @import 'components/avatar';
 @import 'components/button';
 @import 'components/card';
