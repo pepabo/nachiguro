@@ -11,6 +11,7 @@
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./dist/nachiguro.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header class="ncgr-header ncgr-header--fixed">
@@ -26,43 +27,38 @@
           </div>
         </div>
       </div>
-      <nav class="ncgr-category-navigation">
-        <div class="ncgr-category-navigation__inner">
-          <ul class="ncgr-category-navigation__list">
-            <% @categories.sort.each do |category| %>
-              <% unless category[0] == 'index' %>
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="<%= category[1] %>">
-                    <%= category[0] %>
-                  </a>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </div>
-      </nav>
     </header>
-    <div class="ncgr-styleguide">
+    <div class="styleguide">
       <% if title %>
-        <div class="ncgr-styleguide__nav">
-          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
-            <% unless title == 'index' %>
-              <%= title %>
-            <% else %>
-              <%= @config['pepagram']['title'] %>
-            <% end %>
-          </h2>
-          <nav class="ncgr-account-tab">
-            <ul class="ncgr-account-tab__list">
-              <% @blocks.each do |block| %>
-                <li class="ncgr-account-tab__list-item">
-                  <a class="ncgr-account-tab__link" href="#<%= block[:name] %>"><%= block[:title] %></a>
-                </li>
-              <% end %>
-            </li>
+        <div class="styleguide__nav">
+          <nav>
+            <div>
+              <ul>
+                <% @categories.sort.each do |category| %>
+                  <% unless category[0] == 'index' %>
+                    <li>
+                      <a class="ncgr-text-link" href="<%= category[1] %>">
+                        <%= category[0] %>
+                      </a>
+                      <% if category[0] == title %>
+                        <ul class="ncgr-pad-l-16">
+                          <% @blocks.each do |block| %>
+                            <li>
+                              <a class="ncgr-text-link" href="#<%= block[:name] %>">
+                                <%= block[:title] %>
+                              </a>
+                            </li>
+                          <% end %>
+                        </ul>
+                      <% end %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
           </nav>
         </div>
       <% end %>
-      <div class="ncgr-styleguide__content">
+      <div class="styleguide__content">
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
