@@ -11,6 +11,7 @@
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./dist/nachiguro.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header class="ncgr-header ncgr-header--fixed">
@@ -26,80 +27,83 @@
           </div>
         </div>
       </div>
-      <nav class="ncgr-category-navigation">
-        <div class="ncgr-category-navigation__inner">
-          <ul class="ncgr-category-navigation__list">
-            
-              
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="animation.html">
-                    Animation
-                  </a>
-                </li>
-              
-            
-              
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="color.html">
-                    Color
-                  </a>
-                </li>
-              
-            
-              
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="components.html">
-                    Components
-                  </a>
-                </li>
-              
-            
-              
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="mixin.html">
-                    Mixin
-                  </a>
-                </li>
-              
-            
-              
-                <li class="ncgr-category-navigation__list-item">
-                  <a class="ncgr-category-navigation__link" href="utility.html">
-                    Utility
-                  </a>
-                </li>
-              
-            
-              
-            
-          </ul>
-        </div>
-      </nav>
     </header>
-    <div class="ncgr-styleguide">
+    <div class="styleguide">
       
-        <div class="ncgr-styleguide__nav">
-          <h2 class="ncgr-typography-bold ncgr-mar-b-8 if-tablet-hide">
-            
-              Mixin
-            
-          </h2>
-          <nav class="ncgr-account-tab">
-            <ul class="ncgr-account-tab__list">
-              
-                <li class="ncgr-account-tab__list-item">
-                  <a class="ncgr-account-tab__link" href="#breakpoint">Breakpoint</a>
-                </li>
-              
-                <li class="ncgr-account-tab__list-item">
-                  <a class="ncgr-account-tab__link" href="#Shadow">Shadow</a>
-                </li>
-              
-            </li>
+        <div class="styleguide__nav">
+          <nav>
+            <div>
+              <ul>
+                
+                  
+                    <li>
+                      <a class="ncgr-text-link" href="animation.html">
+                        Animation
+                      </a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li>
+                      <a class="ncgr-text-link" href="color.html">
+                        Color
+                      </a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li>
+                      <a class="ncgr-text-link" href="components.html">
+                        Components
+                      </a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li>
+                      <a class="ncgr-text-link" href="mixin.html">
+                        Mixin
+                      </a>
+                      
+                        <ul class="ncgr-pad-l-16">
+                          
+                            <li>
+                              <a class="ncgr-text-link" href="#breakpoint">
+                                Breakpoint
+                              </a>
+                            </li>
+                          
+                            <li>
+                              <a class="ncgr-text-link" href="#Shadow">
+                                Shadow
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                
+                  
+                    <li>
+                      <a class="ncgr-text-link" href="utility.html">
+                        Utility
+                      </a>
+                      
+                    </li>
+                  
+                
+                  
+                
+              </ul>
+            </div>
           </nav>
         </div>
       
-      <div class="ncgr-styleguide__content">
+      <div class="styleguide__content">
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 <h1 id="breakpoint" class="styleguide">Breakpoint</h1>
@@ -111,7 +115,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
         </div><!-- end of .ncgr-section -->
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="ncgr-styleguide__code">
+            <div class="styleguide__code">
               <pre>@include mediaquery(mobile) {
   padding: 4px;
 }
@@ -125,7 +129,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
             </div>
           </div>
         </div>
-        <div class="ncgr-styleguide__content">
+        <div class="styleguide__content">
           <div class="ncgr-section ncgr-section--background">
             <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
@@ -134,7 +138,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
         </div><!-- end of .ncgr-section -->
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="ncgr-styleguide__code">
+            <div class="styleguide__code">
               <pre>@include media-retina() {
   background: url("hoge@2x.jpg");
 }
@@ -142,7 +146,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
             </div>
           </div>
         </div>
-        <div class="ncgr-styleguide__content">
+        <div class="styleguide__content">
           <div class="ncgr-section ncgr-section--background">
             <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
@@ -155,7 +159,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
         </div><!-- end of .ncgr-section -->
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="ncgr-styleguide__code">
+            <div class="styleguide__code">
               <pre>@include shadow-0dp();
 @include shadow-2dp();
 @include shadow-3dp();
@@ -168,15 +172,15 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
             </div>
           </div>
         </div>
-        <div class="ncgr-styleguide__content">
+        <div class="styleguide__content">
           <div class="ncgr-section ncgr-section--background">
             <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
             </div><!-- end of .ncgr-section__inner -->
           </div><!-- end of .ncgr-section -->
-        </div><!-- end of .ncgr-styleguide__content -->
+        </div><!-- end of .styleguide__content -->
         <div class="ncgr-section ncgr-section--background">
           <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="ncgr-styleguide__preview">
+            <div class="styleguide__preview">
               <!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
 <div class="brsh-shadow__0dp" style="width: 100px; height: 100px;"></div>
 <div class="ncgr-shadow__2dp" style="width: 100px; height: 100px;"></div>
@@ -188,7 +192,7 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
 <div class="ncgr-shadow__24dp" style="width: 100px; height: 100px;"></div>
 
             </div>
-            <div class="ncgr-styleguide__code">
+            <div class="styleguide__code">
               <pre><span class="c">&lt;!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"brsh-shadow__0dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__2dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -202,15 +206,15 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
             </div>
           </div>
         </div>
-        <div class="ncgr-styleguide__content">
+        <div class="styleguide__content">
           <div class="ncgr-section ncgr-section--background">
             <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
           </div><!-- end of .ncgr-section__inner -->
         </div><!-- end of .ncgr-section -->
-      </div><!-- end of .ncgr-styleguide__content -->
+      </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2020年4月16日
+          最終更新日: 2020年4月22日
         </div>
         <div>
           © 2020 SUZURI ❤️from 東京・渋谷
