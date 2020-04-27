@@ -3911,6 +3911,7 @@ category: Components
   outline: 0;
   box-shadow: none;
   border: 0 !important;
+  border-radius: 8px;
   background-color: var(--color-textfield-background);
   background-image: none;
   width: 100%;
