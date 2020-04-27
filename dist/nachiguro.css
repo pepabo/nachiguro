@@ -4097,6 +4097,32 @@ category: Components
   outline: 0;
 }
 
+.ncgr-share-button__line-button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  appearance: none;
+  height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+  border-radius: 4px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 8px 0 8px;
+  background: var(--color-brand-line);
+  color: var(--color-white);
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+.ncgr-share-button__line-button:focus, .ncgr-share-button__line-button:active:focus {
+  outline: none;
+}
+.ncgr-share-button__line-button:active, .ncgr-share-button__line-button.ncgr-button--active {
+  outline: 0;
+}
+
 /*doc
 ---
 title: Sheet
