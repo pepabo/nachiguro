@@ -92,7 +92,7 @@ category: Components
   line-height: 6px;
 }
 
-.ncgr-selectbox__prefecture-code {
+.ncgr-selectbox--prefecture-code {
   width: 284px;
   @include mediaquery(tablet) {
     width: 100%;
