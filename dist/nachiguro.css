@@ -3967,6 +3967,15 @@ category: Components
   line-height: 6px;
 }
 
+.ncgr-selectbox--prefecture-code {
+  width: 284px;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-selectbox--prefecture-code {
+    width: 100%;
+  }
+}
+
 /*doc
 ---
 title: Sequence
@@ -4554,7 +4563,6 @@ error・successの場合は以下のようにマークアップします。
 }
 .ncgr-textfield__input[type=color], .ncgr-textfield__input[type=date], .ncgr-textfield__input[type=datetime-local], .ncgr-textfield__input[type=datetime], .ncgr-textfield__input[type=email], .ncgr-textfield__input[type=month], .ncgr-textfield__input[type=number], .ncgr-textfield__input[type=password], .ncgr-textfield__input[type=search], .ncgr-textfield__input[type=tel], .ncgr-textfield__input[type=text], .ncgr-textfield__input[type=time], .ncgr-textfield__input[type=url], .ncgr-textfield__input[type=week] {
   height: 54px;
-  line-height: 54px;
 }
 .ncgr-textfield__input:placeholder-shown {
   color: var(--color-placeholder-text);
@@ -4595,7 +4603,8 @@ error・successの場合は以下のようにマークアップします。
 .ncgr-textfield__input--name,
 .ncgr-textfield__input--zip-code,
 .ncgr-textfield__input--expiration-date,
-.ncgr-textfield__input--security-code {
+.ncgr-textfield__input--security-code,
+.ncgr-textfield__input--birthday {
   width: 140px;
 }
 
@@ -4604,6 +4613,14 @@ error・successの場合は以下のようにマークアップします。
 .ncgr-textfield__input--email,
 .ncgr-textfield__input--credit-card-number {
   width: 284px;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-textfield__input--address,
+.ncgr-textfield__input--phone,
+.ncgr-textfield__input--email,
+.ncgr-textfield__input--credit-card-number {
+    width: 100%;
+  }
 }
 
 .ncgr-textfield__input--half {
