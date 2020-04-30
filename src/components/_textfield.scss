@@ -208,7 +208,6 @@ error・successの場合は以下のようにマークアップします。
   &[type='url'],
   &[type='week'] {
     height: 54px;
-    line-height: 54px;
   }
   &:placeholder-shown {
     color: var(--color-placeholder-text);
@@ -255,7 +254,8 @@ error・successの場合は以下のようにマークアップします。
 .ncgr-textfield__input--name,
 .ncgr-textfield__input--zip-code,
 .ncgr-textfield__input--expiration-date,
-.ncgr-textfield__input--security-code {
+.ncgr-textfield__input--security-code,
+.ncgr-textfield__input--birthday {
   width: 140px;
 }
 
@@ -264,6 +264,9 @@ error・successの場合は以下のようにマークアップします。
 .ncgr-textfield__input--email,
 .ncgr-textfield__input--credit-card-number {
   width: 284px;
+  @include mediaquery(tablet) {
+    width: 100%;
+  }
 }
 
 .ncgr-textfield__input--half {

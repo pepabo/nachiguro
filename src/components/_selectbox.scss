@@ -91,3 +91,10 @@ category: Components
   z-index: 2;
   line-height: 6px;
 }
+
+.ncgr-selectbox--prefecture-code {
+  width: 284px;
+  @include mediaquery(tablet) {
+    width: 100%;
+  }
+}
