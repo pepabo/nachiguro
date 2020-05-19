@@ -108,6 +108,8 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
   border: 1px solid var(--color-default-75);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
   color: var(--color-danger-300);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
   &:hover {
     border: 1px solid var(--color-default-200);
   }
