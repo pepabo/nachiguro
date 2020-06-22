@@ -4705,6 +4705,126 @@ category: Components
   text-decoration: underline;
 }
 
+.ncgr-footer__section {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 32px 24px 32px 24px;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__section {
+    padding: 24px 16px 24px 16px;
+  }
+}
+
+.ncgr-footer__corporate {
+  padding: 32px 24px 32px 24px;
+  background-color: var(--color-secondary-background);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__corporate {
+    padding: 24px 16px 24px 16px;
+  }
+}
+
+.ncgr-footer__corporate-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ncgr-footer__corporate-nav dl {
+  font-size: 13px;
+  width: 18%;
+  line-height: 1.8;
+}
+.ncgr-footer__corporate-nav dl dt {
+  margin-bottom: 4px;
+  color: var(--color-secondary-label);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__corporate-nav dl {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__corporate-nav .ncgr-footer__copyright-group {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.ncgr-footer__corporate-nav a {
+  color: var(--color-label);
+}
+
+.ncgr-footer__pepabo-logo {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__pepabo-logo {
+    margin: 0 auto;
+    width: 240px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-footer__pepabo-logo path {
+    fill: var(--color-white);
+  }
+  .ncgr-footer__pepabo-logo g {
+    fill: var(--color-white);
+  }
+}
+
+.ncgr-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ncgr-footer__nav a {
+  color: var(--color-white);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__nav {
+    display: block;
+  }
+}
+
+.ncgr-footer__list {
+  width: 18%;
+  line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-footer__list {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .ncgr-footer__list:last-child {
+    margin-bottom: 0;
+  }
+}
+.ncgr-footer__list a {
+  cursor: pointer;
+}
+
+.ncgr-footer__heading {
+  font-size: 14px;
+  color: var(--color-default-600);
+  margin-bottom: 4px;
+}
+
+.ncgr-footer__copyright {
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 16px 0;
+}
+.ncgr-footer__copyright a {
+  color: var(--color-default-800);
+}
+
+.ncgr-footer__suzuri-logo {
+  width: 120px;
+  height: auto;
+}
+
 .ncgr-header {
   background-color: var(--color-secondary-grouped-background);
   width: 100%;
