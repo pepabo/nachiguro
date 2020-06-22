@@ -1,0 +1,107 @@
+.ncgr-footer__section {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 32px 24px 32px 24px;
+  @include mediaquery(tablet) {
+    padding: 24px 16px 24px 16px;
+  }
+}
+
+.ncgr-footer__corporate {
+  padding: 32px 24px 32px 24px;
+  background-color: var(--color-secondary-background);
+  @include mediaquery(tablet) {
+    padding: 24px 16px 24px 16px;
+  }
+}
+
+.ncgr-footer__corporate-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  dl {
+    font-size: 13px;
+    width: 18%;
+    line-height: 1.8;
+    dt {
+      margin-bottom: 4px;
+      color: var(--color-secondary-label);
+    }
+    @include mediaquery(tablet) {
+      display: none;
+    }
+  }
+  .ncgr-footer__copyright-group {
+    @include mediaquery(tablet) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  a {
+    color: var(--color-label);
+  }
+}
+
+.ncgr-footer__pepabo-logo {
+  display: block;
+  @include mediaquery(tablet) {
+    margin: 0 auto;
+    width: 240px;
+  }
+  @media (prefers-color-scheme: dark) {
+    path {
+      fill: var(--color-white);
+    }
+    g {
+      fill: var(--color-white);
+    }
+  }
+}
+
+.ncgr-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    color: var(--color-white);
+  }
+  @include mediaquery(tablet) {
+    display: block;
+  }
+}
+
+.ncgr-footer__list {
+  width: 18%;
+  line-height: 1.8;
+  @include mediaquery(tablet) {
+    width: 100%;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
+.ncgr-footer__heading {
+  font-size: 14px;
+  color: var(--color-default-600);
+  margin-bottom: 4px;
+}
+
+.ncgr-footer__copyright {
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 16px 0;
+  a {
+    color: var(--color-default-800);
+  }
+}
+
+.ncgr-footer__suzuri-logo {
+  width: 120px;
+  height: auto;
+}

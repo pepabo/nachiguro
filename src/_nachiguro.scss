@@ -171,6 +171,7 @@ random関数は使用しないでください。
 @import 'components/text-link';
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
+@import 'layout/footer';
 @import 'layout/header';
 @import 'layout/form';
 
