@@ -32,6 +32,7 @@ category: Components
   box-sizing: border-box;
   select {
     appearance: none;
+    -webkit-appearance: none;
     outline: 0;
     box-shadow: none;
     border: 0 !important;
