@@ -569,13 +569,13 @@ category: Components
 .ncgr-button.ncgr-button--apple {
   border-bottom: solid 4px var(--color-brand-apple);
   background: var(--color-brand-apple);
-  color: var(--color-white);
+  color: var(--color-brand-apple-font);
   &:active,
   &.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-black) inset;
+    box-shadow: 0 2px 0 0 var(--color-brand-apple) inset;
     border-bottom: none;
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-brand-apple);
+    color: var(--color-brand-apple-font);
   }
 }
 

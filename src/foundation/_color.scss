@@ -417,6 +417,7 @@ category: Color
   --color-pagenation-background: 0, 0, 0;
   --color-close-button-background: var(--color-default-100);
   --color-brand-apple: var(--color-black);
+  --color-brand-apple-font: var(--color-white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -439,5 +440,6 @@ category: Color
     --color-pagenation-background: 255, 255, 255;
     --color-close-button-background: var(--color-apple-dark-tertiary);
     --color-brand-apple: var(--color-white);
+    --color-brand-apple-font: var(--color-black);
   }
 }
