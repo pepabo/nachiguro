@@ -566,6 +566,19 @@ category: Components
   }
 }
 
+.ncgr-button.ncgr-button--apple {
+  border-bottom: solid 4px var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
+  &:active,
+  &.ncgr-button--active {
+    box-shadow: 0 2px 0 0 var(--color-black) inset;
+    border-bottom: none;
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
 .ncgr-button.ncgr-button--embeded {
   border-bottom: none;
   background: var(--color-default-75);
