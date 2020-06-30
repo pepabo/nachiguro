@@ -772,6 +772,8 @@ category: Color
   --color-square-radio-separator: var(--color-default-75);
   --color-pagenation-background: 0, 0, 0;
   --color-close-button-background: var(--color-default-100);
+  --color-brand-apple: var(--color-black);
+  --color-brand-apple-font: var(--color-white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -793,6 +795,8 @@ category: Color
     --color-square-radio-separator: var(--color-apple-dark-tertiary);
     --color-pagenation-background: 255, 255, 255;
     --color-close-button-background: var(--color-apple-dark-tertiary);
+    --color-brand-apple: var(--color-white);
+    --color-brand-apple-font: var(--color-black);
   }
 }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -2113,6 +2117,18 @@ category: Components
   border-bottom: none;
   background: var(--color-brand-nicovideo-dark);
   color: var(--color-white);
+}
+
+.ncgr-button.ncgr-button--apple {
+  border-bottom: solid 4px var(--color-brand-apple);
+  background: var(--color-brand-apple);
+  color: var(--color-brand-apple-font);
+}
+.ncgr-button.ncgr-button--apple:active, .ncgr-button.ncgr-button--apple.ncgr-button--active {
+  box-shadow: 0 2px 0 0 var(--color-brand-apple) inset;
+  border-bottom: none;
+  background: var(--color-brand-apple);
+  color: var(--color-brand-apple-font);
 }
 
 .ncgr-button.ncgr-button--embeded {
