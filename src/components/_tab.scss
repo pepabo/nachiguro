@@ -1,0 +1,87 @@
+/*doc
+---
+title: Tab
+name: tab
+category: Components
+---
+
+ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
+項目の数はなるべく5つ以下にとどめるようにし、どうしてもそれより数が多くなる場合は画面の高さを圧迫しないように、折り返すのではなく、横スクロールでアクセスできるようにします。
+
+左が一番優先順位が高くデフォルト位置であるべきであり、右に行くほど優先順位が低くなります。
+この場合、隠れてしまうボタンは基本的には押されない前提で設計するべきでしょう。
+
+```example
+<ul class="ncgr-tab">
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link ncgr-tab__link--active" href="#">
+      アイテム
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      オモイデ
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      ズッキュン
+    </a>
+  </li>
+  <li class="ncgr-tab__item">
+    <a class="ncgr-tab__link" href="#">
+      ジャーナル
+    </a>
+  </li>
+</ul>
+```
+
+*/
+
+.ncgr-tab {
+  padding: 16px 0 16px 0;
+  text-align: center;
+}
+
+.ncgr-tab__item {
+  display: inline-block;
+}
+
+.ncgr-tab__link {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 24px;
+  display: inline-block;
+  color: var(--color-secondary-label);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  padding: 0 16px 0 16px;
+  height: 48px;
+  line-height: 48px;
+  &:hover {
+    color: var(--color-label);
+  }
+  @include mediaquery(mobile) {
+    border-radius: 16px;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0 8px 0 8px;
+  }
+}
+
+.ncgr-tab__link--active {
+  background-color: var(--color-segmented-control-background);
+  color: var(--color-label);
+}
+
+.ncgr-tab__sticky-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--color-secondary-grouped-background);
+  transform: translateY(-226px);
+  @include shadow-4dp();
+}
