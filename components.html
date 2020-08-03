@@ -74,6 +74,12 @@
                             </li>
                           
                             <li>
+                              <a class="ncgr-text-link" href="#breadcrumbs">
+                                Breadcrumbs
+                              </a>
+                            </li>
+                          
+                            <li>
                               <a class="ncgr-text-link" href="#button">
                                 Button
                               </a>
@@ -328,6 +334,63 @@
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="breadcrumbs" class="styleguide">Breadcrumbs</h1>
+
+<p>パンくずリストのコンポーネントです。
+ユーザーの現在位置をわかりやすくするため、またSEO対策のために用いられます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="styleguide__preview">
+              <ol class="ncgr-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+  <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a class="ncgr-breadcrumbs__link" itemtype="http://schema.org/Thing" itemprop="item" href="#">
+      <span itemprop="name">
+        トップ
+      </span>
+    </a>
+    <meta itemprop="position" content="1" />
+  </li>
+  <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a class="ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item" href="#">
+      <span itemprop="name">
+        アイテム
+      </span>
+    </a>
+    <meta itemprop="position" content="2" />
+  </li>
+</ol>
+
+            </div>
+            <div class="styleguide__code">
+              <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/BreadcrumbList"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__item"</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__link"</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/Thing"</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        トップ
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"position"</span> <span class="na">content=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__item"</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active"</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/Thing"</span> <span class="na">itemprop=</span><span class="s">"item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        アイテム
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"position"</span> <span class="na">content=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
 </pre>
             </div>
           </div>
@@ -2330,7 +2393,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2020年6月30日
+          最終更新日: 2020年8月3日
         </div>
         <div>
           © 2020 SUZURI ❤️from 東京・渋谷
