@@ -4059,6 +4059,28 @@ category: Components
 
 /*doc
 ---
+title: Separator
+name: separator
+category: Components
+---
+
+各要素を区切るのに使います。
+
+```example
+<hr class="ncgr-separator">
+```
+
+*/
+.ncgr-separator {
+  background-color: var(--color-separator);
+  box-sizing: border-box;
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+/*doc
+---
 title: Sequence
 name: sequence
 category: Components
@@ -4778,6 +4800,84 @@ category: Components
 
 .ncgr-text-link--underline {
   text-decoration: underline;
+}
+
+/*doc
+---
+title: Uploader
+name: uploader
+category: Components
+---
+
+画像をアップロードするために使用します。
+
+```example
+<div class="ncgr-uploader">
+  <div class="ncgr-uploader__inner">
+    <div class="ncgr-uploader__icon">
+      <i class="fas fa-image"></i>
+    </div>
+    <ul class="ncgr-mar-b-8 ncgr-typography-small ncgr-typography-light">
+      <li>.jpg .pngの形式ですか？</li>
+      <li>サイズは15MB以下ですか？</li>
+      <li>権利侵害していませんか？</li>
+    </ul>
+    <button class="ncgr-button ncgr-button--primary ncgr-button--fluid">
+      <i class="fas fa-upload"></i>
+      画像をアップロード
+    </button>
+  </div>
+</div>
+```
+
+*/
+.ncgr-uploader {
+  background-color: var(--color-tertiary-grouped-background);
+  border: rgba(var(--color-textfield-separator), 0.15) 4px dashed;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.ncgr-uploader--sub {
+  background-color: var(--color-tertiary-background);
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  .ncgr-uploader--sub {
+    width: 323px;
+    height: 323px;
+  }
+}
+.ncgr-uploader--sub .ncgr-uploader__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ncgr-uploader--developer {
+  background-color: var(--color-default-600);
+  border: var(--color-default-300) 4px dashed;
+}
+
+.ncgr-uploader__inner {
+  box-sizing: border-box;
+  display: block;
+  padding: 16px;
+  position: relative;
+}
+
+.ncgr-uploader__icon {
+  color: var(--color-secondary-label);
+  font-size: 64px;
+  line-height: 1;
 }
 
 /*doc
