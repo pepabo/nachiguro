@@ -79,13 +79,13 @@ category: Components
   height: 120px;
   margin: 8px auto;
 }
-.ncgr-hide-light {
+.ncgr-hide-dark {
   @media (prefers-color-scheme: dark) {
     display: none;
   }
 }
 
-.ncgr-hide-dark {
+.ncgr-hide-light {
   @media (prefers-color-scheme: light) {
     display: none;
   }
@@ -108,16 +108,13 @@ category: Components
   0% {
     opacity: 100%;
   }
-  30% {
+  33% {
     opacity: 100%;
   }
-  34% {
-    opacity: 60%;
-  }
-  96% {
+  36% {
     opacity: 60%;
   }
   100% {
-    opacity: 100%;
+    opacity: 60%;
   }
 }
