@@ -81,13 +81,16 @@ category: Components
 }
 
 .ncgr-texthighlight--first {
+  opacity:60%
   animation: uploader_textanim 7s ease 0s infinite;
 }
 .ncgr-texthighlight--second {
+  opacity:60%
   animation: uploader_textanim 7s ease 2100ms infinite;
 }
 .ncgr-texthighlight--third {
-  animation: uploader_textanim 7s ease 4200s infinite;
+  opacity:60%
+  animation: uploader_textanim 7s ease 4200ms infinite;
 }
 
 @keyframes uploader_textanim {
@@ -97,7 +100,7 @@ category: Components
   30%{
     opacity: 100%;
   }
-  31%{
+  34%{
     opacity:60%;
   }
   100%{
