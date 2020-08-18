@@ -81,15 +81,15 @@ category: Components
 }
 
 .ncgr-texthighlight--first {
-  opacity:60%
+  opacity:60%;
   animation: uploader_textanim 7s ease 0s infinite;
 }
 .ncgr-texthighlight--second {
-  opacity:60%
+  opacity:60%;
   animation: uploader_textanim 7s ease 2100ms infinite;
 }
 .ncgr-texthighlight--third {
-  opacity:60%
+  opacity:60%;
   animation: uploader_textanim 7s ease 4200ms infinite;
 }
 
@@ -101,9 +101,9 @@ category: Components
     opacity: 100%;
   }
   34%{
-    opacity:60%;
+    opacity: 60%;
   }
   100%{
-    opacity:60%;
+    opacity: 60%;
   }
 }
