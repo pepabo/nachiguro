@@ -1,0 +1,28 @@
+/*doc
+---
+title: sr-only
+name: is-sr-only
+category: Utility
+---
+
+アクセシビリティ向上のため、クローラーやスクリーンリーダーだけが読みに行けるようにしたい要素に使います。
+（表示上は何も見えません。）
+
+```example
+<div class="ncgr-is-sr-only">
+  君、この文字が読めるのかい？
+</div>
+```
+*/
+
+.ncgr-is-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}

@@ -13,6 +13,18 @@ JSで要素を表示させたり消したりするときに使います。
   圧倒的表示
 </div>
 ```
+
+ダークモードやライトモードで表示を分けたいときはこのように使います。
+
+```example
+<div class="ncgr-is-visible-in-light">
+  陽遁
+</div>
+<div class="ncgr-is-visible-in-dark">
+  陰遁
+</div>
+```
+
 */
 
 .ncgr-is-visible {
