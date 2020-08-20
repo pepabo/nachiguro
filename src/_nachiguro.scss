@@ -129,69 +129,69 @@ random関数は使用しないでください。
 
 */
 
-@import "sass-helpers";
+@import 'sass-helpers';
 
 //「Foundation」は、スタイルシートを読み込む順番が変わると、意図しない表示になる可能性があります。
-@import "foundation/animation";
-@import "foundation/breakpoint";
-@import "foundation/color";
-@import "foundation/normalize";
-@import "foundation/reset";
-@import "foundation/shadow";
+@import 'foundation/animation';
+@import 'foundation/breakpoint';
+@import 'foundation/color';
+@import 'foundation/normalize';
+@import 'foundation/reset';
+@import 'foundation/shadow';
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
-@import "components/alert";
-@import "components/avatar";
-@import "components/breadcrumbs";
-@import "components/button";
-@import "components/card";
-@import "components/checkbox";
-@import "components/choice-card";
-@import "components/color-selector";
-@import "components/columns";
-@import "components/credit-card-icon";
-@import "components/expansion-card";
-@import "components/heading";
-@import "components/hint";
-@import "components/icon-button";
-@import "components/image";
-@import "components/label";
-@import "components/list";
-@import "components/modal";
-@import "components/pagenation";
-@import "components/price-slider";
-@import "components/product-card";
-@import "components/radio";
-@import "components/section";
-@import "components/selectbox";
-@import "components/separator";
-@import "components/sequence";
-@import "components/share-buttons";
-@import "components/sheet";
-@import "components/square-radio";
-@import "components/tab";
-@import "components/table";
-@import "components/textfield";
-@import "components/text-link";
-@import "components/uploader";
-@import "components/user-card";
+@import 'components/alert';
+@import 'components/avatar';
+@import 'components/breadcrumbs';
+@import 'components/button';
+@import 'components/card';
+@import 'components/checkbox';
+@import 'components/choice-card';
+@import 'components/color-selector';
+@import 'components/columns';
+@import 'components/credit-card-icon';
+@import 'components/expansion-card';
+@import 'components/heading';
+@import 'components/hint';
+@import 'components/icon-button';
+@import 'components/image';
+@import 'components/label';
+@import 'components/list';
+@import 'components/modal';
+@import 'components/pagenation';
+@import 'components/price-slider';
+@import 'components/product-card';
+@import 'components/radio';
+@import 'components/section';
+@import 'components/selectbox';
+@import 'components/separator';
+@import 'components/sequence';
+@import 'components/share-buttons';
+@import 'components/sheet';
+@import 'components/square-radio';
+@import 'components/tab';
+@import 'components/table';
+@import 'components/textfield';
+@import 'components/text-link';
+@import 'components/uploader';
+@import 'components/user-card';
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
-@import "layout/footer";
-@import "layout/header";
-@import "layout/form";
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/form';
 
 //「Utility」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
-@import "utility/align";
-@import "utility/border";
-@import "utility/cursor";
-@import "utility/device";
-@import "utility/grid";
-@import "utility/is-hidden";
-@import "utility/is-sr-only";
-@import "utility/is-transparent";
-@import "utility/is-visible";
-@import "utility/mar";
-@import "utility/pad";
-@import "utility/typography";
-@import "utility/width";
+@import 'utility/align';
+@import 'utility/border';
+@import 'utility/cursor';
+@import 'utility/device';
+@import 'utility/grid';
+@import 'utility/is-hidden';
+@import 'utility/is-sr-only';
+@import 'utility/is-transparent';
+@import 'utility/is-visible';
+@import 'utility/mar';
+@import 'utility/pad';
+@import 'utility/typography';
+@import 'utility/width';
