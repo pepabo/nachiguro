@@ -49,7 +49,6 @@ category: Components
     height: 323px;
   }
   .ncgr-uploader__inner {
-    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -67,7 +66,6 @@ category: Components
   box-sizing: border-box;
   display: block;
   padding: 16px;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -75,7 +73,4 @@ category: Components
   color: var(--color-secondary-label);
   font-size: 64px;
   line-height: 1;
-  width: 260px;
-  height: 210px;
-  margin: 0px auto 16px auto;
 }
