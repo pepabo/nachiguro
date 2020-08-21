@@ -70,7 +70,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--black {
   background-color: var(--color-default-900);
   color: var(--color-white);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   border: 1px solid var(--color-default-900);
 }
 
@@ -83,7 +83,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--bordered {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-default-500);
   &:hover {
     border: 1px solid var(--color-default-200);
@@ -107,7 +107,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--favorite {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-danger-300);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   outline: none;
@@ -119,7 +119,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--favorite-inactive {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-secondary-label);
   &:hover {
     border: 1px solid var(--color-default-200);
