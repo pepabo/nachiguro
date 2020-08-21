@@ -56,13 +56,13 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
-  height: 44px;
+  height: 40px;
   text-align: center;
   width: auto;
   padding: 0 8px;
   border-radius: 8px;
-  line-height: 44px;
-  min-width: 44px;
+  line-height: 40px;
+  min-width: 40px;
   opacity: 0.9;
   transition: all .2s ease-in-out;
 }
@@ -128,6 +128,6 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 }
 
 .ncgr-icon-button--circle {
-  width: 44px;
+  width: 40px;
   border-radius: 50%;
 }
