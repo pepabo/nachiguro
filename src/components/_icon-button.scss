@@ -7,6 +7,8 @@ category: Components
 
 Icon Buttonはある商品やユーザー情報に対してアクションをするボタンに使用します。
 
+一般的にモバイルでのタップターゲットは44px以上確保するとよいと言われていますが、ボタンそのものの大きさを44px以上にするとアイテムの画像と比較したボタンの領域が大きくなりすぎるため、外周のpaddingを2px以上確保していることでタップターゲットが確保できているとみなします。
+
 `.ncgr-icon-button--black`、`.ncgr-icon-button--white`のModifierをつけるとボタンに色がつきます。
 
 「Whiteボタン」はログインしているユーザー以外である他者からのアクション（ズッキュン・オモイデ追加）がメインである場合に使用します。
@@ -56,13 +58,13 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
-  height: 32px;
+  height: 40px;
   text-align: center;
   width: auto;
   padding: 0 8px;
   border-radius: 8px;
-  line-height: 34px;
-  min-width: 32px;
+  line-height: 40px;
+  min-width: 40px;
   opacity: 0.9;
   transition: all .2s ease-in-out;
 }
@@ -70,8 +72,9 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--black {
   background-color: var(--color-default-900);
   color: var(--color-white);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   border: 1px solid var(--color-default-900);
+  opacity: 1;
 }
 
 .ncgr-icon-button--white {
@@ -83,7 +86,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--bordered {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-default-500);
   &:hover {
     border: 1px solid var(--color-default-200);
@@ -107,7 +110,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--favorite {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-danger-300);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   outline: none;
@@ -119,7 +122,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 .ncgr-icon-button--favorite-inactive {
   background-color: var(--color-white);
   border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
   color: var(--color-secondary-label);
   &:hover {
     border: 1px solid var(--color-default-200);
@@ -127,6 +130,6 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 }
 
 .ncgr-icon-button--circle {
-  width: 32px;
+  width: 40px;
   border-radius: 50%;
 }
