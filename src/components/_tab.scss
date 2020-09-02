@@ -39,12 +39,12 @@ category: Components
 */
 
 .ncgr-tab {
-  padding: 16px 0 16px 0;
-  text-align: center;
+  display: inline-table;
 }
 
 .ncgr-tab__item {
-  display: inline-block;
+  display: table-cell;
+  white-space: nowrap;
 }
 
 .ncgr-tab__link {
@@ -61,14 +61,6 @@ category: Components
   line-height: 48px;
   &:hover {
     color: var(--color-label);
-  }
-  @include mediaquery(mobile) {
-    border-radius: 16px;
-    font-size: 13px;
-    height: 32px;
-    line-height: 32px;
-    margin: 0;
-    padding: 0 8px 0 8px;
   }
 }
 
