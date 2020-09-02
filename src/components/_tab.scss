@@ -39,10 +39,14 @@ category: Components
 */
 
 .ncgr-tab {
+  overflow-x: auto;
+}
+
+.ncgr-tab__list {
   display: inline-table;
 }
 
-.ncgr-tab__item {
+.ncgr-tab__list-item {
   display: table-cell;
   white-space: nowrap;
 }
