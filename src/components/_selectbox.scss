@@ -49,6 +49,9 @@ category: Components
   select::-ms-expand {
     display: none;
   }
+  option:disabled {
+    color: var(--color-secondary-label);
+  }
   i,
   svg {
     position: absolute;
