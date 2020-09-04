@@ -45,6 +45,9 @@ category: Components
     padding: 0 40px 0 16px;
     color: var(--color-label);
     cursor: pointer;
+    &.is-selected-disabled-option {
+      color: var(--color-secondary-label);
+    }
   }
   select::-ms-expand {
     display: none;
