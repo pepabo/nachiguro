@@ -62,6 +62,9 @@ category: Components
   &.valid {
     border: 2px solid var(--color-success-500) !important;
   }
+  &.is-selected-disabled-option {
+    color: var(--color-secondary-label);
+  }
 }
 
 .ncgr-selectbox--liquid {
