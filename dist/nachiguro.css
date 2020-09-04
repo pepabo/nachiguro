@@ -4099,6 +4099,9 @@ category: Components
   color: var(--color-label);
   cursor: pointer;
 }
+.ncgr-selectbox select.is-selected-disabled-option {
+  color: var(--color-secondary-label);
+}
 .ncgr-selectbox select::-ms-expand {
   display: none;
 }
