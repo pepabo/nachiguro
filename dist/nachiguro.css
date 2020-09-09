@@ -3531,6 +3531,10 @@ category: Components
   transition: transform 0.25s ease-in-out;
 }
 
+.ncgr-modal--slide-enter-top {
+  transform: translate3d(0, -100%, 0);
+}
+
 .ncgr-modal__inner {
   box-sizing: border-box;
   overflow-x: hidden;
