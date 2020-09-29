@@ -69,7 +69,7 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-default-200);
     }
-    .ncgr-alert__link {
+    &.ncgr-alert__link {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -80,7 +80,7 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-primary-200);
     }
-    .ncgr-alert__link {
+    &.ncgr-alert__link {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -91,7 +91,7 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-success-200);
     }
-    .ncgr-alert__link {
+    &.ncgr-alert__link {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -102,7 +102,7 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-warning-200);
     }
-    .ncgr-alert__link {
+    &.ncgr-alert__link {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -113,7 +113,7 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-danger-200);
     }
-    .ncgr-alert__link {
+    &.ncgr-alert__link {
       text-decoration: underline;
       cursor: pointer;
     }
