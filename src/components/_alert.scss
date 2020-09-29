@@ -69,20 +69,12 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-default-200);
     }
-    &.ncgr-alert__link {
-      text-decoration: underline;
-      cursor: pointer;
-    }
   }
   &.ncgr-alert--primary {
     background-color: var(--color-primary-50);
     color: var(--color-primary-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-primary-200);
-    }
-    &.ncgr-alert__link {
-      text-decoration: underline;
-      cursor: pointer;
     }
   }
   &.ncgr-alert--success {
@@ -91,20 +83,12 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-success-200);
     }
-    &.ncgr-alert__link {
-      text-decoration: underline;
-      cursor: pointer;
-    }
   }
   &.ncgr-alert--warning {
     background-color: var(--color-warning-50);
     color: var(--color-warning-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-warning-200);
-    }
-    &.ncgr-alert__link {
-      text-decoration: underline;
-      cursor: pointer;
     }
   }
   &.ncgr-alert--danger {
@@ -113,10 +97,10 @@ category: Components
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-danger-200);
     }
-    &.ncgr-alert__link {
-      text-decoration: underline;
-      cursor: pointer;
-    }
+  }
+  &.ncgr-alert__link{
+    text-decoration: underline;
+    cursor: pointer;
   }
   .ncgr-alert__heading {
     font-size: 18px;
