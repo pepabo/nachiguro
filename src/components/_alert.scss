@@ -60,10 +60,6 @@ category: Components
   padding: 16px;
   position: relative;
   width: 100%;
-  .ncgr-alert__link{
-    text-decoration: underline;
-    cursor: pointer;
-  }
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-default-200);
   }
@@ -105,5 +101,10 @@ category: Components
   .ncgr-alert__heading {
     font-size: 18px;
     font-weight: bold;
+  }
+  .ncgr-alert__link{
+    text-decoration: underline;
+    cursor: pointer;
+    color: unset;
   }
 }
