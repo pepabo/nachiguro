@@ -560,18 +560,24 @@ $gaps: (
 $grid-boundaries: $boundaries;
 $grid-gaps: $gaps;
 
+// Functions
+@function grid-gap($grid-boundary) {
+  @return map-get($grid-gaps, $grid-boundary);
+}
+
+// Mixins
 @mixin row() {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(nth($grid-gaps, 1) * -1);
-  margin-right: calc(nth($grid-gaps, 1) / -2);
-  margin-left: calc(nth($grid-gaps, 1) / -2);
+  margin-top: grid-gap(m) * -1;
+  margin-right: grid-gap(m) / -2;
+  margin-left: grid-gap(m) / -2;
   @each $grid-boundary in map-keys($grid-boundaries) {
     @include mq-boundary-up($grid-boundary) {
-      margin-top: map-get($grid-gaps, $grid-boundary) * -1;
-      margin-right: map-get($grid-gaps, $grid-boundary) / -2;
-      margin-left: map-get($grid-gaps, $grid-boundary) / -2;
+      margin-top: grid-gap($grid-boundary) * -1;
+      margin-right: grid-gap($grid-boundary) / -2;
+      margin-left: grid-gap($grid-boundary) / -2;
     }
   }
   &.-align-items-start {
@@ -626,9 +632,9 @@ $grid-gaps: $gaps;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-right: calc(nth($grid-gaps, 1) / 2);
-  padding-left: calc(nth($grid-gaps, 1) / 2);
-  margin-top: nth($grid-gaps, 1);
+  padding-right: grid-gap(m) / 2;
+  padding-left: grid-gap(m) / 2;
+  margin-top: grid-gap(m);
   @for $i from 1 through 12 {
     &.-col-#{$i} {
       @include col-width($i);
@@ -641,9 +647,9 @@ $grid-gaps: $gaps;
   }
   @each $grid-boundary in map-keys($grid-boundaries) {
     @include mq-boundary-up($grid-boundary) {
-      padding-right: map-get($grid-gaps, $grid-boundary) / 2;
-      padding-left: map-get($grid-gaps, $grid-boundary) / 2;
-      margin-top: map-get($grid-gaps, $grid-boundary);
+      padding-right: grid-gap($grid-boundary) / 2;
+      padding-left: grid-gap($grid-boundary) / 2;
+      margin-top: grid-gap($grid-boundary);
       @for $i from 1 through 12 {
         &.-col-#{$grid-boundary}-#{$i} {
           @include col-width($i);
