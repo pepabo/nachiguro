@@ -1,0 +1,673 @@
+/*doc
+---
+title: Grid
+name: grid
+category: Components
+---
+
+Gridコンポーネントを使うと12カラムのグリッドシステムでレスポンシブレイアウトを作成できます。
+
+Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列を行います。
+これは flexbox で構築されています。
+
+下記にグリッドの基本形を示します。
+
+### 基本形
+
+```example
+<div class="ncgr-row">
+  <div class="ncgr-col -col-s-12">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-12
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-6
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-6
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-11">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-11
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-10">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-10
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-9">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-9
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-8">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-8
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-5">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-5
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-7">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-7
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-6
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-col.-col-s-6
+    </div>
+  </div>
+</div>
+```
+
+使用できるオプションは以下の通りです。
+
+#### オプション
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        default<br>
+        <small>&lt;480px</small>
+      </th>
+      <th>
+        Small<br>
+        <small>≥480px</small>
+      </th>
+      <th>
+        Medium<br>
+        <small>≥768px</small>
+      </th>
+      <th>
+        Large<br>
+        <small>≥1280px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>コンテナーの最大幅</th>
+      <td>なし</td>
+      <td>480px</td>
+      <td>768px</td>
+      <td>1280px</td>
+    </tr>
+    <tr>
+      <th>Class prefix</th>
+      <td><code>.ncgr-col.-col-</code></td>
+      <td><code>.ncgr-col.-col-s-</code></td>
+      <td><code>.ncgr-col.-col-m-</code></td>
+      <td><code>.ncgr-col.-col-l-</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### 横の整列
+
+`.ncgr-row`に以下の各Modifierをつけることで、横の整列位置を決めることができます。
+
+#### .-justify-content-start
+
+```example
+<div class="ncgr-row -justify-content-start">
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-start > .ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-start > .ncgr-col.-col-s-4
+    </div>
+  </div>
+</div>
+```
+
+#### .-justify-content-center
+
+```example
+<div class="ncgr-row -justify-content-center">
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-center > .ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-center > .ncgr-col.-col-s-4
+    </div>
+  </div>
+</div>
+```
+
+#### .-justify-content-end
+
+```example
+<div class="ncgr-row -justify-content-end">
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-end > .ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-end > .ncgr-col.-col-s-4
+    </div>
+  </div>
+</div>
+```
+
+#### .-justify-content-around
+
+```example
+<div class="ncgr-row -justify-content-around">
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-around > .ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-around > .ncgr-col.-col-s-4
+    </div>
+  </div>
+</div>
+```
+
+#### .-justify-content-between
+
+```example
+<div class="ncgr-row -justify-content-between">
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-between > .ncgr-col.-col-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-justify-content-between > .ncgr-col.-col-s-4
+    </div>
+  </div>
+</div>
+```
+
+### 縦の整列
+
+`.ncgr-row`に以下の各Modifierをつけることで、縦の整列位置を決めることができます。
+
+#### .-align-items-start
+
+```example
+<div class="ncgr-row -align-items-start" style="min-height: 10rem;">
+  <div class="ncgr-col -col-s-12">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-align-items-start > *
+    </div>
+  </div>
+</div>
+```
+
+#### .-align-items-center
+
+```example
+<div class="ncgr-row -align-items-center" style="min-height: 10rem;">
+  <div class="ncgr-col -col-s-12">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-align-items-center > *
+    </div>
+  </div>
+</div>
+```
+
+#### .-align-items-end
+
+```example
+<div class="ncgr-row -align-items-end" style="min-height: 10rem;">
+  <div class="ncgr-col -col-s-12">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-align-items-end > *
+    </div>
+  </div>
+</div>
+```
+
+### 空白
+
+`.ncgr-col`に`.-offset-*`Modifierをつけると、カラムの左側に空白を作成できます。 
+
+```example
+<div class="ncgr-row">
+  <div class="ncgr-col -col-s-11 -offset-s-1">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-11.-offset-s-1
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-10 -offset-s-2">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-10.-offset-s-2
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-9 -offset-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-9.-offset-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-8 -offset-s-4">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-8.-offset-s-4
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-7 -offset-s-5">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-7.-offset-s-5
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6 -offset-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-6.-offset-s-6
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-5 -offset-s-7">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-5.-offset-s-7
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-4 -offset-s-8">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-4.-offset-s-8
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3 -offset-s-9">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-3.-offset-s-9
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-2 -offset-s-10">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-2.-offset-s-10
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-1 -offset-s-11">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-1.-offset-s-11
+    </div>
+  </div>
+</div>
+```
+
+### 隙間をなくす
+
+`.ncgr-row`に`.-no-gaps`Modifierをつけると隙間がなくなります。
+
+```example
+<div class="ncgr-row -no-gaps">
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-no-gaps > .ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-no-gaps > .ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-no-gaps > .ncgr-col.-col-s-3
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-3">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.ncgr-row.-no-gaps > .ncgr-col.-col-s-3
+    </div>
+  </div>
+</div>
+```
+
+### ネスト
+
+グリッドは以下のようにネストすることも可能です。
+
+```example
+<div class="ncgr-row">
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-6
+      <div class="ncgr-row">
+        <div class="ncgr-col -col-s-6">
+          <div class="ncgr-card ncgr-card--rounded ncgr-card--tertiary-grouped-background ncgr-pad-16">
+            \.-col-s-6
+          </div>
+        </div>
+        <div class="ncgr-col -col-s-6">
+          <div class="ncgr-card ncgr-card--rounded ncgr-card--tertiary-grouped-background ncgr-pad-16">
+            \.-col-s-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ncgr-col -col-s-6">
+    <div class="ncgr-card ncgr-card--rounded ncgr-pad-16">
+      \.-col-s-6
+      <div class="ncgr-row">
+        <div class="ncgr-col -col-s-6">
+          <div class="ncgr-card ncgr-card--rounded ncgr-card--tertiary-grouped-background ncgr-pad-16">
+            \.-col-s-6
+          </div>
+        </div>
+        <div class="ncgr-col -col-s-6">
+          <div class="ncgr-card ncgr-card--rounded ncgr-card--tertiary-grouped-background ncgr-pad-16">
+            \.-col-s-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+$gaps: (
+  s: 1rem,
+  m: 1.5rem,
+  l: 1.5rem,
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-up($boundary) {
+  @media screen and (min-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+@mixin mq-boundary-down($boundary) {
+  @media screen and (max-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+// Variables
+$grid-boundaries: $boundaries;
+$grid-gaps: $gaps;
+
+// Functions
+@function grid-gap($grid-boundary) {
+  @return map-get($grid-gaps, $grid-boundary);
+}
+
+// Mixins
+@mixin row() {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: grid-gap(m) * -1;
+  margin-right: grid-gap(m) / -2;
+  margin-left: grid-gap(m) / -2;
+  @each $grid-boundary in map-keys($grid-boundaries) {
+    @include mq-boundary-up($grid-boundary) {
+      margin-top: grid-gap($grid-boundary) * -1;
+      margin-right: grid-gap($grid-boundary) / -2;
+      margin-left: grid-gap($grid-boundary) / -2;
+    }
+  }
+  &.-align-items-start {
+    align-items: flex-start;
+  }
+  &.-align-items-center {
+    align-items: center;
+  }
+  &.-align-items-end {
+    align-items: flex-end;
+  }
+  &.-justify-content-start {
+    justify-content: flex-start;
+  }
+  &.-justify-content-center {
+    justify-content: center;
+  }
+  &.-justify-content-end {
+    justify-content: flex-end;
+  }
+  &.-justify-content-around {
+    justify-content: space-around;
+  }
+  &.-justify-content-between {
+    justify-content: space-between;
+  }
+  &.-no-gaps {
+    margin: 0;
+    padding: 0;
+    > * {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@mixin col-width($num) {
+  flex: 0 0 auto;
+  width: percentage($num / 12);
+}
+
+@mixin col-offset($num, $direction: ltr) {
+  @if $direction == ltr {
+    margin-left: percentage($num / 12);
+  } @else if $direction == rtl {
+    margin-right: percentage($num / 12);
+  }
+}
+
+@mixin col($direction: ltr) {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-right: grid-gap(m) / 2;
+  padding-left: grid-gap(m) / 2;
+  margin-top: grid-gap(m);
+  @for $i from 1 through 12 {
+    &.-col-#{$i} {
+      @include col-width($i);
+    }
+  }
+  @for $i from 0 through (12 - 1) {
+    &.-offset-#{$i} {
+      @include col-offset($i);
+    }
+  }
+  @each $grid-boundary in map-keys($grid-boundaries) {
+    @include mq-boundary-up($grid-boundary) {
+      padding-right: grid-gap($grid-boundary) / 2;
+      padding-left: grid-gap($grid-boundary) / 2;
+      margin-top: grid-gap($grid-boundary);
+      @for $i from 1 through 12 {
+        &.-col-#{$grid-boundary}-#{$i} {
+          @include col-width($i);
+        }
+      }
+      @for $i from 0 through (12 - 1) {
+        &.-offset-#{$grid-boundary}-#{$i} {
+          @include col-offset($i);
+        }
+      }
+    }
+  }
+}
+
+.ncgr-row {
+  @include row();
+}
+
+.ncgr-col {
+  @include col();
+}
