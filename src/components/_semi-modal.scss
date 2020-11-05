@@ -82,8 +82,10 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
     left: 0;
     widows: 100%;
     background-color: var(--color-secondary-grouped-background);
+    z-index: 101;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 56px;
     border-bottom: 1px solid var(--color-separator);
     @include mediaquery(tablet) {
@@ -92,14 +94,13 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
   }
   
   .ncgr-semi-modal__heading {
-    flex-grow: 1;
-    padding-left: 16px;
-    @include mediaquery(tablet) {
-      padding-left: 0;
-    }
+
   }
   
   .ncgr-semi-modal__close {
+    position: absolute;
+    top: 0; 
+    left: 0;
     width: 56px;
     height: 56px;
     cursor: pointer;
