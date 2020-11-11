@@ -22,60 +22,57 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
 
 */
 
-
-
 .ncgr-semi-modal {
-  z-index: 100;
-}
-  
-  .ncgr-semi-modal__overlay {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .8);
     display: none;
+    grid-template-areas: 'OVERLAY SHEET';
+    grid-template-columns: 1fr 420px;
+    background: rgba(0, 0, 0, .3);
     z-index: 100;
+    @include mediaquery(tablet) {
+      grid-template-areas: 'OVERLAY' 'SHEET';
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 60vh;
+    }
   }
-
-  .ncgr-semi-modal__overlay--active {
+  
+  .ncgr-semi-modal--half {
+    @include mediaquery(tablet) {
+      grid-template-rows: 1fr 50vh;
+    }
+  }
+  
+  input[type="checkbox"]:checked + .ncgr-semi-modal {
+    display: grid;
+    .ncgr-semi-modal__contents {
+        transform: translateX(0);
+        @include mediaquery(tablet) {
+          transform: translateY(0);
+        }
+    }
+  }
+  
+  .ncgr-semi-modal__overlay {
     display: block;
+    grid-area: OVERLAY;
+    
   }
   
   .ncgr-semi-modal__contents {
+    grid-area: SHEET;
     background-color: var(--color-secondary-grouped-background);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 420px;
     height: 100%;
     overflow-y: scroll;
     transform: translateX(420px);
     transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    z-index: 101;
     @include shadow-16dp();
     @include mediaquery(tablet) {
-      width: 100%;
-      height: 60vh;
-      top: auto;
-      bottom: 0;
       border-radius: 14px 14px 0 0;
       transform: translateY(60vh);
-    }
-  }
-
-  .ncgr-semi-modal__contents--half {
-    @include mediaquery(tablet) {
-      height: 50vh;
-      transform: translateY(50vh);
-    }
-  }
-
-  .ncgr-semi-modal__contents--active {
-    transform: translateX(0);
-    @include mediaquery(tablet) {
-      transform: translateY(0);
     }
   }
   
@@ -83,9 +80,9 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
+    widows: 100%;
     background-color: var(--color-secondary-grouped-background);
-    z-index: 102;
+    z-index: 101;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,8 +97,7 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
 
   }
   
-  .ncgr-semi-modal__icon {
-    display: none;
+  .ncgr-semi-modal__close {
     position: absolute;
     top: 0; 
     left: 0;
@@ -113,43 +109,7 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
     text-align: center;
     color: var(--color-secondary-label);
   }
-
-  .ncgr-semi-modal__icon--active {
-    display: block;
-  }
-
   
   .ncgr-semi-modal__body {
-    position: relative;
-    width: 420px;
-    min-height: calc(100vh - 56px);
-    height: auto;
-    overflow: hidden;
-    z-index: 101;
-    @include mediaquery(tablet) {
-      width: 100vw;
-    }
-  }
-
-  .ncgr-semi-modal__body__inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(420px);
-    overflow-y: scroll;
-    width: 420px;
-    height: 100%;
-    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    background-color: var(--color-secondary-grouped-background);
-    @include mediaquery(tablet) {
-      width: 100vw;
-      transform: translateX(100vw);
-    }
-  }
-
-  .ncgr-semi-modal__body__inner--active {
-    transform: translateX(0);
-    @include mediaquery(tablet) {
-      transform: translateX(0);
-    }
+    padding: 16px;
   }
