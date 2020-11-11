@@ -33,3 +33,11 @@ If you use nachiguro with Rails application and it uses sprockets, `nachiguro-sp
 @import 'nachiguro-sprockets';
 @import 'nachiguro';
 ```
+
+#### Styleguide
+
+If you want to update and read the styleguide, run the following command to open the `styleguide/index.html` in your browser.
+
+```
+npm run styleguide
+```
