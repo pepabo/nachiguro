@@ -24,7 +24,18 @@ category: Components
     </span>
   </div>
   <div class="ncgr-list-tile__trailing">
-    <i class="fas fa-ellipsis-v" />
+    <i class="fas fa-ellipsis-v"></i>
+  </div>
+</div>
+<hr class="ncgr-separator">
+<div class="ncgr-list-tile">
+  <div class="ncgr-list-tile__title">
+    <span>
+      忍者スリスリ君
+    </span>
+    <span class="ncgr-typography-light ncgr-typography-small">
+      surisurikun
+    </span>
   </div>
 </div>
 ```
@@ -35,16 +46,17 @@ category: Components
   box-sizing: border-box;
   padding: 8px 16px;
   width: 100%;
-  height: 64px;
+  min-height: 64px;
+  height: auto;
   display: flex;
-  align-items: center;
+  align-items: start;
   &:hover {
     background: var(--color-segmented-control-background);
   }
 }
 
 .ncgr-list-tile__leading {
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -57,10 +69,12 @@ category: Components
   flex-direction: column;
   align-content: center;
   flex-grow: 1;
+  min-height: 48px;
+
 }
 
 .ncgr-list-tile__trailing {
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   display: flex;
   justify-content: center;
