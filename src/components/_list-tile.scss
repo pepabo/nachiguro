@@ -5,36 +5,28 @@ name: list-tile
 category: Components
 ---
 
-`.ncgr-list`を指定すると黒丸のリストになります。
+リストの子要素を表現するコンポーネントです。
+ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、他のボタン等の要素を配置できる`trailing`があります。
 
 ```example
-<ul class="ncgr-list">
-  <li>臨</li>
-  <li>兵</li>
-  <li>闘</li>
-  <li>者</li>
-  <li>皆</li>
-  <li>陣</li>
-  <li>烈</li>
-  <li>在</li>
-  <li>前</li>
-</ul>
-```
-
-`.ncgr-list--decimal`を指定すると算用数字のリストになります。
-
-```example
-<ul class="ncgr-list ncgr-list--decimal">
-  <li>臨</li>
-  <li>兵</li>
-  <li>闘</li>
-  <li>者</li>
-  <li>皆</li>
-  <li>陣</li>
-  <li>烈</li>
-  <li>在</li>
-  <li>前</li>
-</ul>
+<div class="ncgr-list-tile">
+  <div class="ncgr-list-tile__leading">
+    <div class="ncgr-avatar ncgr-avatar--medium">
+      <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+    </div>
+  </div>
+  <div class="ncgr-list-tile__title">
+    <span>
+      忍者スリスリ君
+    </span>
+    <span class="ncgr-typography-light ncgr-typography-small">
+      surisurikun
+    </span>
+  </div>
+  <div class="ncgr-list-tile__trailing">
+    <i class="fas fa-ellipsis-v" />
+  </div>
+</div>
 ```
 
 */
@@ -59,8 +51,6 @@ category: Components
     justify-content: center;
     align-items: center;
     margin: 0 16px 0 0;
-    background: var(--color-segmented-control-background);
-    border-radius: 50%;
   }
   
   .ncgr-list-tile__title {
@@ -76,6 +66,4 @@ category: Components
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-segmented-control-background);
-    border-radius: 50%;
   }
