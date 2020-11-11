@@ -1,0 +1,81 @@
+/*doc
+---
+title: ListTile
+name: list-tile
+category: Components
+---
+
+`.ncgr-list`を指定すると黒丸のリストになります。
+
+```example
+<ul class="ncgr-list">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+```
+
+`.ncgr-list--decimal`を指定すると算用数字のリストになります。
+
+```example
+<ul class="ncgr-list ncgr-list--decimal">
+  <li>臨</li>
+  <li>兵</li>
+  <li>闘</li>
+  <li>者</li>
+  <li>皆</li>
+  <li>陣</li>
+  <li>烈</li>
+  <li>在</li>
+  <li>前</li>
+</ul>
+```
+
+*/
+
+.ncgr-list-tile {
+    box-sizing: border-box;
+    padding: 8px 16px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    &:hover{
+      background: var(--color-segmented-control-background);
+    }
+  }
+  
+  
+  .ncgr-list-tile__leading {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px 0 0;
+    background: var(--color-segmented-control-background);
+    border-radius: 50%;
+  }
+  
+  .ncgr-list-tile__title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-grow: 1;
+  }
+
+  .ncgr-list-tile__trailing {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-segmented-control-background);
+    border-radius: 50%;
+  }
