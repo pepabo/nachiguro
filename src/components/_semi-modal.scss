@@ -29,9 +29,9 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
     top: 0;
     bottom: 0;
     display: none;
+    display: grid;
     grid-template-areas: 'OVERLAY SHEET';
     grid-template-columns: 1fr 420px;
-    background: rgba(0, 0, 0, .3);
     z-index: 100;
     @include mediaquery(tablet) {
       grid-template-areas: 'OVERLAY' 'SHEET';
@@ -47,7 +47,7 @@ Sheetコンポーネントには画面の主要コンテンツを補完するコ
   }
   
   input[type="checkbox"]:checked + .ncgr-semi-modal {
-    display: grid;
+    display: block;
     .ncgr-semi-modal__contents {
         transform: translateX(0);
         @include mediaquery(tablet) {
