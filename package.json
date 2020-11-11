@@ -4,7 +4,8 @@
   "description": "SUZURI CSS Framework",
   "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css"
+    "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css",
+    "styleguide": "sass --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css && bundle exec hologram"
   },
   "repository": {
     "type": "git",
