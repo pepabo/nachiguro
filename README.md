@@ -41,3 +41,5 @@ If you want to update and read the styleguide, run the following command to open
 ```
 npm run styleguide
 ```
+
+Since hologram is installed via bundler, please run `bundle install` if you can't run hologram.
