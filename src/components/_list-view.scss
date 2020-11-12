@@ -1,0 +1,113 @@
+/*doc
+---
+title: ListView
+name: list-view
+category: Components
+---
+
+リストの子要素を表現するコンポーネントです。
+ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、他のボタン等の要素を配置できる`trailing`があります。
+
+```example
+<ul class="ncgr-list-view">
+  <li class="ncgr-list-tile">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-avatar ncgr-avatar--medium">
+        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      <span>
+        忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君
+      </span>
+      <span class="ncgr-typography-light ncgr-typography-small">
+        surisurikun
+      </span>
+    </div>
+    <div class="ncgr-list-tile__trailing">
+      <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+    </div>
+  </li>
+  <hr class="ncgr-separator">
+  <li class="ncgr-list-tile">
+    <div class="ncgr-list-tile__title">
+      <span>
+        忍者スリスリ君
+      </span>
+      <span class="ncgr-typography-light ncgr-typography-small">
+        surisurikun
+      </span>
+    </div>
+  </li>
+</ul>
+```
+
+*/
+.ncgr-list-view {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+  .-list-line-2 {
+
+  }
+
+  .-list-line-3 {
+
+  }
+
+.ncgr-list-tile {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  height: auto;
+  display: flex;
+  align-items: s;
+  &:hover {
+    background: var(--color-segmented-control-background);
+  }
+}
+
+.ncgr-list-tile__leading {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .ncgr-list-tile__leading--small {
+    min-width: 24px;
+    min-height: 24px;
+    margin: 16px 32px 16px 16px;
+  }
+
+  .ncgr-list-tile__leading--medium {
+    min-width: 40px;
+    min-height: 40px;
+    margin: 8px 16px 8px 16px;
+  }
+
+  .ncgr-list-tile__leading--large {
+    min-height: 56px;
+    min-width: 100px;
+    margin: 8px 16px 8px 0;
+  }
+
+.ncgr-list-tile__title {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  flex-grow: 1;
+  min-height: 48px;
+}
+
+.ncgr-list-tile__trailing {
+  min-width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
