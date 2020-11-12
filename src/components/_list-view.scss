@@ -9,37 +9,222 @@ category: Components
 ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、他のボタン等の要素を配置できる`trailing`があります。
 
 ```example
-<ul class="ncgr-list-view">
-  <li class="ncgr-list-tile">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-avatar ncgr-avatar--medium">
-        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+<section>
+  <div class="ncgr-typography-bold ncgr-typography-small">One Line</div>
+  <hr class="ncgr-list-tile__divider">
+  <ul class="ncgr-list-view -dense">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      <span>
-        忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君忍者スリスリ君
-      </span>
-      <span class="ncgr-typography-light ncgr-typography-small">
-        surisurikun
-      </span>
-    </div>
-    <div class="ncgr-list-tile__trailing">
-      <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
-    </div>
-  </li>
-  <hr class="ncgr-separator">
-  <li class="ncgr-list-tile">
-    <div class="ncgr-list-tile__title">
-      <span>
-        忍者スリスリ君
-      </span>
-      <span class="ncgr-typography-light ncgr-typography-small">
-        surisurikun
-      </span>
-    </div>
-  </li>
-</ul>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
+<section>
+  <div class="ncgr-typography-bold ncgr-typography-small">Two Line</div>
+  <hr class="ncgr-list-tile__divider">
+  <ul class="ncgr-list-view -two-line">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
+<section>
+  <div class="ncgr-typography-bold ncgr-typography-small">Three Line</div>
+  <hr class="ncgr-list-tile__divider">
+  <ul class="ncgr-list-view -three-line">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <hr class="ncgr-list-tile__divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__text">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__text -text-secondary">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
 ```
 
 */
@@ -47,24 +232,31 @@ category: Components
   width: 100%;
   height: auto;
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0;
+  &.-two-line {
+
+  }
+
+  &.-three-line {
+    .ncgr-list-tile__trailing {
+      margin: 0 0 auto 16px;
+    }
+  }
+  &.-dense {
+    .ncgr-list-tile {
+      padding: 0.5rem 1rem;
+    }
+  }
 }
-
-  .-list-line-2 {
-
-  }
-
-  .-list-line-3 {
-
-  }
 
 .ncgr-list-tile {
   box-sizing: border-box;
   width: 100%;
-  min-height: 48px;
+  line-height: 1.5;
   height: auto;
   display: flex;
-  align-items: s;
+  align-items: flex-start;
+  padding: 1rem;
   &:hover {
     background: var(--color-segmented-control-background);
   }
@@ -74,40 +266,52 @@ category: Components
   width: auto;
   height: auto;
   display: flex;
+  align-items: flex-start;
+  min-width: 2.5rem;
+  margin: 0 1rem 0 0;
+}
+
+.ncgr-list-tile__icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-  .ncgr-list-tile__leading--small {
-    min-width: 24px;
-    min-height: 24px;
-    margin: 16px 32px 16px 16px;
-  }
-
-  .ncgr-list-tile__leading--medium {
-    min-width: 40px;
-    min-height: 40px;
-    margin: 8px 16px 8px 16px;
-  }
-
-  .ncgr-list-tile__leading--large {
-    min-height: 56px;
-    min-width: 100px;
-    margin: 8px 16px 8px 0;
-  }
 
 .ncgr-list-tile__title {
   display: flex;
   flex-direction: column;
-  align-content: start;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
   flex-grow: 1;
-  min-height: 48px;
+  min-height: 100%;
+}
+
+.ncgr-list-tile__text {
+  font-size: 1rem;
+  &.-text-secondary {
+    font-size: 0.75rem;
+    color: var(--color-secondary-label);
+  }
 }
 
 .ncgr-list-tile__trailing {
-  min-width: 48px;
-  height: 48px;
+  min-width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto 0 auto 1rem;
+}
+
+.ncgr-list-tile__divider {
+  background-color: var(--color-separator);
+  box-sizing: border-box;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 0;
 }
