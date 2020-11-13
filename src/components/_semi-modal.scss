@@ -5,17 +5,17 @@ name: semi-modal
 category: Components
 ---
 Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
-`--active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 
 また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
-`--active`の付け外しをすることでシート内に階層を持たせることができます。
+`-active`の付け外しをすることでシート内に階層を持たせることができます。
 
-```css
+```example
 <section class="ncgr-semi-modal">
-  <div class="ncgr-semi-modal__overlay ncgr-semi-modal__overlay--active"></div>
-  <div class="ncgr-semi-modal__sheet ncgr-semi-modal__sheet--active ncgr-semi-modal__sheet--half">
+  <div class="ncgr-semi-modal__overlay -active"></div>
+  <div class="ncgr-semi-modal__sheet -active -sheet-half">
     <div class="ncgr-semi-modal__header">
-      <div class="ncgr-semi-modal__icon ncgr-semi-modal__icon--active">
+      <div class="ncgr-semi-modal__icon -active">
         ×
       </div>
       <div class="ncgr-semi-modal__heading">
@@ -23,19 +23,21 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
       </div>
     </div>
     <div class="ncgr-semi-modal__body">
-      <div class="ncgr-semi-modal__contents ncgr-semi-modal__contents--active">
-        <div class="ncgr-pad-t-16 ncgr-pad-b-16">
-          スリスリする
-        </div>
-        <div class="ncgr-pad-t-16 ncgr-pad-b-16">
-          スリスリしない
-        </div>
-        <div class="ncgr-pad-t-16 ncgr-pad-b-16">
-          スリスリする
-        </div>
-        <div class="ncgr-pad-t-16 ncgr-pad-b-16">
-          スリスリしない
-        </div>
+      <div class="ncgr-semi-modal__contents -active">
+        <ul> 
+          <li class="ncgr-pad-16">
+            スリスリする
+          </li>
+          <li class="ncgr-pad-16">
+            スリスリしない
+          </li>
+          <li class="ncgr-pad-16">
+            スリスリする
+          </li>
+          <li class="ncgr-pad-16">
+            スリスリしない
+          </li>
+        </ul>
       </div>
     </div>
 </section>
@@ -56,10 +58,9 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   background: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 100;
-}
-
-.ncgr-semi-modal__overlay--active {
-  display: block;
+  &.-active {
+    display: block;
+  }
 }
 
 .ncgr-semi-modal__sheet {
@@ -73,6 +74,18 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   transform: translateX(420px);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
+  &.-sheet-half {
+    @include mediaquery(tablet) {
+      height: 50vh;
+      transform: translateY(50vh);
+    }
+  }
+  &.-active {
+    transform: translateX(0);
+    @include mediaquery(tablet) {
+      transform: translateY(0);
+    }
+  }
   @include shadow-16dp();
   @include mediaquery(tablet) {
     width: 100%;
@@ -81,20 +94,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     bottom: 0;
     border-radius: 14px 14px 0 0;
     transform: translateY(60vh);
-  }
-}
-
-.ncgr-semi-modal__sheet--half {
-  @include mediaquery(tablet) {
-    height: 50vh;
-    transform: translateY(50vh);
-  }
-}
-
-.ncgr-semi-modal__sheet--active {
-  transform: translateX(0);
-  @include mediaquery(tablet) {
-    transform: translateY(0);
   }
 }
 
@@ -136,11 +135,12 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   line-height: 56px;
   text-align: center;
   color: var(--color-secondary-label);
+  &.-active {
+    display: block;
+  }
 }
 
-.ncgr-semi-modal__icon--active {
-  display: block;
-}
+
 
 .ncgr-semi-modal__body {
   position: relative;
@@ -163,15 +163,16 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   height: 100%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-secondary-grouped-background);
+  &.-active {
+    transform: translateX(0);
+    @include mediaquery(tablet) {
+      transform: translateX(0);
+    }
+  }
   @include mediaquery(tablet) {
     width: 100vw;
     transform: translateX(100vw);
   }
 }
 
-.ncgr-semi-modal__contents--active {
-  transform: translateX(0);
-  @include mediaquery(tablet) {
-    transform: translateX(0);
-  }
-}
+
