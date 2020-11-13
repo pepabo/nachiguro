@@ -6,10 +6,15 @@ category: Components
 ---
 
 選択可能なリストを表現するコンポーネントです。
-1ラインから3ラインまでのリストを作成することが可能で、`.ncgr-list-view`に`-two-line`、`three-line`のmodifierを付与することでそれに沿った形になります。
-また、リストの上下paddingを1remから0.5remに変更する`-dense`modifierが存在します。
 
 リスト内の要素は、ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、アクションボタン等ほかの要素を配置できる`trailing`に分かれています。
+
+`text`には、PrimaryとSecondaryの二つの属性を持った文章を格納でき、これにより複数行のリストを作成することが可能です。
+文章量が増えた場合、`.ncgr-list-view`に`-list-large`のmodifierを付与することで各要素を状態に沿ったスタイルに調整できます。
+
+また、リストの上下paddingを1remから0.5remに変更する`-dense`modifierが存在します。
+
+
 
 ```example
 <section class="ncgr-list-group">
