@@ -283,6 +283,7 @@ category: Components
   display: flex;
   align-items: flex-start;
   padding: 1rem;
+  cursor: pointer;
   &:hover {
     background: var(--color-secondary-background);
   }
