@@ -10,10 +10,9 @@ category: Components
 リスト内の要素は、ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、アクションボタン等ほかの要素を配置できる`trailing`に分かれています。
 
 `text`には、PrimaryとSecondaryの二つの属性を持った文章を格納でき、これにより複数行のリストを作成することが可能です。
-文章量が増えた場合、`.ncgr-list-view`に`-list-large`のmodifierを付与することで各要素を状態に沿ったスタイルに調整できます。
+文章量が3行以上になる場合、`.ncgr-list-view`に`-three-line`のmodifierを付与することで各要素を状態に沿ったスタイルに調整できます。
 
 また、リストの上下paddingを1remから0.5remに変更する`-dense`modifierが存在します。
-
 
 
 ```example
@@ -240,8 +239,6 @@ category: Components
 
 */
 
-.ncgr-list-group {
-}
 
 .ncgr-list-group__subheader {
   padding: 0.5rem 1rem;
