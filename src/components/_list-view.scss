@@ -12,13 +12,14 @@ category: Components
 リスト内の要素は、ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、アクションボタン等ほかの要素を配置できる`trailing`に分かれています。
 
 ```example
-<section>
-  <div class="ncgr-typography-bold ncgr-typography-small">One Line</div>
-  <hr class="ncgr-list-tile__divider">
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    One Line
+  </div>
   <ul class="ncgr-list-view -dense">
     <li class="ncgr-list-tile">
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Single-line item
         </li>
       </ul>
@@ -26,7 +27,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-list-tile__icon">
@@ -34,7 +35,7 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Single-line item
         </li>
       </ul>
@@ -42,7 +43,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--medium">
@@ -50,7 +51,7 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Single-line item
         </li>
       </ul>
@@ -58,7 +59,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--large">
@@ -66,7 +67,7 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Single-line item
         </li>
       </ul>
@@ -76,16 +77,17 @@ category: Components
     </li>
   </ul>
 </section>
-<section>
-  <div class="ncgr-typography-bold ncgr-typography-small">Two Line</div>
-  <hr class="ncgr-list-tile__divider">
-  <ul class="ncgr-list-view -two-line">
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    Two Line
+  </div>
+  <ul class="ncgr-list-view">
     <li class="ncgr-list-tile">
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Two-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text
         </li>
       </ul>
@@ -93,7 +95,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-list-tile__icon">
@@ -101,10 +103,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Two-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text
         </li>
       </ul>
@@ -112,7 +114,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--medium">
@@ -120,10 +122,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+         <li class="ncgr-list-tile__primary-title">
           Two-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text
         </li>
       </ul>
@@ -131,7 +133,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--large">
@@ -139,10 +141,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Two-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text
         </li>
       </ul>
@@ -152,16 +154,17 @@ category: Components
     </li>
   </ul>
 </section>
-<section>
-  <div class="ncgr-typography-bold ncgr-typography-small">Three Line</div>
-  <hr class="ncgr-list-tile__divider">
-  <ul class="ncgr-list-view -three-line">
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    Three Line
+  </div>
+  <ul class="ncgr-list-view -list-large">
     <li class="ncgr-list-tile">
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Three-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
         </li>
       </ul>
@@ -169,7 +172,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-list-tile__icon">
@@ -177,10 +180,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Three-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
         </li>
       </ul>
@@ -188,7 +191,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--medium">
@@ -196,10 +199,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Three-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
         </li>
       </ul>
@@ -207,7 +210,7 @@ category: Components
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </li>
-    <hr class="ncgr-list-tile__divider">
+    <li role="separator" class="ncgr-list-divider">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
         <div class="ncgr-avatar ncgr-avatar--large">
@@ -215,10 +218,10 @@ category: Components
         </div>
       </div>
       <ul class="ncgr-list-tile__title">
-        <li class="ncgr-list-tile__text">
+        <li class="ncgr-list-tile__primary-title">
           Three-line item
         </li>
-        <li class="ncgr-list-tile__text -text-secondary">
+        <li class="ncgr-list-tile__secondary-title">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
         </li>
       </ul>
@@ -231,16 +234,30 @@ category: Components
 ```
 
 */
+
+.ncgr-list-group {
+}
+
+.ncgr-list-group__subheader {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.ncgr-list-divider {
+  background-color: var(--color-separator);
+  box-sizing: border-box;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 0;
+}
+
 .ncgr-list-view {
   width: 100%;
   height: auto;
   padding: 0;
-  margin: 0.5rem 0;
-  &.-two-line {
-
-  }
-
-  &.-three-line {
+  margin: 0;
+  &.-list-large {
     .ncgr-list-tile__trailing {
       margin: 0 0 auto 16px;
     }
@@ -261,7 +278,7 @@ category: Components
   align-items: flex-start;
   padding: 1rem;
   &:hover {
-    background: var(--color-segmented-control-background);
+    background: var(--color-secondary-background);
   }
 }
 
@@ -294,12 +311,13 @@ category: Components
   min-height: 100%;
 }
 
-.ncgr-list-tile__text {
+.ncgr-list-tile__primary-title {
   font-size: 1rem;
-  &.-text-secondary {
-    font-size: 0.75rem;
-    color: var(--color-secondary-label);
-  }
+}
+
+.ncgr-list-tile__secondary-title {
+  font-size: 0.75rem;
+  color: var(--color-secondary-label);
 }
 
 .ncgr-list-tile__trailing {
@@ -309,13 +327,4 @@ category: Components
   justify-content: center;
   align-items: center;
   margin: auto 0 auto 1rem;
-}
-
-.ncgr-list-tile__divider {
-  background-color: var(--color-separator);
-  box-sizing: border-box;
-  border: none;
-  height: 1px;
-  width: 100%;
-  margin: 0;
 }
