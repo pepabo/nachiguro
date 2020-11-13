@@ -5,8 +5,11 @@ name: list-view
 category: Components
 ---
 
-リストの子要素を表現するコンポーネントです。
-ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、他のボタン等の要素を配置できる`trailing`があります。
+選択可能なリストを表現するコンポーネントです。
+1ラインから3ラインまでのリストを作成することが可能で、`.ncgr-list-view`に`-two-line`、`three-line`のmodifierを付与することでそれに沿った形になります。
+また、リストの上下paddingを1remから0.5remに変更する`-dense`modifierが存在します。
+
+リスト内の要素は、ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、アクションボタン等ほかの要素を配置できる`trailing`に分かれています。
 
 ```example
 <section>
@@ -156,7 +159,7 @@ category: Components
     <li class="ncgr-list-tile">
       <ul class="ncgr-list-tile__title">
         <li class="ncgr-list-tile__text">
-          Two-line item
+          Three-line item
         </li>
         <li class="ncgr-list-tile__text -text-secondary">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
@@ -175,7 +178,7 @@ category: Components
       </div>
       <ul class="ncgr-list-tile__title">
         <li class="ncgr-list-tile__text">
-          Two-line item
+          Three-line item
         </li>
         <li class="ncgr-list-tile__text -text-secondary">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
@@ -194,7 +197,7 @@ category: Components
       </div>
       <ul class="ncgr-list-tile__title">
         <li class="ncgr-list-tile__text">
-          Two-line item
+          Three-line item
         </li>
         <li class="ncgr-list-tile__text -text-secondary">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
@@ -213,7 +216,7 @@ category: Components
       </div>
       <ul class="ncgr-list-tile__title">
         <li class="ncgr-list-tile__text">
-          Two-line item
+          Three-line item
         </li>
         <li class="ncgr-list-tile__text -text-secondary">
           Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
@@ -269,6 +272,7 @@ category: Components
   align-items: flex-start;
   min-width: 2.5rem;
   margin: 0 1rem 0 0;
+  flex-shrink: 0;
 }
 
 .ncgr-list-tile__icon {
