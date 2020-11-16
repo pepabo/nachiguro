@@ -10,32 +10,43 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
 `-active`の付け外しをすることでシート内に階層を持たせることができます。
 
+`.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
+モーダル内のスクロールの誤動作を防ぐことができます。
+
 ```example
-<section class="ncgr-semi-modal">
-  <div class="ncgr-semi-modal__overlay -active"></div>
-  <div class="ncgr-semi-modal__sheet -active -sheet-half">
+<section class="ncgr-semi-modal -active">
+  <div class="ncgr-semi-modal__overlay"></div>
+  <div class="ncgr-semi-modal__sheet">
     <div class="ncgr-semi-modal__header">
-      <div class="ncgr-semi-modal__icon -active">
+      <div class="ncgr-semi-modal__leading -active">
         ×
       </div>
-      <div class="ncgr-semi-modal__heading">
+      <div class="ncgr-semi-modal__title">
         メニュー
       </div>
     </div>
     <div class="ncgr-semi-modal__body">
       <div class="ncgr-semi-modal__contents -active">
-        <ul> 
-          <li class="ncgr-pad-16">
-            スリスリする
+        <ul class="ncgr-list-view -dense"> 
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
           </li>
-          <li class="ncgr-pad-16">
-            スリスリしない
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
           </li>
-          <li class="ncgr-pad-16">
-            スリスリする
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
           </li>
-          <li class="ncgr-pad-16">
-            スリスリしない
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
           </li>
         </ul>
       </div>
@@ -47,7 +58,17 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 */
 
 .ncgr-semi-modal {
-  z-index: 100;
+  &.-active {
+    .ncgr-semi-modal__overlay {
+      display: block;
+    }
+    .ncgr-semi-modal__sheet {
+      transform: translateX(0);
+      @include mediaquery(tablet) {
+        transform: translateY(0);
+      }
+    }
+  }
 }
 
 .ncgr-semi-modal__overlay {
@@ -59,9 +80,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   background: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 100;
-  &.-active {
-    display: block;
-  }
 }
 
 .ncgr-semi-modal__sheet {
@@ -69,32 +87,19 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   position: fixed;
   top: 0;
   right: 0;
-  width: 420px;
+  width: 25rem;
   height: 100%;
   overflow-y: scroll;
-  transform: translateX(420px);
+  transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
-  &.-sheet-half {
-    @include mediaquery(tablet) {
-      height: 50vh;
-      transform: translateY(50vh);
-    }
-  }
-  &.-active {
-    transform: translateX(0);
-    @include mediaquery(tablet) {
-      transform: translateY(0);
-    }
-  }
   @include shadow-16dp();
   @include mediaquery(tablet) {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     top: auto;
     bottom: 0;
-    border-radius: 14px 14px 0 0;
-    transform: translateY(60vh);
+    transform: translateY(50vh);
   }
 }
 
@@ -108,15 +113,12 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  height: 3.5rem;
   border-bottom: 1px solid var(--color-separator);
-  @include mediaquery(tablet) {
-    flex-direction: row-reverse;
-  }
 }
 
-.ncgr-semi-modal__heading {
-  font-size: 18px;
+.ncgr-semi-modal__title {
+  font-size: 1.125rem;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -124,16 +126,16 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   color: var(--color-label);
 }
 
-.ncgr-semi-modal__icon {
+.ncgr-semi-modal__leading {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  height: 3.5rem;
   cursor: pointer;
-  font-size: 24px;
-  line-height: 56px;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
   text-align: center;
   color: var(--color-secondary-label);
   &.-active {
@@ -141,16 +143,15 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   }
 }
 
-
-
 .ncgr-semi-modal__body {
   position: relative;
-  width: 420px;
-  min-height: calc(100vh - 56px);
+  width: 25rem;
+  min-height: calc(100vh - 3.5rem);
   height: auto;
   overflow: hidden;
   @include mediaquery(tablet) {
     width: 100vw;
+    min-height: calc(50vh - 3.5rem);
   }
 }
 
@@ -158,18 +159,14 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(420px);
+  transform: translateX(25rem);
   overflow-y: scroll;
-  width: 420px;
+  width: 25rem;
   height: 100%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-secondary-grouped-background);
-  border-radius: 0;
   &.-active {
     transform: translateX(0);
-    @include mediaquery(tablet) {
-      transform: translateX(0);
-    }
   }
   @include mediaquery(tablet) {
     width: 100vw;
