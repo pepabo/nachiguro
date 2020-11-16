@@ -1,0 +1,334 @@
+/*doc
+---
+title: ListView
+name: list-view
+category: Components
+---
+
+選択可能なリストを表現するコンポーネントです。
+
+リスト内の要素は、ユーザーアイコンなどの要素を配置できる`leading`と、テキスト用の`title`、アクションボタン等ほかの要素を配置できる`trailing`に分かれています。
+
+`text`には、PrimaryとSecondaryの二つの属性を持った文章を格納でき、これにより複数行のリストを作成することが可能です。
+タイトルが3行以上になる場合、`.ncgr-list-view`に`-three-line`のmodifierを付与してください。それにより`trailing`内の要素が適した位置に調整されます。
+
+また、リストの上下paddingを1remから0.5remに変更する`-dense`modifierが存在します。
+
+
+```example
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    One Line
+  </div>
+  <ul class="ncgr-list-view -dense">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Single-line item
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    Two Line
+  </div>
+  <ul class="ncgr-list-view">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+         <li class="ncgr-list-tile__primary-title">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Two-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
+<section class="ncgr-list-group">
+  <div class="ncgr-list-group__subheader">
+    Three Line
+  </div>
+  <ul class="ncgr-list-view -list-large">
+    <li class="ncgr-list-tile">
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Three-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-list-tile__icon">
+          <i class="fab fa-bluetooth-b"></i>
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Three-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--medium">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Three-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+    <li role="separator" class="ncgr-list-divider">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__leading">
+        <div class="ncgr-avatar ncgr-avatar--large">
+          <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
+        </div>
+      </div>
+      <ul class="ncgr-list-tile__title">
+        <li class="ncgr-list-tile__primary-title">
+          Three-line item
+        </li>
+        <li class="ncgr-list-tile__secondary-title">
+          Secondary text / Secondary text / Secondary text / Secondary text / Secondary text / Secondary text /
+        </li>
+      </ul>
+      <div class="ncgr-list-tile__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+    </li>
+  </ul>
+</section>
+```
+
+*/
+
+
+.ncgr-list-group__subheader {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.ncgr-list-divider {
+  background-color: var(--color-separator);
+  box-sizing: border-box;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+.ncgr-list-view {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  &.-three-line {
+    .ncgr-list-tile__trailing {
+      margin: 0 0 auto 16px;
+    }
+  }
+  &.-dense {
+    .ncgr-list-tile {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+.ncgr-list-tile {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1.5;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    background: var(--color-secondary-background);
+  }
+}
+
+.ncgr-list-tile__leading {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  min-width: 2.5rem;
+  margin: 0 1rem 0 0;
+  flex-shrink: 0;
+}
+
+.ncgr-list-tile__icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ncgr-list-tile__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+.ncgr-list-tile__primary-title {
+  font-size: 1rem;
+}
+
+.ncgr-list-tile__secondary-title {
+  font-size: 0.75rem;
+  color: var(--color-secondary-label);
+}
+
+.ncgr-list-tile__trailing {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 auto 1rem;
+}

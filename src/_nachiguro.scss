@@ -157,6 +157,7 @@ random関数は使用しないでください。
 @import 'components/image';
 @import 'components/label';
 @import 'components/list';
+@import 'components/list-view';
 @import 'components/modal';
 @import 'components/pagenation';
 @import 'components/price-slider';
@@ -175,7 +176,6 @@ random関数は使用しないでください。
 @import 'components/text-link';
 @import 'components/uploader';
 @import 'components/user-card';
-@import 'components/semi-modal';
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
 @import 'layout/footer';
