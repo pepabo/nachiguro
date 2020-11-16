@@ -13,7 +13,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 `.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
 モーダル内のスクロールの誤動作を防ぐことができます。
 
-```example
+```code
 <section class="ncgr-semi-modal -active">
   <div class="ncgr-semi-modal__overlay"></div>
   <div class="ncgr-semi-modal__sheet">
@@ -27,7 +27,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     </div>
     <div class="ncgr-semi-modal__body">
       <div class="ncgr-semi-modal__contents -active">
-        <ul class="ncgr-list-view -dense"> 
+        <ul class="ncgr-list-view"> 
           <li class="ncgr-list-tile">
             <div class="ncgr-list-tile__title">
               スリスリする
