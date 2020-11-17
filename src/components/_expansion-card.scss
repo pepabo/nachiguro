@@ -10,11 +10,24 @@ category: Components
 ```example
 <div class="ncgr-expansion-card">
   <div class="ncgr-expansion-card__item">
-    <label class="ncgr-expansion-card__label" for="koga">甲賀流</label>
-    <input id="koga" class="ncgr-expansion-card__checkbox" type="checkbox">
-    <div class="ncgr-expansion-card__arrow">
-      <i class="fa fa-angle-down"></i>
-    </div>
+    <input id="koga" class="ncgr-expansion-card__checkbox" type="checkbox">  
+    <label for="koga">
+      <div class="ncgr-expansion-card__header">
+        <div class="ncgr-expansion-card__title">
+          <div class="ncgr-expansion-card__primary-title">
+            甲賀流
+          </div>
+          <div class="ncgr-expansion-card__secondary-title">
+            近江国甲賀の地に伝わっていた忍術流派の総称
+          </div>
+        </div>
+        <div class="ncgr-expansion-card__trailing">
+          <div class="ncgr-expansion-card__arrow">
+            <i class="fa fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </label>
     <div class="ncgr-expansion-card__hidden">
       <div class="ncgr-expansion-card__contents">
         甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
@@ -26,11 +39,24 @@ category: Components
     </div>
   </div>
   <div class="ncgr-expansion-card__item">
-    <label class="ncgr-expansion-card__label" for="iga">伊賀流</label>
-    <input id="iga" class="ncgr-expansion-card__checkbox" type="checkbox">
-    <div class="ncgr-expansion-card__arrow">
-      <i class="fa fa-angle-down"></i>
-    </div>
+    <input id="iga" class="ncgr-expansion-card__checkbox" type="checkbox">  
+    <label for="iga">
+      <div class="ncgr-expansion-card__header">
+        <div class="ncgr-expansion-card__title">
+          <div class="ncgr-expansion-card__primary-title">
+            伊賀流
+          </div>
+          <div class="ncgr-expansion-card__secondary-title">
+            伊賀国の地に伝わっていた忍術流派の総称
+          </div>
+        </div>
+        <div class="ncgr-expansion-card__trailing">
+          <div class="ncgr-expansion-card__arrow">
+            <i class="fa fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </label>
     <div class="ncgr-expansion-card__hidden">
       <div class="ncgr-expansion-card__contents">
         伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<br>
@@ -52,6 +78,16 @@ category: Components
   box-sizing: border-box;
   color: var(--color-label);
   width: 100%;
+  &.-three-line {
+    .ncgr-expansion-card__trailing {
+      margin: 0 0 auto 1rem;
+    }
+  }
+  &.-dense {
+    .ncgr-expansion-card__header {
+      padding: 0.5rem 1rem;
+    }
+  }
 }
 
 .ncgr-expansion-card__item {
@@ -62,12 +98,62 @@ category: Components
   position: relative;
 }
 
-.ncgr-expansion-card__label {
-  display: block;
-  padding: 16px 32px 16px 16px;
-  font-weight: bold;
+.ncgr-expansion-card__header {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1.5;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
   cursor: pointer;
-  line-height: 24px;
+}
+
+.ncgr-expansion-card__leading {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  min-width: 2.5rem;
+  margin: 0 1rem 0 0;
+  flex-shrink: 0;
+}
+
+.ncgr-expansion-card__icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ncgr-expansion-card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+.ncgr-expansion-card__primary-title {
+  font-size: 1rem;
+}
+
+.ncgr-expansion-card__secondary-title {
+  font-size: 0.75rem;
+  color: var(--color-secondary-label);
+}
+
+.ncgr-expansion-card__trailing {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 auto 1rem;
 }
 
 .ncgr-expansion-card__checkbox {
@@ -86,7 +172,7 @@ category: Components
 }
 
 .ncgr-expansion-card__contents {
-  padding: 0 16px 16px 16px;
+  padding: 0.5rem 1rem 1rem 1rem;
   a {
     color: var(--color-secondary-label);
     text-decoration: underline;
@@ -96,16 +182,14 @@ category: Components
 
 .ncgr-expansion-card__arrow {
   color: var(--color-secondary-label);
-  font-size: 20px;
-  line-height: 16px;
+  font-size: 1.25rem;
   transform: rotate(0deg);
   transition: transform 0.4s ease;
-  position: absolute;
-  right: 16px;
-  top: 18px;
   pointer-events: none;
 }
 
-.ncgr-expansion-card__checkbox:checked ~ .ncgr-expansion-card__arrow {
-  transform: rotate(-180deg);
+.ncgr-expansion-card__checkbox:checked ~ label {
+  .ncgr-expansion-card__arrow {
+    transform: rotate(-180deg);
+  }
 }
