@@ -162,7 +162,7 @@ category: Components
   <div class="ncgr-list-group__subheader">
     Three Line
   </div>
-  <ul class="ncgr-list-view -list-large">
+  <ul class="ncgr-list-view -three-line">
     <li class="ncgr-list-tile">
       <ul class="ncgr-list-tile__title">
         <li class="ncgr-list-tile__primary-title">
@@ -262,7 +262,7 @@ category: Components
   margin: 0;
   &.-three-line {
     .ncgr-list-tile__trailing {
-      margin: 0 0 auto 16px;
+      margin: 0 0 auto 1rem;
     }
   }
   &.-dense {
