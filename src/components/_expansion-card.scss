@@ -1,15 +1,15 @@
 /*doc
 ---
-title: Expansion Card
-name: expansion-card
+title: Expansion List-View
+name: expansion-list-view
 category: Components
 ---
 
 少ない情報からさらに詳しい情報を見せたい場合に、伸縮するカードを使用します。
 
 ```example
-<div class="ncgr-expansion-card">
-  <div class="ncgr-expansion-card__item">
+<div class="ncgr-expansion-list-view">
+  <div class="ncgr-expansion-card__list-tile">
     <input id="koga" class="ncgr-expansion-card__checkbox" type="checkbox">  
     <label for="koga">
       <div class="ncgr-expansion-card__header">
@@ -29,7 +29,7 @@ category: Components
       </div>
     </label>
     <div class="ncgr-expansion-card__hidden">
-      <div class="ncgr-expansion-card__contents">
+      <div class="ncgr-expansion-card__body">
         甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
         山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
         甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
@@ -38,7 +38,7 @@ category: Components
       </div>
     </div>
   </div>
-  <div class="ncgr-expansion-card__item">
+  <div class="ncgr-expansion-card__list-tile">
     <input id="iga" class="ncgr-expansion-card__checkbox" type="checkbox">  
     <label for="iga">
       <div class="ncgr-expansion-card__header">
@@ -58,7 +58,7 @@ category: Components
       </div>
     </label>
     <div class="ncgr-expansion-card__hidden">
-      <div class="ncgr-expansion-card__contents">
+      <div class="ncgr-expansion-card__body">
         伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<br>
         甲賀流と並んで忍術の中で最も有名な流派の一つである。<br>
         根拠地は、現在の三重県伊賀市と名張市にあった。<br>
@@ -71,7 +71,7 @@ category: Components
 
 */
 
-.ncgr-expansion-card {
+.ncgr-expansion-list-view {
   background-color: var(--color-secondary-grouped-background);
   border-top: 1px solid var(--color-separator);
   border-bottom: 1px solid var(--color-separator);
@@ -90,7 +90,7 @@ category: Components
   }
 }
 
-.ncgr-expansion-card__item {
+.ncgr-expansion-card__list-tile {
   border-bottom: 1px solid var(--color-separator);
   &:last-child {
     border-bottom: none;
@@ -171,7 +171,7 @@ category: Components
   transition: max-height 0.4s ease;
 }
 
-.ncgr-expansion-card__contents {
+.ncgr-expansion-card__body {
   padding: 0.5rem 1rem 1rem 1rem;
   a {
     color: var(--color-secondary-label);
