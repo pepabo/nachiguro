@@ -61,6 +61,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
+      animation: fade-in 0.3s ease ;
     }
     .ncgr-semi-modal__sheet {
       transform: translateX(0);
@@ -80,6 +81,23 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   background: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 100;
+}
+
+@keyframes fade-in{
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
 
 .ncgr-semi-modal__sheet {
