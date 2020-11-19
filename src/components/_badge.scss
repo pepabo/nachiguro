@@ -28,7 +28,7 @@ category: Components
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-default-400);
   }
-  &.ncgr-alert--default {
+  &.ncgr-badge--default {
     background-color: var(--color-default-200);
     color: var(--color-white);
     &:hover {
@@ -42,7 +42,7 @@ category: Components
       }
     }
   }
-  &.ncgr-alert--danger {
+  &.ncgr-badge--danger {
     background-color: var(--color-danger-500);
     color: var(--color-white);
   }
