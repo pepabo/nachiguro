@@ -188,6 +188,12 @@
                             </li>
                           
                             <li>
+                              <a class="ncgr-text-link" href="#semi-modal">
+                                Semi-modal
+                              </a>
+                            </li>
+                          
+                            <li>
                               <a class="ncgr-text-link" href="#separator">
                                 Separator
                               </a>
@@ -3608,6 +3614,68 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
           <div class="ncgr-section ncgr-section--background">
             <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
+<h1 id="semi-modal" class="styleguide">Semi-modal</h1>
+
+<p>Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
+<code>-active</code>のmodifierがある要素は、それを付与することでアクティブな状態になります。</p>
+
+<p>また、<code>ncgr-semi-modal__contents</code>を付与したクラスを複数配置し、
+<code>-active</code>の付け外しをすることでシート内に階層を持たせることができます。</p>
+
+<p><code>.semi-modal</code>をアクティブにするときに、bodyに<code>.overflow-hidden</code>を付与することで下の要素のスクロールを制限し、
+モーダル内のスクロールの誤動作を防ぐことができます。</p>
+          </div><!-- end of .ncgr-section__inner -->
+        </div><!-- end of .ncgr-section -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="styleguide__code">
+              <pre>&lt;section class="ncgr-semi-modal -active"&gt;
+  &lt;div class="ncgr-semi-modal__overlay"&gt;&lt;/div&gt;
+  &lt;div class="ncgr-semi-modal__sheet"&gt;
+    &lt;div class="ncgr-semi-modal__header"&gt;
+      &lt;div class="ncgr-semi-modal__leading -active"&gt;
+        ×
+      &lt;/div&gt;
+      &lt;div class="ncgr-semi-modal__title"&gt;
+        メニュー
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ncgr-semi-modal__body"&gt;
+      &lt;div class="ncgr-semi-modal__contents -active"&gt;
+        &lt;ul class="ncgr-list-view"&gt; 
+          &lt;li class="ncgr-list-tile"&gt;
+            &lt;div class="ncgr-list-tile__title"&gt;
+              スリスリする
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="ncgr-list-tile"&gt;
+            &lt;div class="ncgr-list-tile__title"&gt;
+              スリスリしない
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="ncgr-list-tile"&gt;
+            &lt;div class="ncgr-list-tile__title"&gt;
+              スリスリする
+            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li class="ncgr-list-tile"&gt;
+            &lt;div class="ncgr-list-tile__title"&gt;
+              スリスリしない
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
 <h1 id="separator" class="styleguide">Separator</h1>
 
 <p>各要素を区切るのに使います。</p>
@@ -4191,7 +4259,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2020年11月13日
+          最終更新日: 2020年11月19日
         </div>
         <div>
           © 2020 SUZURI ❤️from 東京・渋谷

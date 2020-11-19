@@ -5262,6 +5262,200 @@ category: Components
 
 /*doc
 ---
+title: Semi-modal
+name: semi-modal
+category: Components
+---
+Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
+
+また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
+`-active`の付け外しをすることでシート内に階層を持たせることができます。
+
+`.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
+モーダル内のスクロールの誤動作を防ぐことができます。
+
+```code
+<section class="ncgr-semi-modal -active">
+  <div class="ncgr-semi-modal__overlay"></div>
+  <div class="ncgr-semi-modal__sheet">
+    <div class="ncgr-semi-modal__header">
+      <div class="ncgr-semi-modal__leading -active">
+        ×
+      </div>
+      <div class="ncgr-semi-modal__title">
+        メニュー
+      </div>
+    </div>
+    <div class="ncgr-semi-modal__body">
+      <div class="ncgr-semi-modal__contents -active">
+        <ul class="ncgr-list-view"> 
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+*/
+.ncgr-semi-modal.-active .ncgr-semi-modal__overlay {
+  display: block;
+  animation: fade-in 0.3s ease;
+}
+.ncgr-semi-modal.-active .ncgr-semi-modal__sheet {
+  transform: translateX(0);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-semi-modal.-active .ncgr-semi-modal__sheet {
+    transform: translateY(0);
+  }
+}
+
+.ncgr-semi-modal__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 100;
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+.ncgr-semi-modal__sheet {
+  background-color: var(--color-secondary-grouped-background);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  height: 100%;
+  overflow-y: scroll;
+  transform: translateX(25rem);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 101;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-semi-modal__sheet {
+    width: 100%;
+    height: 50vh;
+    top: auto;
+    bottom: 0;
+    transform: translateY(50vh);
+  }
+}
+
+.ncgr-semi-modal__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-secondary-grouped-background);
+  z-index: 102;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  border-bottom: 1px solid var(--color-separator);
+}
+
+.ncgr-semi-modal__title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--color-label);
+}
+
+.ncgr-semi-modal__leading {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  color: var(--color-secondary-label);
+}
+.ncgr-semi-modal__leading.-active {
+  display: block;
+}
+
+.ncgr-semi-modal__body {
+  position: relative;
+  width: 25rem;
+  min-height: calc(100vh - 3.5rem);
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .ncgr-semi-modal__body {
+    width: 100vw;
+    min-height: calc(50vh - 3.5rem);
+  }
+}
+
+.ncgr-semi-modal__contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(25rem);
+  overflow-y: scroll;
+  width: 25rem;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--color-secondary-grouped-background);
+}
+.ncgr-semi-modal__contents.-active {
+  transform: translateX(0);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-semi-modal__contents {
+    width: 100vw;
+    transform: translateX(100vw);
+  }
+}
+
+/*doc
+---
 title: Separator
 name: separator
 category: Components
