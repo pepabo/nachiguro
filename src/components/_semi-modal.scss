@@ -19,17 +19,18 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   <div class="ncgr-semi-modal__sheet">
     <div class="ncgr-semi-modal__header -active">
       <div class="ncgr-semi-modal__leading">
-        <div class="ncgr-semi-modal__icon ncgr-typography-light">
-          ×
+        <div class="ncgr-semi-modal__icons">
+          <i class="fas fa-bars ncgr-typography-light"></i>
         </div>
       </div>
       <div class="ncgr-semi-modal__title">
-        <div class="ncgr-semi-modal__primary-title">
           メニュー
-        </div>
-        <div class="ncgr-semi-modal__secondary-title">
-          忍者スリスリ君、伊賀里
-        </div>
+      </div>
+      <div class="ncgr-semi-modal__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </div>
+      <div class="ncgr-semi-modal__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
       <div class="ncgr-semi-modal__trailing">
         <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
@@ -93,7 +94,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   z-index: 100;
 }
 
-@keyframes fade-in{
+@keyframes fade-in {
   0% {
     display: none;
     opacity: 0;
@@ -142,32 +143,21 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   background-color: var(--color-secondary-grouped-background);
   display: flex;
   box-sizing: border-box;
-  line-height: 1.5;
-  height: auto;
+  height: 3.5rem;
   display: flex;
   align-items: flex-start;
-  padding: 1rem;
-  // border-bottom: 1px solid var(--color-separator);
+  padding: 0;
   display: none;
-  &.-active{
+  &.-active {
     display: flex;
   }
-  &.-three-line {
-    .ncgr-semi-modal__trailing {
-      margin: 0 0 auto 16px;
-    }
-  }
-  &.-dense {
-    padding: 0.5rem 1rem;
-  }
 }
+
 .ncgr-semi-modal__leading {
   width: auto;
   height: auto;
-  display: flex;
-  align-items: flex-start;
   min-width: 2.5rem;
-  margin: 0 1rem 0 0;
+  margin: auto 0 auto 1rem;
   flex-shrink: 0;
 }
 
@@ -187,16 +177,9 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   align-content: center;
   align-self: stretch;
   flex-grow: 1;
-  min-height: 100%;
-}
-
-.ncgr-semi-modal__primary-title {
+  height: 3.5rem;
   font-size: 1rem;
-}
-
-.ncgr-semi-modal__secondary-title {
-  font-size: 0.75rem;
-  color: var(--color-secondary-label);
+  margin: 0 1rem;
 }
 
 .ncgr-semi-modal__trailing {
@@ -205,7 +188,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto 0 auto 1rem;
+  margin: auto 1rem auto 0.5rem;
 }
 
 .ncgr-semi-modal__body {
