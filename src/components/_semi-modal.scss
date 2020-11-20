@@ -1,6 +1,6 @@
 /*doc
 ---
-title: Semi-modal
+title: Semi Modal
 name: semi-modal
 category: Components
 ---
@@ -17,13 +17,26 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 <section class="ncgr-semi-modal -active">
   <div class="ncgr-semi-modal__overlay"></div>
   <div class="ncgr-semi-modal__sheet">
-    <div class="ncgr-semi-modal__header">
-      <div class="ncgr-semi-modal__leading -active">
-        ×
+    <div class="ncgr-semi-modal__header -active">
+      <div class="ncgr-semi-modal__leading">
+        <div class="ncgr-semi-modal__icon ncgr-typography-light">
+          ×
+        </div>
       </div>
       <div class="ncgr-semi-modal__title">
         メニュー
       </div>
+      <ul class="ncgr-semi-modal__actions">
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+      </ul>
     </div>
     <div class="ncgr-semi-modal__body">
       <div class="ncgr-semi-modal__contents -active">
@@ -61,7 +74,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
-      animation: fade-in 0.3s ease ;
+      animation: fade-in 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
       transform: translateX(0);
@@ -83,7 +96,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   z-index: 100;
 }
 
-@keyframes fade-in{
+@keyframes fade-in {
   0% {
     display: none;
     opacity: 0;
@@ -107,10 +120,14 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   right: 0;
   width: 25rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
   overflow-y: scroll;
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
+  box-shadow: none !important;
   @include shadow-16dp();
   @include mediaquery(tablet) {
     width: 100%;
@@ -122,54 +139,74 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 }
 
 .ncgr-semi-modal__header {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--color-secondary-grouped-background);
-  z-index: 102;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
   height: 3.5rem;
-  border-bottom: 1px solid var(--color-separator);
-}
-
-.ncgr-semi-modal__title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin: 0;
+  display: flex;
+  align-items: flex-start;
   padding: 0;
-  line-height: 1.6;
-  color: var(--color-label);
+  display: none;
+  &.-active {
+    display: flex;
+  }
 }
 
 .ncgr-semi-modal__leading {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  cursor: pointer;
+  width: auto;
+  height: auto;
+  min-width: 2.5rem;
+  margin: auto 0 auto 1rem;
+  flex-shrink: 0;
+}
+
+.ncgr-semi-modal__icon {
   font-size: 1.5rem;
-  line-height: 3.5rem;
-  text-align: center;
-  color: var(--color-secondary-label);
-  &.-active {
-    display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ncgr-semi-modal__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  flex-grow: 1;
+  height: 3.5rem;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.ncgr-semi-modal__actions {
+  margin: 0;
+  display: flex;
+  height: 3.5rem;
+  width: auto;
+  & li {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 1rem auto 0.5rem;
   }
 }
 
 .ncgr-semi-modal__body {
   position: relative;
   width: 25rem;
-  min-height: calc(100vh - 3.5rem);
   height: auto;
+  flex-grow: 1;
   overflow: hidden;
   @include mediaquery(tablet) {
     width: 100vw;
-    min-height: calc(50vh - 3.5rem);
   }
 }
 
