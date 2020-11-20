@@ -13,16 +13,26 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 `.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
 モーダル内のスクロールの誤動作を防ぐことができます。
 
-```code
+```example
 <section class="ncgr-semi-modal -active">
   <div class="ncgr-semi-modal__overlay"></div>
   <div class="ncgr-semi-modal__sheet">
-    <div class="ncgr-semi-modal__header">
-      <div class="ncgr-semi-modal__leading -active">
-        ×
+    <div class="ncgr-semi-modal__header -active">
+      <div class="ncgr-semi-modal__leading">
+        <div class="ncgr-semi-modal__icon ncgr-typography-light">
+          ×
+        </div>
       </div>
       <div class="ncgr-semi-modal__title">
-        メニュー
+        <div class="ncgr-semi-modal__primary-title">
+          メニュー
+        </div>
+        <div class="ncgr-semi-modal__secondary-title">
+          忍者スリスリ君、伊賀里
+        </div>
+      </div>
+      <div class="ncgr-semi-modal__trailing">
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
       </div>
     </div>
     <div class="ncgr-semi-modal__body">
@@ -61,7 +71,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
-      animation: fade-in 0.3s ease ;
+      animation: fade-in 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
       transform: translateX(0);
@@ -107,6 +117,9 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   right: 0;
   width: 25rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
   overflow-y: scroll;
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,54 +135,86 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 }
 
 .ncgr-semi-modal__header {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--color-secondary-grouped-background);
-  z-index: 102;
   display: flex;
-  align-items: center;
+  box-sizing: border-box;
+  line-height: 1.5;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  // border-bottom: 1px solid var(--color-separator);
+  display: none;
+  &.-active{
+    display: flex;
+  }
+  &.-three-line {
+    .ncgr-semi-modal__trailing {
+      margin: 0 0 auto 16px;
+    }
+  }
+  &.-dense {
+    padding: 0.5rem 1rem;
+  }
+}
+.ncgr-semi-modal__leading {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  min-width: 2.5rem;
+  margin: 0 1rem 0 0;
+  flex-shrink: 0;
+}
+
+.ncgr-semi-modal__icon {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
   justify-content: center;
-  height: 3.5rem;
-  border-bottom: 1px solid var(--color-separator);
+  align-items: center;
 }
 
 .ncgr-semi-modal__title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: var(--color-label);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  flex-grow: 1;
+  min-height: 100%;
 }
 
-.ncgr-semi-modal__leading {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  text-align: center;
+.ncgr-semi-modal__primary-title {
+  font-size: 1rem;
+}
+
+.ncgr-semi-modal__secondary-title {
+  font-size: 0.75rem;
   color: var(--color-secondary-label);
-  &.-active {
-    display: block;
-  }
+}
+
+.ncgr-semi-modal__trailing {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 auto 1rem;
 }
 
 .ncgr-semi-modal__body {
   position: relative;
   width: 25rem;
-  min-height: calc(100vh - 3.5rem);
   height: auto;
+  flex-grow: 1;
   overflow: hidden;
   @include mediaquery(tablet) {
     width: 100vw;
-    min-height: calc(50vh - 3.5rem);
   }
 }
 
