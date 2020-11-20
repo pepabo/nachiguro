@@ -124,6 +124,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
+  box-shadow: none !important;
   @include shadow-16dp();
   @include mediaquery(tablet) {
     width: 100%;
