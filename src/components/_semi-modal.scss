@@ -19,22 +19,24 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   <div class="ncgr-semi-modal__sheet">
     <div class="ncgr-semi-modal__header -active">
       <div class="ncgr-semi-modal__leading">
-        <div class="ncgr-semi-modal__icons">
-          <i class="fas fa-bars ncgr-typography-light"></i>
+        <div class="ncgr-semi-modal__icon ncgr-typography-light">
+          ×
         </div>
       </div>
       <div class="ncgr-semi-modal__title">
           メニュー
       </div>
-      <div class="ncgr-semi-modal__trailing">
-        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
-      </div>
-      <div class="ncgr-semi-modal__trailing">
-        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
-      </div>
-      <div class="ncgr-semi-modal__trailing">
-        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
-      </div>
+      <ul class="ncgr-semi-modal__actions">
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+      </ul>
     </div>
     <div class="ncgr-semi-modal__body">
       <div class="ncgr-semi-modal__contents -active">
@@ -182,13 +184,19 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   margin: 0 1rem;
 }
 
-.ncgr-semi-modal__trailing {
-  min-width: 1.5rem;
-  height: 1.5rem;
+.ncgr-semi-modal__actions {
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto 1rem auto 0.5rem;
+  height: 3.5rem;
+  width: auto;
+  & li {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 1rem auto 0.5rem;
+  }
 }
 
 .ncgr-semi-modal__body {
