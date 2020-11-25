@@ -77,6 +77,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
       animation: fade-in 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
       transform: translateX(0);
       @include mediaquery(tablet) {
         transform: translateY(0);
@@ -161,6 +162,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   min-width: 2.5rem;
   margin: auto 0 auto 1rem;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .ncgr-semi-modal__icon {
