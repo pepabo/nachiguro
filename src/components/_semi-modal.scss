@@ -5,13 +5,16 @@ name: semi-modal
 category: Components
 ---
 Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
-`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 
+`overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
+`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
 `-active`の付け外しをすることでシート内に階層を持たせることができます。
 
-`.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
-モーダル内のスクロールの誤動作を防ぐことができます。
+`.semi-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
 ```code
 <section class="ncgr-semi-modal -active">
