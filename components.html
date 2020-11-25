@@ -3616,14 +3616,17 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
 
 <h1 id="semi-modal" class="styleguide">Semi Modal</h1>
 
-<p>Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
-<code>-active</code>のmodifierがある要素は、それを付与することでアクティブな状態になります。</p>
+<p>Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。</p>
 
-<p>また、<code>ncgr-semi-modal__contents</code>を付与したクラスを複数配置し、
+<p><code>overlay</code>と<code>sheet</code>の二つの大きな要素に分かれており、<code>sheet</code>には<code>header</code>と<code>body</code>の大きな２要素があります。
+<code>header</code>には、<code>leading</code>、<code>title</code>、<code>actions</code>の３つの要素がありますが、<code>leading</code>は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、<code>actions</code>にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。</p>
+
+<p><code>-active</code>のmodifierがある要素は、それを付与することでアクティブな状態になります。
+また、<code>ncgr-semi-modal__contents</code>を付与したクラスを複数配置し、
 <code>-active</code>の付け外しをすることでシート内に階層を持たせることができます。</p>
 
-<p><code>.semi-modal</code>をアクティブにするときに、bodyに<code>.overflow-hidden</code>を付与することで下の要素のスクロールを制限し、
-モーダル内のスクロールの誤動作を防ぐことができます。</p>
+<p><code>.semi-modal</code>をアクティブにするときには、同時にbodyに<code>.overflow-hidden</code>を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。</p>
           </div><!-- end of .ncgr-section__inner -->
         </div><!-- end of .ncgr-section -->
         <div class="ncgr-section ncgr-section--background">
@@ -4272,7 +4275,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2020年11月20日
+          最終更新日: 2020年11月25日
         </div>
         <div>
           © 2020 SUZURI ❤️from 東京・渋谷

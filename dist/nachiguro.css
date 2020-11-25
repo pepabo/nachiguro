@@ -5267,13 +5267,16 @@ name: semi-modal
 category: Components
 ---
 Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
-`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 
+`overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
+`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
 `-active`の付け外しをすることでシート内に階層を持たせることができます。
 
-`.semi-modal`をアクティブにするときに、bodyに`.overflow-hidden`を付与することで下の要素のスクロールを制限し、
-モーダル内のスクロールの誤動作を防ぐことができます。
+`.semi-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
 ```code
 <section class="ncgr-semi-modal -active">
@@ -5336,6 +5339,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   animation: fade-in 0.3s ease;
 }
 .ncgr-semi-modal.-active .ncgr-semi-modal__sheet {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   transform: translateX(0);
 }
 @media screen and (max-width: 768px) {
@@ -5383,8 +5387,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
-  box-shadow: none !important;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 768px) {
   .ncgr-semi-modal__sheet {
@@ -5419,6 +5421,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   min-width: 2.5rem;
   margin: auto 0 auto 1rem;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .ncgr-semi-modal__icon {
