@@ -80,7 +80,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
       animation: fade-in 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
-      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+      @include shadow-16dp();
       transform: translateX(0);
       @include mediaquery(tablet) {
         transform: translateY(0);
@@ -131,8 +131,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
-  box-shadow: none !important;
-  @include shadow-16dp();
   @include mediaquery(tablet) {
     width: 100%;
     height: 50vh;
