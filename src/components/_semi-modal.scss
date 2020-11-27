@@ -71,6 +71,9 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 */
 
 .ncgr-semi-modal {
+  & *{
+    z-index: 2147483645;
+  }
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
