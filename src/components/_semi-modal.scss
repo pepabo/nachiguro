@@ -74,7 +74,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 */
 
 .ncgr-semi-modal {
-  & *{
+  & * {
     z-index: 2147483645;
   }
   &.-active {
@@ -86,15 +86,15 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
       animation: semi-modal-fade-sheet 1s ease;
       @include shadow-16dp();
       transform: translateX(0);
-
-      &:before{
+      &:before {
         animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         @include mediaquery(tablet) {
           animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
       }
-      & .ncgr-semi-modal__header,.ncgr-semi-modal__contents{
-        animation: semi-modal-hide 1s ease ;
+      & .ncgr-semi-modal__header,
+      .ncgr-semi-modal__contents {
+        animation: semi-modal-hide 1s ease;
       }
       @include mediaquery(tablet) {
         transform: translateY(0);
@@ -269,17 +269,17 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 }
 
 @keyframes semi-modal-fade-sheet {
-  0%{
+  0% {
     box-shadow: none;
     background-color: transparent;
   }
 
-  80%{
+  80% {
     box-shadow: none;
     background-color: transparent;
   }
 
-  100%{
+  100% {
     @include shadow-16dp();
     background-color: var(--color-secondary-grouped-background);
   }
@@ -303,7 +303,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     transform: rotate(270deg);
   }
 }
-
 
 @keyframes semi-modal-fill-mobile {
   from {
