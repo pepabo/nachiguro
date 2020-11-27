@@ -1,0 +1,60 @@
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px,
+) !default;
+
+$gaps: (
+  s: 1rem,
+  m: 1.5rem,
+  l: 1.5rem,
+) !default;
+
+$container-widths: (
+  s: 540px,
+  m: 720px,
+  l: 960px,
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-up($boundary) {
+  @media screen and (min-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+// Variables
+$container-boundaries: $boundaries;
+$container-gaps: $gaps;
+
+// Functions
+@function container-gap($container-boundary) {
+  @return map-get($container-gaps, $container-boundary);
+}
+
+@function container-width($container-boundary) {
+  @return map-get($container-widths, $container-boundary);
+}
+
+// Mixins
+@mixin container() {
+  width: 100%;
+  padding-right: container-gap(m);
+  padding-left: container-gap(m);
+  margin-right: auto;
+  margin-left: auto;
+  @each $container-boundary in map-keys($container-boundaries) {
+    @include mq-boundary-up($container-boundary) {
+      &.-container-#{$container-boundary} {
+        padding-right: container-gap($container-boundary);
+        padding-left: container-gap($container-boundary);
+        max-width: container-width($container-boundary);
+      }
+    }
+  }
+}
+
+.ncgr-container {
+  @include container();
+}
