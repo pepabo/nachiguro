@@ -20,7 +20,7 @@ Containerはグリッドシステムを使用する場合に必要です。
 
 ### サイズ
 
-.-container-{container-width} Modifierで、Containerのmax-widthのサイズを指定します。
+`.-container-{container-width}` Modifierで、Containerのmax-widthのサイズを指定します。
 
 ```example
 <div class="ncgr-container -container-s">max-width: 540px</div>
@@ -30,7 +30,7 @@ Containerはグリッドシステムを使用する場合に必要です。
 
 ### 隙間をなくす
 
-`.-no-gaps`Modifierをつけると隙間がなくなります。
+`.-no-gaps` Modifierをつけると隙間がなくなります。
 
 ```example
 <div class="ncgr-container -no-gaps">隙間なし</div>
