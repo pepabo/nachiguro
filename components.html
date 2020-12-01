@@ -110,6 +110,12 @@
                             </li>
                           
                             <li>
+                              <a class="ncgr-text-link" href="#container">
+                                Container
+                              </a>
+                            </li>
+                          
+                            <li>
                               <a class="ncgr-text-link" href="#expansion-card">
                                 Expansion Card
                               </a>
@@ -1222,6 +1228,91 @@
             <div class="styleguide__code">
               <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-color-selector"</span> <span class="na">style=</span><span class="s">"background-color: white"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-color-selector disabled"</span> <span class="na">style=</span><span class="s">"background-color: black"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h1 id="container" class="styleguide">Container</h1>
+
+<p>Containerはグリッドシステムを使用する場合に必要です。</p>
+
+<h3>基本形</h3>
+
+<p><code>.ncgr-container</code> は幅100%のコンテナです。
+左右にboundaryに応じたgapがつきます。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="styleguide__preview">
+              <div class="ncgr-container">
+  100%
+</div>
+
+            </div>
+            <div class="styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container"</span><span class="nt">&gt;</span>
+  100%
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h3>サイズ</h3>
+
+<p><code>.-container-{container-width}</code> Modifierで、Containerのmax-widthのサイズを指定します。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="styleguide__preview">
+              <div class="ncgr-container -container-s">max-width: 540px</div>
+<div class="ncgr-container -container-m">max-width: 720px</div>
+<div class="ncgr-container -container-l">max-width: 1140px</div>
+
+            </div>
+            <div class="styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-s"</span><span class="nt">&gt;</span>max-width: 540px<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-m"</span><span class="nt">&gt;</span>max-width: 720px<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-l"</span><span class="nt">&gt;</span>max-width: 1140px<span class="nt">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="styleguide__content">
+          <div class="ncgr-section ncgr-section--background">
+            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+
+<h3>隙間をなくす</h3>
+
+<p><code>.-no-gaps</code> Modifierをつけると隙間がなくなります。</p>
+            </div><!-- end of .ncgr-section__inner -->
+          </div><!-- end of .ncgr-section -->
+        </div><!-- end of .styleguide__content -->
+        <div class="ncgr-section ncgr-section--background">
+          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
+            <div class="styleguide__preview">
+              <div class="ncgr-container -no-gaps">隙間なし</div>
+<div class="ncgr-container -container-s -no-gaps">隙間なしS</div>
+<div class="ncgr-container -container-m -no-gaps">隙間なしM</div>
+<div class="ncgr-container -container-l -no-gaps">隙間なしL</div>
+
+            </div>
+            <div class="styleguide__code">
+              <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -no-gaps"</span><span class="nt">&gt;</span>隙間なし<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-s -no-gaps"</span><span class="nt">&gt;</span>隙間なしS<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-m -no-gaps"</span><span class="nt">&gt;</span>隙間なしM<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-container -container-l -no-gaps"</span><span class="nt">&gt;</span>隙間なしL<span class="nt">&lt;/div&gt;</span>
 </pre>
             </div>
           </div>
@@ -4275,7 +4366,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2020年11月25日
+          最終更新日: 2020年12月1日
         </div>
         <div>
           © 2020 SUZURI ❤️from 東京・渋谷

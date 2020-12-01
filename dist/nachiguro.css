@@ -2656,6 +2656,88 @@ category: Components
   opacity: 0.35;
 }
 
+/*doc
+---
+title: Container
+name: container
+category: Components
+---
+
+Containerはグリッドシステムを使用する場合に必要です。
+
+### 基本形
+
+`.ncgr-container` は幅100%のコンテナです。
+左右にboundaryに応じたgapがつきます。
+
+```example
+<div class="ncgr-container">
+  100%
+</div>
+```
+
+### サイズ
+
+`.-container-{container-width}` Modifierで、Containerのmax-widthのサイズを指定します。
+
+```example
+<div class="ncgr-container -container-s">max-width: 540px</div>
+<div class="ncgr-container -container-m">max-width: 720px</div>
+<div class="ncgr-container -container-l">max-width: 1140px</div>
+```
+
+### 隙間をなくす
+
+`.-no-gaps` Modifierをつけると隙間がなくなります。
+
+```example
+<div class="ncgr-container -no-gaps">隙間なし</div>
+<div class="ncgr-container -container-s -no-gaps">隙間なしS</div>
+<div class="ncgr-container -container-m -no-gaps">隙間なしM</div>
+<div class="ncgr-container -container-l -no-gaps">隙間なしL</div>
+```
+
+*/
+.ncgr-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+.ncgr-container.-container-s {
+  max-width: 540px;
+}
+.ncgr-container.-container-m {
+  max-width: 720px;
+}
+.ncgr-container.-container-l {
+  max-width: 1140px;
+}
+.ncgr-container.-no-gaps {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .ncgr-credit-card-icon {
   display: flex;
   align-items: center;
