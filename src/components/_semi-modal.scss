@@ -80,10 +80,10 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
-      animation: semi-modal-fade-in 0.3s ease;
+      animation: semi-modal-fade-in-overlay 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
-      animation: semi-modal-fade-sheet 1s ease;
+      animation: semi-modal-fade-in-sheet 1s ease;
       @include shadow-16dp();
       transform: translateX(0);
       &:before {
@@ -92,7 +92,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
           animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
       }
-      & .ncgr-semi-modal__header,
+      .ncgr-semi-modal__header,
       .ncgr-semi-modal__contents {
         animation: semi-modal-hide 1s ease;
       }
@@ -135,7 +135,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     transform: translateY(50vh);
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 180vh;
     height: 180vh;
@@ -251,7 +251,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 
 // animation
 
-@keyframes semi-modal-fade-in {
+@keyframes semi-modal-fade-in-overlay {
   0% {
     display: none;
     opacity: 0;
@@ -268,7 +268,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   }
 }
 
-@keyframes semi-modal-fade-sheet {
+@keyframes semi-modal-fade-in-sheet {
   0% {
     box-shadow: none;
     background-color: transparent;
