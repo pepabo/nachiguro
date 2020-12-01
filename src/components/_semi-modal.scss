@@ -74,14 +74,28 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
 */
 
 .ncgr-semi-modal {
+  & * {
+    z-index: 2147483645;
+  }
   &.-active {
     .ncgr-semi-modal__overlay {
       display: block;
-      animation: fade-in 0.3s ease;
+      animation: semi-modal-fade-in-overlay 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
+      animation: semi-modal-fade-in-sheet 1s ease;
       @include shadow-16dp();
       transform: translateX(0);
+      &:before {
+        animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        @include mediaquery(tablet) {
+          animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+      .ncgr-semi-modal__header,
+      .ncgr-semi-modal__contents {
+        animation: semi-modal-hide 1s ease;
+      }
       @include mediaquery(tablet) {
         transform: translateY(0);
       }
@@ -100,23 +114,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   z-index: 100;
 }
 
-@keyframes fade-in {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
 .ncgr-semi-modal__sheet {
   background-color: var(--color-secondary-grouped-background);
   position: fixed;
@@ -126,8 +123,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 101;
@@ -137,6 +133,27 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     top: auto;
     bottom: 0;
     transform: translateY(50vh);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 180vh;
+    height: 180vh;
+    background-color: var(--color-secondary-grouped-background);
+    top: -40vh;
+    right: -80vh;
+    border-radius: 30%;
+    z-index: -1;
+    overflow: hidden;
+    @include mediaquery(tablet) {
+      width: 160vw;
+      height: 160vw;
+      top: -15vw;
+      border-radius: 40%;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -229,5 +246,93 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   @include mediaquery(tablet) {
     width: 100vw;
     transform: translateX(100vw);
+  }
+}
+
+// animation
+
+@keyframes semi-modal-fade-in-overlay {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes semi-modal-fade-in-sheet {
+  0% {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  80% {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  100% {
+    @include shadow-16dp();
+    background-color: var(--color-secondary-grouped-background);
+  }
+}
+
+@keyframes semi-modal-fill {
+  from {
+    width: 2vh;
+    height: 2vh;
+    right: -2vh;
+    top: 49vh;
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  to {
+    width: 180vh;
+    height: 180vh;
+    right: -80vh;
+    top: -40vh;
+    border-radius: 30%;
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes semi-modal-fill-mobile {
+  from {
+    top: 50vh;
+    border-radius: 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: -15vw;
+    border-radius: 40%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+}
+
+@keyframes semi-modal-hide {
+  0% {
+    opacity: 0;
+    background-color: transparent;
+  }
+  35% {
+    opacity: 0;
+    background-color: transparent;
+  }
+
+  75% {
+    opacity: 1;
+    background-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    background-color: var(--color-secondary-grouped-background);
   }
 }
