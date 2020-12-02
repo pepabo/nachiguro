@@ -570,9 +570,9 @@ $grid-gaps: $gaps;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin-top: grid-gap(m) * -1;
-  margin-right: grid-gap(m) / -2;
-  margin-left: grid-gap(m) / -2;
+  margin-top: grid-gap(s) * -1;
+  margin-right: grid-gap(s) / -2;
+  margin-left: grid-gap(s) / -2;
   @each $grid-boundary in map-keys($grid-boundaries) {
     @include mq-boundary-up($grid-boundary) {
       margin-top: grid-gap($grid-boundary) * -1;
@@ -632,9 +632,9 @@ $grid-gaps: $gaps;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-right: grid-gap(m) / 2;
-  padding-left: grid-gap(m) / 2;
-  margin-top: grid-gap(m);
+  padding-right: grid-gap(s) / 2;
+  padding-left: grid-gap(s) / 2;
+  margin-top: grid-gap(s);
   @for $i from 1 through 12 {
     &.-col-#{$i} {
       @include col-width($i);

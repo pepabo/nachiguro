@@ -84,8 +84,8 @@ $container-gaps: $gaps;
 @mixin container() {
   box-sizing: border-box;
   width: 100%;
-  padding-right: container-gap(m);
-  padding-left: container-gap(m);
+  padding-right: container-gap(s);
+  padding-left: container-gap(s);
   margin-right: auto;
   margin-left: auto;
   
