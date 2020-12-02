@@ -2701,8 +2701,8 @@ Containerはグリッドシステムを使用する場合に必要です。
 .ncgr-container {
   box-sizing: border-box;
   width: 100%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -3403,9 +3403,9 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -1.5rem;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  margin-top: -1rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 @media screen and (min-width: 480px) {
   .ncgr-row {
@@ -3466,9 +3466,9 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-  margin-top: 1.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
 }
 .ncgr-col.-col-1 {
   flex: 0 0 auto;
