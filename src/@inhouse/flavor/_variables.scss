@@ -1,0 +1,276 @@
+@use 'sass:map';
+@use './nachiguro-color';
+
+/* stylelint-disable value-keyword-case */
+$value-color: (
+  black: nachiguro-color.color(black, 1000),
+  white: nachiguro-color.color(white, 1000),
+  gray: (
+    50: nachiguro-color.color(gray, 50),
+    100: nachiguro-color.color(gray, 100),
+    200: nachiguro-color.color(gray, 200),
+    300: nachiguro-color.color(gray, 300),
+    400: nachiguro-color.color(gray, 400),
+    500: nachiguro-color.color(gray, 500),
+    600: nachiguro-color.color(gray, 600),
+    700: nachiguro-color.color(gray, 700),
+    800: nachiguro-color.color(gray, 800)
+  ),
+  blue: (
+    50: nachiguro-color.color(blue, 50),
+    100: nachiguro-color.color(blue, 100),
+    200: nachiguro-color.color(blue, 200),
+    300: nachiguro-color.color(blue, 300),
+    400: nachiguro-color.color(blue, 400),
+    500: nachiguro-color.color(blue, 500),
+    600: nachiguro-color.color(blue, 600),
+    700: nachiguro-color.color(blue, 700),
+    800: nachiguro-color.color(blue, 800),
+    A200: nachiguro-color.color(blue, A200),
+    A400: nachiguro-color.color(blue, A400),
+    A700: nachiguro-color.color(blue, A700)
+  ),
+  red: (
+    50: nachiguro-color.color(red, 50),
+    100: nachiguro-color.color(red, 100),
+    200: nachiguro-color.color(red, 200),
+    300: nachiguro-color.color(red, 300),
+    400: nachiguro-color.color(red, 400),
+    500: nachiguro-color.color(red, 500),
+    600: nachiguro-color.color(red, 600),
+    700: nachiguro-color.color(red, 700),
+    800: nachiguro-color.color(red, 800),
+    A200: nachiguro-color.color(red, A200),
+    A400: nachiguro-color.color(red, A400),
+    A700: nachiguro-color.color(red, A700)
+  ),
+  orange: (
+    50: nachiguro-color.color(orange, 50),
+    100: nachiguro-color.color(orange, 100),
+    200: nachiguro-color.color(orange, 200),
+    300: nachiguro-color.color(orange, 300),
+    400: nachiguro-color.color(orange, 400),
+    500: nachiguro-color.color(orange, 500),
+    600: nachiguro-color.color(orange, 600),
+    700: nachiguro-color.color(orange, 700),
+    800: nachiguro-color.color(orange, 800),
+    A200: nachiguro-color.color(orange, A200),
+    A400: nachiguro-color.color(orange, A400),
+    A700: nachiguro-color.color(orange, A700)
+  ),
+  yellow: (
+    50: nachiguro-color.color(yellow, 50),
+    100: nachiguro-color.color(yellow, 100),
+    200: nachiguro-color.color(yellow, 200),
+    300: nachiguro-color.color(yellow, 300),
+    400: nachiguro-color.color(yellow, 400),
+    500: nachiguro-color.color(yellow, 500),
+    600: nachiguro-color.color(yellow, 600),
+    700: nachiguro-color.color(yellow, 700),
+    800: nachiguro-color.color(yellow, 800),
+    A200: nachiguro-color.color(yellow, A200),
+    A400: nachiguro-color.color(yellow, A400),
+    A700: nachiguro-color.color(yellow, A700)
+  ),
+  green: (
+    50: nachiguro-color.color(green, 50),
+    100: nachiguro-color.color(green, 100),
+    200: nachiguro-color.color(green, 200),
+    300: nachiguro-color.color(green, 300),
+    400: nachiguro-color.color(green, 400),
+    500: nachiguro-color.color(green, 500),
+    600: nachiguro-color.color(green, 600),
+    700: nachiguro-color.color(green, 700),
+    800: nachiguro-color.color(green, 800),
+    A200: nachiguro-color.color(green, A200),
+    A400: nachiguro-color.color(green, A400),
+    A700: nachiguro-color.color(green, A700)
+  )
+) !default;
+/* stylelint-enable value-keyword-case */
+
+$semantic-color: (
+  default: (
+    default: gray
+  ),
+  actions: (
+    primary: blue,
+    secondary: gray,
+    confirm: green,
+    warning: yellow,
+    remove: red,
+    help: orange
+  )
+) !default;
+
+$sizing-scale: (
+  4: 0.0625rem,
+  8: 0.125rem,
+  16: 0.25rem,
+  33: 0.5rem,
+  50: 0.75rem,
+  66: 1rem,
+  100: 1.5rem,
+  133: 2rem,
+  200: 3rem,
+  266: 4rem,
+  300: 4.5rem,
+  333: 5rem,
+  400: 6rem,
+  466: 7rem,
+  500: 7.5rem,
+  533: 8rem,
+  600: 9rem,
+  666: 10rem,
+  700: 10.5rem,
+  733: 11rem,
+  800: 12rem,
+  900: 13.5rem,
+  1000: 15rem,
+  1100: 16.5rem,
+  1200: 18rem,
+  1300: 19.5rem
+) !default;
+
+$spacing: (
+  xxs: 0.25rem,
+  xs: 0.5rem,
+  s: 0.75rem,
+  m: 1rem,
+  l: 1.5rem,
+  xl: 2rem,
+  xxl: 3rem
+) !default;
+
+$interactive-component: (
+  s: 2rem,
+  m: 3rem,
+  l: 4rem
+) !default;
+
+$radius: (
+  m: 0.25rem,
+  l: 0.5rem,
+  xl: 0.75rem
+) !default;
+
+$line-width: (
+  m: 0.0625rem,
+  l: 0.125rem,
+  xl: 0.25rem
+) !default;
+
+$gaps: (
+  xxs: #{map.get($spacing, m)},
+  xs: #{map.get($spacing, m)},
+  s: #{map.get($spacing, m)},
+  m: #{map.get($spacing, l)},
+  l: #{map.get($spacing, l)},
+  xl: #{map.get($spacing, l)}
+) !default;
+
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+$content-widths: (
+  s: 540px,
+  m: 720px,
+  l: 1140px
+) !default;
+
+$font-family: (
+  sans-latin: "'Noto Sans'",
+  sans-japanese: "YakuHanJP, 'Noto Sans JP'",
+  monospace: "'Roboto Mono'",
+  ui: "apple-system, BlinkMacSystemFont, Roboto, 'Lucida Grande', Helvetica, Arial"
+) !default;
+
+$font-stack: (
+  latin: "#{map.get($font-family, sans-latin)}, #{map.get($font-family, ui)}, sans-serif",
+  japanese: "#{map.get($font-family, sans-latin)}, #{map.get($font-family, sans-japanese)}, #{map.get($font-family, ui)}, sans-serif",
+  monospace: "#{map.get($font-family, monospace)}, monospace"
+) !default;
+
+$font-size: (
+  xxs: 11,
+  xs: 12,
+  s: 14,
+  m: 16,
+  l: 18,
+  xl: 21,
+  xxl: 26,
+  xxxl: 32
+) !default;
+
+$line-height: (
+  comfort: (
+    xxs: 20,
+    xs: 24,
+    s: 28,
+    m: 28,
+    l: 32,
+    xl: 40,
+    xxl: 48,
+    xxxl: 56
+  ),
+  normal: (
+    xxs: 20,
+    xs: 20,
+    s: 24,
+    m: 24,
+    l: 28,
+    xl: 32,
+    xxl: 40,
+    xxxl: 40
+  ),
+  dense: (
+    xxs: 16,
+    xs: 16,
+    s: 20,
+    m: 20,
+    l: 24,
+    xl: 28,
+    xxl: 36,
+    xxxl: 40
+  )
+) !default;
+
+$elevation: (
+  light: (
+    -1: [0 1.5 3 0 0.12,],
+    0: [0 0 0 0 0,],
+    1: [0 -0.1 1 0 0.12, 0 1 2 0 0.12],
+    2: [0 0 1 0 0.12, 0 2 4 0 0.12],
+    3: [0 0 3 0 0.08, 0 5 4 -4 0.12, 0 5 10 0 0.12],
+    4: [0 2 5 0 0.08, 0 7 8 -5 0.12, 0 10 25 0 0.12]
+  ),
+  dark: (
+    -1: [0 0 0 0 0,],
+    0: [0 0 0 0 0,],
+    1: [0 0 0 0 0,],
+    2: [0 0 0 0 0,],
+    3: [0 0 0 0 0,],
+    4: [0 7 8 -5 0.32, 0 10 25 0 0.32]
+  ),
+  vivid: (
+    -1: [0 1.5 3 0 0.35,],
+    0: [0 0 0 0 0,],
+    1: [0 1 2 0 0.18,],
+    2: [0 2 4 0 0.3,],
+    3: [0 5 4 -4 0.24, 0 5 10 0 0.24],
+    4: [0 7 8 -5 0.2, 0 10 25 0 0.24]
+  ),
+  outlined: (
+    -1: [0 1.5 2 1 0.08,],
+    0: [0 0 0 0 0,],
+    1: [0 1 2 0 0.08,],
+    2: [0 2 4 0 0.12,],
+    3: [0 5 4 -4 0.12, 0 5 10 0 0.12],
+    4: [0 7 8 -5 0.12, 0 10 25 0 0.15]
+  )
+) !default;
+
+$focus-outline: "0 0 0 4px rgba(#000, 0.15)" !default;
