@@ -5454,7 +5454,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   display: none;
-  z-index: 100;
 }
 
 .ncgr-semi-modal__sheet {
@@ -5469,7 +5468,6 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   overflow: hidden;
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 101;
 }
 @media screen and (max-width: 768px) {
   .ncgr-semi-modal__sheet {
