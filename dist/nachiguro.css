@@ -7917,4 +7917,32 @@ category: Utility
   width: 100%;
 }
 
+/*doc
+---
+title: Ellipsis
+name: ellipsis
+category: Utility
+---
+文章が要素からはみ出てしまう場合、このユーティリティを使用することで
+はみ出ている部分を三点リーダ（`...`）に省略することができます。
+
+
+```example
+<div class="ncgr-selectbox" style="width:240px;">
+  <label class="ncgr-selectbox__label">長い選択肢</label>
+  <select id="tribe" name="tribe" class="ncgr-ellipsis">
+    <option selected="selected" value="01">超ウルトラスーパーアルティメット長い選択肢①</option>
+    <option value="02">超ウルトラスーパーアルティメット長い選択肢②</option>
+    <option value="02">超ウルトラスーパーアルティメット長い選択肢③</option>
+  </select>
+  <i class="fas fa-caret-down"></i>
+</div>
+```
+*/
+.ncgr-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=nachiguro.css.map */
