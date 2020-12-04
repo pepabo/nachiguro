@@ -239,6 +239,34 @@ category: Components
 
 */
 
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+$gaps: (
+  s: 1rem,
+  m: 1.5rem,
+  l: 1.5rem,
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-up($boundary) {
+  @media screen and (min-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+// Variables
+$list-view-boundaries: $boundaries;
+$list-view-gaps: $gaps;
+
+// Functions
+@function list-view-gap($list-view-boundary) {
+  @return map-get($list-view-gaps, $list-view-boundary);
+}
 
 .ncgr-list-group__subheader {
   padding: 0.5rem 1rem;
@@ -262,12 +290,23 @@ category: Components
   margin: 0;
   &.-three-line {
     .ncgr-list-tile__trailing {
-      margin: 0 0 auto 16px;
+      margin: 0 0 auto 1rem;
     }
   }
   &.-dense {
     .ncgr-list-tile {
-      padding: 0.5rem 1rem;
+      padding-top: list-view-gap(s) / 2;
+      padding-right: list-view-gap(s);
+      padding-bottom: list-view-gap(s) / 2;
+      padding-left: list-view-gap(s);
+      @each $list-view-boundary in map-keys($list-view-boundaries) {
+        @include mq-boundary-up($list-view-boundary) {
+          padding-top: list-view-gap($list-view-boundary) / 2;
+          padding-right: list-view-gap($list-view-boundary);
+          padding-bottom: list-view-gap($list-view-boundary) / 2;
+          padding-left: list-view-gap($list-view-boundary);
+        }
+      }
     }
   }
 }
@@ -279,10 +318,21 @@ category: Components
   height: auto;
   display: flex;
   align-items: flex-start;
-  padding: 1rem;
+  padding-top: list-view-gap(s);
+  padding-right: list-view-gap(s);
+  padding-bottom: list-view-gap(s);
+  padding-left: list-view-gap(s);
   cursor: pointer;
   &:hover {
     background: var(--color-secondary-background);
+  }
+  @each $list-view-boundary in map-keys($list-view-boundaries) {
+    @include mq-boundary-up($list-view-boundary) {
+      padding-top: list-view-gap($list-view-boundary);
+      padding-right: list-view-gap($list-view-boundary);
+      padding-bottom: list-view-gap($list-view-boundary);
+      padding-left: list-view-gap($list-view-boundary);
+    }
   }
 }
 
@@ -317,6 +367,7 @@ category: Components
 
 .ncgr-list-tile__primary-title {
   font-size: 1rem;
+  color: var(--color-label);
 }
 
 .ncgr-list-tile__secondary-title {
