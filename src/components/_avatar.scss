@@ -5,75 +5,57 @@ name: avatar
 category: Components
 ---
 
-ある箇所が特定のユーザーが所有するものであることを表す場合に使用します。大きさはそのセクションでの重要度に合わせて「Small・Medium・Large」の3種類を使い分けます。
-
-ユーザー名が長すぎる場合は一覧画面など次のアクションでユーザー名が取得できる場合に限り、三点リーダーで省略することができます。
-
-さらにユーザー名を伝えることの優先順位が低いと判断できる場合は、ユーザー名自体を省略することも可能です。
+ある箇所が特定のユーザーが所有するものであることを表す場合に使用します。
+大きさはそのセクションでの重要度に合わせて「Small・Medium・Large」の3種類を使い分けます。
 
 ```example
-<a class="ncgr-avatar ncgr-avatar--small" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
-<a class="ncgr-avatar ncgr-avatar--medium" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
-<a class="ncgr-avatar ncgr-avatar--large" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
+<div class="ncgr-avatar -s">
+  <img src="./images/components/avatar/avatar.png">
+</div>
+<div class="ncgr-avatar -m">
+  <img src="./images/components/avatar/avatar.png">
+</div>
+<div class="ncgr-avatar -l">
+  <img src="./images/components/avatar/avatar.png">
+</div>
 ```
 */
 
+// Nachiguro Variables
+$avatar-sizes: (
+  s: 1.5rem,
+  m: 2.5rem,
+  l: 3.5rem
+) !default;
+
+// Mixins
+@mixin avatar() {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+  overflow: hidden;
+  position: relative;
+  width: map-get($avatar-sizes, m);
+  height: map-get($avatar-sizes, m);
+
+  @each $avatar-size in map-keys($avatar-sizes) {
+    &.-#{$avatar-size} {
+      width: map-get($avatar-sizes, $avatar-size);
+      height: map-get($avatar-sizes, $avatar-size);
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .ncgr-avatar {
-  display: inline-block;
-  cursor: pointer;
-  .ncgr-avatar__image {
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    vertical-align: middle;
-    box-sizing: border-box;
-  }
-  .ncgr-avatar__name {
-    color: var(--color-label);
-    vertical-align: middle;
-    font-weight: bold;
-    word-break: break-word;
-  }
-}
-
-.ncgr-avatar--small {
-  .ncgr-avatar__image {
-    width: 24px;
-    height: 24px;
-  }
-  .ncgr-avatar__name {
-    font-size: 13px;
-    padding-left: 0;
-  }
-}
-
-.ncgr-avatar--medium {
-  .ncgr-avatar__image {
-    width: 32px;
-    height: 32px;
-  }
-  .ncgr-avatar__name {
-    font-size: 16px;
-    padding-left: 4px;
-  }
-}
-
-.ncgr-avatar--large {
-  .ncgr-avatar__image {
-    width: 48px;
-    height: 48px;
-  }
-  .ncgr-avatar__name {
-    font-size: 20px;
-    padding-left: 4px;
-  }
+  @include avatar();
 }
