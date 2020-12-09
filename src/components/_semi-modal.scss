@@ -83,8 +83,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
       animation: semi-modal-fade-in-overlay 0.3s ease;
     }
     .ncgr-semi-modal__sheet {
-      animation: semi-modal-fade-in-sheet 1s ease;
-      animation: semi-modal-fade-in-shadow 1s ease;
+      animation: semi-modal-fade-in-sheet 1s ease, semi-modal-fade-in-shadow 1s ease;
       @include shadow-16dp();
       transform: translateX(0);
       &:before {
@@ -283,7 +282,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   0% {
     box-shadow: none;
   }
-  50% {
+  30% {
     box-shadow: none;
   }
   100% {
