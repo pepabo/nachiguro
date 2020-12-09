@@ -284,7 +284,7 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
     box-shadow: none;
   }
   50% {
-    background-color: transparent;
+    box-shadow: none;
   }
   100% {
     @include shadow-16dp();
