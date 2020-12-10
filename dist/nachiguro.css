@@ -2724,13 +2724,13 @@ Containerはグリッドシステムを使用する場合に必要です。
     padding-left: 1.5rem;
   }
 }
-.ncgr-container.-container-s {
+.ncgr-container.-s {
   max-width: 540px;
 }
-.ncgr-container.-container-m {
+.ncgr-container.-m {
   max-width: 720px;
 }
-.ncgr-container.-container-l {
+.ncgr-container.-l {
   max-width: 1140px;
 }
 .ncgr-container.-no-gaps {
