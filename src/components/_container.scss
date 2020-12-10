@@ -97,7 +97,7 @@ $container-gaps: $gaps;
   }
 
   @each $container-width in map-keys($container-widths) {
-    &.-container-#{$container-width} {
+    &.-#{$container-width} {
       max-width: container-width($container-width);
     }
   }
