@@ -4,38 +4,23 @@ class MarkdownRenderer < Redcarpet::Render::HTML
     if language and language.include?('example')
       lexer = Rouge::Lexer.find('html')
       <<-EOS
-            </div><!-- end of .ncgr-section__inner -->
-          </div><!-- end of .ncgr-section -->
         </div><!-- end of .styleguide__content -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__preview">
-              #{code}
-            </div>
-            <div class="styleguide__code">
-              <pre>#{formatter.format(lexer.lex(code))}</pre>
-            </div>
-          </div>
+        <div class="styleguide__preview">
+          #{code}
+        </div>
+        <div class="styleguide__code">
+          <pre>#{formatter.format(lexer.lex(code))}</pre>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
       EOS
     else
       lexer = Rouge::Lexer.find_fancy('guess', code)
       <<-EOS
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__code">
-              <pre>#{formatter.format(lexer.lex(code))}</pre>
-            </div>
-          </div>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>#{formatter.format(lexer.lex(code))}</pre>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
       EOS
     end
   end
