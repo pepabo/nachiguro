@@ -2731,7 +2731,7 @@ Containerはグリッドシステムを使用する場合に必要です。
   max-width: 720px;
 }
 .ncgr-container.-l {
-  max-width: 1140px;
+  max-width: 1280px;
 }
 .ncgr-container.-no-gaps {
   padding-right: 0;
@@ -5207,32 +5207,15 @@ sectionの背景色は`.ncgr-section--background`、`.ncgr-section--secondary-ba
 
 ```example
 <section class="ncgr-section ncgr-section--background">
-  <div class="ncgr-section__inner">
-    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
-  </div>
+  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
 </section>
 
 <section class="ncgr-section ncgr-section--secondary-background">
-  <div class="ncgr-section__inner">
-    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
-  </div>
+  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
 </section>
 
 <section class="ncgr-section ncgr-section--grouped-background">
-  <div class="ncgr-section__inner">
-    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
-  </div>
-</section>
-```
-
-`.ncgr-section__inner--narrow`をModifierで指定すると幅が最大幅の半分になります。
-文章を読むことが主要なコンテンツの場合は幅が広いと目を動かす距離が大きくなり、ユーザーに負担がかかるので幅を狭くして読みやすくします。
-
-```example
-<section class="ncgr-section">
-  <div class="ncgr-section__inner ncgr-section__inner--narrow">
-    <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
-  </div>
+  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
 </section>
 ```
 
@@ -5256,39 +5239,6 @@ sectionの背景色は`.ncgr-section--background`、`.ncgr-section--secondary-ba
 
 .ncgr-section--grouped-background {
   background-color: var(--color-grouped-background);
-}
-
-.ncgr-section__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.ncgr-section__inner--narrow {
-  max-width: 42em;
-}
-@media screen and (max-width: 480px) {
-  .ncgr-section__inner--narrow {
-    padding: 0 12px 0 12px;
-  }
-}
-
-.ncgr-section__inner--orders,
-.ncgr-section__inner--silk {
-  max-width: 42em;
-}
-
-.ncgr-section__inner--materials {
-  max-width: 1080px;
-}
-
-.ncgr-section__inner--signup {
-  max-width: 32em;
-}
-@media screen and (max-width: 480px) {
-  .ncgr-section__inner--signup {
-    padding: 0 12px 0 12px;
-  }
 }
 
 /*doc
