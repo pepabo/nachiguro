@@ -7,7 +7,7 @@ category: Components
 
 Sheetコンポーネントには画面の主要コンテンツを補完するコンテンツが表示されます。
 
-```example
+```code
 <input id="drawer-menu-trigger" type="checkbox" hidden="">
 <div class="ncgr-sheet ncgr-sheet--half">
   <label class="ncgr-sheet__overlay" for="drawer-menu-trigger">
