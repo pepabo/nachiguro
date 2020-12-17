@@ -24,136 +24,15 @@
           </div>
           <div class="ncgr-header__spacer"></div>
           <div class="ncgr-header__navigation">
+            <div id="js-menu-toggle-button" class="ncgr-header__navigation-link ncgr-pad-r-16 ncgr-pad-l-16">
+              メニュー
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="styleguide">
-      
-        <div class="styleguide__nav">
-          <nav>
-            <div>
-              <ul>
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="animation.html">
-                        Animation
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="color.html">
-                        Color
-                      </a>
-                      
-                        <ul class="ncgr-pad-l-16">
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#01-color-primary">
-                                Primary
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#02-color-secondary">
-                                Secondary
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#03-color-success">
-                                Success
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#04-color-warning">
-                                Warning
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#05-color-danger">
-                                Danger
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#06-color-default">
-                                Default
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#07-color-black-and-white">
-                                Black &amp; White
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#08-color-social">
-                                Social
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#09-color-apple">
-                                Apple
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#10-semantic-color">
-                                Semantic
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="components.html">
-                        Components
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="mixin.html">
-                        Mixin
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="utility.html">
-                        Utility
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                
-              </ul>
-            </div>
-          </nav>
-        </div>
-      
+    <div class="ncgr-container -m">
       <div class="styleguide__content">
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 <h1 id="01-color-primary" class="styleguide">Primary</h1>
 
 <p><div class="styleguide__colortip" style="background-color: #F2F8FC;">
@@ -945,21 +824,14 @@ Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて�
 <p>基本はAppleのダークモードのシステム色に基づいてセマンティックカラーを設計します。</p>
 
 <p>背景色や文字色などのモノトーン色を指定するときは、直接色をハードコーディングするのではなく、セマンティックカラーをCSS Variablesで指定します。</p>
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__code">
-              <pre>. background {
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>. background {
   boackground-color: var(--color-separator);
 }
 </pre>
-            </div>
-          </div>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
 <p>指定できるセマンティックカラーは以下のとおりです。</p>
 
@@ -1319,8 +1191,6 @@ Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて�
           </div>
         </div>
 </p>
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
@@ -1332,6 +1202,236 @@ Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて�
       </footer>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
-    </div>
+    </div><!-- end of .ncgr-container -->
+    
+      <section id="js-menu" class="ncgr-semi-modal">
+        <div class="ncgr-semi-modal__sheet">
+          <div class="ncgr-semi-modal__header -active">
+            <div class="ncgr-semi-modal__leading">
+              <div id="js-menu-close-button" class="ncgr-semi-modal__icon ncgr-typography-light">
+                ×
+              </div>
+            </div>
+            <div class="ncgr-semi-modal__title">
+              メニュー
+            </div>
+          </div>
+          <div class="ncgr-semi-modal__body">
+            <div class="ncgr-semi-modal__contents -active">
+              <nav>
+                <ul class="ncgr-list-view">
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="animation.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Animation
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="color.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Color
+                            </div>
+                          </div>
+                        </a>
+                        
+                          <ul>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#01-color-primary">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Primary
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#02-color-secondary">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Secondary
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#03-color-success">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Success
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#04-color-warning">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Warning
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#05-color-danger">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Danger
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#06-color-default">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Default
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#07-color-black-and-white">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Black &amp; White
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#08-color-social">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Social
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#09-color-apple">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Apple
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#10-semantic-color">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Semantic
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                          </ul>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="components.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Components
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="mixin.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Mixin
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="utility.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Utility
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <script>
+      const menuToggleButton = document.getElementById('js-menu-toggle-button');
+      const menu = document.getElementById('js-menu');
+      const menuCloseButton = document.getElementById('js-menu-close-button');
+
+      if (menuToggleButton) {
+        menuToggleButton.addEventListener('click', event => {
+          menu.classList.toggle('-active');
+        }, false);
+        menuCloseButton.addEventListener('click', event => {
+          menu.classList.remove('-active');
+        });
+      }
+    </script>
   </body>
 </html>

@@ -24,99 +24,23 @@
           </div>
           <div class="ncgr-header__spacer"></div>
           <div class="ncgr-header__navigation">
+            <div id="js-menu-toggle-button" class="ncgr-header__navigation-link ncgr-pad-r-16 ncgr-pad-l-16">
+              メニュー
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="styleguide">
-      
-        <div class="styleguide__nav">
-          <nav>
-            <div>
-              <ul>
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="animation.html">
-                        Animation
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="color.html">
-                        Color
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="components.html">
-                        Components
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="mixin.html">
-                        Mixin
-                      </a>
-                      
-                        <ul class="ncgr-pad-l-16">
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#breakpoint">
-                                Breakpoint
-                              </a>
-                            </li>
-                          
-                            <li>
-                              <a class="ncgr-text-link" href="#Shadow">
-                                Shadow
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      
-                    </li>
-                  
-                
-                  
-                    <li>
-                      <a class="ncgr-text-link" href="utility.html">
-                        Utility
-                      </a>
-                      
-                    </li>
-                  
-                
-                  
-                
-              </ul>
-            </div>
-          </nav>
-        </div>
-      
+    <div class="ncgr-container -m">
       <div class="styleguide__content">
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 <h1 id="breakpoint" class="styleguide">Breakpoint</h1>
 
 <p>mediaqueryのブレイクポイントをお手軽に呼び出せます。
 引数にはデバイスサイズに合わせて、mobile、table、desktopを指定します。
 mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p>
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__code">
-              <pre>@include mediaquery(mobile) {
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>@include mediaquery(mobile) {
   padding: 4px;
 }
 @include mediaquery(tablet) {
@@ -126,41 +50,27 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
   padding: 16px;
 }
 </pre>
-            </div>
-          </div>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
 <p>Retinaディスプレイを判定したいときは、<code>media-retina()</code>のmixinを使用します。</p>
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__code">
-              <pre>@include media-retina() {
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>@include media-retina() {
   background: url("hoge@2x.jpg");
 }
 </pre>
-            </div>
-          </div>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
 
 <h1 id="Shadow" class="styleguide">Shadow</h1>
 
 <p>影をつけたいときは、影をつけたい要素のスタイルシートで <code>shadow</code> mixin を読み込みます。
 0dp,2dp,3dp,4dp,6dp,8dp,16dp,24dpの値が指定でき、大きいほどレイヤーの位置が高くなります。
 引数を指定する必要はありません。</p>
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__code">
-              <pre>@include shadow-0dp();
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>@include shadow-0dp();
 @include shadow-2dp();
 @include shadow-3dp();
 @include shadow-4dp();
@@ -169,19 +79,11 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
 @include shadow-16dp();
 @include shadow-24dp();
 </pre>
-            </div>
-          </div>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            </div><!-- end of .ncgr-section__inner -->
-          </div><!-- end of .ncgr-section -->
         </div><!-- end of .styleguide__content -->
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-            <div class="styleguide__preview">
-              <!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
+        <div class="styleguide__preview">
+          <!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 -->
 <div class="brsh-shadow__0dp" style="width: 100px; height: 100px;"></div>
 <div class="ncgr-shadow__2dp" style="width: 100px; height: 100px;"></div>
 <div class="ncgr-shadow__3dp" style="width: 100px; height: 100px;"></div>
@@ -191,9 +93,9 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
 <div class="ncgr-shadow__16dp" style="width: 100px; height: 100px;"></div>
 <div class="ncgr-shadow__24dp" style="width: 100px; height: 100px;"></div>
 
-            </div>
-            <div class="styleguide__code">
-              <pre><span class="c">&lt;!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 --&gt;</span>
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="c">&lt;!-- ここではclassを指定していますが、mixinを各々のコンポーネントで使用してください。 --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"brsh-shadow__0dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__2dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__3dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -203,14 +105,8 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__16dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-shadow__24dp"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </pre>
-            </div>
-          </div>
         </div>
         <div class="styleguide__content">
-          <div class="ncgr-section ncgr-section--background">
-            <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">
-          </div><!-- end of .ncgr-section__inner -->
-        </div><!-- end of .ncgr-section -->
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
@@ -222,6 +118,140 @@ mobileは480px、tabletは768px、desktopは1280pxで切り替わります。</p
       </footer>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
-    </div>
+    </div><!-- end of .ncgr-container -->
+    
+      <section id="js-menu" class="ncgr-semi-modal">
+        <div class="ncgr-semi-modal__sheet">
+          <div class="ncgr-semi-modal__header -active">
+            <div class="ncgr-semi-modal__leading">
+              <div id="js-menu-close-button" class="ncgr-semi-modal__icon ncgr-typography-light">
+                ×
+              </div>
+            </div>
+            <div class="ncgr-semi-modal__title">
+              メニュー
+            </div>
+          </div>
+          <div class="ncgr-semi-modal__body">
+            <div class="ncgr-semi-modal__contents -active">
+              <nav>
+                <ul class="ncgr-list-view">
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="animation.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Animation
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="color.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Color
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="components.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Components
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="mixin.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Mixin
+                            </div>
+                          </div>
+                        </a>
+                        
+                          <ul>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#breakpoint">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Breakpoint
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#Shadow">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Shadow
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                          </ul>
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a class="ncgr-list-tile" href="utility.html">
+                          <div class="ncgr-list-tile__title">
+                            <div class="ncgr-list-tile__primary-title">
+                              Utility
+                            </div>
+                          </div>
+                        </a>
+                        
+                      </li>
+                    
+                  
+                    
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <script>
+      const menuToggleButton = document.getElementById('js-menu-toggle-button');
+      const menu = document.getElementById('js-menu');
+      const menuCloseButton = document.getElementById('js-menu-close-button');
+
+      if (menuToggleButton) {
+        menuToggleButton.addEventListener('click', event => {
+          menu.classList.toggle('-active');
+        }, false);
+        menuCloseButton.addEventListener('click', event => {
+          menu.classList.remove('-active');
+        });
+      }
+    </script>
   </body>
 </html>
