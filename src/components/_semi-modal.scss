@@ -4,7 +4,6 @@ title: Semi Modal
 name: semi-modal
 category: Components
 ---
-Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
 
 `overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
 `header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
