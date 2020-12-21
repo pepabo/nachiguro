@@ -5351,7 +5351,6 @@ title: Semi Modal
 name: semi-modal
 category: Components
 ---
-Semi-modalコンポーネントはSheetコンポーネントをアップデートしたものです。
 
 `overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
 `header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
@@ -5455,8 +5454,11 @@ Semi-modalコンポーネントはSheetコンポーネントをアップデー�
   height: 100vh;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
+}
+.ncgr-semi-modal__overlay.-transparent {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .ncgr-semi-modal__sheet {
@@ -5862,125 +5864,6 @@ category: Components
 }
 .ncgr-share-button__line-button:active, .ncgr-share-button__line-button.ncgr-button--active {
   outline: 0;
-}
-
-/*doc
----
-title: Sheet
-name: sheet
-category: Components
----
-
-Sheetコンポーネントには画面の主要コンテンツを補完するコンテンツが表示されます。
-
-```code
-<input id="drawer-menu-trigger" type="checkbox" hidden="">
-<div class="ncgr-sheet ncgr-sheet--half">
-  <label class="ncgr-sheet__overlay" for="drawer-menu-trigger">
-  <section class="ncgr-sheet__sheet">
-    <header class="ncgr-sheet__header">
-    <main class="ncgr-sheet__contents">
-      コンテンツ
-    </main>
-  </section>
-</div>
-```
-
-*/
-.ncgr-sheet {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: grid;
-  grid-template-areas: "OVERLAY SHEET";
-  grid-template-columns: 3fr 1fr;
-  z-index: 100;
-}
-@media screen and (max-width: 768px) {
-  .ncgr-sheet {
-    transform: translateY(100%);
-    grid-template-areas: "OVERLAY" "SHEET";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 16fr;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .ncgr-sheet--half {
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
-input[type=checkbox]:checked + .ncgr-sheet {
-  transform: translateX(0);
-}
-@media screen and (max-width: 768px) {
-  input[type=checkbox]:checked + .ncgr-sheet {
-    transform: translateY(0);
-  }
-}
-
-.ncgr-sheet__overlay {
-  display: block;
-  grid-area: OVERLAY;
-}
-
-.ncgr-sheet__contents {
-  grid-area: SHEET;
-  background-color: var(--color-secondary-grouped-background);
-  height: 100%;
-  overflow-y: scroll;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-sheet__contents {
-    border-radius: 14px 14px 0 0;
-  }
-}
-
-.ncgr-sheet__header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  widows: 100%;
-  background-color: var(--color-secondary-grouped-background);
-  display: flex;
-  align-items: center;
-  height: 56px;
-  border-bottom: 1px solid var(--color-separator);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-sheet__header {
-    flex-direction: row-reverse;
-  }
-}
-
-.ncgr-sheet__heading {
-  flex-grow: 1;
-  padding-left: 16px;
-}
-@media screen and (max-width: 768px) {
-  .ncgr-sheet__heading {
-    padding-left: 0;
-  }
-}
-
-.ncgr-sheet__close {
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  font-size: 24px;
-  line-height: 56px;
-  text-align: center;
-  color: var(--color-secondary-label);
-}
-
-.ncgr-sheet__body {
-  padding: 16px;
 }
 
 /*doc
