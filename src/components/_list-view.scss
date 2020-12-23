@@ -363,6 +363,7 @@ $list-view-gaps: $gaps;
   align-self: stretch;
   flex-grow: 1;
   min-height: 100%;
+  word-break: break-all;
 }
 
 .ncgr-list-tile__primary-title {
