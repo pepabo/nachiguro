@@ -755,8 +755,8 @@ category: Color
 
 */
 :root {
-  --color-label: var(--color-default-800);
-  --color-secondary-label: var(--color-default-200);
+  --color-label: var(--color-default-900);
+  --color-secondary-label: var(--color-default-300);
   --color-placeholder-text: rgba(0, 0, 0, 0.2);
   --color-background: var(--color-white);
   --color-secondary-background: var(--color-default-50);
@@ -779,7 +779,7 @@ category: Color
 @media (prefers-color-scheme: dark) {
   :root {
     --color-label: var(--color-white);
-    --color-secondary-label: var(--color-default-400);
+    --color-secondary-label: var(--color-default-200);
     --color-placeholder-text: rgba(255, 255, 255, 0.2);
     --color-background: var(--color-black);
     --color-secondary-background: var(--color-apple-dark-secondary);
@@ -7726,8 +7726,8 @@ category: Utility
 <div class="ncgr-typography-normal">Normal</div>
 <div class="ncgr-typography-bold">Bold</div>
 <div class="ncgr-typography-italic">Italic</div>
-<div class="ncgr-typography-light">Light</div>
 <div class="ncgr-typography-label">Label</div>
+<div class="ncgr-typography-secondary-label">Light</div>
 <div class="ncgr-typography-large">Large</div>
 <div class="ncgr-typography-medium">Medium</div>
 <div class="ncgr-typography-small">Small</div>
@@ -7752,7 +7752,7 @@ category: Utility
   color: var(--color-label);
 }
 
-.ncgr-typography-light {
+.ncgr-typography-secondary-label {
   color: var(--color-secondary-label);
 }
 
