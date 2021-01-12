@@ -185,6 +185,7 @@ error・successの場合は以下のようにマークアップします。
   position: relative;
   width: 100%;
   outline: none;
+  z-index: 1;
 
   &:hover {
     border: 2px solid rgba(var(--color-textfield-separator), 0.2);
