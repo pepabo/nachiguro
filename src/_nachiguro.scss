@@ -148,6 +148,7 @@ random関数は使用しないでください。
 @import 'components/checkbox';
 @import 'components/choice-card';
 @import 'components/color-selector';
+@import 'components/container';
 @import 'components/credit-card-icon';
 @import 'components/expansion-card';
 @import 'components/grid';
@@ -169,7 +170,6 @@ random関数は使用しないでください。
 @import 'components/separator';
 @import 'components/sequence';
 @import 'components/share-buttons';
-@import 'components/sheet';
 @import 'components/square-radio';
 @import 'components/tab';
 @import 'components/table';
@@ -196,3 +196,4 @@ random関数は使用しないでください。
 @import 'utility/pad';
 @import 'utility/typography';
 @import 'utility/width';
+@import 'utility/ellipsis';

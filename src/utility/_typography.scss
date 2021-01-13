@@ -11,7 +11,8 @@ category: Utility
 <div class="ncgr-typography-normal">Normal</div>
 <div class="ncgr-typography-bold">Bold</div>
 <div class="ncgr-typography-italic">Italic</div>
-<div class="ncgr-typography-light">Light</div>
+<div class="ncgr-typography-label">Label</div>
+<div class="ncgr-typography-secondary-label">Light</div>
 <div class="ncgr-typography-large">Large</div>
 <div class="ncgr-typography-medium">Medium</div>
 <div class="ncgr-typography-small">Small</div>
@@ -33,7 +34,11 @@ category: Utility
   font-style: italic;
 }
 
-.ncgr-typography-light {
+.ncgr-typography-label {
+  color: var(--color-label);
+}
+
+.ncgr-typography-secondary-label {
   color: var(--color-secondary-label);
 }
 

@@ -1,0 +1,113 @@
+/*doc
+---
+title: Container
+name: container
+category: Components
+---
+
+Containerはグリッドシステムを使用する場合に必要です。
+
+### 基本形
+
+`.ncgr-container` は幅100%のコンテナです。
+左右にboundaryに応じたgapがつきます。
+
+```example
+<div class="ncgr-container">
+  100%
+</div>
+```
+
+### サイズ
+
+`.-container-{container-width}` Modifierで、Containerのmax-widthのサイズを指定します。
+
+```example
+<div class="ncgr-container -container-s">max-width: 540px</div>
+<div class="ncgr-container -container-m">max-width: 720px</div>
+<div class="ncgr-container -container-l">max-width: 1140px</div>
+```
+
+### 隙間をなくす
+
+`.-no-gaps` Modifierをつけると隙間がなくなります。
+
+```example
+<div class="ncgr-container -no-gaps">隙間なし</div>
+<div class="ncgr-container -container-s -no-gaps">隙間なしS</div>
+<div class="ncgr-container -container-m -no-gaps">隙間なしM</div>
+<div class="ncgr-container -container-l -no-gaps">隙間なしL</div>
+```
+
+*/
+
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px,
+) !default;
+
+$gaps: (
+  s: 1rem,
+  m: 1.5rem,
+  l: 1.5rem,
+) !default;
+
+$container-widths: (
+  s: 540px,
+  m: 720px,
+  l: 1280px,
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-up($boundary) {
+  @media screen and (min-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+// Variables
+$container-boundaries: $boundaries;
+$container-gaps: $gaps;
+
+// Functions
+@function container-gap($container-boundary) {
+  @return map-get($container-gaps, $container-boundary);
+}
+
+@function container-width($container-boundary) {
+  @return map-get($container-widths, $container-boundary);
+}
+
+// Mixins
+@mixin container() {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: container-gap(s);
+  padding-left: container-gap(s);
+  margin-right: auto;
+  margin-left: auto;
+  
+  @each $container-boundary in map-keys($container-boundaries) {
+    @include mq-boundary-up($container-boundary) {
+      padding-right: container-gap($container-boundary);
+      padding-left: container-gap($container-boundary);
+    }
+  }
+
+  @each $container-width in map-keys($container-widths) {
+    &.-#{$container-width} {
+      max-width: container-width($container-width);
+    }
+  }
+
+  &.-no-gaps {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.ncgr-container {
+  @include container();
+}

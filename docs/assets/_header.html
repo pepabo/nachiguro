@@ -24,41 +24,12 @@
           </div>
           <div class="ncgr-header__spacer"></div>
           <div class="ncgr-header__navigation">
+            <div id="js-menu-toggle-button" class="ncgr-header__navigation-link ncgr-pad-r-16 ncgr-pad-l-16">
+              メニュー
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="styleguide">
-      <% if title %>
-        <div class="styleguide__nav">
-          <nav>
-            <div>
-              <ul>
-                <% @categories.sort.each do |category| %>
-                  <% unless category[0] == 'index' %>
-                    <li>
-                      <a class="ncgr-text-link" href="<%= category[1] %>">
-                        <%= category[0] %>
-                      </a>
-                      <% if category[0] == title %>
-                        <ul class="ncgr-pad-l-16">
-                          <% @blocks.each do |block| %>
-                            <li>
-                              <a class="ncgr-text-link" href="#<%= block[:name] %>">
-                                <%= block[:title] %>
-                              </a>
-                            </li>
-                          <% end %>
-                        </ul>
-                      <% end %>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      <% end %>
+    <div class="ncgr-container -m">
       <div class="styleguide__content">
-        <div class="ncgr-section ncgr-section--background">
-          <div class="ncgr-section__inner ncgr-section__inner--narrow ncgr-pad-r-16 ncgr-pad-l-16">

@@ -5,7 +5,7 @@
   "main": "src/_nachiguro.scss",
   "scripts": {
     "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css",
-    "styleguide": "sass --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css && bundle exec hologram"
+    "styleguide": "bundle exec hologram && sass --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css"
   },
   "repository": {
     "type": "git",
