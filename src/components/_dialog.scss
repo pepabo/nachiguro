@@ -17,7 +17,7 @@ category: Components
 
 ```example
 <section class="ncgr-dialog -active">
-    <div class="ncgr-dialog__overlay">
+    <div class="ncgr-overlay">
     </div>
     <div class="ncgr-dialog__sheet">
       <div class="ncgr-dialog__header">
@@ -52,15 +52,13 @@ category: Components
 ```
 
 */
+
+
 .ncgr-dialog {
   & * {
     z-index: 2147483645;
   }
   &.-active {
-    .ncgr-dialog__overlay {
-      display: block;
-      animation: modal-fade-in-overlay 0.3s ease;
-    }
     .ncgr-dialog__sheet {
       display: flex;
       animation: modal-fade-in-sheet 0.5s cubic-bezier(0.4, 0, 0.2, 1),
@@ -76,19 +74,6 @@ category: Components
         animation: modal-fade-in-sheet-inner 0.5s ease;
       }
     }
-  }
-}
-
-.ncgr-dialog__overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  &.-transparent {
-    background-color: rgba(0, 0, 0, 0);
   }
 }
 
