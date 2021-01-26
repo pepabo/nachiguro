@@ -6622,6 +6622,9 @@ error・successの場合は以下のようにマークアップします。
 .ncgr-textfield__input.invalid {
   border: 2px solid var(--color-danger-500);
 }
+.ncgr-textfield__input.warning {
+  border: 2px solid var(--color-warning-500);
+}
 .ncgr-textfield__input.disabled {
   background-color: var(--color-textfield-background);
   border: 2px solid rgba(var(--color-textfield-separator), 0.1);
