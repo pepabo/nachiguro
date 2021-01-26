@@ -239,6 +239,9 @@ error・successの場合は以下のようにマークアップします。
   &.invalid {
     border: 2px solid var(--color-danger-500);
   }
+  &.warning {
+    border: 2px solid var(--color-warning-500);
+  }
   &.disabled {
     background-color: var(--color-textfield-background);
     border: 2px solid rgba(var(--color-textfield-separator), 0.1);
