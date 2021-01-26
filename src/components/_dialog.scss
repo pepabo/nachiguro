@@ -15,7 +15,7 @@ category: Components
 `.dialog`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
-```example
+```code
 <section class="ncgr-dialog -active">
     <div class="ncgr-overlay">
     </div>

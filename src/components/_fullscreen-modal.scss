@@ -1,0 +1,329 @@
+/*doc
+---
+title: Fullscreen Modal
+name: fullscreen-modal
+category: Components
+---
+
+`overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
+`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
+また、`ncgr-fullscreen-modal__contents`を付与したクラスを複数配置し、
+`-active`の付け外しをすることでシート内に階層を持たせることができます。
+
+`.fullscreen-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
+
+```code
+<section class="ncgr-fullscreen-modal -active">
+  <div class="ncgr-fullscreen-modal__overlay"></div>
+  <div class="ncgr-fullscreen-modal__sheet">
+    <div class="ncgr-fullscreen-modal__header -active">
+      <div class="ncgr-fullscreen-modal__leading">
+        <div class="ncgr-fullscreen-modal__icon ncgr-typography-light">
+          ×
+        </div>
+      </div>
+      <div class="ncgr-fullscreen-modal__title">
+        メニュー
+      </div>
+      <ul class="ncgr-fullscreen-modal__actions">
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+        <li>
+          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="ncgr-fullscreen-modal__body">
+      <div class="ncgr-fullscreen-modal__contents -active">
+        <ul class="ncgr-list-view"> 
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリする
+            </div>
+          </li>
+          <li class="ncgr-list-tile">
+            <div class="ncgr-list-tile__title">
+              スリスリしない
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+*/
+
+.ncgr-fullscreen-modal {
+    & * {
+      z-index: 2147483645;
+    }
+    &.-active {
+      .ncgr-fullscreen-modal__sheet {
+        animation: fullscreen-modal-fade-in-sheet 1s ease, fullscreen-modal-fade-in-shadow 1s ease;
+        @include shadow-16dp();
+        transform: translateX(0);
+        &:before {
+          animation: fullscreen-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          @include mediaquery(tablet) {
+            animation: fullscreen-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+        }
+        .ncgr-fullscreen-modal__header,
+        .ncgr-fullscreen-modal__contents {
+          animation: fullscreen-modal-hide 1s ease;
+        }
+        @include mediaquery(tablet) {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  
+  .ncgr-fullscreen-modal__sheet {
+    background-color: var(--color-secondary-grouped-background);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateX(25rem);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @include mediaquery(tablet) {
+      width: 100%;
+      height: 50vh;
+      top: auto;
+      bottom: 0;
+      transform: translateY(50vh);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 180vh;
+      height: 180vh;
+      background-color: var(--color-secondary-grouped-background);
+      top: -40vh;
+      right: -80vh;
+      border-radius: 30%;
+      z-index: -1;
+      overflow: hidden;
+      @include mediaquery(tablet) {
+        width: 160vw;
+        height: 160vw;
+        top: -15vw;
+        border-radius: 40%;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  
+  .ncgr-fullscreen-modal__header {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--color-secondary-grouped-background);
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    &.-active {
+      width: 100%;
+      height: 3.5rem;
+    }
+  }
+  
+  .ncgr-fullscreen-modal__leading {
+    width: auto;
+    height: auto;
+    min-width: 2.5rem;
+    margin: auto 0 auto 1rem;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+  .ncgr-fullscreen-modal__icon {
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ncgr-fullscreen-modal__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-self: stretch;
+    flex-grow: 1;
+    height: 3.5rem;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  
+  .ncgr-fullscreen-modal__actions {
+    margin: 0;
+    display: flex;
+    height: 3.5rem;
+    width: auto;
+    & li {
+      min-width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 1rem auto 0.5rem;
+    }
+  }
+  
+  .ncgr-fullscreen-modal__body {
+    position: relative;
+    width: 25rem;
+    height: auto;
+    flex-grow: 1;
+    overflow: hidden;
+    @include mediaquery(tablet) {
+      width: 100vw;
+    }
+  }
+  
+  .ncgr-fullscreen-modal__contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(25rem);
+    overflow-y: scroll;
+    width: 25rem;
+    height: 100%;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--color-secondary-grouped-background);
+    &.-active {
+      transform: translateX(0);
+    }
+    @include mediaquery(tablet) {
+      width: 100vw;
+      transform: translateX(100vw);
+    }
+  }
+  
+  // animation
+  
+  @keyframes fullscreen-modal-fade-in-overlay {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+  
+    1% {
+      display: block;
+      opacity: 0;
+    }
+  
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fullscreen-modal-fade-in-sheet {
+    0% {
+      background-color: transparent;
+    }
+    80% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: var(--color-secondary-grouped-background);
+    }
+  }
+  
+  @keyframes fullscreen-modal-fade-in-shadow {
+    0% {
+      box-shadow: none;
+    }
+    30% {
+      box-shadow: none;
+    }
+    100% {
+      @include shadow-16dp();
+    }
+  }
+  
+  @keyframes fullscreen-modal-fill {
+    from {
+      width: 2vh;
+      height: 2vh;
+      right: -2vh;
+      top: 49vh;
+      border-radius: 50%;
+      transform: rotate(0deg);
+    }
+    to {
+      width: 180vh;
+      height: 180vh;
+      right: -80vh;
+      top: -40vh;
+      border-radius: 30%;
+      transform: rotate(270deg);
+    }
+  }
+  
+  @keyframes fullscreen-modal-fill-mobile {
+    from {
+      top: 50vh;
+      border-radius: 50%;
+      transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+      top: -15vw;
+      border-radius: 40%;
+      transform: translateX(-50%) rotate(180deg);
+    }
+  }
+  
+  @keyframes fullscreen-modal-hide {
+    0% {
+      opacity: 0;
+      background-color: transparent;
+    }
+    35% {
+      opacity: 0;
+      background-color: transparent;
+    }
+  
+    75% {
+      opacity: 1;
+      background-color: transparent;
+    }
+    100% {
+      opacity: 1;
+      background-color: var(--color-secondary-grouped-background);
+    }
+  }
+  
