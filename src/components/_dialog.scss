@@ -12,7 +12,7 @@ category: Components
 また、`ncgr-dialog__contents`を付与したクラスを複数配置し、
 `-active`の付け外しをすることでシート内に階層を持たせることができます。
 
-`.modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+`.dialog`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
 ```example
@@ -61,17 +61,17 @@ category: Components
   &.-active {
     .ncgr-dialog__sheet {
       display: flex;
-      animation: modal-fade-in-sheet 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-      modal-fade-in-shadow 0.5s ease;
+      animation: dialog-fade-in-sheet 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      dialog-fade-in-shadow 0.5s ease;
       @include shadow-16dp();
       @include mediaquery(mobile) {
-        animation: modal-fade-in-sheet-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        modal-fade-in-shadow 0.5s ease;
+        animation: dialog-fade-in-sheet-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        dialog-fade-in-shadow 0.5s ease;
       }
       .ncgr-dialog__header,
       .ncgr-dialog__body,
       .ncgr-dialog__footer {
-        animation: modal-fade-in-sheet-inner 0.5s ease;
+        animation: dialog-fade-in-sheet-inner 0.5s ease;
       }
     }
   }
@@ -202,24 +202,7 @@ category: Components
 
 // animation
 
-@keyframes modal-fade-in-overlay {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-@keyframes modal-fade-in-sheet {
+@keyframes dialog-fade-in-sheet {
   0% {
     width: 0;
     height: 10px;
@@ -249,7 +232,7 @@ category: Components
   }
 }
 
-@keyframes modal-fade-in-sheet-mobile {
+@keyframes dialog-fade-in-sheet-mobile {
   0% {
     width: 0;
     height: 10px;
@@ -269,7 +252,7 @@ category: Components
   }
 }
 
-@keyframes modal-fade-in-sheet-inner {
+@keyframes dialog-fade-in-sheet-inner {
   0% {
     opacity: 0;
   }
@@ -283,7 +266,7 @@ category: Components
   }
 }
 
-@keyframes modal-fade-in-shadow {
+@keyframes dialog-fade-in-shadow {
   0% {
     box-shadow: none;
   }
