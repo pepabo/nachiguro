@@ -15,69 +15,43 @@ category: Components
 `.dialog`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
-```code
-<section class="ncgr-dialog -active">
-    <div class="ncgr-overlay">
-    </div>
-    <div class="ncgr-dialog__sheet">
-      <div class="ncgr-dialog__header">
-        <div class="ncgr-dialog__leading">
-          <div class="ncgr-dialog__icon ncgr-typography-label">
-            ×
-          </div>
-        </div>
-        <div class="ncgr-dialog__title">
-          甲賀流
-        </div>
-        <div class="ncgr-dialog__actions">
-          <li>
-            <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
-          </li>
-        </div>
-      </div>
-      <div class="ncgr-dialog__body">
-        <div class="ncgr-pad-16">
-          甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
-          山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
-          甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
-          しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<br>
-          なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。<br>
-        </div>
-      </div>
-      <div class="ncgr-dialog__footer">
-        <button class="ncgr-button ncgr-button-default ncgr-button--fluid ncgr-button--light">とじる</button>
+```example
+<div class="ncgr-overlay -active">
+</div>
+<div class="ncgr-dialog -active">
+  <div class="ncgr-dialog__header">
+    <div class="ncgr-dialog__leading">
+      <div class="ncgr-dialog__icon ncgr-typography-label">
+        ×
       </div>
     </div>
-</section>
+    <div class="ncgr-dialog__title">
+      甲賀流
+    </div>
+    <div class="ncgr-dialog__actions">
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+      </li>
+    </div>
+  </div>
+  <div class="ncgr-dialog__body">
+    <div class="ncgr-pad-16">
+      甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
+      山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
+      甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
+      しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<br>
+      なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。<br>
+    </div>
+  </div>
+  <div class="ncgr-dialog__footer">
+    <button class="ncgr-button ncgr-button-default ncgr-button--fluid ncgr-button--light">とじる</button>
+  </div>
+</div>
 ```
 
 */
 
-
 .ncgr-dialog {
-  & * {
-    z-index: 2147483645;
-  }
-  &.-active {
-    .ncgr-dialog__sheet {
-      display: flex;
-      animation: dialog-fade-in-sheet 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-      dialog-fade-in-shadow 0.5s ease;
-      @include shadow-16dp();
-      @include mediaquery(mobile) {
-        animation: dialog-fade-in-sheet-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        dialog-fade-in-shadow 0.5s ease;
-      }
-      .ncgr-dialog__header,
-      .ncgr-dialog__body,
-      .ncgr-dialog__footer {
-        animation: dialog-fade-in-sheet-inner 0.5s ease;
-      }
-    }
-  }
-}
-
-.ncgr-dialog__sheet {
   width: 40rem;
   height: auto;
   max-height: calc(100vh - 12rem);
@@ -90,10 +64,29 @@ category: Components
   overflow: hidden;
   display: none;
   flex-direction: column;
+  z-index: 2147483645;
+  & * {
+    z-index: 2147483645;
+  }
   @include mediaquery(mobile) {
     height: auto;
     width: calc(100vw - 3rem);
     left: 1.5rem;
+  }
+  &.-active {
+    display: flex;
+    animation: dialog-fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    dialog-fade-in-shadow 0.5s ease;
+    @include shadow-16dp();
+    @include mediaquery(mobile) {
+      animation: dialog-fade-in-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      dialog-fade-in-shadow 0.5s ease;
+    }
+    .ncgr-dialog__header,
+    .ncgr-dialog__body,
+    .ncgr-dialog__footer {
+      animation: dialog-fade-in-sheet-inner 0.5s ease;
+    }
   }
 }
 
@@ -202,7 +195,7 @@ category: Components
 
 // animation
 
-@keyframes dialog-fade-in-sheet {
+@keyframes dialog-fade-in {
   0% {
     width: 0;
     height: 10px;
@@ -232,7 +225,7 @@ category: Components
   }
 }
 
-@keyframes dialog-fade-in-sheet-mobile {
+@keyframes dialog-fade-in-mobile {
   0% {
     width: 0;
     height: 10px;
@@ -252,7 +245,7 @@ category: Components
   }
 }
 
-@keyframes dialog-fade-in-sheet-inner {
+@keyframes dialog-fade-in-inner {
   0% {
     opacity: 0;
   }

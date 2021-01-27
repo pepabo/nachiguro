@@ -61,14 +61,13 @@ category: Components
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
+  &.-active {
+    display: block;
+    animation: fade-in-overlay 0.3s ease;
+  }
   &.-transparent {
     background-color: rgba(0, 0, 0, 0);
   }
-}
-
-.-active > .ncgr-overlay {
-  display: block;
-  animation: fade-in-overlay 0.3s ease;
 }
 
 @keyframes fade-in-overlay {

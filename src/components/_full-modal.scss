@@ -1,7 +1,7 @@
 /*doc
 ---
-title: Fullscreen Modal
-name: fullscreen-modal
+title: Full Modal
+name: full-modal
 category: Components
 ---
 
@@ -9,88 +9,67 @@ category: Components
 `header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
 
 `-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
-また、`ncgr-fullscreen-modal__contents`を付与したクラスを複数配置し、
+また、`ncgr-full-modal__contents`を付与したクラスを複数配置し、
 `-active`の付け外しをすることでシート内に階層を持たせることができます。
 
 `.fullscreen-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
-```example
-<section class="ncgr-fullscreen-modal -active">
-  <div class="ncgr-fullscreen-modal__sheet">
-    <div class="ncgr-fullscreen-modal__header -active">
-      <div class="ncgr-fullscreen-modal__leading">
-        <div class="ncgr-fullscreen-modal__icon ncgr-typography-light">
-          ×
-        </div>
+```code
+<div class="ncgr-full-modal -active">
+  <div class="ncgr-full-modal__header -active">
+    <div class="ncgr-full-modal__leading">
+      <div class="ncgr-full-modal__icon ncgr-typography-light">
+        ×
       </div>
-      <div class="ncgr-fullscreen-modal__title">
-        メニュー
-      </div>
-      <ul class="ncgr-fullscreen-modal__actions">
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+    </div>
+    <div class="ncgr-full-modal__title">
+      メニュー
+    </div>
+    <ul class="ncgr-full-modal__actions">
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </li>
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </li>
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="ncgr-full-modal__body">
+    <div class="ncgr-full-modal__contents -active">
+      <ul class="ncgr-list-view"> 
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
         </li>
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
         </li>
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-light"></i>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
         </li>
       </ul>
     </div>
-    <div class="ncgr-fullscreen-modal__body">
-      <div class="ncgr-fullscreen-modal__contents -active">
-        <ul class="ncgr-list-view"> 
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリする
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリしない
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリする
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリしない
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
-</section>
+</div>
 ```
 
 */
-
-.ncgr-fullscreen-modal {
-  & * {
-    z-index: 2147483645;
-  }
-  &.-active {
-    .ncgr-fullscreen-modal__sheet {
-      transform: translateY(0);
-      animation: fullscreen-modal-fade-in-sheet 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      &:before {
-        animation: fullscreen-modal-fill 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .ncgr-fullscreen-modal__header,
-      .ncgr-fullscreen-modal__body {
-        animation: fullscreen-modal-hide 1s ease;
-      }
-    }
-  }
-}
   
-.ncgr-fullscreen-modal__sheet {
+.ncgr-full-modal {
   background-color: var(--color-secondary-grouped-background);
   position: fixed;
   top: 0;
@@ -103,6 +82,10 @@ category: Components
   height: 100vh;
   top: auto;
   transform: translateY(100vh);
+  z-index: 2147483645;
+  & * {
+    z-index: 2147483645;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -115,9 +98,20 @@ category: Components
     z-index: -1;
     overflow: hidden;
   }
+  &.-active {
+    transform: translateY(0);
+    animation: full-modal-fade-in-sheet 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    &:before {
+      animation: full-modal-fill 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .ncgr-full-modal__header,
+    .ncgr-full-modal__body {
+      animation: full-modal-hide 1s ease;
+    }
+  }
 }
 
-.ncgr-fullscreen-modal__header {
+.ncgr-full-modal__header {
   top: 0;
   left: 0;
   width: 0;
@@ -134,7 +128,7 @@ category: Components
   }
 }
 
-.ncgr-fullscreen-modal__leading {
+.ncgr-full-modal__leading {
   width: auto;
   height: auto;
   min-width: 2.5rem;
@@ -143,7 +137,7 @@ category: Components
   cursor: pointer;
 }
 
-.ncgr-fullscreen-modal__icon {
+.ncgr-full-modal__icon {
   font-size: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -152,7 +146,7 @@ category: Components
   align-items: center;
 }
 
-.ncgr-fullscreen-modal__title {
+.ncgr-full-modal__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +158,7 @@ category: Components
   margin: 0 1rem;
 }
 
-.ncgr-fullscreen-modal__actions {
+.ncgr-full-modal__actions {
   margin: 0;
   display: flex;
   height: 3.5rem;
@@ -179,7 +173,7 @@ category: Components
   }
 }
 
-.ncgr-fullscreen-modal__body {
+.ncgr-full-modal__body {
   position: relative;
   width: 100vw;
   height: auto;
@@ -187,7 +181,7 @@ category: Components
   overflow: hidden;
 }
 
-.ncgr-fullscreen-modal__contents {
+.ncgr-full-modal__contents {
   position: absolute;
   top: 0;
   left: 0;
@@ -205,7 +199,7 @@ category: Components
 // animation
 
 
-@keyframes fullscreen-modal-fade-in-sheet {
+@keyframes full-modal-fade-in-sheet {
   0% {
     background-color: transparent;
   }
@@ -217,7 +211,7 @@ category: Components
   }
 }
 
-@keyframes fullscreen-modal-fill {
+@keyframes full-modal-fill {
   from {
     top: 100vh;
     border-radius: 50%;
@@ -230,7 +224,7 @@ category: Components
   }
 }
 
-@keyframes fullscreen-modal-hide {
+@keyframes full-modal-hide {
   0% {
     opacity: 0;
     background-color: transparent;
