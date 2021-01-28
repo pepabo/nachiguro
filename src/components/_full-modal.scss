@@ -80,7 +80,7 @@ category: Components
   transform: translateY(100vh);
   z-index: 2147483645;
   & * {
-    z-index: 2147483646;
+    z-index: 2147483645;
   }
   &.-active {
     transform: translateY(0);
@@ -101,6 +101,7 @@ category: Components
   margin: 0;
   font-size: 2rem;
   color: var(--color-white);
+  z-index: 2147483646;
 }
 
 .ncgr-full-modal__body {

@@ -63,7 +63,7 @@ category: Components
   flex-direction: column;
   z-index: 2147483645;
   & * {
-    z-index: 2147483646;
+    z-index: 2147483645;
   }
   @include mediaquery(mobile) {
     height: auto;
@@ -99,6 +99,7 @@ category: Components
   margin: 0;
   font-size: 2rem;
   color: var(--color-white);
+  z-index: 2147483646;
 }
 
 .ncgr-dialog__body {
