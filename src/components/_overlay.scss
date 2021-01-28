@@ -52,7 +52,7 @@ Dialog, Semi Modal等を使用する際に、それらの領域外を覆うた�
   width: 100vw;
   height: 100vh;
   top: 0;
-  bottom: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 2147483645;
