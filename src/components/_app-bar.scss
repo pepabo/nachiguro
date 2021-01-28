@@ -12,19 +12,19 @@ Dialog, Full Modal, Semi Modalなどのコンポーネントに使用するヘ�
 
 ```example
 <div class="ncgr-app-bar -active">
-<div class="ncgr-app-bar__leading">
+  <div class="ncgr-app-bar__leading">
     <div class="ncgr-app-bar__icon ncgr-typography-label">
     ×
     </div>
-</div>
-<div class="ncgr-app-bar__title">
+  </div>
+  <div class="ncgr-app-bar__title">
     メニュー
-</div>
-<ul class="ncgr-app-bar__actions">
+  </div>
+  <ul class="ncgr-app-bar__actions">
     <li>
-    <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+      <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
     </li>
-</ul>
+  </ul>
 </div>
 ```
 
