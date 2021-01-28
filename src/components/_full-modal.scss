@@ -133,5 +133,6 @@ category: Components
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0.5rem;
 }
