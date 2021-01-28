@@ -5,8 +5,8 @@ name: full-modal
 category: Components
 ---
 
-画面全体の領域のモーダルを展開させるコンポーネントです。`header`, `body`, `footer`の２要素があります。
-`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+画面全体の領域のモーダルを展開させるコンポーネントです。`body`, `footer`の２要素があります。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。
 
 `-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 また、`ncgr-full-modal__contents`を付与したクラスを複数配置し、
@@ -17,16 +17,16 @@ category: Components
 
 ```code
 <div class="ncgr-full-modal -active">
-  <div class="ncgr-full-modal__header -active">
-    <div class="ncgr-full-modal__leading">
-      <div class="ncgr-full-modal__icon ncgr-typography-label">
+  <div class="ncgr-app-bar -active">
+    <div class="ncgr-app-bar__leading">
+      <div class="ncgr-app-bar__icon ncgr-typography-label">
         ×
       </div>
     </div>
-    <div class="ncgr-full-modal__title">
+    <div class="ncgr-app-bar__title">
       メニュー
     </div>
-    <ul class="ncgr-full-modal__actions">
+    <ul class="ncgr-app-bar__actions">
       <li>
         <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
       </li>
@@ -87,66 +87,20 @@ category: Components
   }
 }
 
-.ncgr-full-modal__header {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: var(--color-secondary-grouped-background);
-  display: flex;
-  align-items: flex-start;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
-  &.-active {
-    width: 100%;
-    height: 3.5rem;
-  }
-}
-
-.ncgr-full-modal__leading {
-  width: auto;
-  height: auto;
-  min-width: 2.5rem;
-  margin: auto 0 auto 1rem;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.ncgr-full-modal__icon {
-  font-size: 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
+.ncgr-full-modal__close {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.ncgr-full-modal__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-self: stretch;
-  flex-grow: 1;
-  height: 3.5rem;
-  font-size: 1rem;
-  margin: 0 1rem;
-}
-
-.ncgr-full-modal__actions {
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
   margin: 0;
-  display: flex;
-  height: 3.5rem;
-  width: auto;
-  & li {
-    min-width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 1rem auto 0.5rem;
-  }
+  font-size: 2rem;
+  color: var(--color-white);
 }
 
 .ncgr-full-modal__body {

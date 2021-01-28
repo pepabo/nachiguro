@@ -5,9 +5,8 @@ name: dialog
 category: Components
 ---
 
-ページ中央に浮遊して現れるダイアログウインドウを生成するコンポーネントです。
-`header`,`body`,`footer`の３要素があります。
-`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+ページ中央に浮遊して現れるダイアログウインドウを生成するコンポーネントです。`body`, `footer`の２要素があります。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。
 
 ダイアログの領域外を暗くする場合や、領域外を選択してダイアログを閉じるアクションを実装する場合は、`ncgr-overlay`を併せて使用してください。
 また、`.ncgr-dialog`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
@@ -17,16 +16,16 @@ category: Components
 <div class="ncgr-overlay -active">
 </div>
 <div class="ncgr-dialog -active">
-  <div class="ncgr-dialog__header">
-    <div class="ncgr-dialog__leading">
-      <div class="ncgr-dialog__icon ncgr-typography-label">
+  <div class="ncgr-app-bar -active">
+    <div class="ncgr-app-bar__leading">
+      <div class="ncgr-app-bar__icon ncgr-typography-label">
         ×
       </div>
     </div>
-    <div class="ncgr-dialog__title">
+    <div class="ncgr-app-bar__title">
       甲賀流
     </div>
-    <div class="ncgr-dialog__actions">
+    <div class="ncgr-app-bar__actions">
       <li>
         <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
       </li>
@@ -80,50 +79,10 @@ category: Components
       animation: dialog-fade-in-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       dialog-fade-in-shadow 0.5s ease;
     }
-    .ncgr-dialog__header,
-    .ncgr-dialog__body,
-    .ncgr-dialog__footer {
+    * {
       animation: dialog-fade-in-sheet-inner 0.5s ease;
     }
   }
-}
-
-.ncgr-dialog__header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3.5rem;
-  display: flex;
-  background-color: var(--color-secondary-grouped-background);
-  align-items: flex-start;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
-  &.-transparent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 2147483646;
-  }
-}
-
-.ncgr-dialog__leading {
-  width: auto;
-  height: auto;
-  min-width: 2.5rem;
-  margin: auto 0 auto 1rem;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.ncgr-dialog__icon {
-  font-size: 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .ncgr-dialog__close {
@@ -140,33 +99,6 @@ category: Components
   margin: 0;
   font-size: 2rem;
   color: var(--color-white);
-}
-
-.ncgr-dialog__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-self: stretch;
-  flex-grow: 1;
-  height: 3.5rem;
-  font-size: 1rem;
-  margin: 0 1rem;
-}
-
-.ncgr-dialog__actions {
-  margin: 0;
-  display: flex;
-  height: 3.5rem;
-  width: auto;
-  & li {
-    min-width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 1rem auto 0.5rem;
-  }
 }
 
 .ncgr-dialog__body {
