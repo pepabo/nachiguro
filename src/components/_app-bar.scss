@@ -32,8 +32,6 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
 */
 
 .ncgr-app-bar {
-  top: 0;
-  left: 0;
   width: 0;
   height: 0;
   background-color: var(--color-secondary-grouped-background);
@@ -43,6 +41,12 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   overflow: hidden;
   padding: 0;
   z-index: 2147483645;
+  &.-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
   &.-active {
     width: 100%;
     height: 3.5rem;
@@ -94,10 +98,7 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   }
 }
 
-.ncgr-app-bar__close {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+.ncgr-app-bar__icon-button {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -105,8 +106,9 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   align-items: center;
   background:rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-  margin: 0;
+  margin: 0.5rem auto auto 0.5rem;
   font-size: 2rem;
   color: var(--color-white);
   z-index: 2147483646;
+  cursor: pointer;
 }

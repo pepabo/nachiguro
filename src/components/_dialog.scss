@@ -50,13 +50,13 @@ category: Components
 
 // Variables
 $dialog-width: 30rem;
-$dialog-vertical-gap: 12rem;
+$dialog-vertical-gap: 6rem;
 $dialog-horizontal-gap: 1.5rem; 
 
 .ncgr-dialog {
   width: $dialog-width;
   height: auto;
-  max-height: calc(100vh - #{$dialog-vertical-gap});
+  max-height: calc(100vh - (#{$dialog-vertical-gap} * 2));
   position: fixed;
   top: 50vh;
   left: calc(50vw - (#{$dialog-width} / 2));
