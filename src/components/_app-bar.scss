@@ -38,8 +38,6 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
   z-index: 2147483645;
   &.-transparent {
     position: absolute;
