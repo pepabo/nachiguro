@@ -79,29 +79,13 @@ category: Components
   height: 100vh;
   transform: translateY(100vh);
   z-index: 2147483645;
-  & * {
+  .ncgr-full-modal__body,
+  .ncgr-full-modal__footer {
     z-index: 2147483645;
   }
   &.-active {
     transform: translateY(0);
   }
-}
-
-.ncgr-full-modal__close {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  margin: 0;
-  font-size: 2rem;
-  color: var(--color-white);
-  z-index: 2147483646;
 }
 
 .ncgr-full-modal__body {

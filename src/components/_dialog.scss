@@ -67,7 +67,8 @@ $dialog-horizontal-gap: 1.5rem;
   display: none;
   flex-direction: column;
   z-index: 2147483645;
-  & * {
+  .ncgr-dialog__body,
+  .ncgr-dialog__footer {
     z-index: 2147483645;
   }
   @include mediaquery(mobile) {
