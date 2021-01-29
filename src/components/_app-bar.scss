@@ -5,16 +5,17 @@ name: app-bar
 category: Components
 ---
 
-Dialog, Full Modal, Semi Modalなどのコンポーネントに使用するヘッダーを生成します。
-`.ncgr-app-bar`に`-active`を付与することでアクティブな状態になります。
+App Bar には現在の画面に関連する情報とアクションが表示されます。`.ncgr-app-bar`に`-active`を付与することでアクティブな状態になります。
 
-`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどの画面のナビゲーションを操作するボタンを置き、`actions`にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。
+
+また、Appbarの領域をもたずにモーダルを閉じるためのボタン用に、`ncgr-app-bar__close`が用意されています。
 
 ```example
 <div class="ncgr-app-bar -active">
   <div class="ncgr-app-bar__leading">
     <div class="ncgr-app-bar__icon ncgr-typography-label">
-    ×
+      ×
     </div>
   </div>
   <div class="ncgr-app-bar__title">
@@ -90,4 +91,21 @@ Dialog, Full Modal, Semi Modalなどのコンポーネントに使用するヘ�
     align-items: center;
     margin: auto 1rem auto 0.5rem;
   }
+}
+
+.ncgr-app-bar__close {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--color-white);
+  z-index: 2147483646;
 }

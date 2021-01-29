@@ -48,16 +48,21 @@ category: Components
 
 */
 
+// Variables
+$dialog-width: 30rem;
+$dialog-vertical-gap: 12rem;
+$dialog-horizontal-gap: 1.5rem; 
+
 .ncgr-dialog {
-  width: 40rem;
+  width: $dialog-width;
   height: auto;
-  max-height: calc(100vh - 12rem);
+  max-height: calc(100vh - #{$dialog-vertical-gap});
   position: fixed;
   top: 50vh;
-  left: calc(50vw - 20rem);
+  left: calc(50vw - (#{$dialog-width} / 2));
   transform: translateY(-50%);
   background-color: var(--color-secondary-grouped-background);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   overflow: hidden;
   display: none;
   flex-direction: column;
@@ -67,45 +72,27 @@ category: Components
   }
   @include mediaquery(mobile) {
     height: auto;
-    width: calc(100vw - 3rem);
-    left: 1.5rem;
+    width: calc(100vw - (#{$dialog-horizontal-gap} * 2));
+    left: $dialog-horizontal-gap;
   }
   &.-active {
     display: flex;
     animation: dialog-fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    dialog-fade-in-shadow 0.5s ease;
+    dialog-shadow-fade-in 0.5s ease;
     @include shadow-16dp();
     @include mediaquery(mobile) {
       animation: dialog-fade-in-mobile 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-      dialog-fade-in-shadow 0.5s ease;
+      dialog-shadow-fade-in 0.5s ease;
     }
     * {
-      animation: dialog-fade-in-sheet-inner 0.5s ease;
+      animation: dialog-inner-fade-in 0.5s ease;
     }
   }
 }
 
-.ncgr-dialog__close {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  margin: 0;
-  font-size: 2rem;
-  color: var(--color-white);
-  z-index: 2147483646;
-}
-
 .ncgr-dialog__body {
-  display: inline-block;
   position: relative;
-  width: 40rem;
+  width: $dialog-width;
   height: auto;
   flex-grow: 1;
   overflow-x: hidden;
@@ -136,25 +123,15 @@ category: Components
   }
 
   40% {
-    width: 40rem;
+    width: $dialog-width;
     height: 10px;
-    left: calc(50vw - 20rem);
-    @include mediaquery(mobile) {
-      width: calc(100vw - 3rem);
-      height: 10px;
-      left: 1.5rem;
-    } 
+    left: calc(50vw - (#{$dialog-width} / 2));
   }
 
   100% {
-    width: 40rem;
+    width: $dialog-width;
     height: auto;
-    left: calc(50vw - 20rem);
-    @include mediaquery(mobile) {
-      width: calc(100vw - 3rem);
-      height: auto;
-      left: 1.5rem;
-    } 
+    left: calc(50vw - (#{$dialog-width} / 2));
   }
 }
 
@@ -167,19 +144,19 @@ category: Components
   }
 
   40% {
-    width: calc(100vw - 3rem);
+    width: calc(100vw - (#{$dialog-horizontal-gap} * 2));
     height: 10px;
-    left: 1.5rem;
+    left: $dialog-horizontal-gap;
   }
 
   100% {
-    width: calc(100vw - 3rem);
+    width: calc(100vw - (#{$dialog-horizontal-gap} * 2));
     height: auto;
-    left: 1.5rem;
+    left: $dialog-horizontal-gap;
   }
 }
 
-@keyframes dialog-fade-in-inner {
+@keyframes dialog-inner-fade-in {
 
   0% {
     opacity: 0;
@@ -194,7 +171,7 @@ category: Components
   }
 }
 
-@keyframes dialog-fade-in-shadow {
+@keyframes dialog-shadow-fade-in {
 
   0% {
     box-shadow: none;
@@ -203,7 +180,7 @@ category: Components
   30% {
     box-shadow: none;
   }
-  
+
   100% {
     @include shadow-16dp();
   }
