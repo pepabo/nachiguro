@@ -38,7 +38,7 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
-  z-index: 2147483645;
+  z-index: 2147483646;
   &.-transparent {
     position: absolute;
     top: 0;
@@ -107,6 +107,5 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   margin: 0.5rem auto auto 0.5rem;
   font-size: 2rem;
   color: var(--color-white);
-  z-index: 2147483646;
   cursor: pointer;
 }
