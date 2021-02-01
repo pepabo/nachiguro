@@ -125,6 +125,52 @@
         </div>
         <div class="styleguide__content">
 
+<h1 id="app-bar" class="styleguide">App Bar</h1>
+
+<p>App Bar には現在の画面に関連する情報とアクションが表示されます。<code>.ncgr-app-bar</code>に<code>-active</code>を付与することでアクティブな状態になります。</p>
+
+<p><code>leading</code>、<code>title</code>、<code>actions</code>の３つの要素がありますが、<code>leading</code>は閉じる、戻るなどの画面のナビゲーションを操作するボタンを置き、<code>actions</code>にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。</p>
+
+<p>また、Appbarの領域をもたずにモーダルを閉じるためのボタン用に、<code>ncgr-app-bar__close</code>が用意されています。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-app-bar -active">
+  <div class="ncgr-app-bar__leading">
+    <div class="ncgr-app-bar__icon ncgr-typography-label">
+      ×
+    </div>
+  </div>
+  <div class="ncgr-app-bar__title">
+    メニュー
+  </div>
+  <ul class="ncgr-app-bar__actions">
+    <li>
+      <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+    </li>
+  </ul>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar -active"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__icon ncgr-typography-label"</span><span class="nt">&gt;</span>
+      ×
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__title"</span><span class="nt">&gt;</span>
+    メニュー
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-ellipsis-v ncgr-typography-label"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="avatar" class="styleguide">Avatar</h1>
 
 <p>ある箇所が特定のユーザーが所有するものであることを表す場合に使用します。大きさはそのセクションでの重要度に合わせて「Small・Medium・Large」の3種類を使い分けます。</p>
@@ -830,6 +876,51 @@
         </div>
         <div class="styleguide__content">
 
+<h1 id="dialog" class="styleguide">Dialog</h1>
+
+<p>ページ中央に浮遊して現れるダイアログウインドウを生成するコンポーネントです。<code>body</code>, <code>footer</code>の２要素があります。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。</p>
+
+<p>ダイアログの領域外を暗くする場合や、領域外を選択してダイアログを閉じるアクションを実装する場合は、<code>ncgr-overlay</code>を併せて使用してください。
+また、<code>.ncgr-dialog</code>をアクティブにするときには、同時にbodyに<code>.overflow-hidden</code>を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>&lt;div class="ncgr-overlay -active"&gt;
+&lt;/div&gt;
+&lt;div class="ncgr-dialog -active"&gt;
+  &lt;div class="ncgr-app-bar -active"&gt;
+    &lt;div class="ncgr-app-bar__leading"&gt;
+      &lt;div class="ncgr-app-bar__icon ncgr-typography-label"&gt;
+        ×
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ncgr-app-bar__title"&gt;
+      甲賀流
+    &lt;/div&gt;
+    &lt;div class="ncgr-app-bar__actions"&gt;
+      &lt;li&gt;
+        &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
+      &lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ncgr-dialog__body"&gt;
+    &lt;div class="ncgr-pad-16"&gt;
+      甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。&lt;br&gt;
+      山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。&lt;br&gt;
+      甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。&lt;br&gt;
+      しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。&lt;br&gt;
+      なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。&lt;br&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ncgr-dialog__footer"&gt;
+    &lt;button class="ncgr-button ncgr-button-default ncgr-button--fluid ncgr-button--light"&gt;とじる&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="expansion-card" class="styleguide">Expansion Card</h1>
 
 <p>少ない情報からさらに詳しい情報を見せたい場合に、伸縮するカードを使用します。</p>
@@ -904,6 +995,69 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h1 id="full-modal" class="styleguide">Full Modal</h1>
+
+<p>画面全体の領域のモーダルを展開させるコンポーネントです。<code>body</code>, <code>footer</code>の２要素があります。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。</p>
+
+<p><code>-active</code>のmodifierがある要素は、それを付与することでアクティブな状態になります。
+また、<code>ncgr-full-modal__contents</code>を付与したクラスを複数配置し、
+<code>-active</code>の付け外しをすることでシート内に階層を持たせることができます。</p>
+
+<p><code>ncgr-full-modal</code>をアクティブにするときには、同時にbodyに<code>.overflow-hidden</code>を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>&lt;div class="ncgr-full-modal -active"&gt;
+  &lt;div class="ncgr-app-bar -active"&gt;
+    &lt;div class="ncgr-app-bar__leading"&gt;
+      &lt;div class="ncgr-app-bar__icon ncgr-typography-label"&gt;
+        ×
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ncgr-app-bar__title"&gt;
+      メニュー
+    &lt;/div&gt;
+    &lt;ul class="ncgr-app-bar__actions"&gt;
+      &lt;li&gt;
+        &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="ncgr-full-modal__body"&gt;
+    &lt;div class="ncgr-full-modal__contents -active"&gt;
+      &lt;ul class="ncgr-list-view"&gt; 
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリする
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリしない
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリする
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリしない
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ncgr-full-modal__footer"&gt;
+    &lt;button class="ncgr-button ncgr-button-default ncgr-button--fluid ncgr-button--light"&gt;とじる&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
         </div>
         <div class="styleguide__content">
@@ -3238,6 +3392,21 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
         </div>
         <div class="styleguide__content">
 
+<h1 id="overlay" class="styleguide">Overlay</h1>
+
+<p>Dialog, Semi Modal等を使用する際に、それらの領域外を覆うためのコンポーネントです。
+それらのウインドウ外の領域が暗くなり、ユーザーをコンテンツに集中させやすくすることができるほか、ウインドウの領域外を選択して閉じるアクションを実装できるようになります。</p>
+
+<p><code>.ncgr-overlay</code>, 並びに併用するコンポーネントをアクティブにするときには、同時にbodyに<code>.overflow-hidden</code>を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>&lt;div class="ncgr-overlay -active"&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="product-card" class="styleguide">Product Card</h1>
 
 <p>Product Cardは商品画像が一番目立つように設計します。</p>
@@ -3500,7 +3669,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
   &lt;div class="ncgr-semi-modal__sheet"&gt;
     &lt;div class="ncgr-semi-modal__header -active"&gt;
       &lt;div class="ncgr-semi-modal__leading"&gt;
-        &lt;div class="ncgr-semi-modal__icon ncgr-typography-light"&gt;
+        &lt;div class="ncgr-semi-modal__icon ncgr-typography-label"&gt;
           ×
         &lt;/div&gt;
       &lt;/div&gt;
@@ -3509,13 +3678,13 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
       &lt;/div&gt;
       &lt;ul class="ncgr-semi-modal__actions"&gt;
         &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-light"&gt;&lt;/i&gt;
+          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-light"&gt;&lt;/i&gt;
+          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-light"&gt;&lt;/i&gt;
+          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -3988,7 +4157,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年1月26日
+          最終更新日: 2021年2月1日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
@@ -4060,6 +4229,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                                   <div class="ncgr-list-tile__title">
                                     <div class="ncgr-list-tile__primary-title">
                                       Alert
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#app-bar">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      App Bar
                                     </div>
                                   </div>
                                 </a>
@@ -4162,12 +4343,36 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               </li>
                             
                               <li>
+                                <a class="ncgr-list-tile" href="#dialog">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Dialog
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
                                 <a class="ncgr-list-tile" href="#expansion-card">
                                   <div class="ncgr-list-tile__leading">
                                   </div>
                                   <div class="ncgr-list-tile__title">
                                     <div class="ncgr-list-tile__primary-title">
                                       Expansion Card
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#full-modal">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Full Modal
                                     </div>
                                   </div>
                                 </a>
@@ -4264,6 +4469,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                                   <div class="ncgr-list-tile__title">
                                     <div class="ncgr-list-tile__primary-title">
                                       ListView
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            
+                              <li>
+                                <a class="ncgr-list-tile" href="#overlay">
+                                  <div class="ncgr-list-tile__leading">
+                                  </div>
+                                  <div class="ncgr-list-tile__title">
+                                    <div class="ncgr-list-tile__primary-title">
+                                      Overlay
                                     </div>
                                   </div>
                                 </a>
