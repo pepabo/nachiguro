@@ -5,8 +5,8 @@ name: semi-modal
 category: Components
 ---
 
-`overlay`と`sheet`の二つの大きな要素に分かれており、`sheet`には`header`と`body`の大きな２要素があります。
-`header`には、`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、`actions`にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。
+画面一部の領域にモーダルを展開させるコンポーネントです。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。
 
 `-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
 また、`ncgr-semi-modal__contents`を付与したクラスを複数配置し、
@@ -16,106 +16,55 @@ category: Components
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
 ```code
-<section class="ncgr-semi-modal -active">
-  <div class="ncgr-semi-modal__overlay"></div>
-  <div class="ncgr-semi-modal__sheet">
-    <div class="ncgr-semi-modal__header -active">
-      <div class="ncgr-semi-modal__leading">
-        <div class="ncgr-semi-modal__icon ncgr-typography-label">
-          ×
-        </div>
+<div class="ncgr-overlay -active"></div>
+<div class="ncgr-semi-modal -active">
+  <div class="ncgr-app-bar -active">
+    <div class="ncgr-app-bar__leading">
+      <div class="ncgr-app-bar__icon ncgr-typography-label">
+        ×
       </div>
-      <div class="ncgr-semi-modal__title">
-        メニュー
-      </div>
-      <ul class="ncgr-semi-modal__actions">
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+    </div>
+    <div class="ncgr-app-bar__title">
+      メニュー
+    </div>
+    <ul class="ncgr-app-bar__actions">
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="ncgr-semi-modal__body">
+    <div class="ncgr-semi-modal__contents -active">
+      <ul class="ncgr-list-view"> 
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
         </li>
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
         </li>
-        <li>
-          <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
         </li>
       </ul>
     </div>
-    <div class="ncgr-semi-modal__body">
-      <div class="ncgr-semi-modal__contents -active">
-        <ul class="ncgr-list-view"> 
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリする
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリしない
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリする
-            </div>
-          </li>
-          <li class="ncgr-list-tile">
-            <div class="ncgr-list-tile__title">
-              スリスリしない
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
-</section>
+</div>
 ```
 
 */
 
 .ncgr-semi-modal {
-  & * {
-    z-index: 2147483645;
-  }
-  &.-active {
-    .ncgr-semi-modal__overlay {
-      display: block;
-      animation: semi-modal-fade-in-overlay 0.3s ease;
-    }
-    .ncgr-semi-modal__sheet {
-      animation: semi-modal-fade-in-sheet 1s ease, semi-modal-fade-in-shadow 1s ease;
-      @include shadow-16dp();
-      transform: translateX(0);
-      &:before {
-        animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        @include mediaquery(tablet) {
-          animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-      }
-      .ncgr-semi-modal__header,
-      .ncgr-semi-modal__contents {
-        animation: semi-modal-hide 1s ease;
-      }
-      @include mediaquery(tablet) {
-        transform: translateY(0);
-      }
-    }
-  }
-}
-
-.ncgr-semi-modal__overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  &.-transparent {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
-.ncgr-semi-modal__sheet {
   background-color: var(--color-secondary-grouped-background);
   position: fixed;
   top: 0;
@@ -127,6 +76,7 @@ category: Components
   overflow: hidden;
   transform: translateX(25rem);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2147483645;
   @include mediaquery(tablet) {
     width: 100%;
     height: 50vh;
@@ -155,67 +105,19 @@ category: Components
       transform: translateX(-50%);
     }
   }
-}
-
-.ncgr-semi-modal__header {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: var(--color-secondary-grouped-background);
-  display: flex;
-  align-items: flex-start;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
   &.-active {
-    width: 100%;
-    height: 3.5rem;
-  }
-}
-
-.ncgr-semi-modal__leading {
-  width: auto;
-  height: auto;
-  min-width: 2.5rem;
-  margin: auto 0 auto 1rem;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.ncgr-semi-modal__icon {
-  font-size: 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ncgr-semi-modal__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-self: stretch;
-  flex-grow: 1;
-  height: 3.5rem;
-  font-size: 1rem;
-  margin: 0 1rem;
-}
-
-.ncgr-semi-modal__actions {
-  margin: 0;
-  display: flex;
-  height: 3.5rem;
-  width: auto;
-  & li {
-    min-width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 1rem auto 0.5rem;
+    animation: semi-modal-fade-in-sheet 1s ease, semi-modal-fade-in-shadow 1s ease;
+    @include shadow-16dp();
+    transform: translateX(0);
+    &:before {
+      animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      @include mediaquery(tablet) {
+        animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+    @include mediaquery(tablet) {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -250,23 +152,6 @@ category: Components
 }
 
 // animation
-
-@keyframes semi-modal-fade-in-overlay {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
 
 @keyframes semi-modal-fade-in-sheet {
   0% {
@@ -321,25 +206,5 @@ category: Components
     top: -15vw;
     border-radius: 40%;
     transform: translateX(-50%) rotate(180deg);
-  }
-}
-
-@keyframes semi-modal-hide {
-  0% {
-    opacity: 0;
-    background-color: transparent;
-  }
-  35% {
-    opacity: 0;
-    background-color: transparent;
-  }
-
-  75% {
-    opacity: 1;
-    background-color: transparent;
-  }
-  100% {
-    opacity: 1;
-    background-color: var(--color-secondary-grouped-background);
   }
 }
