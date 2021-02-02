@@ -18,7 +18,7 @@ category: Components
 ```code
 <div class="ncgr-overlay -active"></div>
 <div class="ncgr-semi-modal -active">
-  <div class="ncgr-app-bar -active">
+  <div class="ncgr-app-bar -transparent -active">
     <div class="ncgr-app-bar__leading">
       <div class="ncgr-app-bar__icon">
         ×
@@ -100,6 +100,9 @@ category: Components
       transform: translateX(-50%);
     }
   }
+  & * {
+    opacity: 0;
+  }
   &.-active {
     animation: semi-modal-fade-in 1s ease, semi-modal-shadow-fade-in 1s ease;
     @include shadow-16dp();
@@ -112,6 +115,10 @@ category: Components
     }
     @include mediaquery(tablet) {
       transform: translateY(0);
+    }
+    & * {
+      animation: semi-modal-inner-fade-in 0.6s ease;
+      opacity: 1;
     }
   }
 }
@@ -168,6 +175,18 @@ category: Components
   }
   100% {
     @include shadow-16dp();
+  }
+}
+
+@keyframes semi-modal-inner-fade-in {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
