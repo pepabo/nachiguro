@@ -20,18 +20,13 @@ category: Components
 <div class="ncgr-semi-modal -active">
   <div class="ncgr-app-bar -active">
     <div class="ncgr-app-bar__leading">
-      <div class="ncgr-app-bar__icon ncgr-typography-label">
+      <div class="ncgr-app-bar__icon">
         ×
       </div>
     </div>
     <div class="ncgr-app-bar__title">
       メニュー
     </div>
-    <ul class="ncgr-app-bar__actions">
-      <li>
-        <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
-      </li>
-    </ul>
   </div>
   <div class="ncgr-semi-modal__body">
     <div class="ncgr-semi-modal__contents -active">
@@ -65,7 +60,7 @@ category: Components
 */
 
 .ncgr-semi-modal {
-  background-color: var(--color-secondary-grouped-background);
+  background-color: transparent;
   position: fixed;
   top: 0;
   right: 0;
@@ -106,7 +101,7 @@ category: Components
     }
   }
   &.-active {
-    animation: semi-modal-fade-in-sheet 1s ease, semi-modal-fade-in-shadow 1s ease;
+    animation: semi-modal-fade-in 1s ease, semi-modal-shadow-fade-in 1s ease;
     @include shadow-16dp();
     transform: translateX(0);
     &:before {
@@ -141,7 +136,6 @@ category: Components
   width: 25rem;
   height: 100%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--color-secondary-grouped-background);
   &.-active {
     transform: translateX(0);
   }
@@ -153,7 +147,7 @@ category: Components
 
 // animation
 
-@keyframes semi-modal-fade-in-sheet {
+@keyframes semi-modal-fade-in {
   0% {
     background-color: transparent;
   }
@@ -165,7 +159,7 @@ category: Components
   }
 }
 
-@keyframes semi-modal-fade-in-shadow {
+@keyframes semi-modal-shadow-fade-in {
   0% {
     box-shadow: none;
   }
