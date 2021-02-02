@@ -32,10 +32,10 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
 */
 
 .ncgr-app-bar {
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 3.5rem;
   background-color: var(--color-secondary-grouped-background);
-  display: flex;
+  display: none;
   align-items: flex-start;
   box-sizing: border-box;
   z-index: 2147483646;
@@ -58,8 +58,7 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
     }
   }
   &.-active {
-    width: 100%;
-    height: 3.5rem;
+    display: flex;
   }
 }
 
