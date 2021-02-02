@@ -103,27 +103,34 @@ category: Components
   & * {
     opacity: 0;
   }
-  &.-active {
-    animation: semi-modal-fade-in 1s ease, semi-modal-shadow-fade-in 1s ease;
-    @include shadow-16dp();
-    transform: translateX(0);
-    &:before {
-      animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      @include mediaquery(tablet) {
-        animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-    }
+}
+
+.ncgr-semi-modal.-active {
+  animation: semi-modal-background-color-fade-in 1s ease, semi-modal-shadow-fade-in 1s ease;
+  @include shadow-16dp();
+  transform: translateX(0);
+  & * {
+    animation: semi-modal-inner-fade-in 0.6s ease;
+    opacity: 1;
+  }
+  & .ncgr-semi-modal__contents {
+    animation: semi-modal-background-color-fade-in 1s ease, semi-modal-inner-fade-in 0.6s ease;
+    opacity: 1;
+    background-color: var(--color-secondary-grouped-background);
+  }
+  &:before {
+    animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     @include mediaquery(tablet) {
-      transform: translateY(0);
+      animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    & * {
-      animation: semi-modal-inner-fade-in 0.6s ease;
-      opacity: 1;
-    }
+  }
+  @include mediaquery(tablet) {
+    transform: translateY(0);
   }
 }
 
 .ncgr-semi-modal__body {
+  background-color: transparent;
   position: relative;
   width: 25rem;
   height: auto;
@@ -135,6 +142,7 @@ category: Components
 }
 
 .ncgr-semi-modal__contents {
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +162,7 @@ category: Components
 
 // animation
 
-@keyframes semi-modal-fade-in {
+@keyframes semi-modal-background-color-fade-in {
   0% {
     background-color: transparent;
   }
