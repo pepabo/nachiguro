@@ -129,9 +129,9 @@
 
 <p>App Bar には現在の画面に関連する情報とアクションが表示されます。<code>.ncgr-app-bar</code>に<code>-active</code>を付与することでアクティブな状態になります。</p>
 
-<p><code>leading</code>、<code>title</code>、<code>actions</code>の３つの要素がありますが、<code>leading</code>は閉じる、戻るなどの画面のナビゲーションを操作するボタンを置き、<code>actions</code>にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。</p>
+<p>背景色を透明にしたいときは<code>- transparent</code>、<code>position: sticky;</code>にしたい場合は、<code>-sticky</code>、<code>position: fixed;</code>にしたい場合は<code>-fixed</code>の Modifier を付与してください。</p>
 
-<p>また、Appbarの領域をもたずにモーダルを閉じるためのボタン用に、<code>ncgr-app-bar__close</code>が用意されています。</p>
+<p><code>leading</code>には閉じる、戻るなどの画面のナビゲーションを操作するボタン、<code>title</code>、には該当する画面のタイトル、<code>actions</code>にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
           <div class="ncgr-app-bar -active">
@@ -3653,8 +3653,8 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
 
 <h1 id="semi-modal" class="styleguide">Semi Modal</h1>
 
-<p><code>overlay</code>と<code>sheet</code>の二つの大きな要素に分かれており、<code>sheet</code>には<code>header</code>と<code>body</code>の大きな２要素があります。
-<code>header</code>には、<code>leading</code>、<code>title</code>、<code>actions</code>の３つの要素がありますが、<code>leading</code>は閉じる、戻るなどのモーダル全体の挙動を示すボタンを置き、<code>actions</code>にはオプションや通知欄など、それ以外の操作を起こすボタンを設置してください。</p>
+<p>画面一部の領域にモーダルを展開させるコンポーネントです。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。</p>
 
 <p><code>-active</code>のmodifierがある要素は、それを付与することでアクティブな状態になります。
 また、<code>ncgr-semi-modal__contents</code>を付与したクラスを複数配置し、
@@ -3664,58 +3664,45 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__code">
-          <pre>&lt;section class="ncgr-semi-modal -active"&gt;
-  &lt;div class="ncgr-semi-modal__overlay"&gt;&lt;/div&gt;
-  &lt;div class="ncgr-semi-modal__sheet"&gt;
-    &lt;div class="ncgr-semi-modal__header -active"&gt;
-      &lt;div class="ncgr-semi-modal__leading"&gt;
-        &lt;div class="ncgr-semi-modal__icon ncgr-typography-label"&gt;
-          ×
-        &lt;/div&gt;
+          <pre>&lt;div class="ncgr-overlay -active"&gt;&lt;/div&gt;
+&lt;div class="ncgr-semi-modal -active"&gt;
+  &lt;div class="ncgr-app-bar -transparent -active"&gt;
+    &lt;div class="ncgr-app-bar__leading"&gt;
+      &lt;div class="ncgr-app-bar__icon"&gt;
+        ×
       &lt;/div&gt;
-      &lt;div class="ncgr-semi-modal__title"&gt;
-        メニュー
-      &lt;/div&gt;
-      &lt;ul class="ncgr-semi-modal__actions"&gt;
-        &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="ncgr-app-bar__title"&gt;
+      メニュー
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ncgr-semi-modal__body"&gt;
+    &lt;div class="ncgr-semi-modal__contents -active"&gt;
+      &lt;ul class="ncgr-list-view"&gt; 
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリする
+          &lt;/div&gt;
         &lt;/li&gt;
-        &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリしない
+          &lt;/div&gt;
         &lt;/li&gt;
-        &lt;li&gt;
-          &lt;i class="fas fa-ellipsis-v ncgr-typography-label"&gt;&lt;/i&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリする
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="ncgr-list-tile"&gt;
+          &lt;div class="ncgr-list-tile__title"&gt;
+            スリスリしない
+          &lt;/div&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;div class="ncgr-semi-modal__body"&gt;
-      &lt;div class="ncgr-semi-modal__contents -active"&gt;
-        &lt;ul class="ncgr-list-view"&gt; 
-          &lt;li class="ncgr-list-tile"&gt;
-            &lt;div class="ncgr-list-tile__title"&gt;
-              スリスリする
-            &lt;/div&gt;
-          &lt;/li&gt;
-          &lt;li class="ncgr-list-tile"&gt;
-            &lt;div class="ncgr-list-tile__title"&gt;
-              スリスリしない
-            &lt;/div&gt;
-          &lt;/li&gt;
-          &lt;li class="ncgr-list-tile"&gt;
-            &lt;div class="ncgr-list-tile__title"&gt;
-              スリスリする
-            &lt;/div&gt;
-          &lt;/li&gt;
-          &lt;li class="ncgr-list-tile"&gt;
-            &lt;div class="ncgr-list-tile__title"&gt;
-              スリスリしない
-            &lt;/div&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </pre>
         </div>
         <div class="styleguide__content">
@@ -4157,7 +4144,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年2月1日
+          最終更新日: 2021年2月5日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
