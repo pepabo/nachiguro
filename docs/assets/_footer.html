@@ -12,54 +12,52 @@
     </div><!-- end of .ncgr-container -->
     <% if title %>
       <section id="js-menu" class="ncgr-semi-modal">
-        <div class="ncgr-semi-modal__sheet">
-          <div class="ncgr-semi-modal__header -active">
-            <div class="ncgr-semi-modal__leading">
-              <div id="js-menu-close-button" class="ncgr-semi-modal__icon ncgr-typography-light">
-                ×
-              </div>
-            </div>
-            <div class="ncgr-semi-modal__title">
-              メニュー
+        <div class="ncgr-app-bar -active -transparent">
+          <div class="ncgr-app-bar__leading">
+            <div id="js-menu-close-button" class="ncgr-app-bar__icon ncgr-typography-light">
+              ×
             </div>
           </div>
-          <div class="ncgr-semi-modal__body">
-            <div class="ncgr-semi-modal__contents -active">
-              <nav>
-                <ul class="ncgr-list-view">
-                  <% @categories.sort.each do |category| %>
-                    <% unless category[0] == 'index' %>
-                      <li>
-                        <a class="ncgr-list-tile" href="<%= category[1] %>">
-                          <div class="ncgr-list-tile__title">
-                            <div class="ncgr-list-tile__primary-title">
-                              <%= category[0] %>
-                            </div>
+          <div class="ncgr-app-bar__title">
+            メニュー
+          </div>
+        </div>
+        <div class="ncgr-semi-modal__body">
+          <div class="ncgr-semi-modal__contents -active">
+            <nav>
+              <ul class="ncgr-list-view">
+                <% @categories.sort.each do |category| %>
+                  <% unless category[0] == 'index' %>
+                    <li>
+                      <a class="ncgr-list-tile" href="<%= category[1] %>">
+                        <div class="ncgr-list-tile__title">
+                          <div class="ncgr-list-tile__primary-title">
+                            <%= category[0] %>
                           </div>
-                        </a>
-                        <% if category[0] == title %>
-                          <ul>
-                            <% @blocks.each do |block| %>
-                              <li>
-                                <a class="ncgr-list-tile" href="#<%= block[:name] %>">
-                                  <div class="ncgr-list-tile__leading">
+                        </div>
+                      </a>
+                      <% if category[0] == title %>
+                        <ul>
+                          <% @blocks.each do |block| %>
+                            <li>
+                              <a class="ncgr-list-tile" href="#<%= block[:name] %>">
+                                <div class="ncgr-list-tile__leading">
+                                </div>
+                                <div class="ncgr-list-tile__title">
+                                  <div class="ncgr-list-tile__primary-title">
+                                    <%= block[:title] %>
                                   </div>
-                                  <div class="ncgr-list-tile__title">
-                                    <div class="ncgr-list-tile__primary-title">
-                                      <%= block[:title] %>
-                                    </div>
-                                  </div>
-                                </a>
-                              </li>
-                            <% end %>
-                          </ul>
-                        <% end %>
-                      </li>
-                    <% end %>
+                                </div>
+                              </a>
+                            </li>
+                          <% end %>
+                        </ul>
+                      <% end %>
+                    </li>
                   <% end %>
-                </ul>
-              </nav>
-            </div>
+                <% end %>
+              </ul>
+            </nav>
           </div>
         </div>
       </section>
