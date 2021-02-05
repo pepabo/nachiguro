@@ -7,9 +7,9 @@ category: Components
 
 App Bar には現在の画面に関連する情報とアクションが表示されます。`.ncgr-app-bar`に`-active`を付与することでアクティブな状態になります。
 
-`leading`、`title`、`actions`の３つの要素がありますが、`leading`は閉じる、戻るなどの画面のナビゲーションを操作するボタンを置き、`actions`にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。
+背景色を透明にしたいときは`- transparent`、`position: sticky;`にしたい場合は、`-sticky`、`position: fixed;`にしたい場合は`-fixed`の Modifier を付与してください。
 
-また、Appbarの領域をもたずにモーダルを閉じるためのボタン用に、`ncgr-app-bar__close`が用意されています。
+`leading`には閉じる、戻るなどの画面のナビゲーションを操作するボタン、`title`、には該当する画面のタイトル、`actions`にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。
 
 ```example
 <div class="ncgr-app-bar -active">
