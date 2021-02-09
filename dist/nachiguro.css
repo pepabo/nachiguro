@@ -1601,6 +1601,9 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   background: rgba(0, 0, 0, 0.4);
   color: var(--color-white);
 }
+.ncgr-app-bar__icon--floating:hover, .ncgr-app-bar__icon--floating:active {
+  background: rgba(0, 0, 0, 0.6);
+}
 
 .ncgr-app-bar__title {
   display: flex;
