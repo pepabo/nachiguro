@@ -123,6 +123,10 @@ $app-bar-leading-width: 3.5rem;
 .ncgr-app-bar__icon--floating {
   background:rgba(0, 0, 0, 0.4);
   color: var(--color-white);
+  &:hover,
+  &:active {
+    background:rgba(0, 0, 0, 0.6);
+  }
 }
 
 .ncgr-app-bar__title {
