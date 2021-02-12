@@ -32,6 +32,14 @@ category: Components
     その他
   </span>
 </label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge" disabled="disabled">
+  <span>
+    <i class="fas fa-check"></i>
+    否
+  </span>
+</label>
 ```
 
 縦に並べる場合には、以下のようにマークアップします。
@@ -58,6 +66,14 @@ category: Components
   <span>
     <i class="fas fa-check"></i>
     その他
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge" disabled="disabled">
+  <span>
+    <i class="fas fa-check"></i>
+    否
   </span>
 </label>
 ```
@@ -138,8 +154,16 @@ category: Components
   }
 
   input:disabled + span {
+    cursor: not-allowed;
     &::before {
-      opacity: 0.3;
+      background: var(--color-default-75);
+      border-color: var(--color-default-75);
+    }
+    i {
+      color: var(--color-white);
+    }
+    svg {
+      fill-opacity: 1;
     }
   }
 }
