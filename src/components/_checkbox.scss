@@ -37,7 +37,15 @@ category: Components
   <input type="checkbox" name="hoge" disabled="disabled">
   <span>
     <i class="fas fa-check"></i>
-    否
+    選択禁止（未選択）
+  </span>
+</label>
+
+<label class="ncgr-checkbox">
+  <input type="checkbox" name="hoge" checked disabled="disabled">
+  <span>
+    <i class="fas fa-check"></i>
+    選択禁止（選択済み）
   </span>
 </label>
 ```
@@ -73,7 +81,15 @@ category: Components
   <input type="checkbox" name="hoge" disabled="disabled">
   <span>
     <i class="fas fa-check"></i>
-    否
+    選択禁止（未選択）
+  </span>
+</label>
+
+<label class="ncgr-checkbox ncgr-checkbox--vertical">
+  <input type="checkbox" name="hoge" checked disabled="disabled">
+  <span>
+    <i class="fas fa-check"></i>
+    選択禁止（選択済み）
   </span>
 </label>
 ```
@@ -155,9 +171,18 @@ category: Components
 
   input:disabled + span {
     cursor: not-allowed;
+    color: var(--color-default-200);
     &::before {
-      background: var(--color-default-75);
-      border-color: var(--color-default-75);
+      opacity: 0.3;
+    }
+  }
+
+  input:checked:disabled + span {
+    cursor: not-allowed;
+    color: var(--color-default-200);
+    &::before {
+      background: var(--color-default-200);
+      border-color: var(--color-default-200);
     }
     i {
       color: var(--color-white);
