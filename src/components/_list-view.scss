@@ -530,7 +530,7 @@ category: Components
   </ul>
   <hr class="ncgr-list-divider">
   <div class="ncgr-list-view">
-    <input id="koga_listview" class="ncgr-list-tile__checkbox" type="checkbox">  
+    <input id="koga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
     <label for="koga_listview">
       <div class="ncgr-list-tile">
         <div class="ncgr-list-tile__title">
@@ -542,14 +542,14 @@ category: Components
           </div>
         </div>
         <div class="ncgr-list-tile__trailing">
-          <div class="ncgr-list-tile__icon -arrow">
+          <div class="ncgr-list-tile__icon -toggle">
             <i class="fa fa-angle-down"></i>
           </div>
         </div>
       </div>
     </label>
-    <div class="ncgr-list-tile__hidden">
-      <div class="ncgr-list-tile__expansion-body">
+    <div class="ncgr-list-tile__expansion-body">
+      <div class="ncgr-pad-8">
         甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
         山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
         甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
@@ -560,7 +560,7 @@ category: Components
   </div>
   <hr class="ncgr-list-divider">
   <div class="ncgr-list-view">
-    <input id="iga_listview" class="ncgr-list-tile__checkbox" type="checkbox">  
+    <input id="iga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
     <label for="iga_listview">
       <div class="ncgr-list-tile">
         <div class="ncgr-list-tile__title">
@@ -572,14 +572,14 @@ category: Components
           </div>
         </div>
         <div class="ncgr-list-tile__trailing">
-          <div class="ncgr-list-tile__icon -arrow">
+          <div class="ncgr-list-tile__icon -toggle">
             <i class="fa fa-angle-down"></i>
           </div>
         </div>
       </div>
     </label>
-    <div class="ncgr-list-tile__hidden">
-      <div class="ncgr-list-tile__expansion-body">
+    <div class="ncgr-list-tile__expansion-body">
+      <div class="ncgr-pad-8">
         伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<br>
         甲賀流と並んで忍術の中で最も有名な流派の一つである。<br>
         根拠地は、現在の三重県伊賀市と名張市にあった。<br>
@@ -728,7 +728,7 @@ $list-view-gaps: $gaps;
   display: flex;
   justify-content: center;
   align-items: center;
-  &.-arrow {
+  &.-toggle {
     font-size: 1.25rem;
     transform: rotate(0deg);
     transition: transform 0.4s ease;
@@ -766,32 +766,23 @@ $list-view-gaps: $gaps;
   padding-left: 1rem;
 }
 
-.ncgr-list-tile__checkbox {
+.ncgr-list-tile__expansion-checkbox {
   display: none;
 }
 
-.ncgr-list-tile__checkbox ~ .ncgr-list-tile__hidden {
+.ncgr-list-tile__expansion-checkbox ~ .ncgr-list-tile__expansion-body {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.4s ease;
 }
 
-.ncgr-list-tile__checkbox:checked ~ .ncgr-list-tile__hidden {
+.ncgr-list-tile__expansion-checkbox:checked ~ .ncgr-list-tile__expansion-body {
   max-height: 9999px;
   transition: max-height 0.4s ease;
 }
 
-.ncgr-list-tile__expansion-body {
-  padding: 0.5rem;
-  a {
-    color: var(--color-secondary-label);
-    text-decoration: underline;
-    display: inline;
-  }
-}
-
-.ncgr-list-tile__checkbox:checked ~ label {
-  .ncgr-list-tile__icon.-arrow {
+.ncgr-list-tile__expansion-checkbox:checked ~ label {
+  .ncgr-list-tile__icon.-toggle {
     transform: rotate(-180deg);
   }
 }
