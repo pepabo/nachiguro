@@ -1,0 +1,122 @@
+/*doc
+---
+title: Full Modal
+name: full-modal
+category: Components
+---
+
+画面全体の領域のモーダルを展開させるコンポーネントです。`body`, `footer`の２要素があります。
+「閉じる」ボタンやタイトル、アクションボタン等を使用したい場合はApp Barコンポーネントを使用してください。
+
+`-active`のmodifierがある要素は、それを付与することでアクティブな状態になります。
+また、`ncgr-full-modal__contents`を付与したクラスを複数配置し、
+`-active`の付け外しをすることでシート内に階層を持たせることができます。
+
+`ncgr-full-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
+
+```code
+<div class="ncgr-full-modal -active">
+  <div class="ncgr-app-bar -active">
+    <div class="ncgr-app-bar__leading">
+      <div class="ncgr-app-bar__icon ncgr-typography-label">
+        ×
+      </div>
+    </div>
+    <div class="ncgr-app-bar__title">
+      メニュー
+    </div>
+    <ul class="ncgr-app-bar__actions">
+      <li>
+        <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="ncgr-full-modal__body">
+    <div class="ncgr-full-modal__contents -active">
+      <ul class="ncgr-list-view"> 
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="ncgr-full-modal__footer">
+    <button class="ncgr-button ncgr-button-default ncgr-button--fluid ncgr-button--light">とじる</button>
+  </div>
+</div>
+```
+
+*/
+  
+.ncgr-full-modal {
+  background-color: var(--color-secondary-grouped-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100vh;
+  transform: translateY(100vh);
+  z-index: 2147483645;
+  .ncgr-full-modal__body,
+  .ncgr-full-modal__footer {
+    z-index: 2147483645;
+  }
+  &.-active {
+    transform: translateY(0);
+  }
+}
+
+.ncgr-full-modal__body {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.ncgr-full-modal__contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100vw);
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--color-secondary-grouped-background);
+  &.-active {
+    transform: translateX(0);
+  }
+}
+
+.ncgr-full-modal__footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}

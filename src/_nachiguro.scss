@@ -141,6 +141,7 @@ random関数は使用しないでください。
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
 @import 'components/alert';
+@import 'components/app-bar';
 @import 'components/avatar';
 @import 'components/breadcrumbs';
 @import 'components/button';
@@ -150,7 +151,9 @@ random関数は使用しないでください。
 @import 'components/color-selector';
 @import 'components/container';
 @import 'components/credit-card-icon';
+@import 'components/dialog';
 @import 'components/expansion-card';
+@import 'components/full-modal';
 @import 'components/grid';
 @import 'components/heading';
 @import 'components/hint';
@@ -160,6 +163,7 @@ random関数は使用しないでください。
 @import 'components/list';
 @import 'components/list-view';
 @import 'components/modal';
+@import 'components/overlay';
 @import 'components/pagenation';
 @import 'components/price-slider';
 @import 'components/product-card';

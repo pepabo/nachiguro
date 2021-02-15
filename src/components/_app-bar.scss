@@ -1,0 +1,158 @@
+/*doc
+---
+title: App Bar
+name: app-bar
+category: Components
+---
+
+App Bar には現在の画面に関連する情報とアクションが表示されます。`.ncgr-app-bar`に`-active`を付与することでアクティブな状態になります。
+
+背景色を透明にしたいときは`- transparent`、`position: sticky;`にしたい場合は、`-sticky`、`position: fixed;`にしたい場合は`-fixed`の Modifier を付与してください。
+
+`leading`には閉じる、戻るなどの画面のナビゲーションを操作するボタン、`title`、には該当する画面のタイトル、`actions`にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。
+
+```example
+<div class="ncgr-app-bar -active">
+  <div class="ncgr-app-bar__leading">
+    <div class="ncgr-app-bar__icon ncgr-typography-label">
+      ×
+    </div>
+  </div>
+  <div class="ncgr-app-bar__title">
+    メニュー
+  </div>
+  <ul class="ncgr-app-bar__actions">
+    <li>
+      <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+    </li>
+  </ul>
+</div>
+```
+
+*/
+
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+$gaps: (
+  s: 1rem,
+  m: 1.5rem,
+  l: 1.5rem,
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-up($boundary) {
+  @media screen and (min-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
+// Variables
+$app-bar-boundaries: $boundaries;
+$app-bar-gaps: $gaps;
+$app-bar-leading-width: 3.5rem;
+
+// Functions
+@function app-bar-gap($app-bar-boundary) {
+  @return map-get($app-bar-gaps, $app-bar-boundary);
+}
+
+.ncgr-app-bar {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--color-secondary-grouped-background);
+  display: none;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2147483646;
+  padding-right: app-bar-gap(s) / 2;
+  padding-left: app-bar-gap(s) / 2;
+  @each $app-bar-boundary in map-keys($app-bar-boundaries) {
+    @include mq-boundary-up($app-bar-boundary) {
+      padding-right: app-bar-gap($app-bar-boundary) / 2;
+      padding-left: app-bar-gap($app-bar-boundary) / 2;
+    }
+  }
+  &.-active {
+    display: flex;
+  }
+  &.-transparent {
+    background-color: transparent;
+  }
+  &.-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &.-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}
+
+.ncgr-app-bar__leading {
+  width: $app-bar-leading-width + app-bar-gap(s) / 2;
+  flex-shrink: 0;
+  cursor: pointer;
+  @each $app-bar-boundary in map-keys($app-bar-boundaries) {
+    @include mq-boundary-up($app-bar-boundary) {
+      width: $app-bar-leading-width + app-bar-gap($app-bar-boundary) / 2;
+    }
+  }
+}
+
+.ncgr-app-bar__icon {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover,
+  &:active {
+    background: var(--color-tertiary-grouped-background);
+  }
+}
+
+.ncgr-app-bar__icon--floating {
+  background:rgba(0, 0, 0, 0.4);
+  color: var(--color-white);
+  &:hover,
+  &:active {
+    background:rgba(0, 0, 0, 0.6);
+  }
+}
+
+.ncgr-app-bar__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: stretch;
+  flex-grow: 1;
+  height: 3.5rem;
+  font-size: 1rem;
+}
+
+.ncgr-app-bar__actions {
+  margin: 0;
+  display: flex;
+  padding-right: app-bar-gap(s) / 2;
+  @each $app-bar-boundary in map-keys($app-bar-boundaries) {
+    @include mq-boundary-up($app-bar-boundary) {
+      padding-right: app-bar-gap($app-bar-boundary) / 2;
+    }
+  }
+  & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
