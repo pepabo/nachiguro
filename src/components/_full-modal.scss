@@ -19,7 +19,7 @@ category: Components
 <div class="ncgr-full-modal -active">
   <div class="ncgr-app-bar -active">
     <div class="ncgr-app-bar__leading">
-      <div class="ncgr-app-bar__icon ncgr-typography-label">
+      <div class="ncgr-icon-button -circle">
         ×
       </div>
     </div>
@@ -28,7 +28,9 @@ category: Components
     </div>
     <ul class="ncgr-app-bar__actions">
       <li>
-        <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+        <div class="ncgr-icon-button -circle">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
       </li>
     </ul>
   </div>
