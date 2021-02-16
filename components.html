@@ -2363,6 +2363,8 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
 <p>タイトルが3行以上になる場合、<code>.ncgr-list-view</code>に<code>-multi-line</code>のmodifierを付与してください。それにより<code>leading</code>及び、<code>trailing</code>内の要素が適した位置に調整されます。</p>
 
 <p>また、<code>.ncgr-list-view</code>に<code>-dense</code>のmodifierを付与すると、リストの上下paddingが半分のサイズになります。</p>
+
+<p>少ない情報からさらに詳しい情報を見せたい場合には、伸縮するカードを生成できる<code>Expansion List</code>のオプションを使用してください。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
           <section class="ncgr-list-group">
@@ -2874,6 +2876,64 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
     </li>
   </ul>
   <hr class="ncgr-list-divider">
+  <div class="ncgr-list-view">
+    <input id="koga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
+    <label for="koga_listview">
+      <div class="ncgr-list-tile">
+        <div class="ncgr-list-tile__title">
+          <div class="ncgr-list-tile__primary-title">
+            甲賀流
+          </div>
+          <div class="ncgr-list-tile__secondary-title">
+            近江国甲賀の地に伝わっていた忍術流派の総称
+          </div>
+        </div>
+        <div class="ncgr-list-tile__trailing">
+          <div class="ncgr-list-tile__icon -toggle">
+            <i class="fa fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </label>
+    <div class="ncgr-list-tile__expansion-body">
+      <div class="ncgr-pad-8">
+        甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<br>
+        山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<br>
+        甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<br>
+        しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<br>
+        なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。
+      </div>
+    </div>
+  </div>
+  <hr class="ncgr-list-divider">
+  <div class="ncgr-list-view">
+    <input id="iga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
+    <label for="iga_listview">
+      <div class="ncgr-list-tile">
+        <div class="ncgr-list-tile__title">
+          <div class="ncgr-list-tile__primary-title">
+            伊賀流
+          </div>
+          <div class="ncgr-list-tile__secondary-title">
+            伊賀国の地に伝わっていた忍術流派の総称
+          </div>
+        </div>
+        <div class="ncgr-list-tile__trailing">
+          <div class="ncgr-list-tile__icon -toggle">
+            <i class="fa fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </label>
+    <div class="ncgr-list-tile__expansion-body">
+      <div class="ncgr-pad-8">
+        伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<br>
+        甲賀流と並んで忍術の中で最も有名な流派の一つである。<br>
+        根拠地は、現在の三重県伊賀市と名張市にあった。<br>
+        普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。
+      </div>
+    </div>
+  </div>
 </section>
 
         </div>
@@ -3387,6 +3447,64 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"koga_listview"</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__expansion-checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"koga_listview"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__title"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__primary-title"</span><span class="nt">&gt;</span>
+            甲賀流
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__secondary-title"</span><span class="nt">&gt;</span>
+            近江国甲賀の地に伝わっていた忍術流派の総称
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__trailing"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__icon -toggle"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__expansion-body"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-8"</span><span class="nt">&gt;</span>
+        甲賀流（こうかりゅう）とは、近江国甲賀の地に伝わっていた忍術流派の総称。<span class="nt">&lt;br&gt;</span>
+        山を一つ隔てた場所に存在する伊賀流と並び、最も有名な忍術の一派として知られる。<span class="nt">&lt;br&gt;</span>
+        甲賀流伊賀流ともに伝系に関しては仮託の説が多く信用できるものはあまりない。<span class="nt">&lt;br&gt;</span>
+        しかし、民家で史料が発見されるなど研究も進み、少なくとも江戸時代には確実に存在したとされている。<span class="nt">&lt;br&gt;</span>
+        なお、「甲賀流」という名称の単一の流派は存在せず、あくまで甲賀に伝わる複数の流派があわさって甲賀流と呼ばれているにすぎない。
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"iga_listview"</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__expansion-checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>  
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"iga_listview"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__title"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__primary-title"</span><span class="nt">&gt;</span>
+            伊賀流
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__secondary-title"</span><span class="nt">&gt;</span>
+            伊賀国の地に伝わっていた忍術流派の総称
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__trailing"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__icon -toggle"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__expansion-body"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-pad-8"</span><span class="nt">&gt;</span>
+        伊賀流（いがりゅう）は、伊賀国の地に伝わっていた忍術流派の総称。<span class="nt">&lt;br&gt;</span>
+        甲賀流と並んで忍術の中で最も有名な流派の一つである。<span class="nt">&lt;br&gt;</span>
+        根拠地は、現在の三重県伊賀市と名張市にあった。<span class="nt">&lt;br&gt;</span>
+        普段は農業や行商をして各地の情報を探る一方、指令が下ると戦場やその後方へ出向き、工作活動に励んだ。
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/section&gt;</span>
 </pre>
         </div>
@@ -4144,7 +4262,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年2月9日
+          最終更新日: 2021年2月16日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
