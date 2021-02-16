@@ -18,6 +18,7 @@ category: Components
 また、`.ncgr-list-view`に`-dense`のmodifierを付与すると、リストの上下paddingが半分のサイズになります。
 
 少ない情報からさらに詳しい情報を見せたい場合には、伸縮するカードを生成できる`Expansion List`のオプションを使用してください。
+`Expansion List`を使用する際は、ひとつの`ncgr-list-view`の中にひとつの`ncgr-list-tile__expansion-body`を置くようにしてください。
 
 ```example
 <section class="ncgr-list-group">
