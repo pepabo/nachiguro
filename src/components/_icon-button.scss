@@ -87,7 +87,7 @@ $icon-button-size: 2.5rem;
   }
 
   &.-circle {
-    border-radius: calc($icon-button-size / 2);
+    border-radius: $icon-button-size / 2;
   }
 
   &.-light {
