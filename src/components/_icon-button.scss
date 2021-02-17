@@ -73,6 +73,7 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   background-color: transparent;
   border: none;
   outline: none;
+  color: var(--color-secondary-label);
   &:hover,
   &:focus,
   &:active {
@@ -90,6 +91,7 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
 
   &.-light {
     background-color: var(--color-white);
+    color: var(--color-default-300);
     &:hover,
     &:focus,
     &:active {
