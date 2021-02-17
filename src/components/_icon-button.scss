@@ -62,12 +62,13 @@ $icon-button-size: 2.5rem;
 
 .ncgr-icon-button {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   height: $icon-button-size;
   text-align: center;
   width: auto;
-  padding: 0 0.5rem;
   border-radius: 0.5rem;
   line-height: $icon-button-size;
   min-width: $icon-button-size;
