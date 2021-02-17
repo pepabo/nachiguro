@@ -58,17 +58,19 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
 
 */
 
+$icon-button-size: 2.5rem;
+
 .ncgr-icon-button {
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
-  height: 2.5rem;
+  height: $icon-button-size;
   text-align: center;
   width: auto;
   padding: 0 0.5rem;
   border-radius: 0.5rem;
-  line-height: 2.5rem;
-  min-width: 2.5rem;
+  line-height: $icon-button-size;
+  min-width: $icon-button-size;
   transition: all .2s ease-in-out;
   background-color: transparent;
   border: none;
@@ -85,8 +87,7 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   }
 
   &.-circle {
-    width: 2.5rem;
-    border-radius: 50%;
+    border-radius: calc($icon-button-size / 2);
   }
 
   &.-light {
