@@ -103,6 +103,10 @@ $icon-button-size: 2.5rem;
     }
   }
 
+  &.-light.-bordered {
+    border: 1px solid var(--color-default-75);
+  }
+
   &.-dark {
     background-color: var(--color-default-900);
     color: var(--color-white);
@@ -111,6 +115,10 @@ $icon-button-size: 2.5rem;
     &:active {
       background-color: var(--color-default-700);
     }
+  }
+
+  &.-dark.-bordered {
+    border: 1px solid var(--color-apple-dark-separator);
   }
 
   &.-favorite {
