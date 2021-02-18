@@ -130,4 +130,8 @@ $icon-button-size: 2.5rem;
       background-color: var(--color-default-50);
     }
   }
+
+  &.-favorite.-bordered {
+    border: 1px solid var(--color-default-75);
+  }
 }
