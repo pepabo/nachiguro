@@ -14,8 +14,8 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
 ```example
 <div class="ncgr-app-bar -active">
   <div class="ncgr-app-bar__leading">
-    <div class="ncgr-app-bar__icon ncgr-typography-label">
-      ×
+    <div class="ncgr-icon-button -circle">
+      <i class="fas fa-arrow-left"></i>
     </div>
   </div>
   <div class="ncgr-app-bar__title">
@@ -23,7 +23,9 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   </div>
   <ul class="ncgr-app-bar__actions">
     <li>
-      <i class="fas fa-ellipsis-v ncgr-typography-label"></i>
+      <div class="ncgr-icon-button -circle">
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
     </li>
   </ul>
 </div>
@@ -103,29 +105,6 @@ $app-bar-leading-width: 3.5rem;
     @include mq-boundary-up($app-bar-boundary) {
       width: $app-bar-leading-width + app-bar-gap($app-bar-boundary) / 2;
     }
-  }
-}
-
-.ncgr-app-bar__icon {
-  border-radius: 50%;
-  font-size: 1.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover,
-  &:active {
-    background: var(--color-tertiary-grouped-background);
-  }
-}
-
-.ncgr-app-bar__icon--floating {
-  background:rgba(0, 0, 0, 0.4);
-  color: var(--color-white);
-  &:hover,
-  &:active {
-    background:rgba(0, 0, 0, 0.6);
   }
 }
 

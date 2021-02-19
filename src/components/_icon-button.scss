@@ -9,127 +9,129 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 
 一般的にモバイルでのタップターゲットは44px以上確保するとよいと言われていますが、ボタンそのものの大きさを44px以上にするとアイテムの画像と比較したボタンの領域が大きくなりすぎるため、外周のpaddingを2px以上確保していることでタップターゲットが確保できているとみなします。
 
-`.ncgr-icon-button--black`、`.ncgr-icon-button--white`のModifierをつけるとボタンに色がつきます。
+```example
+<button class="ncgr-icon-button -circle">
+  <i class="fa fa-bell"></i>
+</button>
+```
 
-「Whiteボタン」はログインしているユーザー以外である他者からのアクション（ズッキュン・オモイデ追加）がメインである場合に使用します。
+Light Mode, Dark Modeに関わらず、強制的に明るい背景にしたい場合は `-light` Modifier を使用します。
 
 ```example
-<button class="ncgr-icon-button ncgr-icon-button--white">
+<button class="ncgr-icon-button -light">
   <i class="fa fa-folder"></i>
 </button>
 ```
 
-「Blackボタン」はログインしているユーザー自身（管理者）のアクション（編集・削除）に使います。
+明度の高い画像の上に乗せるときなどに、ボタンのタップできる範囲を明確にしたい場合は `-bordered` Modifier を使用します。
 
 ```example
-<button class="ncgr-icon-button ncgr-icon-button--black">
+<button class="ncgr-icon-button -light -bordered">
+  <i class="fa fa-folder"></i>
+</button>
+```
+
+Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きたい場合は `-dark` Modifier を使用します。主にログインしているユーザー自身（管理者）のアクション（編集・削除）に使用します。
+
+```example
+<button class="ncgr-icon-button -dark">
   <i class="fas fa-pencil-alt"></i>
 </button>
 ```
 
-ズッキュンボタンはエモーショナルな気持ちを表現するために暖色系の色と♥が動くアニメーションを使用します。
+ズッキュンボタンには `-favorite -bordered` Modifier を使用します。
 
 ```example
-<button class="ncgr-icon-button ncgr-icon-button--favorite">
+<button class="ncgr-icon-button -favorite -bordered">
   <i class="fa fa-heart"></i>
   <span class="ncgr-pad-l-4">246</span>
 </button>
 ```
 
-プロフィール画像やカバー画像などの画像をアップロードする箇所には「Roundedボタン」を使用します。
+プロフィール画像やカバー画像などの画像をアップロードする箇所には `-circle -dark` Modifier を使用します。
 
 ```example
-<button class="ncgr-icon-button ncgr-icon-button--black ncgr-icon-button--circle">
+<button class="ncgr-icon-button -circle -dark">
   <i class="fas fa-pencil-alt"></i>
-</button>
-```
-
-優先順位の低いアクションなどには「Transparentボタン」を使用します。
-
-```example
-<button class="ncgr-icon-button ncgr-icon-button--transparent">
-  <i class="fa fa-pencil-alt"></i>
 </button>
 ```
 
 */
 
+$icon-button-size: 2.5rem;
+
 .ncgr-icon-button {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  height: 40px;
+  height: $icon-button-size;
   text-align: center;
   width: auto;
-  padding: 0 8px;
-  border-radius: 8px;
-  line-height: 40px;
-  min-width: 40px;
-  opacity: 0.9;
+  border-radius: 0.5rem;
+  line-height: $icon-button-size;
+  min-width: $icon-button-size;
   transition: all .2s ease-in-out;
-}
-
-.ncgr-icon-button--black {
-  background-color: var(--color-default-900);
-  color: var(--color-white);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
-  border: 1px solid var(--color-default-900);
-  opacity: 1;
-}
-
-.ncgr-icon-button--white {
-  background-color: var(--color-white);
-  color: var(--color-default-500);
-  border: 1px solid var(--color-default-75);
-}
-
-.ncgr-icon-button--bordered {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
-  color: var(--color-default-500);
-  &:hover {
-    border: 1px solid var(--color-default-200);
-  }
-}
-
-.ncgr-icon-button--transparent {
+  background-color: transparent;
   border: none;
-  background-color: transparent;
-  color: var(--color-default-500);
-  @media (prefers-color-scheme: dark) {
-    color: var(--color-white);
-  }
-}
-
-.ncgr-icon-button--transparent-white {
-  background-color: transparent;
-  color: var(--color-white);
-}
-
-.ncgr-icon-button--favorite {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
-  color: var(--color-danger-300);
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   outline: none;
-  &:hover {
-    border: 1px solid var(--color-default-200);
+  color: var(--color-label);
+  font-size: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--color-tertiary-grouped-background);
   }
-}
 
-.ncgr-icon-button--favorite-inactive {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-default-75);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
-  color: var(--color-secondary-label);
-  &:hover {
-    border: 1px solid var(--color-default-200);
+  &.-bordered {
+    border: 1px solid var(--color-separator);
   }
-}
 
-.ncgr-icon-button--circle {
-  width: 40px;
-  border-radius: 50%;
+  &.-circle {
+    border-radius: $icon-button-size / 2;
+  }
+
+  &.-light {
+    background-color: var(--color-white);
+    color: var(--color-default-900);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--color-default-50);
+    }
+  }
+
+  &.-light.-bordered {
+    border: 1px solid var(--color-default-75);
+  }
+
+  &.-dark {
+    background-color: var(--color-default-900);
+    color: var(--color-white);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--color-default-700);
+    }
+  }
+
+  &.-dark.-bordered {
+    border: 1px solid var(--color-apple-dark-separator);
+  }
+
+  &.-favorite {
+    background-color: var(--color-white);
+    color: var(--color-danger-300);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--color-default-50);
+    }
+  }
+
+  &.-favorite.-bordered {
+    border: 1px solid var(--color-default-75);
+  }
 }
