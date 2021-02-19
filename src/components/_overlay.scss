@@ -1,0 +1,55 @@
+/*doc
+---
+title: Overlay
+name: overlay
+category: Components
+---
+
+Dialog, Semi Modal等を使用する際に、それらの領域外を覆うためのコンポーネントです。
+それらのウインドウ外の領域が暗くなり、ユーザーをコンテンツに集中させやすくすることができるほか、ウインドウの領域外を選択して閉じるアクションを実装できるようになります。
+
+`.ncgr-overlay`, 並びに併用するコンポーネントをアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
+下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
+
+```code
+<div class="ncgr-overlay -active">
+</div>
+```
+
+*/
+
+.ncgr-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 2147483645;
+  &.-active {
+    display: block;
+    animation: fade-in-overlay 0.3s ease;
+  }
+  &.-transparent {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes fade-in-overlay {
+
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

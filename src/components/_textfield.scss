@@ -158,6 +158,7 @@ error・successの場合は以下のようにマークアップします。
   top: 0;
   z-index: 2;
   line-height: 6px;
+  margin-left: -2px;
 }
 
 .ncgr-textfield__required-label {
@@ -184,6 +185,7 @@ error・successの場合は以下のようにマークアップします。
   position: relative;
   width: 100%;
   outline: none;
+  z-index: 1;
 
   &:hover {
     border: 2px solid rgba(var(--color-textfield-separator), 0.2);
@@ -236,6 +238,9 @@ error・successの場合は以下のようにマークアップします。
   }
   &.invalid {
     border: 2px solid var(--color-danger-500);
+  }
+  &.warning {
+    border: 2px solid var(--color-warning-500);
   }
   &.disabled {
     background-color: var(--color-textfield-background);

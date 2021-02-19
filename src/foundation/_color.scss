@@ -399,8 +399,8 @@ category: Color
 */
 
 :root {
-  --color-label: var(--color-default-800);
-  --color-secondary-label: var(--color-default-200);
+  --color-label: var(--color-default-900);
+  --color-secondary-label: var(--color-default-300);
   --color-placeholder-text: rgba(0, 0, 0, 0.2);
   --color-background: var(--color-white);
   --color-secondary-background: var(--color-default-50);
@@ -423,7 +423,7 @@ category: Color
 @media (prefers-color-scheme: dark) {
   :root {
     --color-label: var(--color-white);
-    --color-secondary-label: var(--color-default-400);
+    --color-secondary-label: var(--color-default-200);
     --color-placeholder-text: rgba(255, 255, 255, 0.2);
     --color-background: var(--color-black);
     --color-secondary-background: var(--color-apple-dark-secondary);
