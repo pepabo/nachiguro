@@ -1529,6 +1529,7 @@ App Bar には現在の画面に関連する情報とアクションが表示さ
   z-index: 2147483646;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  transform: translate3d(0, 0, 0);
 }
 @media screen and (min-width: 480px) {
   .ncgr-app-bar {
