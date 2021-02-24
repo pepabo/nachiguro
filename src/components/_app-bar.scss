@@ -73,6 +73,7 @@ $app-bar-leading-width: 3.5rem;
   z-index: 2147483646;
   padding-right: app-bar-gap(s) / 2;
   padding-left: app-bar-gap(s) / 2;
+  transform: translate3d(0, 0, 0);
   @each $app-bar-boundary in map-keys($app-bar-boundaries) {
     @include mq-boundary-up($app-bar-boundary) {
       padding-right: app-bar-gap($app-bar-boundary) / 2;
