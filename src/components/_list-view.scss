@@ -781,6 +781,12 @@ $list-view-gaps: $gaps;
   padding-right: list-view-gap(s) / 2;
   padding-bottom: 1rem;
   padding-left: list-view-gap(s) / 2;
+  @each $list-view-boundary in map-keys($list-view-boundaries) {
+    @include mq-boundary-up($list-view-boundary) {
+      padding-right: list-view-gap($list-view-boundary) / 2;
+      padding-left: list-view-gap($list-view-boundary) / 2;
+    }
+  }
 }
 
 .ncgr-list-tile__expansion-checkbox:checked ~ label {
