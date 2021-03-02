@@ -67,7 +67,7 @@ $switch-moving-distance: calc(#{$switch-handle-size} - #{$switch-border-width} *
   left: 0;
   width: $switch-handle-size;
   height: $switch-handle-size;
-  background-color: var(--color-background);
+  background-color: var(--color-white);
   border-radius: calc(#{$switch-handle-size} / 2);
   transform: translate3d(0, 0, 0);
   transition: all 0.1s ease-in-out;
