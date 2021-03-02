@@ -530,6 +530,22 @@ category: Components
     </li>
   </ul>
   <hr class="ncgr-list-divider">
+  <ul class="ncgr-list-view">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__title">
+        <div class="ncgr-list-tile__primary-title">
+          メールを受信する
+        </div>
+      </div>
+      <div class="ncgr-list-tile__trailing">
+        <label class="ncgr-switch">
+          <input type="checkbox" checked>
+          <i></i>
+        </label>
+      </div>
+    </li>
+  </ul>
+  <hr class="ncgr-list-divider">
   <div class="ncgr-list-view">
     <input id="koga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
     <label for="koga_listview">
