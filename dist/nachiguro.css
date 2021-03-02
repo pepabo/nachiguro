@@ -768,6 +768,8 @@ category: Color
   --color-search-bar-background: var(--color-default-75);
   --color-textfield-background: var(--color-white);
   --color-textfield-separator: 0, 0, 0;
+  --color-switch-background: var(--color-default-50);
+  --color-switch-separator: 0, 0, 0;
   --color-segmented-control-background: var(--color-default-100);
   --color-square-radio-separator: var(--color-default-75);
   --color-pagenation-background: 0, 0, 0;
@@ -791,6 +793,8 @@ category: Color
     --color-search-bar-background: var(--color-apple-dark-tertiary);
     --color-textfield-background: var(--color-apple-dark-tertiary);
     --color-textfield-separator: 255, 255, 255;
+    --color-switch-background: var(--color-apple-dark-tertiary);
+    --color-switch-separator: 255, 255, 255;
     --color-segmented-control-background: var(--color-apple-dark-tertiary);
     --color-square-radio-separator: var(--color-apple-dark-tertiary);
     --color-pagenation-background: 255, 255, 255;
@@ -5301,6 +5305,22 @@ category: Components
     </li>
   </ul>
   <hr class="ncgr-list-divider">
+  <ul class="ncgr-list-view">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__title">
+        <div class="ncgr-list-tile__primary-title">
+          メールを受信する
+        </div>
+      </div>
+      <div class="ncgr-list-tile__trailing">
+        <label class="ncgr-switch">
+          <input type="checkbox" checked>
+          <i></i>
+        </label>
+      </div>
+    </li>
+  </ul>
+  <hr class="ncgr-list-divider">
   <div class="ncgr-list-view">
     <input id="koga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
     <label for="koga_listview">
@@ -6634,6 +6654,99 @@ category: Components
   }
 }
 
+/*doc
+---
+title: Switch
+name: switch
+category: Components
+---
+
+スイッチは、2つの状態を切り替えるために使用します。スイッチの状態はオンまたはオフのいずれかです。インターフェイスが乱雑になるので状態を説明するラベルをつけるのは避けてください。
+
+```example
+<label class="ncgr-switch">
+  <input type="checkbox" checked>
+  <i></i>
+</label>
+<label class="ncgr-switch">
+  <input type="checkbox">
+  <i></i>
+</label>
+```
+
+*/
+.ncgr-switch {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ncgr-switch i {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: calc(calc(2rem - 2px * 2) * 2);
+  height: 2rem;
+  background-color: var(--color-switch-background);
+  border-radius: 2rem;
+  border: 2px solid rgba(var(--color-switch-separator), 0.15);
+  vertical-align: top;
+  transition: all 0.1s ease-in-out;
+}
+.ncgr-switch i:hover {
+  border: 2px solid rgba(var(--color-switch-separator), 0.2);
+}
+.ncgr-switch i:active {
+  border: 2px solid rgba(var(--color-switch-separator), 0.4);
+}
+
+.ncgr-switch i:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-switch-background);
+  border-radius: 1rem;
+  opacity: 0;
+}
+
+.ncgr-switch i:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: calc(2rem - 2px * 2);
+  height: calc(2rem - 2px * 2);
+  background-color: var(--color-white);
+  border-radius: calc(calc(2rem - 2px * 2) / 2);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.1s ease-in-out;
+}
+
+.ncgr-switch input {
+  display: none;
+}
+
+.ncgr-switch input:checked + i {
+  background-color: var(--color-primary-500);
+}
+
+.ncgr-switch input:checked + i:before {
+  animation-name: switch-fade-in;
+}
+
+.ncgr-switch input:checked + i:after {
+  transform: translate3d(calc(calc(2rem - 2px * 2) - 2px * 2), 0, 0);
+}
+
+@keyframes switch-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*doc
 ---
 title: Tab

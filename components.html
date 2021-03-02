@@ -2897,6 +2897,22 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
     </li>
   </ul>
   <hr class="ncgr-list-divider">
+  <ul class="ncgr-list-view">
+    <li class="ncgr-list-tile">
+      <div class="ncgr-list-tile__title">
+        <div class="ncgr-list-tile__primary-title">
+          メールを受信する
+        </div>
+      </div>
+      <div class="ncgr-list-tile__trailing">
+        <label class="ncgr-switch">
+          <input type="checkbox" checked>
+          <i></i>
+        </label>
+      </div>
+    </li>
+  </ul>
+  <hr class="ncgr-list-divider">
   <div class="ncgr-list-view">
     <input id="koga_listview" class="ncgr-list-tile__expansion-checkbox" type="checkbox">  
     <label for="koga_listview">
@@ -3464,6 +3480,22 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-list-view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-list-tile"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__title"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__primary-title"</span><span class="nt">&gt;</span>
+          メールを受信する
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__trailing"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-switch"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-list-view"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"koga_listview"</span> <span class="na">class=</span><span class="s">"ncgr-list-tile__expansion-checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>  
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"koga_listview"</span><span class="nt">&gt;</span>
@@ -3925,6 +3957,34 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
         </div>
         <div class="styleguide__content">
 
+<h1 id="switch" class="styleguide">Switch</h1>
+
+<p>スイッチは、2つの状態を切り替えるために使用します。スイッチの状態はオンまたはオフのいずれかです。インターフェイスが乱雑になるので状態を説明するラベルをつけるのは避けてください。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <label class="ncgr-switch">
+  <input type="checkbox" checked>
+  <i></i>
+</label>
+<label class="ncgr-switch">
+  <input type="checkbox">
+  <i></i>
+</label>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="tab" class="styleguide">Tab</h1>
 
 <p>ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
@@ -4275,7 +4335,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年2月24日
+          最終更新日: 2021年3月2日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
@@ -4694,6 +4754,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                                 <div class="ncgr-list-tile__title">
                                   <div class="ncgr-list-tile__primary-title">
                                     Square Radio
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          
+                            <li>
+                              <a class="ncgr-list-tile" href="#switch">
+                                <div class="ncgr-list-tile__leading">
+                                </div>
+                                <div class="ncgr-list-tile__title">
+                                  <div class="ncgr-list-tile__primary-title">
+                                    Switch
                                   </div>
                                 </div>
                               </a>
