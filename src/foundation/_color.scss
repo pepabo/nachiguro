@@ -412,6 +412,8 @@ category: Color
   --color-search-bar-background: var(--color-default-75);
   --color-textfield-background: var(--color-white);
   --color-textfield-separator: 0, 0, 0;
+  --color-switch-background: var(--color-default-50);
+  --color-switch-separator: 0, 0, 0;
   --color-segmented-control-background: var(--color-default-100);
   --color-square-radio-separator: var(--color-default-75);
   --color-pagenation-background: 0, 0, 0;
@@ -435,6 +437,8 @@ category: Color
     --color-search-bar-background: var(--color-apple-dark-tertiary);
     --color-textfield-background: var(--color-apple-dark-tertiary);
     --color-textfield-separator: 255, 255, 255;
+    --color-switch-background: var(--color-apple-dark-tertiary);
+    --color-switch-separator: 255, 255, 255;
     --color-segmented-control-background: var(--color-apple-dark-tertiary);
     --color-square-radio-separator: var(--color-apple-dark-tertiary);
     --color-pagenation-background: 255, 255, 255;

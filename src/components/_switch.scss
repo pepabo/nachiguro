@@ -1,0 +1,99 @@
+/*doc
+---
+title: Switch
+name: switch
+category: Components
+---
+
+スイッチは、2つの状態を切り替えるために使用します。スイッチの状態はオンまたはオフのいずれかです。インターフェイスが乱雑になるので状態を説明するラベルをつけるのは避けてください。
+
+```example
+<label class="ncgr-switch">
+  <input type="checkbox" checked>
+  <i></i>
+</label>
+<label class="ncgr-switch">
+  <input type="checkbox">
+  <i></i>
+</label>
+```
+
+*/
+
+$switch-size: 2rem;
+$switch-border-width: 2px;
+$switch-handle-size: calc(#{$switch-size} - #{$switch-border-width} * 2);
+$switch-moving-distance: calc(#{$switch-handle-size} - #{$switch-border-width} * 2);
+
+.ncgr-switch {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ncgr-switch i {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: calc(#{$switch-handle-size} * 2);
+  height: $switch-size;
+  background-color: var(--color-switch-background);
+  border-radius: $switch-size;
+  border: $switch-border-width solid rgba(var(--color-switch-separator), 0.15);
+  vertical-align: top;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    border: $switch-border-width solid rgba(var(--color-switch-separator), 0.2);
+  }
+  &:active {
+    border: $switch-border-width solid rgba(var(--color-switch-separator), 0.4);
+  }
+}
+
+.ncgr-switch i:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-switch-background);
+  border-radius: $switch-size / 2;
+  opacity: 0;
+}
+
+.ncgr-switch i:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: $switch-handle-size;
+  height: $switch-handle-size;
+  background-color: var(--color-white);
+  border-radius: calc(#{$switch-handle-size} / 2);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.1s ease-in-out;
+}
+
+.ncgr-switch input {
+  display: none;
+}
+
+.ncgr-switch input:checked + i {
+  background-color: var(--color-primary-500);
+}
+
+.ncgr-switch input:checked + i:before {
+  animation-name: switch-fade-in;
+}
+
+.ncgr-switch input:checked + i:after {
+  transform: translate3d($switch-moving-distance, 0, 0);
+}
+
+@keyframes switch-fade-in {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
