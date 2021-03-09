@@ -786,7 +786,7 @@ $list-view-gaps: $gaps;
 .ncgr-list-tile__expansion-checkbox ~ .ncgr-list-tile__expansion-body {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, padding 0s ease 0.4s;
   padding: 0;
 }
 
