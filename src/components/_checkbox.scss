@@ -6,54 +6,48 @@ category: Components
 ---
 
 オプションのオン/オフ切り替えなどをする際に使用します。
-List Viewのleadingやtrailingや、Icon Buttonなどの中に入れて使用することができます。
+List Viewのleadingやtrailingなどの中に入れて使用することもできます。
 
 オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
 
 ```example
-<div class="ncgr-list-group__subheader">
-  Icon Button
-</div>
 <div class="ncgr-row">
   <div class="ncgr-col -col-6 -col-s-4">
-      <label class="ncgr-icon-button -circle" for="koga">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="koga">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
+    <label class="ncgr-cursor-pointer" for="koga">
+      <div class="ncgr-checkbox ncgr-mar-r-4">
+        <input type="checkbox" id="koga">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
         </div>
-      </label>
+      </div>
       甲賀流
+    </label>
   </div>
   <div class="ncgr-col -col-6 -col-s-4">
-      <label class="ncgr-icon-button -circle" for="iga">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="iga">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
+    <label class="ncgr-cursor-pointer" for="iga">
+      <div class="ncgr-checkbox ncgr-mar-r-4">
+        <input type="checkbox" id="iga">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
         </div>
-      </label>
+      </div>
       伊賀流
+    </label>
   </div>
   <div class="ncgr-col -col-6 -col-s-4">
-      <label class="ncgr-icon-button -circle" for="others">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="others">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
+    <label class="ncgr-cursor-pointer" for="others">
+      <div class="ncgr-checkbox ncgr-mar-r-4">
+        <input type="checkbox" id="others">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
         </div>
-      </label>
+      </div>
       その他
+    </label>
   </div>
 </div>
 <hr class="ncgr-list-divider">
-<div class="ncgr-list-group__subheader">
-  ListView
-</div>
-<div class="ncgr-list-view -dense">
+<div class="ncgr-list-view">
   <label class="ncgr-list-tile" for="koga2">
     <div class="ncgr-list-tile__title">
       甲賀流
@@ -80,7 +74,9 @@ List Viewのleadingやtrailingや、Icon Buttonなどの中に入れて使用す
       </div>
     </div>
   </label>
-  <hr class="ncgr-list-divider">
+</div>
+<hr class="ncgr-list-divider">
+<div class="ncgr-list-view">
   <label class="ncgr-list-tile" for="koga3">
     <div class="ncgr-list-tile__leading">
       <div class="ncgr-checkbox">
