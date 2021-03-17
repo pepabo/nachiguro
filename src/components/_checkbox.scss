@@ -84,7 +84,9 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
     color: var(--color-white);
   }  
   input:disabled + .ncgr-checkbox__background {
-    color:rgba(var(--color-white), 0.2);
+    cursor: not-allowed;
+    background: var(--color-default-200);
+    border-color: var(--color-default-200);
   }
 }
 
