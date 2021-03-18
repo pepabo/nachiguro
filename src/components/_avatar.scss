@@ -47,33 +47,33 @@ category: Components
 
 .ncgr-avatar.-s {
   .ncgr-avatar__image {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .ncgr-avatar__name {
-    font-size: 13px;
+    font-size: 0.8125rem;
     padding-left: 0;
   }
 }
 
 .ncgr-avatar.-m {
   .ncgr-avatar__image {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
   }
   .ncgr-avatar__name {
-    font-size: 16px;
-    padding-left: 4px;
+    font-size: 1rem;
+    padding-left: 0.25rem;
   }
 }
 
 .ncgr-avatar.-l {
   .ncgr-avatar__image {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
   .ncgr-avatar__name {
-    font-size: 20px;
-    padding-left: 4px;
+    font-size: 1.25rem;
+    padding-left: 0.25rem;
   }
 }
