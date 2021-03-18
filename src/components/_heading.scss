@@ -10,25 +10,25 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 
 
 ```example
-<h1 class="ncgr-heading ncgr-heading--large">忍者スリスリ君</h1>
-<h1 class="ncgr-heading ncgr-heading--medium">忍者スリスリ君</h1>
-<h1 class="ncgr-heading ncgr-heading--small">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -l">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -m">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -s">忍者スリスリ君</h1>
 ```
 
 見出しにボーダーをつける場合はspanで入れ子にして`.ncgr-heading__border`のclassをつけます。
 
 ```example
-<h1 class="ncgr-heading ncgr-heading--large">
+<h1 class="ncgr-heading -l">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading ncgr-heading--medium">
+<h1 class="ncgr-heading -m">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading ncgr-heading--small">
+<h1 class="ncgr-heading -s">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
@@ -52,7 +52,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
   display: inline-block;
 }
 
-.ncgr-heading--large {
+.ncgr-heading.-l {
   font-size: 46px;
   @include mediaquery(mobile) {
     font-size: 28px;
@@ -63,7 +63,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
   }
 }
 
-.ncgr-heading--medium {
+.ncgr-heading.-m {
   font-size: 30px;
   @include mediaquery(mobile) {
     font-size: 20px;
@@ -74,7 +74,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
   }
 }
 
-.ncgr-heading--small {
+.ncgr-heading.-s {
   font-size: 18px;
   @include mediaquery(mobile) {
     font-size: 16px;
@@ -85,7 +85,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
   }
 }
 
-.ncgr-heading--white {
+.ncgr-heading.-dark {
   color: var(--color-white);
   a {
     color: var(--color-white);
