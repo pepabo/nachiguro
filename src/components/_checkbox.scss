@@ -6,144 +6,106 @@ category: Components
 ---
 
 オプションのオン/オフ切り替えなどをする際に使用します。
+List Viewの`leading`や`trailing`の中に入れて使用します。
+
 オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
 
 ```example
-<label class="ncgr-checkbox">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    甲賀流
-  </span>
-</label>
-
-<label class="ncgr-checkbox">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    伊賀流
-  </span>
-</label>
-
-<label class="ncgr-checkbox">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    その他
-  </span>
-</label>
+<div class="ncgr-list-view">
+  <label class="ncgr-list-tile" for="koga2">
+    <div class="ncgr-list-tile__title">
+      甲賀流
+    </div>
+    <div class="ncgr-list-tile__trailing">
+      <div class="ncgr-checkbox">
+        <input type="checkbox" id="koga2">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    </div>
+  </label>
+  <label class="ncgr-list-tile" for="iga2">
+    <div class="ncgr-list-tile__title">
+      伊賀流
+    </div>
+    <div class="ncgr-list-tile__trailing">
+      <div class="ncgr-checkbox">
+        <input type="checkbox" id="iga2">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    </div>
+  </label>
+</div>
+<hr class="ncgr-list-divider">
+<div class="ncgr-list-view">
+  <label class="ncgr-list-tile" for="koga3">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-checkbox">
+        <input type="checkbox"" id="koga3">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      甲賀流
+    </div>
+  </label>
+  <label class="ncgr-list-tile" for="iga3">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-checkbox">
+        <input type="checkbox" id="iga3">
+        <div class="ncgr-checkbox__background">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      伊賀流
+    </div>
+  </label>
+</div>
 ```
-
-縦に並べる場合には、以下のようにマークアップします。
-
-```example
-<label class="ncgr-checkbox ncgr-checkbox--vertical">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    甲賀流
-  </span>
-</label>
-
-<label class="ncgr-checkbox ncgr-checkbox--vertical">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    伊賀流
-  </span>
-</label>
-
-<label class="ncgr-checkbox ncgr-checkbox--vertical">
-  <input type="checkbox" name="hoge">
-  <span>
-    <i class="fas fa-check"></i>
-    その他
-  </span>
-</label>
-```
-
 */
 
 .ncgr-checkbox {
   position: relative;
   display: inline-block;
-  padding: 8px 24px 8px 24px;
   cursor: pointer;
   input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    visibility: hidden;
+    display: none;
   }
-
-  span {
-    padding: 0 4px 0 4px;
-    font-size: 16px;
-    font-weight: bold;
-    &::before {
-      content: '';
-      box-sizing: border-box;
-      position: absolute;
-      top: 12px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background-color: var(--color-textfield-background);
-      border-radius: 4px;
-      border: 2px solid rgba(var(--color-textfield-separator), 0.15);
-      transition-property: background-color, border-color;
-      transition-duration: 0.2s;
-      transition-timing-function: ease;
-    }
-    &:hover::before {
-      border-color: rgba(var(--color-textfield-separator), 0.2);
-    }
-    i,
-    svg {
-      position: absolute;
-      top: 15px;
-      left: ((20px - 14px) / 2);
-      width: 14px;
-      height: 14px;
-      font-size: 14px;
-      z-index: 1;
-    }
-    i {
-      color: transparent;
-    }
-    svg {
-      fill-opacity: 0;
-    }
-    path {
-      fill: var(--color-white);
-    }
-  }
-
-  input:checked + span {
-    &::before {
-      background: var(--color-primary-500);
-      border-color: var(--color-primary-500);
-    }
-    &::after {
-      opacity: 1;
-    }
-    i {
-      color: var(--color-white);
-    }
-    svg {
-      fill-opacity: 1;
-    }
-  }
-
-  input:disabled + span {
-    &::before {
-      opacity: 0.3;
-    }
+  input:checked + .ncgr-checkbox__background {
+    background: var(--color-primary-500);
+    border-color: var(--color-primary-500);
+    color: var(--color-white);
+  }  
+  input:disabled + .ncgr-checkbox__background {
+    cursor: not-allowed;
+    background: var(--color-default-200);
+    border-color: var(--color-default-200);
   }
 }
 
-.ncgr-checkbox--vertical {
-  display: block;
+.ncgr-checkbox__background {
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color-textfield-background);
+  border-radius: 0.25rem;
+  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-size: 0.875rem;
+  &:hover {
+    border-color: rgba(var(--color-textfield-separator), 0.2);
+  }
 }
