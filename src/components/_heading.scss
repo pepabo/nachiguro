@@ -53,35 +53,35 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 }
 
 .ncgr-heading.-l {
-  font-size: 46px;
+  font-size: 2.875rem;
   @include mediaquery(mobile) {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .ncgr-heading__border {
-    border-bottom: 4px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.25rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
 .ncgr-heading.-m {
-  font-size: 30px;
+  font-size: 1.875em;
   @include mediaquery(mobile) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .ncgr-heading__border {
-    border-bottom: 3px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.1875rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
 .ncgr-heading.-s {
-  font-size: 18px;
+  font-size: 1.125rem;
   @include mediaquery(mobile) {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .ncgr-heading__border {
-    border-bottom: 2px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.125rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -91,7 +91,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
     color: var(--color-white);
   }
   .ncgr-heading__border {
-    border-bottom: 4px solid var(--color-white);
+    border-bottom: 0.25rem solid var(--color-white);
   }
 }
 
