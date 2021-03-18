@@ -12,15 +12,15 @@ category: Components
 さらにユーザー名を伝えることの優先順位が低いと判断できる場合は、ユーザー名自体を省略することも可能です。
 
 ```example
-<a class="ncgr-avatar ncgr-avatar--small" href="#">
+<a class="ncgr-avatar -s" href="#">
   <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
   <span class="ncgr-avatar__name">surisurikun</span>
 </a>
-<a class="ncgr-avatar ncgr-avatar--medium" href="#">
+<a class="ncgr-avatar -m" href="#">
   <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
   <span class="ncgr-avatar__name">surisurikun</span>
 </a>
-<a class="ncgr-avatar ncgr-avatar--large" href="#">
+<a class="ncgr-avatar -l" href="#">
   <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
   <span class="ncgr-avatar__name">surisurikun</span>
 </a>
@@ -45,7 +45,7 @@ category: Components
   }
 }
 
-.ncgr-avatar--small {
+.ncgr-avatar.-s {
   .ncgr-avatar__image {
     width: 24px;
     height: 24px;
@@ -56,7 +56,7 @@ category: Components
   }
 }
 
-.ncgr-avatar--medium {
+.ncgr-avatar.-m {
   .ncgr-avatar__image {
     width: 32px;
     height: 32px;
@@ -67,7 +67,7 @@ category: Components
   }
 }
 
-.ncgr-avatar--large {
+.ncgr-avatar.-l {
   .ncgr-avatar__image {
     width: 48px;
     height: 48px;
