@@ -10,25 +10,25 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 
 
 ```example
-<h1 class="ncgr-heading ncgr-heading--large">忍者スリスリ君</h1>
-<h1 class="ncgr-heading ncgr-heading--medium">忍者スリスリ君</h1>
-<h1 class="ncgr-heading ncgr-heading--small">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -l">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -m">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -s">忍者スリスリ君</h1>
 ```
 
 見出しにボーダーをつける場合はspanで入れ子にして`.ncgr-heading__border`のclassをつけます。
 
 ```example
-<h1 class="ncgr-heading ncgr-heading--large">
+<h1 class="ncgr-heading -l">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading ncgr-heading--medium">
+<h1 class="ncgr-heading -m">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading ncgr-heading--small">
+<h1 class="ncgr-heading -s">
   <span class="ncgr-heading__border">
     忍者スリスリ君
   </span>
@@ -52,46 +52,46 @@ h1からh6、どのタグに関わらず大きさを調整できます。
   display: inline-block;
 }
 
-.ncgr-heading--large {
-  font-size: 46px;
+.ncgr-heading.-l {
+  font-size: 2.875rem;
   @include mediaquery(mobile) {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .ncgr-heading__border {
-    border-bottom: 4px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.25rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
-.ncgr-heading--medium {
-  font-size: 30px;
+.ncgr-heading.-m {
+  font-size: 1.875em;
   @include mediaquery(mobile) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .ncgr-heading__border {
-    border-bottom: 3px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.1875rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
-.ncgr-heading--small {
-  font-size: 18px;
+.ncgr-heading.-s {
+  font-size: 1.125rem;
   @include mediaquery(mobile) {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .ncgr-heading__border {
-    border-bottom: 2px solid var(--color-label);
-    padding-bottom: 8px;
+    border-bottom: 0.125rem solid var(--color-label);
+    padding-bottom: 0.5rem;
   }
 }
 
-.ncgr-heading--white {
+.ncgr-heading.-dark {
   color: var(--color-white);
   a {
     color: var(--color-white);
   }
   .ncgr-heading__border {
-    border-bottom: 4px solid var(--color-white);
+    border-bottom: 0.25rem solid var(--color-white);
   }
 }
 
