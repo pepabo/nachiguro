@@ -4191,7 +4191,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 }
 
 .ncgr-heading.-m {
-  font-size: 1.875em;
+  font-size: 1.875rem;
 }
 @media screen and (max-width: 480px) {
   .ncgr-heading.-m {
