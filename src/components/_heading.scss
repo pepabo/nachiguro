@@ -64,7 +64,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 }
 
 .ncgr-heading.-m {
-  font-size: 1.875em;
+  font-size: 1.875rem;
   @include mediaquery(mobile) {
     font-size: 1.25rem;
   }
