@@ -17,10 +17,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
       甲賀流
     </div>
     <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="koga2">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="koga2">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -30,10 +32,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
       伊賀流
     </div>
     <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="iga2">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="iga2">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -43,10 +47,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
 <div class="ncgr-list-view">
   <label class="ncgr-list-tile" for="koga3">
     <div class="ncgr-list-tile__leading">
-      <div class="ncgr-checkbox">
-        <input type="checkbox"" id="koga3">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox"" id="koga3">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -56,10 +62,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   </label>
   <label class="ncgr-list-tile" for="iga3">
     <div class="ncgr-list-tile__leading">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="iga3">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="iga3">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
