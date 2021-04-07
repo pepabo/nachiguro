@@ -734,6 +734,8 @@ $list-view-gaps: $gaps;
   box-sizing: border-box;
   min-width: 2.5rem;
   padding-right: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .ncgr-list-tile__icon {
