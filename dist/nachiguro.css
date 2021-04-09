@@ -2552,10 +2552,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
       甲賀流
     </div>
     <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="koga2">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="koga2">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -2565,10 +2567,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
       伊賀流
     </div>
     <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="iga2">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="iga2">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -2578,10 +2582,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
 <div class="ncgr-list-view">
   <label class="ncgr-list-tile" for="koga3">
     <div class="ncgr-list-tile__leading">
-      <div class="ncgr-checkbox">
-        <input type="checkbox"" id="koga3">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox"" id="koga3">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -2591,10 +2597,12 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   </label>
   <label class="ncgr-list-tile" for="iga3">
     <div class="ncgr-list-tile__leading">
-      <div class="ncgr-checkbox">
-        <input type="checkbox" id="iga3">
-        <div class="ncgr-checkbox__background">
-          <i class="fas fa-check"></i>
+      <div class="ncgr-list-tile__icon">
+        <div class="ncgr-checkbox">
+          <input type="checkbox" id="iga3">
+          <div class="ncgr-checkbox__background">
+            <i class="fas fa-check"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -4753,7 +4761,7 @@ category: Components
   <ul class="ncgr-list-view">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -4770,7 +4778,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -4787,7 +4795,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -4923,7 +4931,7 @@ category: Components
   <ul class="ncgr-list-view -two-line">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -4943,7 +4951,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -4963,7 +4971,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -5102,7 +5110,7 @@ category: Components
   <ul class="ncgr-list-view -multi-line">
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -5122,7 +5130,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -5142,7 +5150,7 @@ category: Components
     </li>
     <li class="ncgr-list-tile">
       <div class="ncgr-list-tile__leading">
-        <div class="ncgr-avatar ncgr-avatar--medium">
+        <div class="ncgr-avatar -m">
           <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         </div>
       </div>
@@ -5375,7 +5383,11 @@ category: Components
 }
 
 .ncgr-list-tile__leading {
-  width: 3.5rem;
+  box-sizing: border-box;
+  min-width: 2.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .ncgr-list-tile__icon {
