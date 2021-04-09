@@ -1,3 +1,26 @@
+/*doc
+---
+title: Tooltip
+name: tooltip
+category: Components
+---
+
+フォームの入力に誤りがある場合などに使用します。
+
+```example
+<div style="position: relative;">
+  <div class="ncgr-textfield ncgr-mar-b-16">
+    <label class="ncgr-textfield__label" for="name">名前</label>
+    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  </div>
+  <div class="ncgr-tooltip -top -active" role="tooltip">
+    名前は8文字以上で入力してください
+  </div>
+</div>
+```
+
+*/
+
 $tooltip-arrow-size: 0.5rem;
 $tooltip-border-radius: 0.25rem;
 $tooltip-font-size: 0.75rem;
