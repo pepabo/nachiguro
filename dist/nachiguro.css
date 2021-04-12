@@ -7103,6 +7103,83 @@ category: Components
 
 /*doc
 ---
+title: Tooltip
+name: tooltip
+category: Components
+---
+
+フォームの入力に誤りがある場合などに使用します。
+
+```example
+<div style="position: relative;">
+  <div class="ncgr-textfield ncgr-mar-b-16">
+    <label class="ncgr-textfield__label" for="name">名前</label>
+    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  </div>
+  <div class="ncgr-tooltip -top -active" role="tooltip">
+    名前は8文字以上で入力してください
+  </div>
+</div>
+```
+
+*/
+.ncgr-tooltip {
+  background-color: var(--color-black);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  left: 0;
+}
+.ncgr-tooltip.-active {
+  visibility: visible;
+}
+.ncgr-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  border-style: solid;
+  border-width: calc(0.5rem / 2);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-tooltip {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}
+
+.ncgr-tooltip.-top {
+  bottom: calc(100% + 0.5rem);
+}
+.ncgr-tooltip.-top::after {
+  top: 100%;
+  border-color: var(--color-black) transparent transparent transparent;
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-tooltip.-top::after {
+    border-color: var(--color-white) transparent transparent transparent;
+  }
+}
+
+.ncgr-tooltip.-bottom {
+  top: calc(100% + 0.5rem);
+}
+.ncgr-tooltip.-bottom::after {
+  bottom: 100%;
+  border-color: transparent transparent var(--color-black) transparent;
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-tooltip.-bottom::after {
+    border-color: transparent transparent var(--color-white) transparent;
+  }
+}
+
+/*doc
+---
 title: Uploader
 name: uploader
 category: Components

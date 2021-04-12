@@ -4166,6 +4166,36 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
         </div>
         <div class="styleguide__content">
 
+<h1 id="tooltip" class="styleguide">Tooltip</h1>
+
+<p>フォームの入力に誤りがある場合などに使用します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div style="position: relative;">
+  <div class="ncgr-textfield ncgr-mar-b-16">
+    <label class="ncgr-textfield__label" for="name">名前</label>
+    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  </div>
+  <div class="ncgr-tooltip -top -active" role="tooltip">
+    名前は8文字以上で入力してください
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"position: relative;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input invalid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"例）スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-tooltip -top -active"</span> <span class="na">role=</span><span class="s">"tooltip"</span><span class="nt">&gt;</span>
+    名前は8文字以上で入力してください
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="uploader" class="styleguide">Uploader</h1>
 
 <p>画像をアップロードするために使用します。</p>
@@ -4286,7 +4316,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年4月9日
+          最終更新日: 2021年4月12日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
@@ -4753,6 +4783,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                                 <div class="ncgr-list-tile__title">
                                   <div class="ncgr-list-tile__primary-title">
                                     Textfield
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          
+                            <li>
+                              <a class="ncgr-list-tile" href="#tooltip">
+                                <div class="ncgr-list-tile__leading">
+                                </div>
+                                <div class="ncgr-list-tile__title">
+                                  <div class="ncgr-list-tile__primary-title">
+                                    Tooltip
                                   </div>
                                 </div>
                               </a>
