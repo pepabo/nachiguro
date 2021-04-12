@@ -1,0 +1,83 @@
+/*doc
+---
+title: Tooltip
+name: tooltip
+category: Components
+---
+
+フォームの入力に誤りがある場合などに使用します。
+
+```example
+<div style="position: relative;">
+  <div class="ncgr-textfield ncgr-mar-b-16">
+    <label class="ncgr-textfield__label" for="name">名前</label>
+    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  </div>
+  <div class="ncgr-tooltip -top -active" role="tooltip">
+    名前は8文字以上で入力してください
+  </div>
+</div>
+```
+
+*/
+
+$tooltip-arrow-size: 0.5rem;
+$tooltip-border-radius: 0.25rem;
+$tooltip-font-size: 0.75rem;
+$tooltip-background-color-light: var(--color-black);
+$tooltip-background-color-dark: var(--color-white);
+$tooltip-text-color-light: var(--color-white);
+$tooltip-text-color-dark: var(--color-black);
+
+.ncgr-tooltip {
+  background-color: $tooltip-background-color-light;
+  border-radius: $tooltip-border-radius;
+  box-sizing: border-box;
+  color: $tooltip-text-color-light;
+  font-size: $tooltip-font-size;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  left: 0;
+  &.-active {
+    visibility: visible;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    border-style: solid;
+    border-width: calc(#{$tooltip-arrow-size} / 2);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: $tooltip-background-color-dark;
+    color: $tooltip-text-color-dark;
+  }
+}
+
+.ncgr-tooltip.-top {
+  bottom: calc(100% + #{$tooltip-arrow-size});
+  &::after {
+    top: 100%;
+    border-color: $tooltip-background-color-light transparent transparent
+      transparent;
+    @media (prefers-color-scheme: dark) {
+      border-color: $tooltip-background-color-dark transparent transparent
+        transparent;
+    }
+  }
+}
+
+.ncgr-tooltip.-bottom {
+  top: calc(100% + #{$tooltip-arrow-size});
+  &::after {
+    bottom: 100%;
+    border-color: transparent transparent $tooltip-background-color-light
+      transparent;
+    @media (prefers-color-scheme: dark) {
+      border-color: transparent transparent $tooltip-background-color-dark
+        transparent;
+    }
+  }
+}
