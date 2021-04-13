@@ -5,14 +5,43 @@ name: tab
 category: Components
 ---
 
-ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
+ある画面の中で複数の画面が存在し、それを切り替える場合には `.ncgr-horizontal-tab` を使用します。
 項目の数はなるべく5つ以下にとどめるようにし、どうしてもそれより数が多くなる場合は画面の高さを圧迫しないように、折り返すのではなく、横スクロールでアクセスできるようにします。
 
 左が一番優先順位が高くデフォルト位置であるべきであり、右に行くほど優先順位が低くなります。
 この場合、隠れてしまうボタンは基本的には押されない前提で設計するべきでしょう。
 
 ```example
-<nav class="ncgr-tab">
+<nav class="ncgr-horizontal-tab">
+  <ul>
+    <li>
+      <a class="-active" href="#">
+        アイテム
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        オモイデ
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ズッキュン
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ジャーナル
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+
+また、デスクトップサイズのとき、縦に並べたい場合は `.ncgr-vertical-tab` を使用します。
+
+```example
+<nav class="ncgr-vertical-tab">
   <ul>
     <li>
       <a class="-active" href="#">
@@ -40,7 +69,29 @@ category: Components
 
 */
 
-.ncgr-tab {
+@mixin tab-anchor {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  color: var(--color-secondary-label);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  &:hover {
+    color: var(--color-label);
+  }
+  &.-active {
+    color: var(--color-label);
+    background-color: var(--color-segmented-control-background);
+  }
+}
+
+.ncgr-horizontal-tab {
   overflow-x: auto;
 
   ul {
@@ -56,24 +107,12 @@ category: Components
   }
 
   a {
-    align-items: center;
-    background-color: transparent;
-    box-sizing: border-box;
-    border-radius: 1.25rem;
-    color: var(--color-secondary-label);
-    cursor: pointer;
-    display: flex;
-    font-size: 1rem;
-    font-weight: bold;
-    height: 2.5rem;
-    margin: 0;
-    padding: 0 1rem 0 1rem;
-    &:hover {
-      color: var(--color-label);
-    }
-    &.-active {
-      color: var(--color-label);
-      background-color: var(--color-segmented-control-background);
-    }
+    @include tab-anchor();
+  }
+}
+
+.ncgr-vertical-tab {
+  a {
+    @include tab-anchor();
   }
 }
