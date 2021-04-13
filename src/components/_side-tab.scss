@@ -1,0 +1,65 @@
+/*doc
+---
+title: Side Tab
+name: side-tab
+category: Components
+---
+
+デスクトップサイズのときにサブ画面を切り替えるのに使います。
+
+```example
+<nav class="ncgr-side-tab">
+  <ul>
+    <li>
+      <a href="#" class="-active">
+        アカウント
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        振込先
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        クレジットカード
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        住所
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        通知
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+*/
+
+.ncgr-side-tab {
+  a {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+    color: var(--color-secondary-label);
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0 1rem 0 1rem;
+    &:hover {
+      color: var(--color-label);
+    }
+    &.-active {
+      color: var(--color-label);
+      background-color: var(--color-segmented-control-background);
+    }
+  }
+}
