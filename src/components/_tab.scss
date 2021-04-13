@@ -96,11 +96,13 @@ category: Components
 
   ul {
     display: inline-table;
+    scroll-snap-type: x mandatory;
   }
 
   li {
     display: table-cell;
     white-space: nowrap;
+    scroll-snap-align: start;
     &:first-child {
       padding-left: 1rem;
     }
