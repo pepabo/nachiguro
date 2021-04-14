@@ -13,14 +13,14 @@ category: Components
     <img class="ncgr-card__cover-image" src="./images/components/card/sushi.jpg">
   </div>
   <header class="ncgr-card__header ncgr-pad-t-16 ncgr-pad-r-16 ncgr-pad-l-16">
-    <h2 class="ncgr-heading ncgr-heading--medium">寿司の盛り合わせ</h2>
+    <h2 class="ncgr-heading -m">寿司の盛り合わせ</h2>
   </header>
   <section class="ncgr-card__contents ncgr-pad-16">
     サーモン、うに、いくら、かずのこ、まぐろ、鯛、ホッキ貝、えび
   </section>
   <footer class="ncgr-card__footer ncgr-pad-16">
     <div class="ncgr-card__avatar">
-      <a class="ncgr-avatar ncgr-avatar--small" href="#">
+      <a class="ncgr-avatar -m" href="#">
         <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
         <span class="ncgr-avatar__name">surisurikun</span>
       </a>

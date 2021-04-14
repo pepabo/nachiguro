@@ -7,11 +7,11 @@ category: Components
 
 各セクションをマークアップするのに使用します。
 
-主に見出しコンポーネントの`.ncgr-heading--medium`とあわせて使用します。
+主に見出しコンポーネントの`.-m`とあわせて使用します。
 
 ```example
 <section class="ncgr-section">
-  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  <h2 class="ncgr-heading -m">近頃ウワサのあのショップ</h2>
 </section>
 ```
 
@@ -19,15 +19,15 @@ sectionの背景色は`.ncgr-section--background`、`.ncgr-section--secondary-ba
 
 ```example
 <section class="ncgr-section ncgr-section--background">
-  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  <h2 class="ncgr-heading -m">近頃ウワサのあのショップ</h2>
 </section>
 
 <section class="ncgr-section ncgr-section--secondary-background">
-  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  <h2 class="ncgr-heading -m">近頃ウワサのあのショップ</h2>
 </section>
 
 <section class="ncgr-section ncgr-section--grouped-background">
-  <h2 class="ncgr-heading ncgr-heading--medium">近頃ウワサのあのショップ</h2>
+  <h2 class="ncgr-heading -m">近頃ウワサのあのショップ</h2>
 </section>
 ```
 
