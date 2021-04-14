@@ -69,6 +69,20 @@ category: Components
 
 */
 
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-down($boundary) {
+  @media screen and (max-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
+}
+
 @mixin tab-anchor {
   align-items: center;
   background-color: transparent;
@@ -93,6 +107,7 @@ category: Components
 
 .ncgr-horizontal-tab {
   overflow-x: auto;
+  text-align: center;
 
   ul {
     display: inline-table;
@@ -103,8 +118,10 @@ category: Components
     display: table-cell;
     white-space: nowrap;
     scroll-snap-align: start;
-    &:first-child {
-      padding-left: 1rem;
+    @include mq-boundary-down(m) {
+      &:first-child {
+        padding-left: 1rem;
+      }
     }
   }
 
