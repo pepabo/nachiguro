@@ -8509,6 +8509,7 @@ category: Utility
 <div class="ncgr-typography-large">Large</div>
 <div class="ncgr-typography-medium">Medium</div>
 <div class="ncgr-typography-small">Small</div>
+<div class="ncgr-typography-primary">Primary</div>
 <div class="ncgr-typography-danger">Danger</div>
 <div class="ncgr-typography-success">Success</div>
 ```
@@ -8558,6 +8559,10 @@ category: Utility
 
 .ncgr-typography-extra-small {
   font-size: 11px;
+}
+
+.ncgr-typography-primary {
+  color: var(--color-primary-500);
 }
 
 .ncgr-typography-danger {
