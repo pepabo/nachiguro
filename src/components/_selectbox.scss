@@ -30,6 +30,7 @@ category: Components
   border-radius: 8px;
   border: 2px solid rgba(var(--color-textfield-separator), 0.15);
   box-sizing: border-box;
+  cursor: pointer;
   select {
     appearance: none;
     -webkit-appearance: none;
@@ -94,6 +95,7 @@ category: Components
   top: -2px;
   z-index: 2;
   line-height: 6px;
+  margin-left: -2px;
 }
 
 .ncgr-selectbox--prefecture-code {
