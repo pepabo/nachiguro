@@ -229,3 +229,148 @@ category: Components
     transform: translateX(-50%) rotate(180deg);
   }
 }
+
+// 以下WIP
+
+// .ncgr-semi-modal {
+//   background-color: transparent;
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   width: 25rem;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+//   transform: translateX(25rem);
+//   transition: transform 0s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+//   z-index: 2147483645;
+//   & * {
+//     animation: semi-modal-inner-fade-out 0.3s ease;
+//     opacity: 0;
+//   }
+//   @include mediaquery(tablet) {
+//     transition: transform 0s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+//     width: 100%;
+//     height: 50vh;
+//     top: auto;
+//     bottom: 0;
+//     transform: translateY(50vh);
+//   }
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     width: 100vh;
+//     height: 300vh;
+//     background-color: var(--color-secondary-grouped-background);
+//     top: -150vh;
+//     right: -100vh;
+//     border-radius: 50%;
+//     z-index: -1;
+//     overflow: hidden;
+//     animation: semi-modal-fill 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+//     @include mediaquery(tablet) {
+//       width: 160vw;
+//       height: 160vw;
+//       top: -15vw;
+//       border-radius: 40%;
+//       right: auto;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       animation: semi-modal-fill-mobile 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+//   }
+// }
+
+// .ncgr-semi-modal.-active {
+//   background-color: var(--color-secondary-grouped-background);
+//   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+//   @include shadow-16dp();
+//   & * {
+//     animation: none;
+//     opacity: 1;
+//   }
+//   & .ncgr-semi-modal__body,.ncgr-semi-modal__contents {
+//     background-color: var(--color-secondary-grouped-background);
+//   }
+//   transform: translateX(0);
+//   @include mediaquery(tablet) {
+//     transform: translateY(0);
+//   }
+//   &:before {
+//     animation: none;
+//     @include mediaquery(tablet) {
+//       animation: none;
+//     }
+//   }
+//   @include mediaquery(tablet) {
+//     transform: translateY(0);
+//   }
+// }
+
+// .ncgr-semi-modal__body {
+//   opacity: 1;
+//   background-color: transparent;
+//   position: relative;
+//   width: 25rem;
+//   height: auto;
+//   flex-grow: 1;
+//   overflow: hidden;
+//   @include mediaquery(tablet) {
+//     width: 100vw;
+//   }
+// }
+
+// .ncgr-semi-modal__contents {
+//   background-color: transparent;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   transform: translateX(25rem);
+//   overflow-y: scroll;
+//   width: 25rem;
+//   height: 100%;
+//   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+//   &.-active {
+//     transform: translateX(0);
+//   }
+//   @include mediaquery(tablet) {
+//     width: 100vw;
+//     transform: translateX(100vw);
+//   }
+// }
+
+// // animation
+
+// @keyframes semi-modal-inner-fade-out {
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes semi-modal-fill {
+//   from {
+//     right: calc(25rem - 100vh);
+//     border-radius: 0%;
+//   }
+//   to {    
+//     right: -100vh;
+//     border-radius: 50%;
+//   }
+// }
+
+// @keyframes semi-modal-fill-mobile {
+//   from {
+//     top: -15vw;
+//     border-radius: 40%;
+//     transform: translateX(-50%) rotate(180deg);
+//   }
+//   to {
+//     top: 50vh;
+//     border-radius: 50%;
+//     transform: translateX(-50%) rotate(0deg);
+//   }
+// }
