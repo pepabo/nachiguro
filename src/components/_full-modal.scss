@@ -15,7 +15,7 @@ category: Components
 `ncgr-full-modal`をアクティブにするときには、同時にbodyに`.overflow-hidden`を付与してください。
 下の要素のスクロールを制限し、モーダル内のスクロールの誤動作を防ぐことができます。
 
-```code
+```example
 <div class="ncgr-full-modal -active">
   <div class="ncgr-app-bar -active">
     <div class="ncgr-app-bar__leading">
@@ -57,6 +57,66 @@ category: Components
             スリスリしない
           </div>
         </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリする
+          </div>
+        </li>
+        <li class="ncgr-list-tile">
+          <div class="ncgr-list-tile__title">
+            スリスリしない
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -73,8 +133,6 @@ category: Components
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
@@ -94,7 +152,7 @@ category: Components
   position: relative;
   width: 100vw;
   height: auto;
-  flex-grow: 1;
+  min-height: calc(100vh - 3.5rem);
   overflow: hidden;
 }
 
@@ -108,6 +166,8 @@ category: Components
   height: 100%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-secondary-grouped-background);
+  box-sizing: border-box;
+  padding-bottom: 4rem;
   &.-active {
     transform: translateX(0);
   }
@@ -117,11 +177,12 @@ category: Components
   width: 100%;
   height: 4rem;
   display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary-grouped-background);
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0.5rem;
-  @supports (-webkit-touch-callout: none) {
-    margin-bottom: 7.5rem;
-  }
 }
