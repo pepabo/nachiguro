@@ -70,7 +70,7 @@ category: Components
   flex-direction: column;
   overflow: hidden;
   transform: translateX(25rem);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2147483645;
   @include mediaquery(tablet) {
     width: 100%;
@@ -83,11 +83,11 @@ category: Components
     content: '';
     position: absolute;
     width: 180vh;
-    height: 180vh;
+    height: 240vh;
     background-color: var(--color-secondary-grouped-background);
-    top: -40vh;
-    right: -80vh;
-    border-radius: 30%;
+    top: -70vh;
+    right: -100vh;
+    border-radius: 50%;
     z-index: -1;
     overflow: hidden;
     @include mediaquery(tablet) {
@@ -100,28 +100,24 @@ category: Components
       transform: translateX(-50%);
     }
   }
-  & * {
-    opacity: 0;
-  }
 }
 
 .ncgr-semi-modal.-active {
-  animation: semi-modal-background-color-fade-in 1s ease, semi-modal-shadow-fade-in 1s ease;
+  animation: semi-modal-background-color-fade-in 0.4s ease, semi-modal-shadow-fade-in 0.5s ease forwards;
   @include shadow-16dp();
   transform: translateX(0);
   & * {
-    animation: semi-modal-inner-fade-in 0.6s ease;
-    opacity: 1;
+    animation: semi-modal-inner-fade-in 0.3s ease;
   }
   & .ncgr-semi-modal__contents {
-    animation: semi-modal-background-color-fade-in 1s ease, semi-modal-inner-fade-in 0.6s ease;
+    animation: semi-modal-background-color-fade-in 0.4s ease, semi-modal-inner-fade-in 0.4s ease forwards;
     opacity: 1;
     background-color: var(--color-secondary-grouped-background);
   }
   &:before {
-    animation: semi-modal-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: semi-modal-fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     @include mediaquery(tablet) {
-      animation: semi-modal-fill-mobile 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: semi-modal-fill-mobile 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   @include mediaquery(tablet) {
@@ -200,20 +196,16 @@ category: Components
 
 @keyframes semi-modal-fill {
   from {
-    width: 2vh;
-    height: 2vh;
-    right: -2vh;
-    top: 49vh;
-    border-radius: 50%;
-    transform: rotate(0deg);
+    width: 60vh;
+    height: 80vh;
+    right: -60vh;
+    top: 10vh;
   }
   to {
     width: 180vh;
-    height: 180vh;
-    right: -80vh;
-    top: -40vh;
-    border-radius: 30%;
-    transform: rotate(270deg);
+    height: 240vh;
+    right: -120vh;
+    top: -70vh;
   }
 }
 
