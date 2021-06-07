@@ -74,6 +74,7 @@ Product Cardは商品画像が一番目立つように設計します。
   z-index: 1;
   img {
     width: 100px;
+    height: auto;
     vertical-align: top;
     @include mediaquery(mobile) {
       width: 80px;
