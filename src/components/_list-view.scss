@@ -608,7 +608,7 @@ category: Components
 $boundaries: (
   s: 480px,
   m: 768px,
-  l: 1280px
+  l: 1280px,
 ) !default;
 
 $gaps: (
@@ -691,6 +691,7 @@ $list-view-gaps: $gaps;
     .ncgr-list-tile {
       align-items: flex-start;
     }
+    .ncgr-list-tile__primary-title,
     .ncgr-list-tile__secondary-title {
       white-space: normal;
       overflow: auto;
