@@ -724,9 +724,17 @@ $list-view-gaps: $gaps;
     }
   }
   cursor: pointer;
-  &:hover,
-  &:active {
+
+  &:hover {
     background: var(--color-tertiary-grouped-background);
+  }
+  @include mediaquery(tablet) {
+    &:hover {
+      background: transparent;
+    }
+    &:active {
+      background: var(--color-tertiary-grouped-background);
+    }
   }
 }
 
