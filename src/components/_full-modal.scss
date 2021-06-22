@@ -133,6 +133,8 @@ category: Components
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
@@ -152,7 +154,7 @@ category: Components
   position: relative;
   width: 100vw;
   height: auto;
-  min-height: calc(100vh - 3.5rem);
+  flex-grow: 1;
   overflow: hidden;
 }
 
@@ -166,8 +168,6 @@ category: Components
   height: 100%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-secondary-grouped-background);
-  box-sizing: border-box;
-  padding-bottom: 4rem;
   &.-active {
     transform: translateX(0);
   }
@@ -177,12 +177,11 @@ category: Components
   width: 100%;
   height: 4rem;
   display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-secondary-grouped-background);
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0.5rem;
+  @supports (-webkit-touch-callout: none) {
+    margin-bottom: 7.5rem;
+  }
 }
