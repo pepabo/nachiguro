@@ -4436,8 +4436,16 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   font-size: 1rem;
   padding: 0 0.5rem 0 0.5rem;
 }
-.ncgr-icon-button:hover, .ncgr-icon-button:focus, .ncgr-icon-button:active {
+.ncgr-icon-button:hover {
   background-color: var(--color-tertiary-grouped-background);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-icon-button:hover {
+    background: transparent;
+  }
+  .ncgr-icon-button:focus, .ncgr-icon-button:active {
+    background: var(--color-tertiary-grouped-background);
+  }
 }
 .ncgr-icon-button.-bordered {
   border: 1px solid var(--color-separator);
@@ -4449,8 +4457,16 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   background-color: var(--color-white);
   color: var(--color-default-900);
 }
-.ncgr-icon-button.-light:hover, .ncgr-icon-button.-light:focus, .ncgr-icon-button.-light:active {
+.ncgr-icon-button.-light:hover {
   background-color: var(--color-default-50);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-icon-button.-light:hover {
+    background: transparent;
+  }
+  .ncgr-icon-button.-light:focus, .ncgr-icon-button.-light:active {
+    background: var(--color-default-50);
+  }
 }
 .ncgr-icon-button.-light.-bordered {
   border: 1px solid var(--color-default-75);
@@ -4459,8 +4475,16 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   background-color: var(--color-default-900);
   color: var(--color-white);
 }
-.ncgr-icon-button.-dark:hover, .ncgr-icon-button.-dark:focus, .ncgr-icon-button.-dark:active {
+.ncgr-icon-button.-dark:hover {
   background-color: var(--color-default-700);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-icon-button.-dark:hover {
+    background: transparent;
+  }
+  .ncgr-icon-button.-dark:focus, .ncgr-icon-button.-dark:active {
+    background: var(--color-default-700);
+  }
 }
 .ncgr-icon-button.-dark.-bordered {
   border: 1px solid var(--color-apple-dark-separator);
@@ -4469,8 +4493,16 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   background-color: var(--color-white);
   color: var(--color-danger-300);
 }
-.ncgr-icon-button.-favorite:hover, .ncgr-icon-button.-favorite:focus, .ncgr-icon-button.-favorite:active {
+.ncgr-icon-button.-favorite:hover {
   background-color: var(--color-default-50);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-icon-button.-favorite:hover {
+    background: transparent;
+  }
+  .ncgr-icon-button.-favorite:focus, .ncgr-icon-button.-favorite:active {
+    background: var(--color-default-50);
+  }
 }
 .ncgr-icon-button.-favorite.-bordered {
   border: 1px solid var(--color-default-75);
@@ -5336,6 +5368,7 @@ category: Components
 .ncgr-list-view.-multi-line .ncgr-list-tile {
   align-items: flex-start;
 }
+.ncgr-list-view.-multi-line .ncgr-list-tile__primary-title,
 .ncgr-list-view.-multi-line .ncgr-list-tile__secondary-title {
   white-space: normal;
   overflow: auto;
@@ -5378,8 +5411,16 @@ category: Components
     padding-left: 0.75rem;
   }
 }
-.ncgr-list-tile:hover, .ncgr-list-tile:active {
+.ncgr-list-tile:hover {
   background: var(--color-tertiary-grouped-background);
+}
+@media screen and (max-width: 768px) {
+  .ncgr-list-tile:hover {
+    background: transparent;
+  }
+  .ncgr-list-tile:active {
+    background: var(--color-tertiary-grouped-background);
+  }
 }
 
 .ncgr-list-tile__leading {
