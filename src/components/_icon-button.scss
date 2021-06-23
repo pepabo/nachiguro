@@ -72,17 +72,24 @@ $icon-button-size: 2.5rem;
   border-radius: 0.5rem;
   line-height: $icon-button-size;
   min-width: $icon-button-size;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: transparent;
   border: none;
   outline: none;
   color: var(--color-label);
   font-size: 1rem;
   padding: 0 0.5rem 0 0.5rem;
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     background-color: var(--color-tertiary-grouped-background);
+  }
+  @include mediaquery(tablet) {
+    &:hover {
+      background: transparent;
+    }
+    &:focus,
+    &:active {
+      background: var(--color-tertiary-grouped-background);
+    }
   }
 
   &.-bordered {
@@ -96,10 +103,17 @@ $icon-button-size: 2.5rem;
   &.-light {
     background-color: var(--color-white);
     color: var(--color-default-900);
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       background-color: var(--color-default-50);
+    }
+    @include mediaquery(tablet) {
+      &:hover {
+        background: transparent;
+      }
+      &:focus,
+      &:active {
+        background: var(--color-default-50);
+      }
     }
   }
 
@@ -110,10 +124,17 @@ $icon-button-size: 2.5rem;
   &.-dark {
     background-color: var(--color-default-900);
     color: var(--color-white);
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       background-color: var(--color-default-700);
+    }
+    @include mediaquery(tablet) {
+      &:hover {
+        background: transparent;
+      }
+      &:focus,
+      &:active {
+        background: var(--color-default-700);
+      }
     }
   }
 
@@ -124,10 +145,17 @@ $icon-button-size: 2.5rem;
   &.-favorite {
     background-color: var(--color-white);
     color: var(--color-danger-300);
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       background-color: var(--color-default-50);
+    }
+    @include mediaquery(tablet) {
+      &:hover {
+        background: transparent;
+      }
+      &:focus,
+      &:active {
+        background: var(--color-default-50);
+      }
     }
   }
 
