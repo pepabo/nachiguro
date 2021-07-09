@@ -5,83 +5,133 @@ name: tab
 category: Components
 ---
 
-ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
+ある画面の中で複数の画面が存在し、それを切り替える場合には `.ncgr-horizontal-tab` を使用します。
 項目の数はなるべく5つ以下にとどめるようにし、どうしてもそれより数が多くなる場合は画面の高さを圧迫しないように、折り返すのではなく、横スクロールでアクセスできるようにします。
 
 左が一番優先順位が高くデフォルト位置であるべきであり、右に行くほど優先順位が低くなります。
 この場合、隠れてしまうボタンは基本的には押されない前提で設計するべきでしょう。
 
 ```example
-<ul class="ncgr-tab">
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link ncgr-tab__link--active" href="#">
-      アイテム
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      オモイデ
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      ズッキュン
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      ジャーナル
-    </a>
-  </li>
-</ul>
+<nav class="ncgr-horizontal-tab">
+  <ul>
+    <li>
+      <a class="-active" href="#">
+        アイテム
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        オモイデ
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ズッキュン
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ジャーナル
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+
+また、デスクトップサイズのとき、縦に並べたい場合は `.ncgr-vertical-tab` を使用します。
+
+```example
+<nav class="ncgr-vertical-tab">
+  <ul>
+    <li>
+      <a class="-active" href="#">
+        アイテム
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        オモイデ
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ズッキュン
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ジャーナル
+      </a>
+    </li>
+  </ul>
+</nav>
 ```
 
 */
 
-.ncgr-tab {
-  padding: 16px 0 16px 0;
-  text-align: center;
+// Nachiguro Variables
+$boundaries: (
+  s: 480px,
+  m: 768px,
+  l: 1280px
+) !default;
+
+// Inhouse Mixins
+@mixin mq-boundary-down($boundary) {
+  @media screen and (max-width: map-get($boundaries, $boundary)) {
+    @content;
+  }
 }
 
-.ncgr-tab__item {
-  display: inline-block;
-}
-
-.ncgr-tab__link {
+@mixin tab-anchor {
+  align-items: center;
   background-color: transparent;
   box-sizing: border-box;
-  border-radius: 24px;
-  display: inline-block;
+  border-radius: 1.5rem;
   color: var(--color-secondary-label);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 18px;
+  height: 3rem;
   margin: 0;
-  padding: 0 16px 0 16px;
-  height: 48px;
-  line-height: 48px;
+  padding: 0 1rem 0 1rem;
   &:hover {
     color: var(--color-label);
   }
-  @include mediaquery(mobile) {
-    border-radius: 16px;
-    font-size: 13px;
-    height: 32px;
-    line-height: 32px;
-    margin: 0;
-    padding: 0 8px 0 8px;
+  &.-active {
+    color: var(--color-label);
+    background-color: var(--color-segmented-control-background);
   }
 }
 
-.ncgr-tab__link--active {
-  background-color: var(--color-segmented-control-background);
-  color: var(--color-label);
+.ncgr-horizontal-tab {
+  overflow-x: auto;
+  text-align: center;
+
+  ul {
+    display: inline-table;
+    scroll-snap-type: x mandatory;
+  }
+
+  li {
+    display: table-cell;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    @include mq-boundary-down(m) {
+      &:first-child {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  a {
+    @include tab-anchor();
+  }
 }
 
-.ncgr-tab__sticky-wrapper {
-  position: fixed;
-  width: 100%;
-  z-index: 9999;
-  background-color: var(--color-secondary-grouped-background);
-  transform: translateY(-226px);
-  @include shadow-4dp();
+.ncgr-vertical-tab {
+  a {
+    @include tab-anchor();
+  }
 }
