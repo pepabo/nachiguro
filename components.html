@@ -3938,60 +3938,122 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
 
 <h1 id="tab" class="styleguide">Tab</h1>
 
-<p>ある画面の中で複数の画面が存在し、それを切り替える場合に使用します。
+<p>ある画面の中で複数の画面が存在し、それを切り替える場合には <code>.ncgr-horizontal-tab</code> を使用します。
 項目の数はなるべく5つ以下にとどめるようにし、どうしてもそれより数が多くなる場合は画面の高さを圧迫しないように、折り返すのではなく、横スクロールでアクセスできるようにします。</p>
 
 <p>左が一番優先順位が高くデフォルト位置であるべきであり、右に行くほど優先順位が低くなります。
 この場合、隠れてしまうボタンは基本的には押されない前提で設計するべきでしょう。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
-          <ul class="ncgr-tab">
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link ncgr-tab__link--active" href="#">
-      アイテム
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      オモイデ
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      ズッキュン
-    </a>
-  </li>
-  <li class="ncgr-tab__item">
-    <a class="ncgr-tab__link" href="#">
-      ジャーナル
-    </a>
-  </li>
-</ul>
+          <nav class="ncgr-horizontal-tab">
+  <ul>
+    <li>
+      <a class="-active" href="#">
+        アイテム
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        オモイデ
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ズッキュン
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ジャーナル
+      </a>
+    </li>
+  </ul>
+</nav>
 
         </div>
         <div class="styleguide__code">
-          <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-tab"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link ncgr-tab__link--active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      アイテム
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      オモイデ
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      ズッキュン
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ncgr-tab__item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-tab__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      ジャーナル
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
+          <pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ncgr-horizontal-tab"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"-active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        アイテム
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        オモイデ
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        ズッキュン
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        ジャーナル
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<p>また、デスクトップサイズのとき、縦に並べたい場合は <code>.ncgr-vertical-tab</code> を使用します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <nav class="ncgr-vertical-tab">
+  <ul>
+    <li>
+      <a class="-active" href="#">
+        アイテム
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        オモイデ
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ズッキュン
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        ジャーナル
+      </a>
+    </li>
+  </ul>
+</nav>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"ncgr-vertical-tab"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"-active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        アイテム
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        オモイデ
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        ズッキュン
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        ジャーナル
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
 </pre>
         </div>
         <div class="styleguide__content">
@@ -4316,7 +4378,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年6月23日
+          最終更新日: 2021年7月9日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
