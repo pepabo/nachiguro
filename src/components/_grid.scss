@@ -531,6 +531,8 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 */
 
 // Nachiguro Variables
+@use "sass:math";
+
 $boundaries: (
   s: 480px,
   m: 768px,
@@ -571,13 +573,13 @@ $grid-gaps: $gaps;
   display: flex;
   flex-wrap: wrap;
   margin-top: grid-gap(s) * -1;
-  margin-right: grid-gap(s) / -2;
-  margin-left: grid-gap(s) / -2;
+  margin-right: math.div(grid-gap(s), -2);
+  margin-left: math.div(grid-gap(s), -2);
   @each $grid-boundary in map-keys($grid-boundaries) {
     @include mq-boundary-up($grid-boundary) {
       margin-top: grid-gap($grid-boundary) * -1;
-      margin-right: grid-gap($grid-boundary) / -2;
-      margin-left: grid-gap($grid-boundary) / -2;
+      margin-right: math.div(grid-gap($grid-boundary), -2);
+      margin-left: math.div(grid-gap($grid-boundary), -2);
     }
   }
   &.-align-items-start {
@@ -616,14 +618,14 @@ $grid-gaps: $gaps;
 
 @mixin col-width($num) {
   flex: 0 0 auto;
-  width: percentage($num / 12);
+  width: percentage(math.div($num, 12));
 }
 
 @mixin col-offset($num, $direction: ltr) {
   @if $direction == ltr {
-    margin-left: percentage($num / 12);
+    margin-left: percentage(math.div($num, 12));
   } @else if $direction == rtl {
-    margin-right: percentage($num / 12);
+    margin-right: percentage(math.div($num, 12));
   }
 }
 
@@ -632,8 +634,8 @@ $grid-gaps: $gaps;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-right: grid-gap(s) / 2;
-  padding-left: grid-gap(s) / 2;
+  padding-right: grid-gap(s) * 0.5;
+  padding-left: grid-gap(s) * 0.5;
   margin-top: grid-gap(s);
   @for $i from 1 through 12 {
     &.-col-#{$i} {
@@ -647,8 +649,8 @@ $grid-gaps: $gaps;
   }
   @each $grid-boundary in map-keys($grid-boundaries) {
     @include mq-boundary-up($grid-boundary) {
-      padding-right: grid-gap($grid-boundary) / 2;
-      padding-left: grid-gap($grid-boundary) / 2;
+      padding-right: grid-gap($grid-boundary) * 0.5;
+      padding-left: grid-gap($grid-boundary) * 0.5;
       margin-top: grid-gap($grid-boundary);
       @for $i from 1 through 12 {
         &.-col-#{$grid-boundary}-#{$i} {
