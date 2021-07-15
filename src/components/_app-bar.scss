@@ -71,13 +71,13 @@ $app-bar-leading-width: 3.5rem;
   align-items: center;
   box-sizing: border-box;
   z-index: 2147483646;
-  padding-right: app-bar-gap(s) / 2;
-  padding-left: app-bar-gap(s) / 2;
+  padding-right: app-bar-gap(s) * 0.5;
+  padding-left: app-bar-gap(s) * 0.5;
   transform: translate3d(0, 0, 0);
   @each $app-bar-boundary in map-keys($app-bar-boundaries) {
     @include mq-boundary-up($app-bar-boundary) {
-      padding-right: app-bar-gap($app-bar-boundary) / 2;
-      padding-left: app-bar-gap($app-bar-boundary) / 2;
+      padding-right: app-bar-gap($app-bar-boundary) * 0.5;
+      padding-left: app-bar-gap($app-bar-boundary) * 0.5;
     }
   }
   &.-active {
@@ -99,12 +99,12 @@ $app-bar-leading-width: 3.5rem;
 }
 
 .ncgr-app-bar__leading {
-  width: $app-bar-leading-width + app-bar-gap(s) / 2;
+  width: $app-bar-leading-width + app-bar-gap(s) * 0.5;
   flex-shrink: 0;
   cursor: pointer;
   @each $app-bar-boundary in map-keys($app-bar-boundaries) {
     @include mq-boundary-up($app-bar-boundary) {
-      width: $app-bar-leading-width + app-bar-gap($app-bar-boundary) / 2;
+      width: $app-bar-leading-width + app-bar-gap($app-bar-boundary) * 0.5;
     }
   }
 }
@@ -123,10 +123,10 @@ $app-bar-leading-width: 3.5rem;
 .ncgr-app-bar__actions {
   margin: 0;
   display: flex;
-  padding-right: app-bar-gap(s) / 2;
+  padding-right: app-bar-gap(s) * 0.5;
   @each $app-bar-boundary in map-keys($app-bar-boundaries) {
     @include mq-boundary-up($app-bar-boundary) {
-      padding-right: app-bar-gap($app-bar-boundary) / 2;
+      padding-right: app-bar-gap($app-bar-boundary) * 0.5;
     }
   }
   & li {

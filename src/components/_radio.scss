@@ -85,7 +85,7 @@ category: Components
       content: '';
       position: absolute;
       top: 19px;
-      left: ((20px - 6px) / 2);
+      left: ((20px - 6px) * 0.5);
       width: 6px;
       height: 6px;
       background-color: var(--color-white);

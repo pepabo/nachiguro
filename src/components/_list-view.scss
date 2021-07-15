@@ -655,14 +655,14 @@ $list-view-gaps: $gaps;
   border: none;
   height: 1px;
   width: 100%;
-  margin-top: list-view-gap(s) / 2;
+  margin-top: list-view-gap(s) * 0.5;
   margin-right: 0;
-  margin-bottom: list-view-gap(s) / 2;
+  margin-bottom: list-view-gap(s) * 0.5;
   margin-left: 0;
   @each $list-view-boundary in map-keys($list-view-boundaries) {
     @include mq-boundary-up($list-view-boundary) {
-      margin-top: list-view-gap($list-view-boundary) / 2;
-      margin-bottom: list-view-gap($list-view-boundary) / 2;
+      margin-top: list-view-gap($list-view-boundary) * 0.5;
+      margin-bottom: list-view-gap($list-view-boundary) * 0.5;
     }
   }
 }
@@ -672,14 +672,14 @@ $list-view-gaps: $gaps;
   width: 100%;
   height: auto;
   padding-top: 0;
-  padding-right: list-view-gap(s) / 2;
+  padding-right: list-view-gap(s) * 0.5;
   padding-bottom: 0;
-  padding-left: list-view-gap(s) / 2;
+  padding-left: list-view-gap(s) * 0.5;
   margin: 0;
   @each $list-view-boundary in map-keys($list-view-boundaries) {
     @include mq-boundary-up($list-view-boundary) {
-      padding-right: list-view-gap($list-view-boundary) / 2;
-      padding-left: list-view-gap($list-view-boundary) / 2;
+      padding-right: list-view-gap($list-view-boundary) * 0.5;
+      padding-left: list-view-gap($list-view-boundary) * 0.5;
     }
   }
   &.-two-line {
@@ -714,14 +714,14 @@ $list-view-gaps: $gaps;
   align-items: center;
   padding: 1rem;
   padding-top: 1rem;
-  padding-right: list-view-gap(s) / 2;
+  padding-right: list-view-gap(s) * 0.5;
   padding-bottom: 1rem;
-  padding-left: list-view-gap(s) / 2;
+  padding-left: list-view-gap(s) * 0.5;
   border-radius: 0.5rem;
   @each $list-view-boundary in map-keys($list-view-boundaries) {
     @include mq-boundary-up($list-view-boundary) {
-      padding-right: list-view-gap($list-view-boundary) / 2;
-      padding-left: list-view-gap($list-view-boundary) / 2;
+      padding-right: list-view-gap($list-view-boundary) * 0.5;
+      padding-left: list-view-gap($list-view-boundary) * 0.5;
     }
   }
   cursor: pointer;
@@ -806,13 +806,13 @@ $list-view-gaps: $gaps;
   max-height: 9999px;
   transition: max-height 0.4s ease;
   padding-top: 1rem;
-  padding-right: list-view-gap(s) / 2;
+  padding-right: list-view-gap(s) * 0.5;
   padding-bottom: 1rem;
-  padding-left: list-view-gap(s) / 2;
+  padding-left: list-view-gap(s) * 0.5;
   @each $list-view-boundary in map-keys($list-view-boundaries) {
     @include mq-boundary-up($list-view-boundary) {
-      padding-right: list-view-gap($list-view-boundary) / 2;
-      padding-left: list-view-gap($list-view-boundary) / 2;
+      padding-right: list-view-gap($list-view-boundary) * 0.5;
+      padding-left: list-view-gap($list-view-boundary) * 0.5;
     }
   }
 }
