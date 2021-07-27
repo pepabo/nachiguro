@@ -1,0 +1,158 @@
+/*doc
+---
+title: Information Card
+name: information-card
+category: Components
+---
+
+ワンポイントのグラフィックを用いてテキストと共に情報を伝える際に使用します。
+Primary title は必須で最大で２行になるようにしましょう。
+Secondary title は任意にで、こちらも最大で2行になるようにしましょう。
+正し、Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか一つのみが2行になるように調整しましょう。
+
+Secondary titleは`.-linnk`を併用することでリンクに対応することができます。
+
+```example
+<div class="ncgr-information-card ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+  </div>
+</div>
+<div class="ncgr-information-card ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+  </div>
+</div>
+<div class="ncgr-information-card ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <a class="ncgr-information-card__secondary-title -link">
+      Secondary title also can be up to two lines*
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+```
+
+Information card に吹き出しの装飾をつけることができます。
+吹き出しは、左上・右上・左下・右下の４方向あります。左右からの位置を指定することはできません。
+
+```example
+<div class="ncgr-information-card -bubble-upper-left ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+  </div>
+</div>
+<div class="ncgr-information-card -bubble-upper-right ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+  </div>
+</div>
+<div class="ncgr-information-card -bubble-lower-left ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+  </div>
+</div>
+<div class="ncgr-information-card -bubble-lower-right ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+  </div>
+</div>
+```
+*/
+
+.ncgr-information-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary-grouped-background);
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--color-label);
+  position: relative;
+  border-radius: 8px;
+  padding: 1rem;
+  &.-bubble-upper-left:after {
+    content: ' ';
+    position: absolute;
+    border: 0.5rem solid transparent;
+    border-bottom: 0.75rem solid var(--color-secondary-grouped-background);
+    bottom: 100%;
+    left: 8%;
+  }
+  &.-bubble-upper-right:after {
+    content: ' ';
+    position: absolute;
+    border: 0.5rem solid transparent;
+    border-bottom: 0.75rem solid var(--color-secondary-grouped-background);
+    bottom: 100%;
+    right: 8%;
+  }
+  &.-bubble-lower-left:after {
+    content: ' ';
+    position: absolute;
+    border: 0.5rem solid transparent;
+    border-top: 0.75rem solid var(--color-secondary-grouped-background);
+    top: 100%;
+    left: 8%;
+  }
+  &.-bubble-lower-right:after {
+    content: ' ';
+    position: absolute;
+    border: 0.5rem solid transparent;
+    border-top: 0.75rem solid var(--color-secondary-grouped-background);
+    top: 100%;
+    right: 8%;
+  }
+}
+
+.ncgr-information-card__leading {
+  display: flex;
+  padding-right: 1rem;
+}
+
+.ncgr-information-card__icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.ncgr-information-card__title {
+  flex: 1;
+}
+
+.ncgr-information-card__primaly-title {
+  font-weight: bold;
+}
+
+.ncgr-information-card__secondary-title {
+  font-size: 13px;
+  &.-link {
+    color: var(--color-secondary-label);
+    display: inline-block;
+  }
+}
