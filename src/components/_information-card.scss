@@ -6,82 +6,83 @@ category: Components
 ---
 
 ワンポイントのグラフィックを用いてテキストと共に情報を伝える際に使用します。
+
 Primary title は必須で最大で２行になるようにしましょう。
-Secondary title は任意にで、こちらも最大で2行になるようにしましょう。
-正し、Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか一つのみが2行になるように調整しましょう。
+Secondary title は任意で、こちらも最大で2行になるようにしましょう。
+ただし、Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
 Secondary titleは`.-linnk`を併用することでリンクに対応することができます。
 
 ```example
 <div class="ncgr-information-card ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
   </div>
 </div>
 <div class="ncgr-information-card ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
-    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
   </div>
 </div>
 <div class="ncgr-information-card ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
     <a class="ncgr-information-card__secondary-title -link">
-      Secondary title also can be up to two lines*
+      詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </a>
   </div>
 </div>
 ```
 
-Information card に吹き出しの装飾をつけることができます。
-吹き出しは、左上・右上・左下・右下の４方向あります。左右からの位置を指定することはできません。
+Information card には吹き出しの装飾をつけることができます。
+吹き出しは、左上・右上・左下・右下の４方向があります。左右からの位置を指定することはできません。
 
 ```example
 <div class="ncgr-information-card -bubble-upper-left ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
-    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
   </div>
 </div>
 <div class="ncgr-information-card -bubble-upper-right ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
-    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
   </div>
 </div>
 <div class="ncgr-information-card -bubble-lower-left ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
-    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
   </div>
 </div>
 <div class="ncgr-information-card -bubble-lower-right ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
-    <img class="ncgr-information-card__icon" src="./images/components/avatar/avatar.png">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
   </div>
   <div class="ncgr-information-card__title">
-    <p class="ncgr-information-card__primaly-title">Primary title can be up to tow lines</p>
-    <p class="ncgr-information-card__secondary-title">Secondary title also can be up to two lines*</p>
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
   </div>
 </div>
 ```
