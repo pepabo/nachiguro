@@ -13,6 +13,8 @@ Secondary title は任意で、こちらも最大で2行になるようにしま
 
 Secondary titleは`.-linnk`を併用することでリンクに対応することができます。
 
+`ncgr-information-card--primary`を使用することで Background color　や Text を Primary color に変更することができます。
+
 ```example
 <div class="ncgr-information-card ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
@@ -34,6 +36,18 @@ Secondary titleは`.-linnk`を併用することでリンクに対応するこ�
 <div class="ncgr-information-card ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
     <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping.svg">
+  </div>
+  <div class="ncgr-information-card__title">
+    <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
+    <a class="ncgr-information-card__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-information-card ncgr-information-card--primary ncgr-mar-b-24">
+  <div class="ncgr-information-card__leading">
+    <img class="ncgr-information-card__icon" src="./images/components/information-card/shipping-white.svg">
   </div>
   <div class="ncgr-information-card__title">
     <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
@@ -132,6 +146,17 @@ Information card には吹き出しの装飾をつけることができます。
   }
 }
 
+.ncgr-information-card--primary {
+  background: var(--color-primary-50);
+  color: var(--color-primary-900);
+  &.-bubble-upper-left:after {
+    border-bottom: 0.75rem solid var(--color-primary-50);
+  }
+  a.-link {
+    color: var(--color-primary-900);
+  }
+}
+
 .ncgr-information-card__leading {
   display: flex;
   padding-right: 1rem;
@@ -155,5 +180,6 @@ Information card には吹き出しの装飾をつけることができます。
   &.-link {
     color: var(--color-secondary-label);
     display: inline-block;
+    cursor: pointer;
   }
 }
