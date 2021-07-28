@@ -13,7 +13,7 @@ Secondary title は任意で、こちらも最大で2行になるようにしま
 
 Secondary titleは`.-linnk`を併用することでリンクに対応することができます。
 
-`ncgr-information-card--primary`を使用することで Background color　や Text を Primary color に変更することができます。
+`ncgr-information-card--primary`を使用することで Background color や Text を Primary color に変更することができます。
 
 ```example
 <div class="ncgr-information-card ncgr-mar-b-24">
@@ -69,7 +69,7 @@ Information card には吹き出しの装飾をつけることができます。
   </div>
   <div class="ncgr-information-card__title">
     <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
-    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
+    <p class="ncgr-information-card__secondary-title">左上に吹き出しの角がつきます。</p>
   </div>
 </div>
 <div class="ncgr-information-card -bubble-upper-right ncgr-mar-b-24">
@@ -78,7 +78,7 @@ Information card には吹き出しの装飾をつけることができます。
   </div>
   <div class="ncgr-information-card__title">
     <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
-    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
+    <p class="ncgr-information-card__secondary-title">右上に吹き出しの角がつきます。</p>
   </div>
 </div>
 <div class="ncgr-information-card -bubble-lower-left ncgr-mar-b-24">
@@ -87,8 +87,7 @@ Information card には吹き出しの装飾をつけることができます。
   </div>
   <div class="ncgr-information-card__title">
     <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
-    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
-  </div>
+    <p class="ncgr-information-card__secondary-title">左下に吹き出しの角がつきます。
 </div>
 <div class="ncgr-information-card -bubble-lower-right ncgr-mar-b-24">
   <div class="ncgr-information-card__leading">
@@ -96,7 +95,7 @@ Information card には吹き出しの装飾をつけることができます。
   </div>
   <div class="ncgr-information-card__title">
     <p class="ncgr-information-card__primaly-title">お得な情報があります</p>
-    <p class="ncgr-information-card__secondary-title">モバイルで2行以上にはならないように、できるだけ簡潔に伝える。</p>
+    <p class="ncgr-information-card__secondary-title">右下に吹き出しの角がつきます。</p>
   </div>
 </div>
 ```
