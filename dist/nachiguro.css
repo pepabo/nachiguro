@@ -3131,6 +3131,11 @@ category: Components
   transform: translateY(100vh);
   z-index: 2147483645;
 }
+@supports (-webkit-touch-callout: none) {
+  .ncgr-full-modal {
+    height: -webkit-fill-available;
+  }
+}
 .ncgr-full-modal .ncgr-full-modal__body,
 .ncgr-full-modal .ncgr-full-modal__footer {
   z-index: 2147483645;
@@ -3170,6 +3175,11 @@ category: Components
   align-items: center;
   box-sizing: border-box;
   padding: 0.5rem;
+}
+@supports (-webkit-touch-callout: none) {
+  .ncgr-full-modal__footer {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 /*doc
