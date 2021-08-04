@@ -81,6 +81,9 @@ category: Components
   height: 100vh;
   transform: translateY(100vh);
   z-index: 2147483645;
+  @supports (-webkit-touch-callout: none) {
+    height:-webkit-fill-available;
+  }
   .ncgr-full-modal__body,
   .ncgr-full-modal__footer {
     z-index: 2147483645;
@@ -122,6 +125,6 @@ category: Components
   box-sizing: border-box;
   padding: 0.5rem;
   @supports (-webkit-touch-callout: none) {
-    margin-bottom: 7rem;
+    margin-bottom: env(safe-area-inset-bottom);
   }
 }
