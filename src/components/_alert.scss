@@ -144,65 +144,65 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <hr class="ncgr-list-divider">
 
-<div class="ncgr-alert -default ncgr-mar-b-8">
+<a class="ncgr-alert -default -link ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
       デフォルト
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -primary ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -primary -link ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
       お得な情報
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -success ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -success ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
       良好な状態
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -warning ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -warning ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
       注意喚起
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -danger ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -danger ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
       発生中のエラー
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
+</a>
 
 <hr class="ncgr-list-divider">
 
-<div class="ncgr-alert -default ncgr-mar-b-8">
+<a class="ncgr-alert -link -default ncgr-mar-b-8">
   <div class="ncgr-alert__leading">
     <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-blue.svg">
   </div>
@@ -210,13 +210,13 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <div class="ncgr-alert__primary-title -bold">
       デフォルト
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -primary ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -primary ncgr-mar-b-8">
   <div class="ncgr-alert__leading">
     <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
@@ -224,13 +224,13 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <div class="ncgr-alert__primary-title -bold">
       お得な情報
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -success ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -success ncgr-mar-b-8">
   <div class="ncgr-alert__leading">
     <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
@@ -238,13 +238,13 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <div class="ncgr-alert__primary-title -bold">
       良好な状態
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -warning ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -warning ncgr-mar-b-8">
   <div class="ncgr-alert__leading">
     <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
@@ -252,13 +252,13 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <div class="ncgr-alert__primary-title -bold">
       注意喚起
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
-<div class="ncgr-alert -danger ncgr-mar-b-8">
+</a>
+<a class="ncgr-alert -link -danger ncgr-mar-b-8">
   <div class="ncgr-alert__leading">
     <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
@@ -266,12 +266,12 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <div class="ncgr-alert__primary-title -bold">
       発生中のエラー
     </div>
-    <a class="ncgr-alert__secondary-title -link">
+    <div class="ncgr-alert__secondary-title">
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </a>
+    </div>
   </div>
-</div>
+</a>
 ```
 
 */
@@ -316,6 +316,9 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
       background-color: var(--color-danger-200);
     }
   }
+  &.-link {
+    cursor: pointer;
+  }
 }
 
 .ncgr-alert__leading {
@@ -343,8 +346,4 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 .ncgr-alert__secondary-title {
   font-size: 13px;
-  &.-link {
-    display: inline-block;
-    cursor: pointer;
-  }
 }
