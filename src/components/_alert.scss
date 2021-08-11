@@ -8,7 +8,7 @@ category: Components
 お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。<br>
 アイコンなどのを配置できる Leading と、テキスト用の Title が要素としてあります。
 
-Tile は Primary Title と Secondary title の二つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に変更できます。<br>
+Tile は Primary Title と Secondary title の二つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-center`を使用すると atext-lighn を center 変更できます。<br>
 Sexondary-title は`.-link`を使用することでリンクのスタイルを当てることができます。
 
 Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
@@ -52,37 +52,38 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <hr class="ncgr-list-divider">
 
+
 <div class="ncgr-alert -default ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -bold">
+    <div class="ncgr-alert__primary-title -center">
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -primary ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -bold">
+    <div class="ncgr-alert__primary-title -center">
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -success ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -bold">
+    <div class="ncgr-alert__primary-title -center">
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -warning ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -bold">
+    <div class="ncgr-alert__primary-title -center">
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -danger">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -bold">
+    <div class="ncgr-alert__primary-title -center">
       発生中のエラー
     </div>
   </div>
@@ -334,6 +335,9 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 .ncgr-alert__primary-title {
   &.-bold {
     font-weight: bold;
+  }
+  &.-center {
+    text-align: center;
   }
 }
 
