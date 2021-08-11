@@ -6,7 +6,12 @@ category: Components
 ---
 
 お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。<br>
-`.-bold`を使用すると font-weight を bold に変更できます。
+アイコンなどのを配置できる Leading と、テキスト用の Title が要素としてあります。
+
+Tile は Primary Title と Secondary title の二つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に変更できます。<br>
+Sexondary-title は`.-link`を使用することでリンクのスタイルを当てることができます。
+
+Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
 ```example
 <div class="ncgr-alert -default ncgr-mar-b-8">
@@ -83,15 +88,8 @@ category: Components
   </div>
 </div>
 
-```
+<hr class="ncgr-list-divider">
 
-Sexondary-title を用いてより詳細に内容を伝えることもできます。<br>
-Sexondary-title は`.-link`を使用することでリンクにすることもできます。<br>
-また、 Leading を用いてアイコンを置くことも可能です。
-
-Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
-
-```example
 <div class="ncgr-alert -default ncgr-mar-b-8">
   <div class="ncgr-alert__title">
     <div class="ncgr-alert__primary-title -bold">
