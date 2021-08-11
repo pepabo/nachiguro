@@ -5,106 +5,344 @@ name: alert
 category: Components
 ---
 
-お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。
+お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。<br>
+`.-bold`を使用すると font-weight を bold に変更できます。
 
 ```example
-<div class="ncgr-alert ncgr-alert--default">
-  デフォルト
+<div class="ncgr-alert -default ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title">
+      デフォルト
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--primary">
-  お得な情報
+<div class="ncgr-alert -primary ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title">
+      お得な情報
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--success">
-  良好な状態
+<div class="ncgr-alert -success ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title">
+      良好な状態
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--warning">
-  注意喚起
+<div class="ncgr-alert -warning ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title">
+      注意喚起
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--danger">
-  発生中のエラー
+<div class="ncgr-alert -danger">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title">
+      発生中のエラー
+    </div>
+  </div>
 </div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -default ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      デフォルト
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -primary ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      お得な情報
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -success ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      良好な状態
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -warning ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      注意喚起
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -danger">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      発生中のエラー
+    </div>
+  </div>
+</div>
+
 ```
 
-見出しとテキストリンクを用いてより詳細に内容を伝える場合は、`.ncgr-alert__heading`と`.ncgr-alert__link`を追加することができます。
+Sexondary-title を用いてより詳細に内容を伝えることもできます。<br>
+Sexondary-title は`.-link`を使用することでリンクにすることもできます。<br>
+また、 Leading を用いてアイコンを置くことも可能です。
+
+Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
 ```example
-<div class="ncgr-alert ncgr-alert--default">
-  <h4 class="ncgr-alert__heading">デフォルト</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
+<div class="ncgr-alert -default ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      デフォルト
+    </div>
+    <div class="ncgr-alert__secondary-title">
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--primary">
-  <h4 class="ncgr-alert__heading">お得な情報</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
+<div class="ncgr-alert -primary ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      お得な情報
+    </div>
+    <div class="ncgr-alert__secondary-title">
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--success">
-  <h4 class="ncgr-alert__heading">良好な状態</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
+<div class="ncgr-alert -success ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      良好な状態
+    </div>
+    <div class="ncgr-alert__secondary-title">
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--warning">
-  <h4 class="ncgr-alert__heading">注意喚起</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
+<div class="ncgr-alert -warning ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      注意喚起
+    </div>
+    <div class="ncgr-alert__secondary-title">
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--danger">
-  <h4 class="ncgr-alert__heading">発生中のエラー</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
+<div class="ncgr-alert -danger">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      発生中のエラー
+    </div>
+    <div class="ncgr-alert__secondary-title">
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -default ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      デフォルト
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -primary ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      お得な情報
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -success ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      良好な状態
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -warning ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      注意喚起
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -danger ncgr-mar-b-8">
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      発生中のエラー
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -default ncgr-mar-b-8">
+  <div class="ncgr-alert__leading">
+    <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-blue.svg">
+  </div>
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      デフォルト
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -primary ncgr-mar-b-8">
+  <div class="ncgr-alert__leading">
+    <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
+  </div>
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      お得な情報
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -success ncgr-mar-b-8">
+  <div class="ncgr-alert__leading">
+    <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
+  </div>
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      良好な状態
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -warning ncgr-mar-b-8">
+  <div class="ncgr-alert__leading">
+    <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
+  </div>
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      注意喚起
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
+</div>
+<div class="ncgr-alert -danger ncgr-mar-b-8">
+  <div class="ncgr-alert__leading">
+    <img class="ncgr-alert__icon" src="./images/components/alert/alert-icon-white.svg">
+  </div>
+  <div class="ncgr-alert__title">
+    <div class="ncgr-alert__primary-title -bold">
+      発生中のエラー
+    </div>
+    <a class="ncgr-alert__secondary-title -link">
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </a>
+  </div>
 </div>
 ```
 
 */
 
 .ncgr-alert {
-  background-color: var(--color-default-50);
+  display: flex;
+  align-items: center;
   border-radius: 8px;
   box-sizing: border-box;
-  color: var(--color-default-900);
-  padding: 16px;
+  padding: 1rem;
   position: relative;
   width: 100%;
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--color-default-200);
+  &.-default {
+    background-color: var(--color-secondary-grouped-background);
+    color: var(--color-la);
   }
-  &.ncgr-alert--default {
-    background-color: var(--color-default-50);
-    color: var(--color-default-900);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-default-200);
-    }
-  }
-  &.ncgr-alert--primary {
+  &.-primary {
     background-color: var(--color-primary-50);
     color: var(--color-primary-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-primary-200);
     }
   }
-  &.ncgr-alert--success {
+  &.-success {
     background-color: var(--color-success-50);
     color: var(--color-success-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-success-200);
     }
   }
-  &.ncgr-alert--warning {
+  &.-warning {
     background-color: var(--color-warning-50);
     color: var(--color-warning-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-warning-200);
     }
   }
-  &.ncgr-alert--danger {
+  &.-danger {
     background-color: var(--color-danger-50);
     color: var(--color-danger-900);
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-danger-200);
     }
   }
-  .ncgr-alert__heading {
-    font-size: 18px;
+}
+
+.ncgr-alert__leading {
+  display: flex;
+  padding-right: 1rem;
+}
+
+.ncgr-alert__icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.ncgr-alert__title {
+  flex: 1;
+}
+
+.ncgr-alert__primary-title {
+  &.-bold {
     font-weight: bold;
   }
-  .ncgr-alert__link{
-    text-decoration: underline;
+}
+
+.ncgr-alert__secondary-title {
+  font-size: 13px;
+  &.-link {
+    display: inline-block;
     cursor: pointer;
-    color: unset;
   }
 }
