@@ -355,13 +355,13 @@ $colors: default, primary, success, warning, danger;
       text-align: center;
     }
   }
-  ._secondary-title {
-    font-size: 0.8125rem;
-  }
   @for $i from 1 through 6 {
     h#{$i}._primary-title {
       font-weight: bold;
     }
+  }
+  ._secondary-title {
+    font-size: 0.8125rem;
   }
 }
 
