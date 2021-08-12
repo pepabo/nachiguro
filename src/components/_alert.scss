@@ -11,7 +11,7 @@ category: Components
 
 リンクを置く場合は alert 自体をaタグで囲み、`.-link`を付与することでリンクのスタイルが当たります。
 
-Tile は Primary Title と Secondary title の二つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-center`を使用すると atext-lighn を center 変更できます。<br>
+Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-center`を使用すると text-align を center に変更できます。<br>
 
 Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
