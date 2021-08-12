@@ -11,7 +11,7 @@ category: Components
 
 要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。
 
-Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-center`を使用すると text-align を center に変更できます。
+Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-align-center`を使用すると text-align を center に変更できます。
 
 Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
@@ -94,35 +94,35 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -center">
+    <div class="ncgr-alert__primary-title -align-center">
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -center">
+    <div class="ncgr-alert__primary-title -align-center">
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -center">
+    <div class="ncgr-alert__primary-title -align-center">
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -center">
+    <div class="ncgr-alert__primary-title -align-center">
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
   <div class="ncgr-alert__title">
-    <div class="ncgr-alert__primary-title -center">
+    <div class="ncgr-alert__primary-title -align-center">
       発生中のエラー
     </div>
   </div>
@@ -364,7 +364,7 @@ h1,h2,h3,h4,h5,h6.ncgr-alert__primary-title {
 }
 
 .ncgr-alert__primary-title {
-  &.-center {
+  &.-align-center {
     text-align: center;
   }
 }
