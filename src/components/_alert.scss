@@ -320,7 +320,7 @@ $colors: default, primary, success, warning, danger;
 .ncgr-alert {
   display: flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   padding: 1rem;
   position: relative;
@@ -370,5 +370,5 @@ h1,h2,h3,h4,h5,h6.ncgr-alert__primary-title {
 }
 
 .ncgr-alert__secondary-title {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
