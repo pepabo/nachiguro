@@ -7,12 +7,13 @@ category: Components
 
 お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。
 
-背景色には2つの modifier があり、`-appearance-flat`を使うとそれぞれのセマンティックな色に、`-appearance-white`を使うと白く（ダークモード時はグレー）なります。<br>
-リンクを置く場合は alert 自体をaタグで囲み、`.-link`を付与することでリンクのスタイルが当たります。
+背景色には2つの modifier があり、`-appearance-flat`を使うとそれぞれのセマンティックな色に、`-appearance-white`を使うと白く（ダークモード時はグレー）なります。
 
 要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。
 
 Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-bold`を使用すると font-weight を bold に、`.-center`を使用すると text-align を center に変更できます。
+
+リンクを置く場合は alert 自体をaタグで囲み、`.-link`を付与することでリンクのスタイルが当たります。
 
 Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
