@@ -11,43 +11,45 @@ category: Components
 
 要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。
 
-Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-align-center`を使用すると text-align を center に変更できます。<br>
-h1~h6のどれかを Primary title に用いると font-weight が bold になります。
+Title の text-align を center にしたい場合は、 `_title`に`-align-center`を追加することでセンター揃えにできます。<br>
+Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bold になります。<br>
+また、Title 内では Heading と合わせてさらにテキストも追加することができます。<br>
+しかし、 Heading と テキストの両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
-Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
+Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲みましょう。
 
 ```example
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       発生中のエラー
     </div>
   </div>
@@ -57,35 +59,73 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <div class="ncgr-alert -color-default -appearance-white ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-white ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-white ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-white ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-white">
   <div class="_title">
-    <div class="_primary-title">
+    <div>
+      発生中のエラー
+    </div>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_title -align-center">
+    <div>
+      デフォルト
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_title -align-center">
+    <div>
+      お得な情報
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_title -align-center">
+    <div>
+      良好な状態
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_title -align-center">
+    <div>
+      注意喚起
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_title -align-center">
+    <div>
       発生中のエラー
     </div>
   </div>
@@ -95,88 +135,50 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <div class="_primary-title -align-center">
-      デフォルト
-    </div>
-  </div>
-</div>
-<div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
-    <div class="_primary-title -align-center">
-      お得な情報
-    </div>
-  </div>
-</div>
-<div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
-    <div class="_primary-title -align-center">
-      良好な状態
-    </div>
-  </div>
-</div>
-<div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
-    <div class="_primary-title -align-center">
-      注意喚起
-    </div>
-  </div>
-</div>
-<div class="ncgr-alert -color-danger -appearance-flat">
-  <div class="_title">
-    <div class="_primary-title -align-center">
-      発生中のエラー
-    </div>
-  </div>
-</div>
-
-<hr class="ncgr-list-divider">
-
-<div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       デフォルト
     </h4>
-    <div class="_secondary-title">
+    <div>
       モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       お得な情報
     </h4>
-    <div class="_secondary-title">
+    <div>
       モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       良好な状態
     </h4>
-    <div class="_secondary-title">
+    <div>
       モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       注意喚起
     </h4>
-    <div class="_secondary-title">
+    <div>
       モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       発生中のエラー
     </h4>
-    <div class="_secondary-title">
+    <div>
       モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
     </div>
   </div>
@@ -186,10 +188,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 <a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       デフォルト
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -197,10 +199,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 </a>
 <a class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       お得な情報
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -208,10 +210,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 </a>
 <a class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       良好な状態
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -219,10 +221,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 </a>
 <a class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       注意喚起
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -230,13 +232,11 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 </a>
 <a class="ncgr-alert -color-danger -appearance-flat">
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       発生中のエラー
     </h4>
-    <div class="_secondary-title">
-      詳しく見る
-      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
-    </div>
+    詳しく見る
+    <i class="fa fa-angle-right ncgr-mar-l-4"></i>
   </div>
 </a>
 
@@ -247,10 +247,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       デフォルト
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -261,10 +261,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       お得な情報
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -275,10 +275,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       良好な状態
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -289,10 +289,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       注意喚起
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -303,10 +303,10 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
     <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
   </div>
   <div class="_title">
-    <h4 class="_primary-title">
+    <h4>
       発生中のエラー
     </h4>
-    <div class="_secondary-title">
+    <div>
       詳しく見る
       <i class="fa fa-angle-right ncgr-mar-l-4"></i>
     </div>
@@ -350,19 +350,17 @@ $colors: default, primary, success, warning, danger;
   }
   ._title {
     flex: 1;
-  }
-  ._primary-title {
     &.-align-center {
       text-align: center;
+    }
+    :nth-child(2) {
+      font-size: 0.8125rem;
     }
   }
   @for $i from 1 through 6 {
     h#{$i}._primary-title {
       font-weight: bold;
     }
-  }
-  ._secondary-title {
-    font-size: 0.8125rem;
   }
 }
 
