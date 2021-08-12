@@ -339,38 +339,32 @@ $colors: default, primary, success, warning, danger;
       }
     }
   }
+  ._leading {
+    display: flex;
+    padding-right: 1rem;
+  }
+  ._icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  ._title {
+    flex: 1;
+  }
+  ._primary-title {
+    &.-align-center {
+      text-align: center;
+    }
+  }
+  ._secondary-title {
+    font-size: 0.8125rem;
+  }
+  @for $i from 1 through 6 {
+    h#{$i}._primary-title {
+      font-weight: bold;
+    }
+  }
 }
 
 a.ncgr-alert {
   cursor: pointer;
-}
-
-._leading {
-  display: flex;
-  padding-right: 1rem;
-}
-
-._icon {
-  width: 3rem;
-  height: 3rem;
-}
-
-._title {
-  flex: 1;
-}
-
-@for $i from 1 through 6 {
-  h#{$i}._primary-title {
-    font-weight: bold;
-  }
-}
-
-._primary-title {
-  &.-align-center {
-    text-align: center;
-  }
-}
-
-._secondary-title {
-  font-size: 0.8125rem;
 }
