@@ -317,15 +317,15 @@ Primary と Secondary 両方が2行になってしまうと、文字数が多く
 
 $colors: default, primary, success, warning, danger;
 
-@each $color in $colors {
-  .ncgr-alert {
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    box-sizing: border-box;
-    padding: 1rem;
-    position: relative;
-    width: 100%;
+.ncgr-alert {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  @each $color in $colors {
     &.-color-#{$color} {
       color: var(--color-#{$color}-900);
       &.-appearance-white {
