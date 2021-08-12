@@ -11,7 +11,8 @@ category: Components
 
 要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。
 
-Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-align-center`を使用すると text-align を center に変更できます。
+Title は Primary Title と Secondary title の2つがあり、 Primary title は`.-align-center`を使用すると text-align を center に変更できます。<br>
+h1~h6のどれかを Primary title に用いると font-weight が bold になります。
 
 Primary と Secondary 両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
 
