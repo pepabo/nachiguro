@@ -353,15 +353,16 @@ $colors: default, primary, success, warning, danger;
     &.-align-center {
       text-align: center;
     }
+    @for $i from 1 through 6 {
+      h#{$i} {
+        font-weight: bold;
+      }
+    }
     :nth-child(2) {
       font-size: 0.8125rem;
     }
   }
-  @for $i from 1 through 6 {
-    h#{$i}._primary-title {
-      font-weight: bold;
-    }
-  }
+
 }
 
 a.ncgr-alert {
