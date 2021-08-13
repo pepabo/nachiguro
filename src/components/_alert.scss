@@ -235,8 +235,10 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     <h4>
       発生中のエラー
     </h4>
-    詳しく見る
-    <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
   </div>
 </a>
 
@@ -358,11 +360,10 @@ $colors: default, primary, success, warning, danger;
         font-weight: bold;
       }
     }
-    :nth-child(2) {
+    > :nth-child(2) {
       font-size: 0.8125rem;
     }
   }
-
 }
 
 a.ncgr-alert {
