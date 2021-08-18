@@ -11,7 +11,7 @@ category: Components
 
 要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。
 
-Title の text-align を center にしたい場合は、 `_title`に`-align-center`を追加することでセンター揃えにできます。<br>
+Title の text-align を center にしたい場合は、 `_body`に`-align-center`を追加することでセンター揃えにできます。<br>
 Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bold になります。<br>
 また、Title 内では Heading と合わせてさらにテキストも追加することができます。<br>
 しかし、 Heading と テキストの両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。
@@ -20,35 +20,35 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 
 ```example
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
-  <div class="_title">
+  <div class="_body">
     <div>
       発生中のエラー
     </div>
@@ -58,35 +58,35 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 <hr class="ncgr-list-divider">
 
 <div class="ncgr-alert -color-default -appearance-white ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-white ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-white ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-white ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <div>
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-white">
-  <div class="_title">
+  <div class="_body">
     <div>
       発生中のエラー
     </div>
@@ -96,35 +96,35 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 <hr class="ncgr-list-divider">
 
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
-  <div class="_title -align-center">
+  <div class="_body -align-center">
     <div>
       デフォルト
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
-  <div class="_title -align-center">
+  <div class="_body -align-center">
     <div>
       お得な情報
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
-  <div class="_title -align-center">
+  <div class="_body -align-center">
     <div>
       良好な状態
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
-  <div class="_title -align-center">
+  <div class="_body -align-center">
     <div>
       注意喚起
     </div>
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
-  <div class="_title -align-center">
+  <div class="_body -align-center">
     <div>
       発生中のエラー
     </div>
@@ -134,7 +134,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 <hr class="ncgr-list-divider">
 
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       デフォルト
     </h4>
@@ -144,7 +144,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </div>
 <div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       お得な情報
     </h4>
@@ -154,7 +154,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </div>
 <div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       良好な状態
     </h4>
@@ -164,7 +164,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </div>
 <div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       注意喚起
     </h4>
@@ -174,7 +174,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </div>
 <div class="ncgr-alert -color-danger -appearance-flat">
-  <div class="_title">
+  <div class="_body">
     <h4>
       発生中のエラー
     </h4>
@@ -187,7 +187,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 <hr class="ncgr-list-divider">
 
 <a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       デフォルト
     </h4>
@@ -198,7 +198,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </a>
 <a class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       お得な情報
     </h4>
@@ -209,7 +209,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </a>
 <a class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       良好な状態
     </h4>
@@ -220,7 +220,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </a>
 <a class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
-  <div class="_title">
+  <div class="_body">
     <h4>
       注意喚起
     </h4>
@@ -231,7 +231,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   </div>
 </a>
 <a class="ncgr-alert -color-danger -appearance-flat">
-  <div class="_title">
+  <div class="_body">
     <h4>
       発生中のエラー
     </h4>
@@ -250,7 +250,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
       <img src="./images/components/alert/alert-icon-white.svg">
     </div>
   </div>
-  <div class="_title">
+  <div class="_body">
     <h4>
       デフォルト
     </h4>
@@ -266,7 +266,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
       <img src="./images/components/alert/alert-icon-white.svg">
     </div>
   </div>
-  <div class="_title">
+  <div class="_body">
     <h4>
       お得な情報
     </h4>
@@ -282,7 +282,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
       <img src="./images/components/alert/alert-icon-white.svg">
     </div>
   </div>
-  <div class="_title">
+  <div class="_body">
     <h4>
       良好な状態
     </h4>
@@ -298,7 +298,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
       <img src="./images/components/alert/alert-icon-white.svg">
     </div>
   </div>
-  <div class="_title">
+  <div class="_body">
     <h4>
       注意喚起
     </h4>
@@ -314,7 +314,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
       <img src="./images/components/alert/alert-icon-white.svg">
     </div>
   </div>
-  <div class="_title">
+  <div class="_body">
     <h4>
       発生中のエラー
     </h4>
@@ -361,7 +361,7 @@ $colors: default, primary, success, warning, danger;
       display: flex;
     }
   }
-  ._title {
+  ._body {
     flex: 1;
     &.-align-center {
       text-align: center;
