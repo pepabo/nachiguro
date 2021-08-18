@@ -246,7 +246,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 
 <a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_leading">
-    <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
+    <div class="_icon" >
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
   </div>
   <div class="_title">
     <h4>
@@ -260,7 +262,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 </a>
 <a class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
   <div class="_leading">
-    <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
   </div>
   <div class="_title">
     <h4>
@@ -274,7 +278,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 </a>
 <a class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
   <div class="_leading">
-    <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
   </div>
   <div class="_title">
     <h4>
@@ -288,7 +294,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 </a>
 <a class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
   <div class="_leading">
-    <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
   </div>
   <div class="_title">
     <h4>
@@ -302,7 +310,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 </a>
 <a class="ncgr-alert -color-danger -appearance-flat">
   <div class="_leading">
-    <img class="_icon" src="./images/components/alert/alert-icon-white.svg">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
   </div>
   <div class="_title">
     <h4>
@@ -345,10 +355,11 @@ $colors: default, primary, success, warning, danger;
   ._leading {
     display: flex;
     padding-right: 1rem;
-  }
-  ._icon {
-    width: 3rem;
-    height: 3rem;
+    ._icon {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+    }
   }
   ._title {
     flex: 1;
