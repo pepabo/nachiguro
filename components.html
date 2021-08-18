@@ -36,91 +36,632 @@
 <h1 id="alert" class="styleguide">Alert</h1>
 
 <p>お得な情報、良好な状態、注意喚起、発生中のエラーなど特別にユーザーに知らせたい事柄がある場合に使用します。</p>
+
+<p>背景色には2つの modifier があり、<code>-appearance-flat</code>を使うとそれぞれのセマンティックな色に、<code>-appearance-white</code>を使うと白く（ダークモード時はグレー）なります。</p>
+
+<p>要素は、アイコンなどを配置できる Leading と、テキスト用の Title の2つがあります。</p>
+
+<p>Title の text-align を center にしたい場合は、 <code>_body</code>に<code>-align-center</code>を追加することでセンター揃えにできます。<br>
+Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bold になります。<br>
+また、Title 内では Heading と合わせてさらにテキストも追加することができます。<br>
+しかし、 Heading と テキストの両方が2行になってしまうと、文字数が多くなり認知の負荷が高まるため、どちらか1つのみが2行になるように調整しましょう。</p>
+
+<p>Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲みましょう。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
-          <div class="ncgr-alert ncgr-alert--default">
-  デフォルト
+          <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      デフォルト
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--primary">
-  お得な情報
+<div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      お得な情報
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--success">
-  良好な状態
+<div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      良好な状態
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--warning">
-  注意喚起
+<div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      注意喚起
+    </div>
+  </div>
 </div>
-<div class="ncgr-alert ncgr-alert--danger">
-  発生中のエラー
+<div class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_body">
+    <div>
+      発生中のエラー
+    </div>
+  </div>
 </div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -color-default -appearance-white ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      デフォルト
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-primary -appearance-white ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      お得な情報
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-success -appearance-white ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      良好な状態
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-warning -appearance-white ncgr-mar-b-8">
+  <div class="_body">
+    <div>
+      注意喚起
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-danger -appearance-white">
+  <div class="_body">
+    <div>
+      発生中のエラー
+    </div>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_body -align-center">
+    <div>
+      デフォルト
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_body -align-center">
+    <div>
+      お得な情報
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_body -align-center">
+    <div>
+      良好な状態
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_body -align-center">
+    <div>
+      注意喚起
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_body -align-center">
+    <div>
+      発生中のエラー
+    </div>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      デフォルト
+    </h4>
+    <div>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      お得な情報
+    </h4>
+    <div>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      良好な状態
+    </h4>
+    <div>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      注意喚起
+    </h4>
+    <div>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+<div class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_body">
+    <h4>
+      発生中のエラー
+    </h4>
+    <div>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    </div>
+  </div>
+</div>
+
+<hr class="ncgr-list-divider">
+
+<a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      デフォルト
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      お得な情報
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      良好な状態
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_body">
+    <h4>
+      注意喚起
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_body">
+    <h4>
+      発生中のエラー
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+
+<hr class="ncgr-list-divider">
+
+<a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
+  <div class="_leading">
+    <div class="_icon" >
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
+  </div>
+  <div class="_body">
+    <h4>
+      デフォルト
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8">
+  <div class="_leading">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
+  </div>
+  <div class="_body">
+    <h4>
+      お得な情報
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-success -appearance-flat ncgr-mar-b-8">
+  <div class="_leading">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
+  </div>
+  <div class="_body">
+    <h4>
+      良好な状態
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8">
+  <div class="_leading">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
+  </div>
+  <div class="_body">
+    <h4>
+      注意喚起
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
+<a class="ncgr-alert -color-danger -appearance-flat">
+  <div class="_leading">
+    <div class="_icon">
+      <img src="./images/components/alert/alert-icon-white.svg">
+    </div>
+  </div>
+  <div class="_body">
+    <h4>
+      発生中のエラー
+    </h4>
+    <div>
+      詳しく見る
+      <i class="fa fa-angle-right ncgr-mar-l-4"></i>
+    </div>
+  </div>
+</a>
 
         </div>
         <div class="styleguide__code">
-          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--default"</span><span class="nt">&gt;</span>
-  デフォルト
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--primary"</span><span class="nt">&gt;</span>
-  お得な情報
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--success"</span><span class="nt">&gt;</span>
-  良好な状態
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--warning"</span><span class="nt">&gt;</span>
-  注意喚起
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--danger"</span><span class="nt">&gt;</span>
-  発生中のエラー
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-flat"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
 
-<p>見出しとテキストリンクを用いてより詳細に内容を伝える場合は、<code>.ncgr-alert__heading</code>と<code>.ncgr-alert__link</code>を追加することができます。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <div class="ncgr-alert ncgr-alert--default">
-  <h4 class="ncgr-alert__heading">デフォルト</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
-</div>
-<div class="ncgr-alert ncgr-alert--primary">
-  <h4 class="ncgr-alert__heading">お得な情報</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
-</div>
-<div class="ncgr-alert ncgr-alert--success">
-  <h4 class="ncgr-alert__heading">良好な状態</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
-</div>
-<div class="ncgr-alert ncgr-alert--warning">
-  <h4 class="ncgr-alert__heading">注意喚起</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
-</div>
-<div class="ncgr-alert ncgr-alert--danger">
-  <h4 class="ncgr-alert__heading">発生中のエラー</h4>
-  詳細な情報と<a class="ncgr-alert__link">テキストリンク</a>を追加する。
-</div>
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
 
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--default"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ncgr-alert__heading"</span><span class="nt">&gt;</span>デフォルト<span class="nt">&lt;/h4&gt;</span>
-  詳細な情報と<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert__link"</span><span class="nt">&gt;</span>テキストリンク<span class="nt">&lt;/a&gt;</span>を追加する。
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-white ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--primary"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ncgr-alert__heading"</span><span class="nt">&gt;</span>お得な情報<span class="nt">&lt;/h4&gt;</span>
-  詳細な情報と<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert__link"</span><span class="nt">&gt;</span>テキストリンク<span class="nt">&lt;/a&gt;</span>を追加する。
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-white ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--success"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ncgr-alert__heading"</span><span class="nt">&gt;</span>良好な状態<span class="nt">&lt;/h4&gt;</span>
-  詳細な情報と<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert__link"</span><span class="nt">&gt;</span>テキストリンク<span class="nt">&lt;/a&gt;</span>を追加する。
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-white ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--warning"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ncgr-alert__heading"</span><span class="nt">&gt;</span>注意喚起<span class="nt">&lt;/h4&gt;</span>
-  詳細な情報と<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert__link"</span><span class="nt">&gt;</span>テキストリンク<span class="nt">&lt;/a&gt;</span>を追加する。
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-white ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert ncgr-alert--danger"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ncgr-alert__heading"</span><span class="nt">&gt;</span>発生中のエラー<span class="nt">&lt;/h4&gt;</span>
-  詳細な情報と<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert__link"</span><span class="nt">&gt;</span>テキストリンク<span class="nt">&lt;/a&gt;</span>を追加する。
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-white"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body -align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body -align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body -align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body -align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-flat"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body -align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-flat"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      モバイルで2行以上にはならないように、できるだけ簡潔に伝える。
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-flat"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ncgr-list-divider"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-default -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_icon"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/alert/alert-icon-white.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      デフォルト
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-primary -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/alert/alert-icon-white.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      お得な情報
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-success -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/alert/alert-icon-white.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      良好な状態
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-warning -appearance-flat ncgr-mar-b-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/alert/alert-icon-white.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      注意喚起
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-alert -color-danger -appearance-flat"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/alert/alert-icon-white.svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>
+      発生中のエラー
+    <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      詳しく見る
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-right ncgr-mar-l-4"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
 </pre>
         </div>
         <div class="styleguide__content">
@@ -4378,7 +4919,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年8月4日
+          最終更新日: 2021年8月18日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
