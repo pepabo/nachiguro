@@ -37,7 +37,7 @@ Product Cardは商品画像が一番目立つように設計します。
   </div>
   <div class="ncgr-product-card__info">
     <a class="ncgr-product-card__name" href="#">
-      スリスリ君のパーカー
+      忍者スリスリくん
     </a>
     <div class="ncgr-product-card__item-name">
       パーカー
@@ -135,14 +135,6 @@ Product Cardは商品画像が一番目立つように設計します。
   padding: 0.75rem 0 0.75rem 0;
 }
 
-.ncgr-product-card__item-name {
-  color: var(--color-secondary-label);
-  font-size: 0.8125rem;
-  @include mediaquery(mobile) {
-    font-size: 0.75rem
-  }
-}
-
 .ncgr-product-card__name {
   color: var(--color-label);
   display: block;
@@ -151,9 +143,15 @@ Product Cardは商品画像が一番目立つように設計します。
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-bottom: 0.25rem;
   @include mediaquery(mobile) {
     font-size: 0.875rem
   }
+}
+
+.ncgr-product-card__item-name {
+  color: var(--color-secondary-label);
+  font-size: 0.8125rem;
 }
 
 .ncgr-product-card__user-name {
@@ -163,18 +161,13 @@ Product Cardは商品画像が一番目立つように設計します。
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  @include mediaquery(mobile) {
-    font-size: 0.75rem
-  }
+  margin-bottom: 0.5rem;
 }
 
 .ncgr-product-card__price {
   color: var(--color-label);
   font-size: 0.8125rem;
   padding-bottom: 0.25rem;
-  @include mediaquery(mobile) {
-    font-size: 0.75rem
-  }
 }
 
 .ncgr-product-card__quantity-limit {
