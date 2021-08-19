@@ -272,34 +272,10 @@ category: Color
 
 /*doc
 ---
-title: Apple
-name: 09-color-apple
-category: Color
----
-
-[color:--color-apple-dark-secondary:#1C1C1E]
-[color:--color-apple-dark-tertiary:#2C2C2E]
-[color:--color-apple-dark-separator:#38383A]
-
-ダークモードが適用されているときに使うAppleのSystem Colorです。
-Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて消すかもしれません。
-
-*/
-
-:root {
-  --color-apple-dark-secondary: #1C1C1E;
-  --color-apple-dark-tertiary: #2C2C2E;
-  --color-apple-dark-separator: #38383A;
-}
-
-/*doc
----
 title: Semantic
 name: 10-semantic-color
 category: Color
 ---
-
-基本はAppleのダークモードのシステム色に基づいてセマンティックカラーを設計します。
 
 背景色や文字色などのモノトーン色を指定するときは、直接色をハードコーディングするのではなく、セマンティックカラーをCSS Variablesで指定します。
 
@@ -313,88 +289,71 @@ category: Color
 
 #### label
 
-[color:light:#444444]
-[color:dark:#FFFFFF]
+[color:--color-label:#444444]
 
 #### secondary-label
 
-[color:light:#B0B0B0]
-[color:dark:#797979]
+[color:--color-secondary-label:#B0B0B0]
 
 #### placeholder-text
 
-[color:light:#D0D0D0]
-[color:dark:#616161]
+[color:--color-placeholder-text:#D0D0D0]
 
 #### background
 
-[color:light:#FFFFFF]
-[color:dark:#000000]
+[color:--color-background:#FFFFFF]
 
 #### secondary-background
 
-[color:light:#FFFFFF]
-[color:dark:#1C1C1E]
+[color:--color-secondary-background:#FFFFFF]
 
 #### tertiary-background
 
-[color:light:#FFFFFF]
-[color:dark:#2C2C2E]
+[color:--color-tertiary-background:#FFFFFF]
 
 #### grouped-background
 
-[color:light:#F7F7F7]
-[color:dark:#000000]
+[color:--color-grouped-background:#F7F7F7]
 
 #### secondary-grouped-background
 
-[color:light:#FFFFFF]
-[color:dark:#1C1C1E]
+[color:--color-secondary-grouped-background:#FFFFFF]
 
 #### tertiary-grouped-background
 
-[color:light:#F7F7F7]
-[color:dark:#2C2C2E]
+[color:--color-tertiary-grouped-background:#F7F7F7]
 
 #### separator
 
-[color:light:#EFEFEF]
-[color:dark:#3F3F3F]
+[color:--color-separator:#EFEFEF]
 
 #### search-bar-background
 
-[color:light:#DFDFDF]
-[color:dark:#2C2C2E]
+[color:--color-search-bar-background:#DFDFDF]
 
 #### textfield-background
 
-[color:light:#FFFFFF]
-[color:dark:#2C2C2E]
+[color:--color-textfield-background:#FFFFFF]
 
 #### textfield-separator
 
-[color:light:#000000]
-[color:dark:#FFFFFF]
+[color:--color-textfield-separator:#000000]
 
 #### segmented-control-background
 
-[color:light:#D0D0D0]
-[color:dark:#1C1C1E]
+[color:--color-segmented-control-background:#D0D0D0]
 
 #### square-radio-separator
 
-[color:light:#DFDFDF]
-[color:dark:#2C2C2E]
+[color:--color-square-radio-separator:#DFDFDF]
 
 #### pagenation-background
 
-[color:light:#000000]
-[color:dark:#FFFFFF]
+[color:--color-pagenation-background:#000000]
 
 #### close-button-background
 
-[color:light:#D0D0D0]
-[color:dark:#2C2C2E]
+[color:--color-close-button-background:#D0D0D0]
 
 */
 
