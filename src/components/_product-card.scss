@@ -143,7 +143,6 @@ Product Cardは商品画像が一番目立つように設計します。
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin-bottom: 0.25rem;
   @include mediaquery(mobile) {
     font-size: 0.875rem
   }
