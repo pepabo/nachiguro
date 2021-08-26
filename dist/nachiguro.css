@@ -1711,6 +1711,14 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-default.-appearance-white {
   background-color: var(--color-secondary-grouped-background);
 }
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.-color-default.-appearance-white {
+    color: var(--color-default-200);
+  }
+}
+.ncgr-alert.-color-default.-appearance-white.-color-default {
+  color: var(--color-label);
+}
 .ncgr-alert.-color-default.-appearance-flat {
   background-color: var(--color-default-50);
 }
@@ -1724,6 +1732,14 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 }
 .ncgr-alert.-color-primary.-appearance-white {
   background-color: var(--color-secondary-grouped-background);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.-color-primary.-appearance-white {
+    color: var(--color-primary-200);
+  }
+}
+.ncgr-alert.-color-primary.-appearance-white.-color-default {
+  color: var(--color-label);
 }
 .ncgr-alert.-color-primary.-appearance-flat {
   background-color: var(--color-primary-50);
@@ -1739,6 +1755,14 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-success.-appearance-white {
   background-color: var(--color-secondary-grouped-background);
 }
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.-color-success.-appearance-white {
+    color: var(--color-success-200);
+  }
+}
+.ncgr-alert.-color-success.-appearance-white.-color-default {
+  color: var(--color-label);
+}
 .ncgr-alert.-color-success.-appearance-flat {
   background-color: var(--color-success-50);
 }
@@ -1753,6 +1777,14 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-warning.-appearance-white {
   background-color: var(--color-secondary-grouped-background);
 }
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.-color-warning.-appearance-white {
+    color: var(--color-warning-200);
+  }
+}
+.ncgr-alert.-color-warning.-appearance-white.-color-default {
+  color: var(--color-label);
+}
 .ncgr-alert.-color-warning.-appearance-flat {
   background-color: var(--color-warning-50);
 }
@@ -1766,6 +1798,14 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 }
 .ncgr-alert.-color-danger.-appearance-white {
   background-color: var(--color-secondary-grouped-background);
+}
+@media (prefers-color-scheme: dark) {
+  .ncgr-alert.-color-danger.-appearance-white {
+    color: var(--color-danger-200);
+  }
+}
+.ncgr-alert.-color-danger.-appearance-white.-color-default {
+  color: var(--color-label);
 }
 .ncgr-alert.-color-danger.-appearance-flat {
   background-color: var(--color-danger-50);
@@ -1783,6 +1823,9 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
   width: 3rem;
   height: 3rem;
   display: flex;
+}
+.ncgr-alert ._leading ._icon img {
+  width: 100%;
 }
 .ncgr-alert ._body {
   flex: 1;
