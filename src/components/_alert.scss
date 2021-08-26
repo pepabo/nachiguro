@@ -343,6 +343,12 @@ $colors: default, primary, success, warning, danger;
       color: var(--color-#{$color}-900);
       &.-appearance-white {
         background-color: var(--color-secondary-grouped-background);
+        @media (prefers-color-scheme: dark) {
+          color: var(--color-#{$color}-200);
+        }
+        &.-color-default{
+          color: var(--color-label);
+        }
       }
       &.-appearance-flat {
         background-color: var(--color-#{$color}-50);
@@ -356,6 +362,9 @@ $colors: default, primary, success, warning, danger;
       width: 3rem;
       height: 3rem;
       display: flex;
+      img {
+        width: 100%;
+      }
     }
   }
   ._body {

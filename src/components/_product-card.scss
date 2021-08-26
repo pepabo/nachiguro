@@ -37,8 +37,14 @@ Product Cardは商品画像が一番目立つように設計します。
   </div>
   <div class="ncgr-product-card__info">
     <a class="ncgr-product-card__name" href="#">
-      スリスリ君のパーカー
+      忍者スリスリくん
     </a>
+    <div class="ncgr-product-card__item-name">
+      パーカー
+    </div>
+    <div class="ncgr-product-card__user-name">
+      by 忍者スリスリくん
+    </div>
     <div class="ncgr-product-card__price">
       ¥1,580
     </div>
@@ -57,7 +63,7 @@ Product Cardは商品画像が一番目立つように設計します。
 }
 
 .ncgr-product-card__thumbnail {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: block;
   position: relative;
   overflow: hidden;
@@ -69,21 +75,21 @@ Product Cardは商品画像が一番目立つように設計します。
 
 .ncgr-product-card__pickup-badge {
   position: absolute;
-  left: 8px;
+  left: 0.5rem;
   bottom: 0;
   z-index: 1;
   img {
-    width: 100px;
+    width: 6.25rem;
     height: auto;
     vertical-align: top;
     @include mediaquery(mobile) {
-      width: 80px;
+      width: 5rem;
     }
   }
 }
 
 .ncgr-product-card__background {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
@@ -92,62 +98,75 @@ Product Cardは商品画像が一番目立つように設計します。
   vertical-align: top;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   transition: opacity 0.1s ease-in-out;
   transform: scale(1.00001);
 }
 
 .ncgr-product-card__label {
   position: absolute;
-  left: 8px;
-  top: 8px;
+  left: 0.5rem;
+  top: 0.5rem;
   @include mediaquery(mobile) {
-    left: 4px;
-    top: 4px;
+    left: 0.25rem;
+    top: 0.25rem;
   }
 }
 
 .ncgr-product-card__actions {
   display: flex;
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 0.5rem;
+  top: 0.5rem;
   @include mediaquery(mobile) {
-    right: 4px;
-    top: 4px;
+    right: 0.25rem;
+    top: 0.25rem;
   }
 }
 
 .ncgr-product-card__action {
-  padding-right: 4px;
+  padding-right: 0.25rem;
   &:last-child {
     padding-right: 0;
   }
 }
 
 .ncgr-product-card__info {
-  padding: 12px 0 12px 0;
-}
-
-.ncgr-product-card__item-name {
-  color: var(--color-secondary-label);
-  font-size: 13px;
+  padding: 0.75rem 0 0.75rem 0;
 }
 
 .ncgr-product-card__name {
   color: var(--color-label);
   display: block;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  @include mediaquery(mobile) {
+    font-size: 0.875rem
+  }
+}
+
+.ncgr-product-card__item-name {
+  color: var(--color-secondary-label);
+  font-size: 0.8125rem;
+}
+
+.ncgr-product-card__user-name {
+  color: var(--color-label);
+  display: block;
+  font-size: 0.8125rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
 }
 
 .ncgr-product-card__price {
   color: var(--color-label);
-  font-size: 13px;
-  padding-bottom: 4px;
+  font-size: 0.8125rem;
+  padding-bottom: 0.25rem;
 }
 
 .ncgr-product-card__quantity-limit {
@@ -157,9 +176,9 @@ Product Cardは商品画像が一番目立つように設計します。
 }
 
 .ncgr-product-card__quantity-limit-form {
-  width: 56px;
+  width: 3.5rem;
 }
 
 .ncgr-product-card__quantity-limit-text {
-  padding-left: 4px;
+  padding-left: 0.25rem;
 }
