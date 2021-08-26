@@ -328,7 +328,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 
 */
 
-$colors: primary, success, warning, danger;
+$colors: default, primary, success, warning, danger;
 
 .ncgr-alert {
   display: flex;
