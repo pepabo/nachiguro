@@ -99,10 +99,10 @@ $switch-moving-distance: calc(#{$switch-handle-size} - #{$switch-border-width} *
 
 .ncgr-switch input:disabled + i {
   cursor: not-allowed;
+  background-color: var(--color-default-50);
 }
 
 .ncgr-switch input:disabled + i:before {
-  background-color: var(--color-default-200);
   border-color: var(--color-default-200);
 }
 
