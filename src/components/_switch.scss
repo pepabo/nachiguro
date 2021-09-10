@@ -16,6 +16,14 @@ category: Components
   <input type="checkbox">
   <i></i>
 </label>
+<label class="ncgr-switch">
+  <input type="checkbox" checked disabled>
+  <i></i>
+</label>
+<label class="ncgr-switch">
+  <input type="checkbox" disabled>
+  <i></i>
+</label>
 ```
 
 */
@@ -87,6 +95,19 @@ $switch-moving-distance: calc(#{$switch-handle-size} - #{$switch-border-width} *
 
 .ncgr-switch input:checked + i:after {
   transform: translate3d($switch-moving-distance, 0, 0);
+}
+
+.ncgr-switch input:disabled + i {
+  cursor: not-allowed;
+  background-color: var(--color-default-50);
+}
+
+.ncgr-switch input:disabled + i:before {
+  border-color: var(--color-default-200);
+}
+
+.ncgr-switch input:disabled:checked + i {
+  background-color: var(--color-primary-100);
 }
 
 @keyframes switch-fade-in {
