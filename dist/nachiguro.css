@@ -768,7 +768,7 @@ category: Color
   --color-search-bar-background: var(--color-default-75);
   --color-textfield-background: var(--color-white);
   --color-textfield-separator: 0, 0, 0;
-  --color-switch-background: var(--color-default-50);
+  --color-switch-background: var(--color-default-100);
   --color-switch-separator: 0, 0, 0;
   --color-segmented-control-background: var(--color-default-100);
   --color-square-radio-separator: var(--color-default-75);
@@ -6978,6 +6978,14 @@ category: Components
   <input type="checkbox">
   <i></i>
 </label>
+<label class="ncgr-switch">
+  <input type="checkbox" checked disabled>
+  <i></i>
+</label>
+<label class="ncgr-switch">
+  <input type="checkbox" disabled>
+  <i></i>
+</label>
 ```
 
 */
@@ -7043,6 +7051,19 @@ category: Components
 
 .ncgr-switch input:checked + i:after {
   transform: translate3d(calc(calc(2rem - 2px * 2) - 2px * 2), 0, 0);
+}
+
+.ncgr-switch input:disabled + i {
+  cursor: not-allowed;
+  background-color: var(--color-default-50);
+}
+
+.ncgr-switch input:disabled + i:before {
+  border-color: var(--color-default-200);
+}
+
+.ncgr-switch input:disabled:checked + i {
+  background-color: var(--color-primary-100);
 }
 
 @keyframes switch-fade-in {
