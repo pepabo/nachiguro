@@ -54,17 +54,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .ncgr-header__brand-logo {
-    g {
-      fill: var(--color-label) !important;
-    }
-    path {
-      fill: var(--color-label) !important;
-    }
-  }
-}
-
 .ncgr-header__spacer {
   flex-grow: 1;
 }

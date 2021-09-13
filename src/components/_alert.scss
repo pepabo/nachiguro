@@ -352,9 +352,6 @@ $colors: default, primary, success, warning, danger;
       }
       &.-appearance-flat {
         background-color: var(--color-#{$color}-50);
-        @media (prefers-color-scheme: dark) {
-          background-color: var(--color-#{$color}-200);
-        }
       }
     }
   }

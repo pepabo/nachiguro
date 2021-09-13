@@ -49,14 +49,6 @@
     margin: 0 auto;
     width: 240px;
   }
-  @media (prefers-color-scheme: dark) {
-    path {
-      fill: var(--color-white);
-    }
-    g {
-      fill: var(--color-white);
-    }
-  }
 }
 
 .ncgr-footer__nav {

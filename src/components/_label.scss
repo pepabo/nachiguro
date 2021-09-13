@@ -27,36 +27,21 @@ category: Components
   &.ncgr-label--default {
     color: var(--color-default-900);
     background-color: var(--color-default-50);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-default-200);
-    }
   }
   &.ncgr-label--primary {
     color: var(--color-primary-900);
     background-color: var(--color-primary-50);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-primary-200);
-    }
   }
   &.ncgr-label--success {
     color: var(--color-success-900);
     background-color: var(--color-success-50);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-success-200);
-    }
   }
   &.ncgr-label--warning {
     color: var(--color-warning-900);
     background-color: var(--color-warning-50);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-warning-200);
-    }
   }
   &.ncgr-label--danger {
     color: var(--color-danger-900);
     background-color: var(--color-danger-50);
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-danger-200);
-    }
   }
 }
