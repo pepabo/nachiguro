@@ -630,33 +630,10 @@ category: Color
 
 /*doc
 ---
-title: Apple
-name: 09-color-apple
-category: Color
----
-
-[color:--color-apple-dark-secondary:#1C1C1E]
-[color:--color-apple-dark-tertiary:#2C2C2E]
-[color:--color-apple-dark-separator:#38383A]
-
-ダークモードが適用されているときに使うAppleのSystem Colorです。
-Nachiguroのdefaultの色をもう少しいい感じにしたら置き換えて消すかもしれません。
-
-*/
-:root {
-  --color-apple-dark-secondary: #1C1C1E;
-  --color-apple-dark-tertiary: #2C2C2E;
-  --color-apple-dark-separator: #38383A;
-}
-
-/*doc
----
 title: Semantic
 name: 10-semantic-color
 category: Color
 ---
-
-基本はAppleのダークモードのシステム色に基づいてセマンティックカラーを設計します。
 
 背景色や文字色などのモノトーン色を指定するときは、直接色をハードコーディングするのではなく、セマンティックカラーをCSS Variablesで指定します。
 
@@ -670,88 +647,71 @@ category: Color
 
 #### label
 
-[color:light:#444444]
-[color:dark:#FFFFFF]
+[color:--color-label:#444444]
 
 #### secondary-label
 
-[color:light:#B0B0B0]
-[color:dark:#797979]
+[color:--color-secondary-label:#B0B0B0]
 
 #### placeholder-text
 
-[color:light:#D0D0D0]
-[color:dark:#616161]
+[color:--color-placeholder-text:#D0D0D0]
 
 #### background
 
-[color:light:#FFFFFF]
-[color:dark:#000000]
+[color:--color-background:#FFFFFF]
 
 #### secondary-background
 
-[color:light:#FFFFFF]
-[color:dark:#1C1C1E]
+[color:--color-secondary-background:#FFFFFF]
 
 #### tertiary-background
 
-[color:light:#FFFFFF]
-[color:dark:#2C2C2E]
+[color:--color-tertiary-background:#FFFFFF]
 
 #### grouped-background
 
-[color:light:#F7F7F7]
-[color:dark:#000000]
+[color:--color-grouped-background:#F7F7F7]
 
 #### secondary-grouped-background
 
-[color:light:#FFFFFF]
-[color:dark:#1C1C1E]
+[color:--color-secondary-grouped-background:#FFFFFF]
 
 #### tertiary-grouped-background
 
-[color:light:#F7F7F7]
-[color:dark:#2C2C2E]
+[color:--color-tertiary-grouped-background:#F7F7F7]
 
 #### separator
 
-[color:light:#EFEFEF]
-[color:dark:#3F3F3F]
+[color:--color-separator:#EFEFEF]
 
 #### search-bar-background
 
-[color:light:#DFDFDF]
-[color:dark:#2C2C2E]
+[color:--color-search-bar-background:#DFDFDF]
 
 #### textfield-background
 
-[color:light:#FFFFFF]
-[color:dark:#2C2C2E]
+[color:--color-textfield-background:#FFFFFF]
 
 #### textfield-separator
 
-[color:light:#000000]
-[color:dark:#FFFFFF]
+[color:--color-textfield-separator:#000000]
 
 #### segmented-control-background
 
-[color:light:#D0D0D0]
-[color:dark:#1C1C1E]
+[color:--color-segmented-control-background:#D0D0D0]
 
 #### square-radio-separator
 
-[color:light:#DFDFDF]
-[color:dark:#2C2C2E]
+[color:--color-square-radio-separator:#DFDFDF]
 
 #### pagenation-background
 
-[color:light:#000000]
-[color:dark:#FFFFFF]
+[color:--color-pagenation-background:#000000]
 
 #### close-button-background
 
-[color:light:#D0D0D0]
-[color:dark:#2C2C2E]
+[color:--color-close-button-background:#D0D0D0]
 
 */
 :root {
@@ -778,31 +738,6 @@ category: Color
   --color-brand-apple-font: var(--color-white);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-label: var(--color-white);
-    --color-secondary-label: var(--color-default-200);
-    --color-placeholder-text: rgba(255, 255, 255, 0.2);
-    --color-background: var(--color-black);
-    --color-secondary-background: var(--color-apple-dark-secondary);
-    --color-tertiary-background: var(--color-apple-dark-tertiary);
-    --color-grouped-background: var(--color-black);
-    --color-secondary-grouped-background: var(--color-apple-dark-secondary);
-    --color-tertiary-grouped-background: var(--color-apple-dark-tertiary);
-    --color-separator: var(--color-apple-dark-separator);
-    --color-search-bar-background: var(--color-apple-dark-tertiary);
-    --color-textfield-background: var(--color-apple-dark-tertiary);
-    --color-textfield-separator: 255, 255, 255;
-    --color-switch-background: var(--color-apple-dark-tertiary);
-    --color-switch-separator: 255, 255, 255;
-    --color-segmented-control-background: var(--color-apple-dark-tertiary);
-    --color-square-radio-separator: var(--color-apple-dark-tertiary);
-    --color-pagenation-background: 255, 255, 255;
-    --color-close-button-background: var(--color-apple-dark-tertiary);
-    --color-brand-apple: var(--color-white);
-    --color-brand-apple-font: var(--color-black);
-  }
-}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1722,11 +1657,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-default.-appearance-flat {
   background-color: var(--color-default-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-alert.-color-default.-appearance-flat {
-    background-color: var(--color-default-200);
-  }
-}
 .ncgr-alert.-color-primary {
   color: var(--color-primary-900);
 }
@@ -1743,11 +1673,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 }
 .ncgr-alert.-color-primary.-appearance-flat {
   background-color: var(--color-primary-50);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-alert.-color-primary.-appearance-flat {
-    background-color: var(--color-primary-200);
-  }
 }
 .ncgr-alert.-color-success {
   color: var(--color-success-900);
@@ -1766,11 +1691,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-success.-appearance-flat {
   background-color: var(--color-success-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-alert.-color-success.-appearance-flat {
-    background-color: var(--color-success-200);
-  }
-}
 .ncgr-alert.-color-warning {
   color: var(--color-warning-900);
 }
@@ -1788,11 +1708,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 .ncgr-alert.-color-warning.-appearance-flat {
   background-color: var(--color-warning-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-alert.-color-warning.-appearance-flat {
-    background-color: var(--color-warning-200);
-  }
-}
 .ncgr-alert.-color-danger {
   color: var(--color-danger-900);
 }
@@ -1809,11 +1724,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
 }
 .ncgr-alert.-color-danger.-appearance-flat {
   background-color: var(--color-danger-50);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-alert.-color-danger.-appearance-flat {
-    background-color: var(--color-danger-200);
-  }
 }
 .ncgr-alert ._leading {
   display: flex;
@@ -2366,25 +2276,11 @@ category: Components
   font-weight: normal;
   background-color: var(--color-default-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--light {
-    border-bottom: solid 4px var(--color-default-300);
-    font-weight: normal;
-    background-color: var(--color-default-200);
-  }
-}
 .ncgr-button.ncgr-button--light:active, .ncgr-button.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-default-100) inset;
   border-bottom: none;
   color: var(--color-default-900);
   background-color: var(--color-default-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--light:active, .ncgr-button.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-default-400) inset;
-    color: var(--color-default-900);
-    background-color: var(--color-default-300);
-  }
 }
 
 .ncgr-button[disabled],
@@ -2412,23 +2308,11 @@ category: Components
   color: var(--color-primary-900);
   background-color: var(--color-primary-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--primary.ncgr-button--light {
-    border-bottom: solid 4px var(--color-primary-300);
-    background-color: var(--color-primary-200);
-  }
-}
 .ncgr-button.ncgr-button--primary.ncgr-button--light:active, .ncgr-button.ncgr-button--primary.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-primary-100) inset;
   border-bottom: none;
   color: var(--color-primary-900);
   background-color: var(--color-primary-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--primary.ncgr-button--light:active, .ncgr-button.ncgr-button--primary.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-primary-400) inset;
-    background-color: var(--color-primary-300);
-  }
 }
 .ncgr-button.ncgr-button--primary[disabled], .ncgr-button.ncgr-button--primary.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 var(--color-primary-200) inset;
@@ -2453,23 +2337,11 @@ category: Components
   color: var(--color-secondary-900);
   background-color: var(--color-secondary-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--secondary.ncgr-button--light {
-    border-bottom: solid 4px var(--color-secondary-300);
-    background-color: var(--color-secondary-200);
-  }
-}
 .ncgr-button.ncgr-button--secondary.ncgr-button--light:active, .ncgr-button.ncgr-button--secondary.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-secondary-100) inset;
   border-bottom: none;
   color: var(--color-secondary-900);
   background-color: var(--color-secondary-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--secondary.ncgr-button--light:active, .ncgr-button.ncgr-button--secondary.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-secondary-400) inset;
-    background-color: var(--color-secondary-300);
-  }
 }
 .ncgr-button.ncgr-button--secondary[disabled], .ncgr-button.ncgr-button--secondary.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 var(--color-secondary-200) inset;
@@ -2494,23 +2366,11 @@ category: Components
   color: var(--color-success-900);
   background-color: var(--color-success-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--success.ncgr-button--light {
-    border-bottom: solid 4px var(--color-success-300);
-    background-color: var(--color-success-200);
-  }
-}
 .ncgr-button.ncgr-button--success.ncgr-button--light:active, .ncgr-button.ncgr-button--success.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-success-100) inset;
   border-bottom: none;
   color: var(--color-success-900);
   background-color: var(--color-success-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--success.ncgr-button--light:active, .ncgr-button.ncgr-button--success.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-success-400) inset;
-    background-color: var(--color-success-300);
-  }
 }
 .ncgr-button.ncgr-button--success[disabled], .ncgr-button.ncgr-button--success.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 var(--color-success-200) inset;
@@ -2535,23 +2395,11 @@ category: Components
   color: var(--color-warning-900);
   background-color: var(--color-warning-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--warning.ncgr-button--light {
-    border-bottom: solid 4px var(--color-warning-300);
-    background-color: var(--color-warning-200);
-  }
-}
 .ncgr-button.ncgr-button--warning.ncgr-button--light:active, .ncgr-button.ncgr-button--warning.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-warning-100) inset;
   border-bottom: none;
   color: var(--color-warning-900);
   background-color: var(--color-warning-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--warning.ncgr-button--light:active, .ncgr-button.ncgr-button--warning.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-warning-400) inset;
-    background-color: var(--color-warning-200);
-  }
 }
 .ncgr-button.ncgr-button--warning[disabled], .ncgr-button.ncgr-button--warning.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 var(--color-warning-200) inset;
@@ -2580,13 +2428,6 @@ category: Components
   color: var(--color-danger-900);
   background-color: var(--color-danger-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--danger.ncgr-button--light,
-.ncgr-button.ncgr-button--error.ncgr-button--light {
-    border-bottom: solid 4px var(--color-danger-300);
-    background-color: var(--color-danger-200);
-  }
-}
 .ncgr-button.ncgr-button--danger.ncgr-button--light:active, .ncgr-button.ncgr-button--danger.ncgr-button--light.ncgr-button--active,
 .ncgr-button.ncgr-button--error.ncgr-button--light:active,
 .ncgr-button.ncgr-button--error.ncgr-button--light.ncgr-button--active {
@@ -2594,14 +2435,6 @@ category: Components
   border-bottom: none;
   color: var(--color-danger-900);
   background-color: var(--color-danger-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--danger.ncgr-button--light:active, .ncgr-button.ncgr-button--danger.ncgr-button--light.ncgr-button--active,
-.ncgr-button.ncgr-button--error.ncgr-button--light:active,
-.ncgr-button.ncgr-button--error.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-danger-400) inset;
-    background-color: var(--color-danger-300);
-  }
 }
 .ncgr-button.ncgr-button--danger[disabled], .ncgr-button.ncgr-button--danger.ncgr-button--disabled,
 .ncgr-button.ncgr-button--error[disabled],
@@ -2628,23 +2461,11 @@ category: Components
   color: var(--color-default-900);
   background-color: var(--color-default-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--default.ncgr-button--light {
-    border-bottom: solid 4px var(--color-default-300);
-    background-color: var(--color-default-200);
-  }
-}
 .ncgr-button.ncgr-button--default.ncgr-button--light:active, .ncgr-button.ncgr-button--default.ncgr-button--light.ncgr-button--active {
   box-shadow: 0 2px 0 0 var(--color-default-100) inset;
   border-bottom: none;
   color: var(--color-default-900);
   background-color: var(--color-default-75);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--default.ncgr-button--light:active, .ncgr-button.ncgr-button--default.ncgr-button--light.ncgr-button--active {
-    box-shadow: 0 2px 0 0 var(--color-default-400) inset;
-    background-color: var(--color-default-300);
-  }
 }
 .ncgr-button.ncgr-button--default[disabled], .ncgr-button.ncgr-button--default.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 var(--color-default-200) inset;
@@ -2658,32 +2479,17 @@ category: Components
   color: var(--color-default-600);
   background-color: transparent;
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--transparent {
-    color: var(--color-white);
-  }
-}
 .ncgr-button.ncgr-button--transparent:active, .ncgr-button.ncgr-button--transparent.ncgr-button--active {
   box-shadow: 0 2px 0 0 transparent inset;
   border-bottom: none;
   color: var(--color-black);
   background-color: transparent;
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--transparent:active, .ncgr-button.ncgr-button--transparent.ncgr-button--active {
-    color: var(--color-white);
-  }
-}
 .ncgr-button.ncgr-button--transparent[disabled], .ncgr-button.ncgr-button--transparent.ncgr-button--disabled {
   box-shadow: 0 2px 0 0 transparent inset;
   border-bottom: none;
   color: var(--color-default-200);
   background-color: transparent;
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-button.ncgr-button--transparent[disabled], .ncgr-button.ncgr-button--transparent.ncgr-button--disabled {
-    color: var(--color-default-800);
-  }
 }
 
 .ncgr-button.ncgr-button--twitter {
@@ -4754,7 +4560,7 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 </button>
 ```
 
-Light Mode, Dark Modeに関わらず、強制的に明るい背景にしたい場合は `-light` Modifier を使用します。
+強制的に明るい背景にしたい場合は `-light` Modifier を使用します。
 
 ```example
 <button class="ncgr-icon-button -light">
@@ -4770,7 +4576,7 @@ Light Mode, Dark Modeに関わらず、強制的に明るい背景にしたい�
 </button>
 ```
 
-Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きたい場合は `-dark` Modifier を使用します。主にログインしているユーザー自身（管理者）のアクション（編集・削除）に使用します。
+強制的に暗い背景色を敷きたい場合は `-dark` Modifier を使用します。主にログインしているユーザー自身（管理者）のアクション（編集・削除）に使用します。
 
 ```example
 <button class="ncgr-icon-button -dark">
@@ -4867,7 +4673,7 @@ Light Mode, Dark Modeに関わらず、強制的に暗い背景色を敷きた�
   }
 }
 .ncgr-icon-button.-dark.-bordered {
-  border: 1px solid var(--color-apple-dark-separator);
+  border: 1px solid var(--color-default-900);
 }
 .ncgr-icon-button.-favorite {
   background-color: var(--color-white);
@@ -4958,46 +4764,21 @@ category: Components
   color: var(--color-default-900);
   background-color: var(--color-default-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-label.ncgr-label--default {
-    background-color: var(--color-default-200);
-  }
-}
 .ncgr-label.ncgr-label--primary {
   color: var(--color-primary-900);
   background-color: var(--color-primary-50);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-label.ncgr-label--primary {
-    background-color: var(--color-primary-200);
-  }
 }
 .ncgr-label.ncgr-label--success {
   color: var(--color-success-900);
   background-color: var(--color-success-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-label.ncgr-label--success {
-    background-color: var(--color-success-200);
-  }
-}
 .ncgr-label.ncgr-label--warning {
   color: var(--color-warning-900);
   background-color: var(--color-warning-50);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-label.ncgr-label--warning {
-    background-color: var(--color-warning-200);
-  }
-}
 .ncgr-label.ncgr-label--danger {
   color: var(--color-danger-900);
   background-color: var(--color-danger-50);
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-label.ncgr-label--danger {
-    background-color: var(--color-danger-200);
-  }
 }
 
 /*doc
@@ -7646,12 +7427,6 @@ category: Components
   border-style: solid;
   border-width: calc(0.5rem / 2);
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-tooltip {
-    background-color: var(--color-white);
-    color: var(--color-black);
-  }
-}
 
 .ncgr-tooltip.-top {
   bottom: calc(100% + 0.5rem);
@@ -7660,11 +7435,6 @@ category: Components
   top: 100%;
   border-color: var(--color-black) transparent transparent transparent;
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-tooltip.-top::after {
-    border-color: var(--color-white) transparent transparent transparent;
-  }
-}
 
 .ncgr-tooltip.-bottom {
   top: calc(100% + 0.5rem);
@@ -7672,11 +7442,6 @@ category: Components
 .ncgr-tooltip.-bottom::after {
   bottom: 100%;
   border-color: transparent transparent var(--color-black) transparent;
-}
-@media (prefers-color-scheme: dark) {
-  .ncgr-tooltip.-bottom::after {
-    border-color: transparent transparent var(--color-white) transparent;
-  }
 }
 
 /*doc
@@ -7964,14 +7729,6 @@ category: Components
     width: 240px;
   }
 }
-@media (prefers-color-scheme: dark) {
-  .ncgr-footer__pepabo-logo path {
-    fill: var(--color-white);
-  }
-  .ncgr-footer__pepabo-logo g {
-    fill: var(--color-white);
-  }
-}
 
 .ncgr-footer__nav {
   display: flex;
@@ -8082,14 +7839,6 @@ category: Components
   width: 88px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .ncgr-header__brand-logo g {
-    fill: var(--color-label) !important;
-  }
-  .ncgr-header__brand-logo path {
-    fill: var(--color-label) !important;
-  }
-}
 .ncgr-header__spacer {
   flex-grow: 1;
 }
@@ -8501,39 +8250,11 @@ JSで要素を表示させたり消したりするときに使います。
 </div>
 ```
 
-ダークモードやライトモードで表示を分けたいときはこのように使います。
-
-```example
-<div class="ncgr-is-visible-in-light">
-  陽遁
-</div>
-<div class="ncgr-is-visible-in-dark">
-  陰遁
-</div>
-```
-
 */
 .ncgr-is-visible {
   display: block;
 }
 
-.ncgr-is-visible-in-light {
-  display: block;
-}
-
-.ncgr-is-visible-in-dark {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .ncgr-is-visible-in-light {
-    display: none;
-  }
-
-  .ncgr-is-visible-in-dark {
-    display: block;
-  }
-}
 /*doc
 ---
 title: Margin
