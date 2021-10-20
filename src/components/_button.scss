@@ -129,21 +129,27 @@ category: Components
 <button class="ncgr-button ncgr-button--default ncgr-button--fluid" disabled>タップ禁止</button>
 ```
 
-#### .ncgr-button--{twitter or instagram or nicovideo}
+#### .ncgr-button--{twitter or instagram or nicovideo or apple or line}
 
 ```.ncgr-button``` を指定した要素にそれぞれの class を指定すると、各サービスのブランドカラーの文字色のボタンになります。
 
 おもにログインボタンとして使用することを想定して用意しています。
 
 ```example
-<button class="ncgr-button ncgr-button--twitter ncgr-button--light ncgr-button--fluid">
+<button class="ncgr-button ncgr-button--twitter ncgr-button--fluid">
   Twitter
 </button>
-<button class="ncgr-button ncgr-button--instagram ncgr-button--light ncgr-button--fluid">
+<button class="ncgr-button ncgr-button--instagram ncgr-button--fluid">
   Instagram
 </button>
-<button class="ncgr-button ncgr-button--nicovideo ncgr-button--light ncgr-button--fluid">
+<button class="ncgr-button ncgr-button--nicovideo ncgr-button--fluid">
   ニコニコ動画
+</button>
+<button class="ncgr-button ncgr-button--apple ncgr-button--fluid">
+  Apple
+</button>
+<button class="ncgr-button ncgr-button--line ncgr-button--fluid">
+  LINE
 </button>
 ```
 
@@ -509,6 +515,19 @@ category: Components
     border-bottom: none;
     background: var(--color-brand-apple);
     color: var(--color-brand-apple-font);
+  }
+}
+
+.ncgr-button.ncgr-button--line {
+  border-bottom: solid 4px var(--color-brand-line-darkest);
+  background: var(--color-brand-line);
+  color: var(--color-white);
+  &:active,
+  &.ncgr-button--active {
+    box-shadow: 0 2px 0 0 var(--color-brand-line-darkest) inset;
+    border-bottom: none;
+    background: var(--color-brand-line-dark);
+    color: var(--color-white);
   }
 }
 
