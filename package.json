@@ -19,5 +19,8 @@
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
     "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "@inhouse/grid": "^0.7.1"
   }
 }
