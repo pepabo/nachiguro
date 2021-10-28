@@ -1,0 +1,150 @@
+$sizing-scale: (
+  1:   0.0625rem,
+  2:   0.125rem,
+  4:   0.25rem,
+  8:   0.5rem,
+  12:  0.75rem,
+  16:  1rem,
+  20:  1.25rem,
+  24:  1.5rem,
+  28:  1.75rem,
+  32:  2rem,
+  40:  2.5rem,
+  48:  3rem,
+  56:  3.5rem,
+  64:  4rem,
+  72:  4.5rem,
+  80:  5rem,
+  96:  6rem,
+  112: 7rem,
+  120: 7.5rem,
+  128: 8rem,
+  144: 9rem,
+  160: 10rem,
+  168: 10.5rem,
+  176: 11rem,
+  192: 12rem,
+  216: 13.5rem,
+  240: 15rem,
+  264: 16.5rem,
+  288: 18rem,
+  312: 19.5rem
+) !default;
+
+$spacing-sizes: (
+  xxs: 0.25rem, // Level  4
+  xs:  0.5rem,  // Level  8
+  s:   0.75rem, // Level 12
+  m:   1rem,    // Level 16
+  l:   1.5rem,  // Level 24
+  xl:  2rem,    // Level 32
+  xxl: 3rem     // Level 48
+) !default;
+
+$interactive-component-sizes: (
+  xs: 1.5rem, // Level 24,
+  s:  2rem,   // Level 32
+  m:  2.5rem, // Level 40
+  l:  3rem,   // Level 48
+  xl: 3.5rem  // Level 56
+) !default;
+
+$radius-sizes: (
+  m:  0.25rem, // Level  4
+  l:  0.5rem,  // Level  8
+  xl: 0.75rem  // Level 12
+) !default;
+
+$line-width-sizes: (
+  m:  0.0625rem, // Level  4
+  l:  0.125rem,  // Level  8
+  xl: 0.25rem    // Level 16
+) !default;
+
+$gap-sizes: (
+  xxs: 1rem,   // spacing-sizes: m
+  xs:  1rem,   // spacing-sizes: m
+  s:   1rem,   // spacing-sizes: m
+  m:   1.5rem, // spacing-sizes: l
+  l:   1.5rem, // spacing-sizes: l
+  xl:  1.5rem, // spacing-sizes: l
+) !default;
+
+$boundary-sizes: (
+  xxs:  330px,
+  xs:   370px,
+  s:    600px,
+  m:    800px,
+  l:   1100px,
+  xl:  1400px
+) !default;
+
+$minimum-boundary-size: 1px;
+
+$content-width-sizes: (
+  xs:  480px,
+  s:   640px,
+  m:   960px,
+  l:  1200px,
+  xl: 1440px
+) !default;
+
+$cell-vertical-gap-sizes: (
+  dense: 0.25rem,  // Level  4
+  normal: 0.75rem, // Level 12
+  comfort: 1rem    // Level 16
+) !default;
+
+$header-height: 3.5rem !default; // Level 56
+
+$avatar-sizes: (
+  xs: 1.5rem, // Level 24
+  s:  2rem,   // Level 32
+  m:  2.5rem, // Level 40
+  l:  3.5rem  // Level 56
+) !default;
+
+$avatar-border-size: 0;
+$avatar-radius-size: 50%;
+
+$button-border-width: (
+  flat:         1px,
+  outlined:     1px,
+  solid:        1px,
+  white:        1px,
+  transparent:  1px,
+  hollow:       2px,
+) !default;
+
+$icon-only-button-pict-size: (
+  xs: 1rem,    // Level 16
+  s:  1rem,    // Level 16
+  m:  1.5rem,  // Level 24
+  l:  1.5rem,  // Level 24
+  xl: 1.5rem,  // Level 24
+) !default;
+
+$radio-size: 1.5rem !default;             // Level 24
+$radio-background-size: 1.25rem !default; // Level 20
+$radio-foreground-size: 0.75rem !default; // Level 12
+$radio-border-width: 1px !default;
+
+$checkbox-size: 1.5rem !default;                // Level 24
+$checkbox-child-element-size: 1.25rem !default; // Level 20
+$checkbox-border-width: 1px !default;
+
+$thumbnail-sizes: (
+  s: 2.5rem, // Level 40
+  m: 3.5rem, // Level 56
+  l: 4.5rem  // Level 72
+) !default;
+
+$thumbnail-radius-size: 0 !default;
+
+$interactive-list-gap-size:               0.5rem !default; // Level  8
+$interactive-list-pict-size:              1.5rem !default; // Level 24
+$interactive-list-edge-element-min-width:   2rem !default; // Level 32
+
+$list-leading-width: 3rem !default; // spacing-sizes: xxl
+
+$table-border-size: 0.0625rem; // line-width-sizes: m

@@ -4,8 +4,8 @@
   "description": "SUZURI CSS Framework",
   "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --no-error-css src/styleguide.scss dist/nachiguro.css",
-    "styleguide": "bundle exec hologram && sass --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css"
+    "build": "sass --load-path=node_modules --load-path=src --no-error-css src/styleguide.scss dist/nachiguro.css",
+    "styleguide": "bundle exec hologram && sass --load-path=node_modules  --load-path=src --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
     "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "@inhouse/grid": "^0.7.1"
   }
 }

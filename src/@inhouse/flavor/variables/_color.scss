@@ -1,0 +1,470 @@
+@use "sass:map";
+@use "./nachiguro-color";
+
+// 数値のインデントを揃えているせいでstylelintがエラーと判定してしまうため、
+// ソースコードの読みやすさを優先させてlintの対象から除外する
+/* stylelint-disable function-comma-space-after */
+
+$color: (
+  black: (
+    1000: nachiguro-color.color(black, 1000)
+  ),
+  white: (
+    1000: nachiguro-color.color(white, 1000)
+  ),
+  gray: (
+    50:   nachiguro-color.color(gray,  50),
+    100:  nachiguro-color.color(gray, 100),
+    200:  nachiguro-color.color(gray, 200),
+    300:  nachiguro-color.color(gray, 300),
+    400:  nachiguro-color.color(gray, 400),
+    500:  nachiguro-color.color(gray, 500),
+    600:  nachiguro-color.color(gray, 600),
+    700:  nachiguro-color.color(gray, 700),
+    800:  nachiguro-color.color(gray, 800),
+    900:  nachiguro-color.color(gray, 900),
+  ),
+  blue: (
+    50:   nachiguro-color.color(blue,   50),
+    100:  nachiguro-color.color(blue,  100),
+    200:  nachiguro-color.color(blue,  200),
+    300:  nachiguro-color.color(blue,  300),
+    400:  nachiguro-color.color(blue,  400),
+    500:  nachiguro-color.color(blue,  500),
+    600:  nachiguro-color.color(blue,  600),
+    700:  nachiguro-color.color(blue,  700),
+    800:  nachiguro-color.color(blue,  800),
+    900:  nachiguro-color.color(blue,  900),
+  ),
+  green: (
+    50:   nachiguro-color.color(green,   50),
+    100:  nachiguro-color.color(green,  100),
+    200:  nachiguro-color.color(green,  200),
+    300:  nachiguro-color.color(green,  300),
+    400:  nachiguro-color.color(green,  400),
+    500:  nachiguro-color.color(green,  500),
+    600:  nachiguro-color.color(green,  600),
+    700:  nachiguro-color.color(green,  700),
+    800:  nachiguro-color.color(green,  800),
+    900:  nachiguro-color.color(green,  900),
+  ),
+  yellow: (
+    50:   nachiguro-color.color(yellow,   50),
+    100:  nachiguro-color.color(yellow,  100),
+    200:  nachiguro-color.color(yellow,  200),
+    300:  nachiguro-color.color(yellow,  300),
+    400:  nachiguro-color.color(yellow,  400),
+    500:  nachiguro-color.color(yellow,  500),
+    600:  nachiguro-color.color(yellow,  600),
+    700:  nachiguro-color.color(yellow,  700),
+    800:  nachiguro-color.color(yellow,  800),
+    900:  nachiguro-color.color(yellow,  900),
+  ),
+  red: (
+    50:   nachiguro-color.color(red,   50),
+    100:  nachiguro-color.color(red,  100),
+    200:  nachiguro-color.color(red,  200),
+    300:  nachiguro-color.color(red,  300),
+    400:  nachiguro-color.color(red,  400),
+    500:  nachiguro-color.color(red,  500),
+    600:  nachiguro-color.color(red,  600),
+    700:  nachiguro-color.color(red,  700),
+    800:  nachiguro-color.color(red,  800),
+    900:  nachiguro-color.color(red,  900),
+  ),
+  orange: (
+    50:   nachiguro-color.color(orange,   50),
+    100:  nachiguro-color.color(orange,  100),
+    200:  nachiguro-color.color(orange,  200),
+    300:  nachiguro-color.color(orange,  300),
+    400:  nachiguro-color.color(orange,  400),
+    500:  nachiguro-color.color(orange,  500),
+    600:  nachiguro-color.color(orange,  600),
+    700:  nachiguro-color.color(orange,  700),
+    800:  nachiguro-color.color(orange,  800),
+    900:  nachiguro-color.color(orange,  900),
+  ),
+) !default;
+
+$semantic-color: (
+  informative: blue,
+  neutral: gray,
+  positive: green,
+  notice: yellow,
+  negative: red,
+  attention: orange,
+  interactive: blue,
+  favorite: red,
+) !default;
+
+$background-overlay-color: (
+  light: (
+    enabled:   rgba(nachiguro-color.color(black, 1000), 0),
+    hover:     rgba(nachiguro-color.color(black, 1000), 0.04),
+    focused:   rgba(nachiguro-color.color(black, 1000), 0.12),
+    selected:  rgba(nachiguro-color.color(blue,  500),  0.08),
+    mixed:     rgba(nachiguro-color.color(blue,  500),  0.08),
+    activated: rgba(nachiguro-color.color(blue,  500),  0.12),
+    disabled:  rgba(nachiguro-color.color(black, 1000), 0),
+  ),
+  dark: (
+    enabled:   rgba(nachiguro-color.color(white, 1000), 0),
+    hover:     rgba(nachiguro-color.color(white, 1000), 0.08),
+    focused:   rgba(nachiguro-color.color(white, 1000), 0.24),
+    selected:  rgba(nachiguro-color.color(white, 1000), 0.16),
+    mixed:     rgba(nachiguro-color.color(white, 1000), 0.16),
+    activated: rgba(nachiguro-color.color(white, 1000), 0.24),
+    disabled:  rgba(nachiguro-color.color(white, 1000), 0),
+  )
+) !default;
+
+$image-overlay-color: (
+  enabled:   rgba(nachiguro-color.color(black, 1000), 0),
+  hover:     rgba(nachiguro-color.color(black, 1000), 0.12),
+  focused:   rgba(nachiguro-color.color(black, 1000), 0.36),
+  selected:  rgba(nachiguro-color.color(black, 1000), 0.24),
+  mixed:     rgba(nachiguro-color.color(black, 1000), 0.24),
+  activated: rgba(nachiguro-color.color(black, 1000), 0.36),
+  disabled:  rgba(nachiguro-color.color(black, 1000), 0),
+);
+
+$header-color: nachiguro-color.color(blue, 600) !default;
+
+$avatar-background-color: nachiguro-color.color(gray, 50) !default;
+$avatar-border-color: transparent !default;
+
+$button-color: (
+  informative: nachiguro-color.color(blue, 600),
+  neutral:     nachiguro-color.color(gray, 700),
+  positive:    nachiguro-color.color(green, 700),
+  notice:      nachiguro-color.color(yellow, 700),
+  negative:    nachiguro-color.color(red, 600),
+  attention:   nachiguro-color.color(orange, 600),
+  interactive: nachiguro-color.color(blue, 600),
+  favorite:    nachiguro-color.color(red, 600),
+) !default;
+
+$checkbox-color: nachiguro-color.color(blue, 600) !default;
+$checkbox-inverted-color: nachiguro-color.color(white, 1000) !default;
+
+$solid-button-background-scrim-linear-gradient:
+  linear-gradient(
+    rgba(nachiguro-color.color(white, 1000), 0.25),
+    rgba(nachiguro-color.color(white, 1000), 0)
+  ) !default;
+
+$list-text-color: nachiguro-color.color(gray, 800) !default;
+
+$radio-color: nachiguro-color.color(blue, 600) !default;
+$radio-inverted-color: nachiguro-color.color(white, 1000) !default;
+
+$table-text-color:      nachiguro-color.color(gray, 800) !default;
+$table-th-border-color: nachiguro-color.color(gray, 400) !default;
+$table-td-border-color: nachiguro-color.color(gray, 300) !default;
+
+$select-state-color-matrix: (
+  informative: (
+    text: (
+      enabled:  nachiguro-color.color(blue, 800),
+      hover:    nachiguro-color.color(blue, 800),
+      focused:  nachiguro-color.color(blue, 800),
+      disabled: nachiguro-color.color(blue, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(blue,    50),
+      hover:    nachiguro-color.color(blue,   100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(blue,   200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(blue,  400),
+      hover:    nachiguro-color.color(blue,  600),
+      focused:  nachiguro-color.color(blue,  700),
+      disabled: nachiguro-color.color(blue,  400)
+    )
+  ),
+  neutral: (
+    text: (
+      enabled:  nachiguro-color.color(gray, 800),
+      hover:    nachiguro-color.color(gray, 800),
+      focused:  nachiguro-color.color(gray, 800),
+      disabled: nachiguro-color.color(gray, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(gray,    50),
+      hover:    nachiguro-color.color(gray,   100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(gray,   200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(gray,  400),
+      hover:    nachiguro-color.color(gray,  600),
+      focused:  nachiguro-color.color(blue,  700),
+      disabled: nachiguro-color.color(gray,  400)
+    )
+  ),
+  positive: (
+    text: (
+      enabled:  nachiguro-color.color(green, 800),
+      hover:    nachiguro-color.color(green, 800),
+      focused:  nachiguro-color.color(green, 800),
+      disabled: nachiguro-color.color(green, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(green,   50),
+      hover:    nachiguro-color.color(green,  100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(green,  200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(green,  400),
+      hover:    nachiguro-color.color(green,  600),
+      focused:  nachiguro-color.color(green,  700),
+      disabled: nachiguro-color.color(green,  400)
+    )
+  ),
+  notice: (
+    text: (
+      enabled:  nachiguro-color.color(yellow, 800),
+      hover:    nachiguro-color.color(yellow, 800),
+      focused:  nachiguro-color.color(yellow, 800),
+      disabled: nachiguro-color.color(yellow, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(yellow,  50),
+      hover:    nachiguro-color.color(yellow, 100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(yellow, 200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(yellow,  400),
+      hover:    nachiguro-color.color(yellow,  600),
+      focused:  nachiguro-color.color(yellow,  700),
+      disabled: nachiguro-color.color(yellow,  400)
+    )
+  ),
+  negative: (
+    text: (
+      enabled:  nachiguro-color.color(red, 800),
+      hover:    nachiguro-color.color(red, 800),
+      focused:  nachiguro-color.color(red, 800),
+      disabled: nachiguro-color.color(red, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(red,     50),
+      hover:    nachiguro-color.color(red,    100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(red,    200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(red,  400),
+      hover:    nachiguro-color.color(red,  600),
+      focused:  nachiguro-color.color(red,  700),
+      disabled: nachiguro-color.color(red,  400)
+    )
+  ),
+  attention: (
+    text: (
+      enabled:  nachiguro-color.color(orange, 800),
+      hover:    nachiguro-color.color(orange, 800),
+      focused:  nachiguro-color.color(orange, 800),
+      disabled: nachiguro-color.color(orange, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(orange,  50),
+      hover:    nachiguro-color.color(orange, 100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(orange, 200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(orange,  400),
+      hover:    nachiguro-color.color(orange,  600),
+      focused:  nachiguro-color.color(orange,  700),
+      disabled: nachiguro-color.color(orange,  400)
+    )
+  )
+) !default;
+
+$textfield-state-color-matrix: (
+  informative: (
+    text: (
+      enabled:  nachiguro-color.color(blue, 800),
+      hover:    nachiguro-color.color(blue, 800),
+      focused:  nachiguro-color.color(blue, 800),
+      disabled: nachiguro-color.color(blue, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(blue,    50),
+      hover:    nachiguro-color.color(blue,   100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(blue,   200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(blue,  400),
+      hover:    nachiguro-color.color(blue,  600),
+      focused:  nachiguro-color.color(blue,  700),
+      disabled: nachiguro-color.color(blue,  400)
+    )
+  ),
+  neutral: (
+    text: (
+      enabled:  nachiguro-color.color(gray, 800),
+      hover:    nachiguro-color.color(gray, 800),
+      focused:  nachiguro-color.color(gray, 800),
+      disabled: nachiguro-color.color(gray, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(gray,    50),
+      hover:    nachiguro-color.color(gray,   100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(gray,   200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(gray,  400),
+      hover:    nachiguro-color.color(gray,  600),
+      focused:  nachiguro-color.color(blue,  700),
+      disabled: nachiguro-color.color(gray,  400)
+    )
+  ),
+  positive: (
+    text: (
+      enabled:  nachiguro-color.color(green, 800),
+      hover:    nachiguro-color.color(green, 800),
+      focused:  nachiguro-color.color(green, 800),
+      disabled: nachiguro-color.color(green, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(green,   50),
+      hover:    nachiguro-color.color(green,  100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(green,  200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(green,  400),
+      hover:    nachiguro-color.color(green,  600),
+      focused:  nachiguro-color.color(green,  700),
+      disabled: nachiguro-color.color(green,  400)
+    )
+  ),
+  notice: (
+    text: (
+      enabled:  nachiguro-color.color(yellow, 800),
+      hover:    nachiguro-color.color(yellow, 800),
+      focused:  nachiguro-color.color(yellow, 800),
+      disabled: nachiguro-color.color(yellow, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(yellow,  50),
+      hover:    nachiguro-color.color(yellow, 100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(yellow, 200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(yellow,  400),
+      hover:    nachiguro-color.color(yellow,  600),
+      focused:  nachiguro-color.color(yellow,  700),
+      disabled: nachiguro-color.color(yellow,  400)
+    )
+  ),
+  negative: (
+    text: (
+      enabled:  nachiguro-color.color(red, 800),
+      hover:    nachiguro-color.color(red, 800),
+      focused:  nachiguro-color.color(red, 800),
+      disabled: nachiguro-color.color(red, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(red,     50),
+      hover:    nachiguro-color.color(red,    100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(red,    200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(red,  400),
+      hover:    nachiguro-color.color(red,  600),
+      focused:  nachiguro-color.color(red,  700),
+      disabled: nachiguro-color.color(red,  400)
+    )
+  ),
+  attention: (
+    text: (
+      enabled:  nachiguro-color.color(orange, 800),
+      hover:    nachiguro-color.color(orange, 800),
+      focused:  nachiguro-color.color(orange, 800),
+      disabled: nachiguro-color.color(orange, 600)
+    ),
+    background: (
+      enabled:  nachiguro-color.color(orange,  50),
+      hover:    nachiguro-color.color(orange, 100),
+      focused:  nachiguro-color.color(white, 1000),
+      disabled: nachiguro-color.color(orange, 200)
+    ),
+    border: (
+      enabled:  nachiguro-color.color(orange,  400),
+      hover:    nachiguro-color.color(orange,  600),
+      focused:  nachiguro-color.color(orange,  700),
+      disabled: nachiguro-color.color(orange,  400)
+    )
+  )
+) !default;
+
+$interactive-list-color-matrix: (
+  border-color: nachiguro-color.color(gray, 400),
+  title: (
+    color: nachiguro-color.color(gray, 800)
+  ),
+  item: (
+    background-color: (
+      enabled: nachiguro-color.color(white, 1000),
+      focused: nachiguro-color.color(gray, 50),
+      hover: nachiguro-color.color(gray, 50),
+      disabled: nachiguro-color.color(white, 1000),
+      selected: nachiguro-color.color(blue, 50)
+    )
+  ),
+  leading: (
+    color: (
+      enabled: nachiguro-color.color(gray, 800),
+      disabled: nachiguro-color.color(gray, 300)
+    )
+  ),
+  trailing: (
+    color: (
+      enabled: nachiguro-color.color(gray, 800),
+      disabled: nachiguro-color.color(gray, 300)
+    )
+  ),
+  body: (
+    title: (
+      color: (
+        enabled: nachiguro-color.color(gray, 800),
+        disabled: nachiguro-color.color(gray, 300)
+      )
+    ),
+    description: (
+      color: (
+        enabled: nachiguro-color.color(gray, 600),
+        disabled: nachiguro-color.color(gray, 300),
+      )
+    )
+  )
+);
+
+$interactive-table-color-matrix: (
+  text: (
+    enabled: nachiguro-color.color(gray, 800),
+    hover: nachiguro-color.color(gray, 800),
+    disabled: nachiguro-color.color(gray, 300),
+    selected: nachiguro-color.color(gray, 800),
+  ),
+  background: (
+    enabled: nachiguro-color.color(white, 1000),
+    hover: nachiguro-color.color(gray, 50),
+    disabled: nachiguro-color.color(white, 1000),
+    selected: nachiguro-color.color(blue, 50)
+  ),
+  border: (
+    th: nachiguro-color.color(gray, 400),
+    td: nachiguro-color.color(gray, 300)
+  )
+);

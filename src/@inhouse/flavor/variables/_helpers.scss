@@ -1,0 +1,13 @@
+@use "./nachiguro-color";
+
+$transition-value: none !default;
+
+$selection-color-values: (
+  text: #fff,
+  background: #0a62ad, // Pepper Blue 700
+) !default;
+
+$disabled-opacity-value: 0.38 !default;
+$hollow-button-opacity-value: 0.15 !default;
+$solid-button-scrim-highlight: inset 0 1px 1px rgba(nachiguro-color.color(white, 1000), 0.5);
+$solid-button-scrim-shadow: inset 0 -1px 1px rgba(nachiguro-color.color(black, 1000), 0.1);
