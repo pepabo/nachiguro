@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "./variables";
+
+@mixin export {
+  // ここのみ特殊例として許可する
+  /* stylelint-disable no-invalid-position-at-import-rule */
+  @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css");
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+  /* stylelint-enable no-invalid-position-at-import-rule */
+
+  @font-face {
+    font-weight: 400;
+    font-family: "Inhouse Icons";
+    font-style: normal;
+    src:
+      url("../icon/dist/inhouse-icons.woff2") format("woff2"),
+      url("../icon/dist/inhouse-icons.woff") format("woff");
+  }
+
+  :root {
+    // フォールバックを目的に指定するfont familyの値はFlavorで指定しているためlintの対象から除外する
+    /* stylelint-disable font-family-no-missing-generic-family-keyword */
+    font-family: #{map.get(variables.$font-stack-values, japanese)};
+    /* stylelint-enable font-family-no-missing-generic-family-keyword */
+  }
+
+  ::selection {
+    color: #{map.get(variables.$selection-color-values, text)};
+    background-color: #{map.get(variables.$selection-color-values, background)};
+  }
+}
