@@ -21,6 +21,7 @@
     "sass": "^1.35.2"
   },
   "dependencies": {
+    "@inhouse/container": "^0.7.1",
     "@inhouse/grid": "^0.7.1"
   }
 }
