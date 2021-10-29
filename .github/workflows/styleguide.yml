@@ -35,6 +35,7 @@ jobs:
 
       - name: Build CSS
         run: |
+          echo '${{ secrets.NPMRC }}' >> $HOME/.npmrc
           npm ci
           npm run build
 
