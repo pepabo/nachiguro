@@ -62,31 +62,23 @@ $line-width-sizes: (
 ) !default;
 
 $gap-sizes: (
-  xxs: 1rem,   // spacing-sizes: m
-  xs:  1rem,   // spacing-sizes: m
   s:   1rem,   // spacing-sizes: m
   m:   1.5rem, // spacing-sizes: l
   l:   1.5rem, // spacing-sizes: l
-  xl:  1.5rem, // spacing-sizes: l
 ) !default;
 
 $boundary-sizes: (
-  xxs:  330px,
-  xs:   370px,
-  s:    600px,
-  m:    800px,
-  l:   1100px,
-  xl:  1400px
+  s: 480px,
+  m: 768px,
+  l: 1280px
 ) !default;
 
 $minimum-boundary-size: 1px;
 
 $content-width-sizes: (
-  xs:  480px,
-  s:   640px,
-  m:   960px,
-  l:  1200px,
-  xl: 1440px
+  s:   540px,
+  m:   720px,
+  l:  1280px,
 ) !default;
 
 $cell-vertical-gap-sizes: (
