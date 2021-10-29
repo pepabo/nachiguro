@@ -3378,6 +3378,8 @@ category: Components
   }
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
 /*doc
 ---
 title: Grid
@@ -3910,28 +3912,49 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 
 */
 .ncgr-row {
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   margin-top: -1rem;
   margin-right: -0.5rem;
   margin-left: -0.5rem;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 330px) {
   .ncgr-row {
     margin-top: -1rem;
     margin-right: -0.5rem;
     margin-left: -0.5rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 370px) {
+  .ncgr-row {
+    margin-top: -1rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .ncgr-row {
+    margin-top: -1rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+}
+@media screen and (min-width: 800px) {
   .ncgr-row {
     margin-top: -1.5rem;
     margin-right: -0.75rem;
     margin-left: -0.75rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1100px) {
+  .ncgr-row {
+    margin-top: -1.5rem;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
   .ncgr-row {
     margin-top: -1.5rem;
     margin-right: -0.75rem;
@@ -3946,6 +3969,9 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 }
 .ncgr-row.-align-items-end {
   align-items: flex-end;
+}
+.ncgr-row.-align-items-stretch {
+  align-items: stretch;
 }
 .ncgr-row.-justify-content-start {
   justify-content: flex-start;
@@ -3962,23 +3988,23 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 .ncgr-row.-justify-content-between {
   justify-content: space-between;
 }
-.ncgr-row.-no-gaps {
+.ncgr-row.-is-gapless {
   margin: 0;
   padding: 0;
 }
-.ncgr-row.-no-gaps > * {
+.ncgr-row.-is-gapless > * {
   margin: 0;
   padding: 0;
 }
 
 .ncgr-col {
   flex-shrink: 0;
+  box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  margin-top: 1rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  margin-top: 1rem;
 }
 .ncgr-col.-col-1 {
   flex: 0 0 auto;
@@ -4064,11 +4090,193 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 .ncgr-col.-offset-11 {
   margin-left: 91.6666666667%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 330px) {
   .ncgr-col {
+    margin-top: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+  }
+  .ncgr-col.-col-xxs-1 {
+    flex: 0 0 auto;
+    width: 8.3333333333%;
+  }
+  .ncgr-col.-col-xxs-2 {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+  .ncgr-col.-col-xxs-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .ncgr-col.-col-xxs-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .ncgr-col.-col-xxs-5 {
+    flex: 0 0 auto;
+    width: 41.6666666667%;
+  }
+  .ncgr-col.-col-xxs-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .ncgr-col.-col-xxs-7 {
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+  }
+  .ncgr-col.-col-xxs-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+  }
+  .ncgr-col.-col-xxs-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .ncgr-col.-col-xxs-10 {
+    flex: 0 0 auto;
+    width: 83.3333333333%;
+  }
+  .ncgr-col.-col-xxs-11 {
+    flex: 0 0 auto;
+    width: 91.6666666667%;
+  }
+  .ncgr-col.-col-xxs-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .ncgr-col.-offset-xxs-0 {
+    margin-left: 0%;
+  }
+  .ncgr-col.-offset-xxs-1 {
+    margin-left: 8.3333333333%;
+  }
+  .ncgr-col.-offset-xxs-2 {
+    margin-left: 16.6666666667%;
+  }
+  .ncgr-col.-offset-xxs-3 {
+    margin-left: 25%;
+  }
+  .ncgr-col.-offset-xxs-4 {
+    margin-left: 33.3333333333%;
+  }
+  .ncgr-col.-offset-xxs-5 {
+    margin-left: 41.6666666667%;
+  }
+  .ncgr-col.-offset-xxs-6 {
+    margin-left: 50%;
+  }
+  .ncgr-col.-offset-xxs-7 {
+    margin-left: 58.3333333333%;
+  }
+  .ncgr-col.-offset-xxs-8 {
+    margin-left: 66.6666666667%;
+  }
+  .ncgr-col.-offset-xxs-9 {
+    margin-left: 75%;
+  }
+  .ncgr-col.-offset-xxs-10 {
+    margin-left: 83.3333333333%;
+  }
+  .ncgr-col.-offset-xxs-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media screen and (min-width: 370px) {
+  .ncgr-col {
     margin-top: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .ncgr-col.-col-xs-1 {
+    flex: 0 0 auto;
+    width: 8.3333333333%;
+  }
+  .ncgr-col.-col-xs-2 {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+  .ncgr-col.-col-xs-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .ncgr-col.-col-xs-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .ncgr-col.-col-xs-5 {
+    flex: 0 0 auto;
+    width: 41.6666666667%;
+  }
+  .ncgr-col.-col-xs-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .ncgr-col.-col-xs-7 {
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+  }
+  .ncgr-col.-col-xs-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+  }
+  .ncgr-col.-col-xs-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .ncgr-col.-col-xs-10 {
+    flex: 0 0 auto;
+    width: 83.3333333333%;
+  }
+  .ncgr-col.-col-xs-11 {
+    flex: 0 0 auto;
+    width: 91.6666666667%;
+  }
+  .ncgr-col.-col-xs-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .ncgr-col.-offset-xs-0 {
+    margin-left: 0%;
+  }
+  .ncgr-col.-offset-xs-1 {
+    margin-left: 8.3333333333%;
+  }
+  .ncgr-col.-offset-xs-2 {
+    margin-left: 16.6666666667%;
+  }
+  .ncgr-col.-offset-xs-3 {
+    margin-left: 25%;
+  }
+  .ncgr-col.-offset-xs-4 {
+    margin-left: 33.3333333333%;
+  }
+  .ncgr-col.-offset-xs-5 {
+    margin-left: 41.6666666667%;
+  }
+  .ncgr-col.-offset-xs-6 {
+    margin-left: 50%;
+  }
+  .ncgr-col.-offset-xs-7 {
+    margin-left: 58.3333333333%;
+  }
+  .ncgr-col.-offset-xs-8 {
+    margin-left: 66.6666666667%;
+  }
+  .ncgr-col.-offset-xs-9 {
+    margin-left: 75%;
+  }
+  .ncgr-col.-offset-xs-10 {
+    margin-left: 83.3333333333%;
+  }
+  .ncgr-col.-offset-xs-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .ncgr-col {
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
   .ncgr-col.-col-s-1 {
     flex: 0 0 auto;
@@ -4155,11 +4363,11 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
     margin-left: 91.6666666667%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .ncgr-col {
+    margin-top: 1.5rem;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
-    margin-top: 1.5rem;
   }
   .ncgr-col.-col-m-1 {
     flex: 0 0 auto;
@@ -4246,11 +4454,11 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
     margin-left: 91.6666666667%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1100px) {
   .ncgr-col {
+    margin-top: 1.5rem;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
-    margin-top: 1.5rem;
   }
   .ncgr-col.-col-l-1 {
     flex: 0 0 auto;
@@ -4334,6 +4542,97 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
     margin-left: 83.3333333333%;
   }
   .ncgr-col.-offset-l-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .ncgr-col {
+    margin-top: 1.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+  .ncgr-col.-col-xl-1 {
+    flex: 0 0 auto;
+    width: 8.3333333333%;
+  }
+  .ncgr-col.-col-xl-2 {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+  .ncgr-col.-col-xl-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .ncgr-col.-col-xl-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .ncgr-col.-col-xl-5 {
+    flex: 0 0 auto;
+    width: 41.6666666667%;
+  }
+  .ncgr-col.-col-xl-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .ncgr-col.-col-xl-7 {
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+  }
+  .ncgr-col.-col-xl-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+  }
+  .ncgr-col.-col-xl-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .ncgr-col.-col-xl-10 {
+    flex: 0 0 auto;
+    width: 83.3333333333%;
+  }
+  .ncgr-col.-col-xl-11 {
+    flex: 0 0 auto;
+    width: 91.6666666667%;
+  }
+  .ncgr-col.-col-xl-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .ncgr-col.-offset-xl-0 {
+    margin-left: 0%;
+  }
+  .ncgr-col.-offset-xl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .ncgr-col.-offset-xl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .ncgr-col.-offset-xl-3 {
+    margin-left: 25%;
+  }
+  .ncgr-col.-offset-xl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .ncgr-col.-offset-xl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .ncgr-col.-offset-xl-6 {
+    margin-left: 50%;
+  }
+  .ncgr-col.-offset-xl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .ncgr-col.-offset-xl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .ncgr-col.-offset-xl-9 {
+    margin-left: 75%;
+  }
+  .ncgr-col.-offset-xl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .ncgr-col.-offset-xl-11 {
     margin-left: 91.6666666667%;
   }
 }
