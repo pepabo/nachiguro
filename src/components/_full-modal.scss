@@ -78,10 +78,13 @@ category: Components
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+  height: 100vh;
   transform: translateY(100vh);
   z-index: 2147483645;
-  height: -webkit-fill-available;
-  height: fill-available;
+  @include mediaquery(tablet) {
+    height: -webkit-fill-available;
+    height: fill-available;
+  }
   .ncgr-full-modal__body,
   .ncgr-full-modal__footer {
     z-index: 2147483645;
@@ -122,5 +125,7 @@ category: Components
   align-items: center;
   box-sizing: border-box;
   padding: 0.5rem;
-  margin-bottom: env(safe-area-inset-bottom);
+  @include mediaquery(tablet) {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
 }
