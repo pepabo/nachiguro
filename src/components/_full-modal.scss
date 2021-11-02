@@ -67,7 +67,7 @@ category: Components
 ```
 
 */
-  
+
 .ncgr-full-modal {
   background-color: var(--color-secondary-grouped-background);
   position: fixed;
@@ -81,8 +81,9 @@ category: Components
   height: 100vh;
   transform: translateY(100vh);
   z-index: 2147483645;
-  @supports (-webkit-touch-callout: none) {
-    height:-webkit-fill-available;
+  @include mediaquery(tablet) {
+    height: -webkit-fill-available;
+    height: fill-available;
   }
   .ncgr-full-modal__body,
   .ncgr-full-modal__footer {
@@ -124,7 +125,7 @@ category: Components
   align-items: center;
   box-sizing: border-box;
   padding: 0.5rem;
-  @supports (-webkit-touch-callout: none) {
+  @include mediaquery(tablet) {
     margin-bottom: env(safe-area-inset-bottom);
   }
 }
