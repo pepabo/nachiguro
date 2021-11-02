@@ -3329,9 +3329,10 @@ category: Components
   transform: translateY(100vh);
   z-index: 2147483645;
 }
-@supports (-webkit-touch-callout: none) {
+@media screen and (max-width: 768px) {
   .ncgr-full-modal {
     height: -webkit-fill-available;
+    height: fill-available;
   }
 }
 .ncgr-full-modal .ncgr-full-modal__body,
@@ -3374,7 +3375,7 @@ category: Components
   box-sizing: border-box;
   padding: 0.5rem;
 }
-@supports (-webkit-touch-callout: none) {
+@media screen and (max-width: 768px) {
   .ncgr-full-modal__footer {
     margin-bottom: env(safe-area-inset-bottom);
   }
