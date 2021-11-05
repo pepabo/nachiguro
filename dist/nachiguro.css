@@ -169,6 +169,7 @@ category: Animation
 ```
 
 */
+@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css");
 @keyframes slide-enter-top {
   0%, 100% {
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1186,10 +1187,6 @@ body {
   position: relative;
   color: var(--color-label);
   vertical-align: baseline;
-  font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
-  text-size-adjust: 100%;
-  font-feature-settings: "palt" 1;
-  letter-spacing: 0.03em;
   line-height: 1.8;
   padding: 0;
 }
@@ -1302,6 +1299,27 @@ category: Mixin
 
 .ncgr-shadow__24dp {
   box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/* stylelint-disable no-invalid-position-at-import-rule */
+/* stylelint-enable no-invalid-position-at-import-rule */
+@font-face {
+  font-weight: 400;
+  font-family: "Nachiguro Icons";
+  font-style: normal;
+  src: url("../icons/dest/Nachiguro-icons.woff2") format("woff2"), url("../icons/dest/Nachiguro-icons.woff") format("woff");
+}
+:root {
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+  font-family: 'Open Sans', 'Hiragino Kaku Gothic ProN', apple-system, BlinkMacSystemFont, Roboto, 'Lucida Grande', Helvetica, Arial, sans-serif;
+  /* stylelint-enable font-family-no-missing-generic-family-keyword */
+}
+
+::selection {
+  color: #fff;
+  background-color: #0a62ad;
 }
 
 /*doc
