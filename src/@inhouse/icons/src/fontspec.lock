@@ -1,0 +1,269 @@
+{
+  "fileRefs": {
+    "arrow_down.svg": {
+      "name": "arrow_down",
+      "codePoint": 61697
+    },
+    "arrow_drop_down.svg": {
+      "name": "arrow_drop_down",
+      "codePoint": 61698
+    },
+    "arrow_drop_left.svg": {
+      "name": "arrow_drop_left",
+      "codePoint": 61699
+    },
+    "arrow_drop_right.svg": {
+      "name": "arrow_drop_right",
+      "codePoint": 61700
+    },
+    "arrow_drop_up.svg": {
+      "name": "arrow_drop_up",
+      "codePoint": 61701
+    },
+    "arrow_left.svg": {
+      "name": "arrow_left",
+      "codePoint": 61702
+    },
+    "arrow_right.svg": {
+      "name": "arrow_right",
+      "codePoint": 61703
+    },
+    "arrow_up.svg": {
+      "name": "arrow_up",
+      "codePoint": 61704
+    },
+    "balloon.svg": {
+      "name": "balloon",
+      "codePoint": 61705
+    },
+    "bell.svg": {
+      "name": "bell",
+      "codePoint": 61706
+    },
+    "bill.svg": {
+      "name": "bill",
+      "codePoint": 61707
+    },
+    "bullet_circle.svg": {
+      "name": "bullet_circle",
+      "codePoint": 61708
+    },
+    "calendar.svg": {
+      "name": "calendar",
+      "codePoint": 61709
+    },
+    "camera.svg": {
+      "name": "camera",
+      "codePoint": 61710
+    },
+    "cart.svg": {
+      "name": "cart",
+      "codePoint": 61711
+    },
+    "check_on_circle.svg": {
+      "name": "check_on_circle",
+      "codePoint": 61712
+    },
+    "check.svg": {
+      "name": "check",
+      "codePoint": 61713
+    },
+    "chevron_double.svg": {
+      "name": "chevron_double",
+      "codePoint": 61714
+    },
+    "chevron_down.svg": {
+      "name": "chevron_down",
+      "codePoint": 61715
+    },
+    "chevron_left.svg": {
+      "name": "chevron_left",
+      "codePoint": 61716
+    },
+    "chevron_right.svg": {
+      "name": "chevron_right",
+      "codePoint": 61717
+    },
+    "chevron_up.svg": {
+      "name": "chevron_up",
+      "codePoint": 61718
+    },
+    "circle.svg": {
+      "name": "circle",
+      "codePoint": 61719
+    },
+    "clip.svg": {
+      "name": "clip",
+      "codePoint": 61720
+    },
+    "copy.svg": {
+      "name": "copy",
+      "codePoint": 61721
+    },
+    "cross_on_circle.svg": {
+      "name": "cross_on_circle",
+      "codePoint": 61722
+    },
+    "cross.svg": {
+      "name": "cross",
+      "codePoint": 61723
+    },
+    "download.svg": {
+      "name": "download",
+      "codePoint": 61724
+    },
+    "drag_handle.svg": {
+      "name": "drag_handle",
+      "codePoint": 61725
+    },
+    "ellipsis_horizontal_on_circle.svg": {
+      "name": "ellipsis_horizontal_on_circle",
+      "codePoint": 61726
+    },
+    "ellipsis_horizontal.svg": {
+      "name": "ellipsis_horizontal",
+      "codePoint": 61727
+    },
+    "ellipsis_vertical.svg": {
+      "name": "ellipsis_vertical",
+      "codePoint": 61728
+    },
+    "exclamation_on_triangle.svg": {
+      "name": "exclamation_on_triangle",
+      "codePoint": 61729
+    },
+    "facebook.svg": {
+      "name": "facebook",
+      "codePoint": 61730
+    },
+    "funnel.svg": {
+      "name": "funnel",
+      "codePoint": 61731
+    },
+    "garbage_can.svg": {
+      "name": "garbage_can",
+      "codePoint": 61732
+    },
+    "gear.svg": {
+      "name": "gear",
+      "codePoint": 61733
+    },
+    "hatena_bookmark.svg": {
+      "name": "hatena_bookmark",
+      "codePoint": 61734
+    },
+    "heart_border.svg": {
+      "name": "heart_border",
+      "codePoint": 61735
+    },
+    "heart.svg": {
+      "name": "heart",
+      "codePoint": 61736
+    },
+    "home.svg": {
+      "name": "home",
+      "codePoint": 61737
+    },
+    "info_on_circle.svg": {
+      "name": "info_on_circle",
+      "codePoint": 61738
+    },
+    "launch.svg": {
+      "name": "launch",
+      "codePoint": 61739
+    },
+    "location_pin.svg": {
+      "name": "location_pin",
+      "codePoint": 61740
+    },
+    "magnifying_glass.svg": {
+      "name": "magnifying_glass",
+      "codePoint": 61741
+    },
+    "megaphone.svg": {
+      "name": "megaphone",
+      "codePoint": 61742
+    },
+    "menu.svg": {
+      "name": "menu",
+      "codePoint": 61743
+    },
+    "mic.svg": {
+      "name": "mic",
+      "codePoint": 61744
+    },
+    "minus.svg": {
+      "name": "minus",
+      "codePoint": 61745
+    },
+    "node.svg": {
+      "name": "node",
+      "codePoint": 61746
+    },
+    "outside.svg": {
+      "name": "outside",
+      "codePoint": 61747
+    },
+    "pencil.svg": {
+      "name": "pencil",
+      "codePoint": 61748
+    },
+    "people.svg": {
+      "name": "people",
+      "codePoint": 61749
+    },
+    "pepapon.svg": {
+      "name": "pepapon",
+      "codePoint": 61750
+    },
+    "person_plus.svg": {
+      "name": "person_plus",
+      "codePoint": 61751
+    },
+    "person.svg": {
+      "name": "person",
+      "codePoint": 61752
+    },
+    "phone.svg": {
+      "name": "phone",
+      "codePoint": 61753
+    },
+    "plus_on_circle.svg": {
+      "name": "plus_on_circle",
+      "codePoint": 61754
+    },
+    "plus.svg": {
+      "name": "plus",
+      "codePoint": 61755
+    },
+    "qr_code_scanner.svg": {
+      "name": "qr_code_scanner",
+      "codePoint": 61756
+    },
+    "qr_code.svg": {
+      "name": "qr_code",
+      "codePoint": 61757
+    },
+    "question_on_circle.svg": {
+      "name": "question_on_circle",
+      "codePoint": 61758
+    },
+    "receipt.svg": {
+      "name": "receipt",
+      "codePoint": 61759
+    },
+    "star_border.svg": {
+      "name": "star_border",
+      "codePoint": 61760
+    },
+    "star.svg": {
+      "name": "star",
+      "codePoint": 61761
+    },
+    "twitter.svg": {
+      "name": "twitter",
+      "codePoint": 61762
+    }
+  },
+  "version": "0.2.1"
+}
