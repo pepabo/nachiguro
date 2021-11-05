@@ -4,8 +4,7 @@
 @mixin export {
   // ここのみ特殊例として許可する
   /* stylelint-disable no-invalid-position-at-import-rule */
-  @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css");
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+  @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css");
   /* stylelint-enable no-invalid-position-at-import-rule */
 
   @font-face {
