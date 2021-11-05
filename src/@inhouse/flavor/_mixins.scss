@@ -12,8 +12,8 @@
     font-family: "Nachiguro Icons";
     font-style: normal;
     src:
-      url("../icons/dest/Nachiguro-icons.woff2") format("woff2"),
-      url("../icons/dest/Nachiguro-icons.woff") format("woff");
+      ncgr-asset-url("icons/dest/Nachiguro-icons.woff2") format("woff2"),
+      ncgr-asset-url("icons/dest/Nachiguro-icons.woff") format("woff");
   }
 
   :root {
