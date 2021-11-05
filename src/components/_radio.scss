@@ -6,123 +6,37 @@ category: Components
 ---
 
 オプションの選択をする際に使用します。
-リストから選択できる項目が1つだけの場合は、Radioの代わりにSwitchの使用を検討しましょう。
-また、使用可能なオプションを折りたたむことができる場合は、スペース節約のため、Radioの代わりSelectboxを使用することを検討しましょう。
+List Viewの`leading`の中に入れて使用します。
 
 ```example
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-a" checked>
-  <span>伊賀流</span>
-</label>
-
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-b">
-  <span>甲賀流</span>
-</label>
-
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-c">
-  <span>その他</span>
-</label>
-```
-
-また、縦に並べる場合には、以下のようにマークアップします。
-
-```example
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-a" checked>
-  <span>伊賀流</span>
-</label>
-
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-b">
-  <span>甲賀流</span>
-</label>
-
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-c">
-  <span>その他</span>
-</label>
+<div class="ncgr-list-view">
+  <label class="ncgr-list-tile" for="koga">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-list-tile__icon">
+        <input class="ncgr-radio" type="radio" name="ninja" value="koga" id="koga" />
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      甲賀流
+    </div>
+  </label>
+  <label class="ncgr-list-tile" for="iga">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-list-tile__icon">
+        <input class="ncgr-radio" type="radio" name="ninja" value="iga" id="iga" />
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      伊賀流
+    </div>
+  </label>
+</div>
 ```
 
 */
 
+@use '@inhouse/radio/mixins';
+
 .ncgr-radio {
-  position: relative;
-  display: inline-block;
-  padding: 8px 24px 8px 24px;
-  cursor: pointer;
-
-  input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-
-  span {
-    padding: 0 4px 0 4px;
-    font-size: 16px;
-    font-weight: bold;
-    &::before {
-      content: '';
-      box-sizing: border-box;
-      position: absolute;
-      top: 12px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background-color: var(--color-textfield-background);
-      border-radius: 50%;
-      border: 2px solid rgba(var(--color-textfield-separator), 0.15);
-      transition-property: background-color, border-color;
-      transition-duration: 0.2s;
-      transition-timing-function: ease;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 19px;
-      left: ((20px - 6px) * 0.5);
-      width: 6px;
-      height: 6px;
-      background-color: var(--color-white);
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-    &:hover::before {
-      border-color: rgba(var(--color-textfield-separator), 0.2);
-    }
-  }
-
-  input:checked + span {
-    &::before {
-      background: var(--color-primary-500);
-      border-color: var(--color-primary-500);
-    }
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  input[disabled] + span {
-    cursor: not-allowed;
-    opacity: 0.3;
-    &::before {
-      opacity: 0.3;
-    }
-    &::after {
-      opacity: 0.3;
-    }
-    &:hover::before {
-      opacity: 0.3;
-    }
-  }
-}
-
-.ncgr-radio--vertical {
-  display: block;
+  @include mixins.style();
 }
