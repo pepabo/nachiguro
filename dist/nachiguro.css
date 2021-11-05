@@ -1303,13 +1303,11 @@ category: Mixin
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
-/* stylelint-disable no-invalid-position-at-import-rule */
-/* stylelint-enable no-invalid-position-at-import-rule */
 @font-face {
   font-weight: 400;
   font-family: "Nachiguro Icons";
   font-style: normal;
-  src: url("../icons/dest/Nachiguro-icons.woff2") format("woff2"), url("../icons/dest/Nachiguro-icons.woff") format("woff");
+  src: url("../assets/icons/dest/Nachiguro-icons.woff2") format("woff2"), url("../assets/icons/dest/Nachiguro-icons.woff") format("woff");
 }
 :root {
   /* stylelint-disable font-family-no-missing-generic-family-keyword */
