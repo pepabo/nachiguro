@@ -2,20 +2,6 @@
 @use "./variables";
 
 @mixin export {
-  // ここのみ特殊例として許可する
-  /* stylelint-disable no-invalid-position-at-import-rule */
-  @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css");
-  /* stylelint-enable no-invalid-position-at-import-rule */
-
-  @font-face {
-    font-weight: 400;
-    font-family: "Nachiguro Icons";
-    font-style: normal;
-    src:
-      ncgr-asset-url("icons/dest/Nachiguro-icons.woff2") format("woff2"),
-      ncgr-asset-url("icons/dest/Nachiguro-icons.woff") format("woff");
-  }
-
   :root {
     // フォールバックを目的に指定するfont familyの値はFlavorで指定しているためlintの対象から除外する
     /* stylelint-disable font-family-no-missing-generic-family-keyword */
