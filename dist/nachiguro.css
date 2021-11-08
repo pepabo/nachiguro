@@ -6610,6 +6610,8 @@ Product Cardは商品画像が一番目立つように設計します。
   padding-left: 0.25rem;
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
 /*doc
 ---
 title: Radio
@@ -6618,118 +6620,453 @@ category: Components
 ---
 
 オプションの選択をする際に使用します。
-リストから選択できる項目が1つだけの場合は、Radioの代わりにSwitchの使用を検討しましょう。
-また、使用可能なオプションを折りたたむことができる場合は、スペース節約のため、Radioの代わりSelectboxを使用することを検討しましょう。
+List Viewの`leading`の中に入れて使用します。
 
 ```example
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-a" checked>
-  <span>伊賀流</span>
-</label>
-
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-b">
-  <span>甲賀流</span>
-</label>
-
-<label class="ncgr-radio">
-  <input type="radio" name="example_radio" value="example-c">
-  <span>その他</span>
-</label>
-```
-
-また、縦に並べる場合には、以下のようにマークアップします。
-
-```example
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-a" checked>
-  <span>伊賀流</span>
-</label>
-
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-b">
-  <span>甲賀流</span>
-</label>
-
-<label class="ncgr-radio ncgr-radio--vertical">
-  <input type="radio" name="example_radio" value="example-c">
-  <span>その他</span>
-</label>
+<div class="ncgr-list-view">
+  <label class="ncgr-list-tile" for="koga">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-list-tile__icon">
+        <input class="ncgr-radio" type="radio" name="ninja" value="koga" id="koga" />
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      甲賀流
+    </div>
+  </label>
+  <label class="ncgr-list-tile" for="iga">
+    <div class="ncgr-list-tile__leading">
+      <div class="ncgr-list-tile__icon">
+        <input class="ncgr-radio" type="radio" name="ninja" value="iga" id="iga" />
+      </div>
+    </div>
+    <div class="ncgr-list-tile__title">
+      伊賀流
+    </div>
+  </label>
+</div>
 ```
 
 */
 .ncgr-radio {
   position: relative;
-  display: inline-block;
-  padding: 8px 24px 8px 24px;
-  cursor: pointer;
-}
-.ncgr-radio input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-.ncgr-radio span {
-  padding: 0 4px 0 4px;
-  font-size: 16px;
-  font-weight: bold;
-}
-.ncgr-radio span::before {
-  content: "";
+  display: block;
   box-sizing: border-box;
-  position: absolute;
-  top: 12px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-textfield-background);
-  border-radius: 50%;
-  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
-  transition-property: background-color, border-color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-}
-.ncgr-radio span::after {
-  content: "";
-  position: absolute;
-  top: 19px;
-  left: 7px;
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-white);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.ncgr-radio span:hover::before {
-  border-color: rgba(var(--color-textfield-separator), 0.2);
-}
-.ncgr-radio input:checked + span::before {
-  background: var(--color-primary-500);
-  border-color: var(--color-primary-500);
-}
-.ncgr-radio input:checked + span::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
   opacity: 1;
 }
-.ncgr-radio input[disabled] + span {
-  cursor: not-allowed;
-  opacity: 0.3;
-}
-.ncgr-radio input[disabled] + span::before {
-  opacity: 0.3;
-}
-.ncgr-radio input[disabled] + span::after {
-  opacity: 0.3;
-}
-.ncgr-radio input[disabled] + span:hover::before {
-  opacity: 0.3;
-}
-
-.ncgr-radio--vertical {
+.ncgr-radio::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:hover, .ncgr-radio.--hover {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-radio:hover::before, .ncgr-radio.--hover::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:hover::after, .ncgr-radio.--hover::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:hover::after::after, .ncgr-radio.--hover::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:focus, .ncgr-radio.--focused {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-radio:focus::before, .ncgr-radio.--focused::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(173, 180, 187, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:focus::after, .ncgr-radio.--focused::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:focus::after::after, .ncgr-radio.--focused::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:checked, .ncgr-radio.--selected {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-radio:checked::before, .ncgr-radio.--selected::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #067bbf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:checked::after, .ncgr-radio.--selected::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #067bbf;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:checked::after::after, .ncgr-radio.--selected::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:disabled, .ncgr-radio.--disabled {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: default;
+  opacity: 0.38;
+}
+.ncgr-radio:disabled::before, .ncgr-radio.--disabled::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:disabled::after, .ncgr-radio.--disabled::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:disabled::after::after, .ncgr-radio.--disabled::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:checked:focus, .ncgr-radio:checked.--focused, .ncgr-radio.--selected:focus, .ncgr-radio.--selected.--focused {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-radio:checked:focus::before, .ncgr-radio:checked.--focused::before, .ncgr-radio.--selected:focus::before, .ncgr-radio.--selected.--focused::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(18, 156, 229, 0.15), 0 0 0 2px #067bbf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:checked:focus::after, .ncgr-radio:checked.--focused::after, .ncgr-radio.--selected:focus::after, .ncgr-radio.--selected.--focused::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #067bbf;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:checked:focus::after::after, .ncgr-radio:checked.--focused::after::after, .ncgr-radio.--selected:focus::after::after, .ncgr-radio.--selected.--focused::after::after {
+  content: attr(data-icon);
+}
+.ncgr-radio:checked:disabled, .ncgr-radio:checked.--disabled, .ncgr-radio.--selected:disabled, .ncgr-radio.--selected.--disabled {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: default;
+  opacity: 0.38;
+}
+.ncgr-radio:checked:disabled::before, .ncgr-radio:checked.--disabled::before, .ncgr-radio.--selected:disabled::before, .ncgr-radio.--selected.--disabled::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #067bbf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-radio:checked:disabled::after, .ncgr-radio:checked.--disabled::after, .ncgr-radio.--selected:disabled::after, .ncgr-radio.--selected.--disabled::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+  color: #067bbf;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  content: "circle";
+  pointer-events: none;
+}
+.ncgr-radio:checked:disabled::after::after, .ncgr-radio:checked.--disabled::after::after, .ncgr-radio.--selected:disabled::after::after, .ncgr-radio.--selected.--disabled::after::after {
+  content: attr(data-icon);
 }
 
 /*doc
