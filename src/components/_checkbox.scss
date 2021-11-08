@@ -18,12 +18,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
     </div>
     <div class="ncgr-list-tile__trailing">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="koga2">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="koga2">
       </div>
     </div>
   </label>
@@ -33,12 +28,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
     </div>
     <div class="ncgr-list-tile__trailing">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="iga2">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="iga2">
       </div>
     </div>
   </label>
@@ -48,12 +38,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   <label class="ncgr-list-tile" for="koga3">
     <div class="ncgr-list-tile__leading">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox"" id="koga3">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox"" id="koga3">
       </div>
     </div>
     <div class="ncgr-list-tile__title">
@@ -63,12 +48,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   <label class="ncgr-list-tile" for="iga3">
     <div class="ncgr-list-tile__leading">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="iga3">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="iga3">
       </div>
     </div>
     <div class="ncgr-list-tile__title">
@@ -79,41 +59,8 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
 ```
 */
 
-.ncgr-checkbox {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  input {
-    display: none;
-  }
-  input:checked + .ncgr-checkbox__background {
-    background: var(--color-primary-500);
-    border-color: var(--color-primary-500);
-    color: var(--color-white);
-  }  
-  input:disabled + .ncgr-checkbox__background {
-    cursor: not-allowed;
-    background: var(--color-default-200);
-    border-color: var(--color-default-200);
-  }
-}
+@use '@inhouse/checkbox/mixins';
 
-.ncgr-checkbox__background {
-  box-sizing: border-box;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: var(--color-textfield-background);
-  border-radius: 0.25rem;
-  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
-  transition-property: background-color, border-color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: transparent;
-  font-size: 0.875rem;
-  &:hover {
-    border-color: rgba(var(--color-textfield-separator), 0.2);
-  }
+.ncgr-checkbox {
+  @include mixins.style();
 }
