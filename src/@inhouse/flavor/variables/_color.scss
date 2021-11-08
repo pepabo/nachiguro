@@ -546,21 +546,7 @@ $interactive-list-color-matrix: (
   )
 );
 
-$interactive-table-color-matrix: (
-  text: (
-    enabled: nachiguro-color.color(gray, 800),
-    hover: nachiguro-color.color(gray, 800),
-    disabled: nachiguro-color.color(gray, 300),
-    selected: nachiguro-color.color(gray, 800),
-  ),
-  background: (
-    enabled: nachiguro-color.color(white, 1000),
-    hover: nachiguro-color.color(gray, 50),
-    disabled: nachiguro-color.color(white, 1000),
-    selected: nachiguro-color.color(blue, 50)
-  ),
-  border: (
-    th: nachiguro-color.color(gray, 400),
-    td: nachiguro-color.color(gray, 300)
-  )
-);
+$interactive-table-color: nachiguro-color.color(gray, 800);
+$interactive-table-th-background-color: nachiguro-color.color(white, 1000);
+$interactive-table-th-border-color: nachiguro-color.color(gray, 400);
+$interactive-table-td-border-color: nachiguro-color.color(gray, 300);
