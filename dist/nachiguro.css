@@ -2745,6 +2745,8 @@ category: Components
   height: 64px;
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
 /*doc
 ---
 title: Checkbox
@@ -2765,12 +2767,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
     </div>
     <div class="ncgr-list-tile__trailing">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="koga2">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="koga2">
       </div>
     </div>
   </label>
@@ -2780,12 +2777,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
     </div>
     <div class="ncgr-list-tile__trailing">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="iga2">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="iga2">
       </div>
     </div>
   </label>
@@ -2795,12 +2787,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   <label class="ncgr-list-tile" for="koga3">
     <div class="ncgr-list-tile__leading">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox"" id="koga3">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox"" id="koga3">
       </div>
     </div>
     <div class="ncgr-list-tile__title">
@@ -2810,12 +2797,7 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
   <label class="ncgr-list-tile" for="iga3">
     <div class="ncgr-list-tile__leading">
       <div class="ncgr-list-tile__icon">
-        <div class="ncgr-checkbox">
-          <input type="checkbox" id="iga3">
-          <div class="ncgr-checkbox__background">
-            <i class="fas fa-check"></i>
-          </div>
-        </div>
+        <input class="ncgr-checkbox" type="checkbox" id="iga3">
       </div>
     </div>
     <div class="ncgr-list-tile__title">
@@ -2827,41 +2809,633 @@ List Viewの`leading`や`trailing`の中に入れて使用します。
 */
 .ncgr-checkbox {
   position: relative;
-  display: inline-block;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
   cursor: pointer;
+  opacity: 1;
 }
-.ncgr-checkbox input {
-  display: none;
-}
-.ncgr-checkbox input:checked + .ncgr-checkbox__background {
-  background: var(--color-primary-500);
-  border-color: var(--color-primary-500);
-  color: var(--color-white);
-}
-.ncgr-checkbox input:disabled + .ncgr-checkbox__background {
-  cursor: not-allowed;
-  background: var(--color-default-200);
-  border-color: var(--color-default-200);
-}
-
-.ncgr-checkbox__background {
+.ncgr-checkbox::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
   box-sizing: border-box;
   width: 1.25rem;
   height: 1.25rem;
-  background-color: var(--color-textfield-background);
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #fff;
   border-radius: 0.25rem;
-  border: 2px solid rgba(var(--color-textfield-separator), 0.15);
-  transition-property: background-color, border-color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: transparent;
-  font-size: 0.875rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
 }
-.ncgr-checkbox__background:hover {
-  border-color: rgba(var(--color-textfield-separator), 0.2);
+.ncgr-checkbox::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #067bbf;
+  text-align: center;
+  opacity: 0;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:hover, .ncgr-checkbox.--hover {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox:hover::before, .ncgr-checkbox.--hover::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-checkbox:hover::after, .ncgr-checkbox.--hover::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #067bbf;
+  text-align: center;
+  opacity: 0;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:hover::after::after, .ncgr-checkbox.--hover::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:focus, .ncgr-checkbox.--focused {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox:focus::before, .ncgr-checkbox.--focused::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 4px rgba(173, 180, 187, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-checkbox:focus::after, .ncgr-checkbox.--focused::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #067bbf;
+  text-align: center;
+  opacity: 0;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:focus::after::after, .ncgr-checkbox.--focused::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:checked, .ncgr-checkbox.--selected {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox:checked::before, .ncgr-checkbox.--selected::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox:checked::after, .ncgr-checkbox.--selected::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:checked::after::after, .ncgr-checkbox.--selected::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox.--mixed {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox.--mixed::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox.--mixed::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "minus";
+  pointer-events: none;
+}
+.ncgr-checkbox.--mixed::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:disabled, .ncgr-checkbox.--disabled {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: default;
+  opacity: 0.38;
+}
+.ncgr-checkbox:disabled::before, .ncgr-checkbox.--disabled::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 2px #c4cbcf, inset 0px 1.5px 3px 0px rgba(0, 0, 0, 0.12);
+  content: "";
+}
+.ncgr-checkbox:disabled::after, .ncgr-checkbox.--disabled::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #067bbf;
+  text-align: center;
+  opacity: 0;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:disabled::after::after, .ncgr-checkbox.--disabled::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:checked:focus, .ncgr-checkbox:checked.--focused, .ncgr-checkbox.--selected:focus, .ncgr-checkbox.--selected.--focused {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox:checked:focus::before, .ncgr-checkbox:checked.--focused::before, .ncgr-checkbox.--selected:focus::before, .ncgr-checkbox.--selected.--focused::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 4px rgba(18, 156, 229, 0.15), 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox:checked:focus::after, .ncgr-checkbox:checked.--focused::after, .ncgr-checkbox.--selected:focus::after, .ncgr-checkbox.--selected.--focused::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:checked:focus::after::after, .ncgr-checkbox:checked.--focused::after::after, .ncgr-checkbox.--selected:focus::after::after, .ncgr-checkbox.--selected.--focused::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox:checked:disabled, .ncgr-checkbox:checked.--disabled, .ncgr-checkbox.--selected:disabled, .ncgr-checkbox.--selected.--disabled {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: default;
+  opacity: 0.38;
+}
+.ncgr-checkbox:checked:disabled::before, .ncgr-checkbox:checked.--disabled::before, .ncgr-checkbox.--selected:disabled::before, .ncgr-checkbox.--selected.--disabled::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox:checked:disabled::after, .ncgr-checkbox:checked.--disabled::after, .ncgr-checkbox.--selected:disabled::after, .ncgr-checkbox.--selected.--disabled::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "check";
+  pointer-events: none;
+}
+.ncgr-checkbox:checked:disabled::after::after, .ncgr-checkbox:checked.--disabled::after::after, .ncgr-checkbox.--selected:disabled::after::after, .ncgr-checkbox.--selected.--disabled::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox.--mixed:focus, .ncgr-checkbox.--mixed.--focused {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-checkbox.--mixed:focus::before, .ncgr-checkbox.--mixed.--focused::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 4px rgba(18, 156, 229, 0.15), 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox.--mixed:focus::after, .ncgr-checkbox.--mixed.--focused::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "minus";
+  pointer-events: none;
+}
+.ncgr-checkbox.--mixed:focus::after::after, .ncgr-checkbox.--mixed.--focused::after::after {
+  content: attr(data-icon);
+}
+.ncgr-checkbox.--mixed:disabled, .ncgr-checkbox.--mixed.--disabled {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: unset;
+  cursor: default;
+  opacity: 0.38;
+}
+.ncgr-checkbox.--mixed:disabled::before, .ncgr-checkbox.--mixed.--disabled::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  background-color: #067bbf;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px #067bbf, 0 0 0 0 transparent,0px 0px 0px 0px rgba(0, 0, 0, 0);
+  content: "";
+}
+.ncgr-checkbox.--mixed:disabled::after, .ncgr-checkbox.--mixed.--disabled::after {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.625rem;
+  margin-left: -0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  content: "minus";
+  pointer-events: none;
+}
+.ncgr-checkbox.--mixed:disabled::after::after, .ncgr-checkbox.--mixed.--disabled::after::after {
+  content: attr(data-icon);
 }
 
 /*doc
