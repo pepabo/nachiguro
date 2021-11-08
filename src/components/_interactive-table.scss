@@ -1,0 +1,5 @@
+@use '@inhouse/interactive-table/mixins';
+
+.ncgr-interactive-table {
+  @include mixins.style();
+}
