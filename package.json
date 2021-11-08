@@ -25,6 +25,7 @@
     "@inhouse/container": "^0.7.2",
     "@inhouse/grid": "^0.7.2",
     "@inhouse/icon": "^0.7.2",
+    "@inhouse/radio": "^0.7.2",
     "@inhouse/table": "^0.7.4"
   }
 }
