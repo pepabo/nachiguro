@@ -5,10 +5,10 @@ name: list
 category: Components
 ---
 
-`.ncgr-list`を指定すると黒丸のリストになります。
+`.ncgr-ul`を指定すると黒丸のリストになります。
 
 ```example
-<ul class="ncgr-list">
+<ul class="ncgr-ul">
   <li>臨</li>
   <li>兵</li>
   <li>闘</li>
@@ -21,10 +21,10 @@ category: Components
 </ul>
 ```
 
-`.ncgr-list--decimal`を指定すると算用数字のリストになります。
+`.ncgr-ol`を指定すると算用数字のリストになります。
 
 ```example
-<ul class="ncgr-list ncgr-list--decimal">
+<ul class="ncgr-ol">
   <li>臨</li>
   <li>兵</li>
   <li>闘</li>
@@ -39,13 +39,16 @@ category: Components
 
 */
 
-.ncgr-list {
-  list-style-type: disc;
-  margin-left: 24px;
-  line-height: 1.8;
+@use '@inhouse/list/mixins';
+
+.ncgr-ol {
+  @include mixins.style();
 }
 
-.ncgr-list--decimal {
-  list-style-type: decimal;
-  list-style-position: outside;
+.ncgr-ul {
+  @include mixins.style((
+    density: normal,
+    list-style-type: disc,
+    size: m,
+  ));
 }
