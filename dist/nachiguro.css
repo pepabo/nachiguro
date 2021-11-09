@@ -5312,6 +5312,247 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
   border: 1px solid var(--color-default-75);
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/* stylelint-disable no-descending-specificity */
+/*doc
+---
+title: Interactive Table
+name: interactive-table
+category: Components
+---
+
+商品やユーザーなど、あるオブジェクトの集合とInteractiveにやりとりするためのTableを提供します。
+
+```example
+<table class="ncgr-interactive-table">
+  <tbody>
+    <tr>
+      <th style="width: 80px;">アイテム名</th>
+      <th>価格</th>
+      <th class="-align-end">個数</th>
+    </tr>
+    <tr>
+      <td>Tシャツ</td>
+      <td>2,000円</td>
+      <td class="-align-end">10</td>
+    </tr>
+    <tr>
+      <td>トートバッグ</td>
+      <td>1,000円</td>
+      <td class="-align-end">10</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+.ncgr-interactive-table {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-spacing: 0;
+}
+.ncgr-interactive-table thead tr {
+  color: #3a3e40;
+}
+.ncgr-interactive-table thead th {
+  text-align: start;
+  background-color: #fff;
+}
+.ncgr-interactive-table thead.-is-sticky th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.ncgr-interactive-table tbody tr {
+  color: #3a3e40;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
+}
+.ncgr-interactive-table tbody tr:hover, .ncgr-interactive-table tbody tr.--hover {
+  color: #3a3e40;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.ncgr-interactive-table tbody tr.--disabled {
+  color: #3a3e40;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.38;
+}
+.ncgr-interactive-table tbody tr.--disabled:hover, .ncgr-interactive-table tbody tr.--disabled.--hover {
+  color: #3a3e40;
+  background-color: rgba(0, 0, 0, 0);
+}
+.ncgr-interactive-table tbody tr.--selected {
+  color: #3a3e40;
+  background-color: rgba(18, 156, 229, 0.08);
+}
+.ncgr-interactive-table tbody tr.--selected:hover, .ncgr-interactive-table tbody tr.--selected.--hover {
+  color: #3a3e40;
+  background-color: rgba(18, 156, 229, 0.08);
+}
+.ncgr-interactive-table tbody tr.-is-draggable {
+  cursor: grab;
+}
+.ncgr-interactive-table tbody tr.-is-draggable:active, .ncgr-interactive-table tbody tr.-is-draggable.--dragged {
+  box-shadow: 0 0 0 0 transparent,0px 2px 5px 0px rgba(0, 0, 0, 0.08),0px 7px 8px -5px rgba(0, 0, 0, 0.12),0px 10px 25px 0px rgba(0, 0, 0, 0.12);
+  cursor: grabbing;
+}
+.ncgr-interactive-table th,
+.ncgr-interactive-table td {
+  padding: 0 1.5rem;
+}
+.ncgr-interactive-table th {
+  font-weight: bold;
+  border-color: #c4cbcf;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-table th ._wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ncgr-interactive-table th ._control.-order-asc {
+  transform: rotate(0deg);
+}
+.ncgr-interactive-table th ._control.-order-desc {
+  transform: rotate(180deg);
+}
+.ncgr-interactive-table th.-align-start {
+  text-align: start;
+}
+.ncgr-interactive-table th.-align-start ._wrapper {
+  justify-content: flex-start;
+}
+.ncgr-interactive-table th.-align-end {
+  text-align: end;
+}
+.ncgr-interactive-table th.-align-end ._wrapper {
+  justify-content: flex-end;
+}
+.ncgr-interactive-table td {
+  font-weight: normal;
+  border-color: #d5dbde;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-table td ._wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ncgr-interactive-table td ._control.-order-asc {
+  transform: rotate(0deg);
+}
+.ncgr-interactive-table td ._control.-order-desc {
+  transform: rotate(180deg);
+}
+.ncgr-interactive-table td.-align-start {
+  text-align: start;
+}
+.ncgr-interactive-table td.-align-start ._wrapper {
+  justify-content: flex-start;
+}
+.ncgr-interactive-table td.-align-end {
+  text-align: end;
+}
+.ncgr-interactive-table td.-align-end ._wrapper {
+  justify-content: flex-end;
+}
+.ncgr-interactive-table ._media ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-table ._media ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-table ._media.-size-s ._thumbnail {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-table ._media.-size-s ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-table ._media.-size-m ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-table ._media.-size-m ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-table ._media.-size-l ._thumbnail {
+  box-sizing: border-box;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-table ._media.-size-l ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-table ._icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+.ncgr-interactive-table.-density-dense th,
+.ncgr-interactive-table.-density-dense td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-table.-density-normal th,
+.ncgr-interactive-table.-density-normal td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-table.-density-comfort th,
+.ncgr-interactive-table.-density-comfort td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 /*doc
 ---
 title: Image
