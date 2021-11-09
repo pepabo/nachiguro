@@ -5640,6 +5640,8 @@ category: Components
   background-color: var(--color-danger-50);
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
 /*doc
 ---
 title: List
@@ -5647,10 +5649,10 @@ name: list
 category: Components
 ---
 
-`.ncgr-list`を指定すると黒丸のリストになります。
+`.ncgr-ul`を指定すると黒丸のリストになります。
 
 ```example
-<ul class="ncgr-list">
+<ul class="ncgr-ul">
   <li>臨</li>
   <li>兵</li>
   <li>闘</li>
@@ -5663,10 +5665,10 @@ category: Components
 </ul>
 ```
 
-`.ncgr-list--decimal`を指定すると算用数字のリストになります。
+`.ncgr-ol`を指定すると算用数字のリストになります。
 
 ```example
-<ul class="ncgr-list ncgr-list--decimal">
+<ul class="ncgr-ol">
   <li>臨</li>
   <li>兵</li>
   <li>闘</li>
@@ -5680,15 +5682,680 @@ category: Components
 ```
 
 */
-.ncgr-list {
-  list-style-type: disc;
-  margin-left: 24px;
-  line-height: 1.8;
+.ncgr-ol {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+}
+.ncgr-ol.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-ol li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: relative;
+  padding-left: 3rem;
+  counter-increment: list;
+}
+.ncgr-ol li::before {
+  font-family: inherit;
+  content: counter(list) ".";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 3rem;
+  text-align: center;
+}
+.ncgr-ol.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-dense li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense ul,
+.ncgr-ol.-density-dense ol {
+  margin-top: 0.25rem;
+  margin-bottom: calc(-1 * 0.25rem);
+}
+.ncgr-ol.-density-normal li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal ul,
+.ncgr-ol.-density-normal ol {
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
+}
+.ncgr-ol.-density-comfort li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort ul,
+.ncgr-ol.-density-comfort ol {
+  margin-top: 1rem;
+  margin-bottom: calc(-1 * 1rem);
+}
+.ncgr-ol.-density-dense.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-dense.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-dense.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-normal.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-normal.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-normal.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-comfort.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol.-density-comfort.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-comfort.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ol.-density-dense.-has-background {
+  padding: 0.25rem 0;
+}
+.ncgr-ol.-density-normal.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-ol.-density-comfort.-has-background {
+  padding: 1rem 0;
+}
+.ncgr-ol ul,
+.ncgr-ol ol {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
+}
+.ncgr-ol ul > li::before {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  content: "bullet_circle";
+}
+.ncgr-ol ul > li::before::after {
+  content: attr(data-icon);
+}
+.ncgr-ol ol > li::before {
+  font-family: inherit;
+  content: counter(list) ".";
 }
 
-.ncgr-list--decimal {
-  list-style-type: decimal;
-  list-style-position: outside;
+.ncgr-ul {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+}
+.ncgr-ul.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-ul li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: relative;
+  padding-left: 3rem;
+  counter-increment: list;
+}
+.ncgr-ul li::before {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  content: "bullet_circle";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 3rem;
+  text-align: center;
+}
+.ncgr-ul li::before::after {
+  content: attr(data-icon);
+}
+.ncgr-ul.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-dense li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense ul,
+.ncgr-ul.-density-dense ol {
+  margin-top: 0.25rem;
+  margin-bottom: calc(-1 * 0.25rem);
+}
+.ncgr-ul.-density-normal li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal ul,
+.ncgr-ul.-density-normal ol {
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
+}
+.ncgr-ul.-density-comfort li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort ul,
+.ncgr-ul.-density-comfort ol {
+  margin-top: 1rem;
+  margin-bottom: calc(-1 * 1rem);
+}
+.ncgr-ul.-density-dense.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-dense.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-dense.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-normal.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-normal.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-normal.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-comfort.-size-s li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort.-size-s li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort.-size-m li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort.-size-m li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul.-density-comfort.-size-l li {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-comfort.-size-l li::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.ncgr-ul.-density-dense.-has-background {
+  padding: 0.25rem 0;
+}
+.ncgr-ul.-density-normal.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-ul.-density-comfort.-has-background {
+  padding: 1rem 0;
+}
+.ncgr-ul ul,
+.ncgr-ul ol {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
+}
+.ncgr-ul ul > li::before {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  content: "bullet_circle";
+}
+.ncgr-ul ul > li::before::after {
+  content: attr(data-icon);
+}
+.ncgr-ul ol > li::before {
+  font-family: inherit;
+  content: counter(list) ".";
 }
 
 /*doc
