@@ -26,6 +26,7 @@
     "@inhouse/grid": "^0.7.2",
     "@inhouse/icon": "^0.7.2",
     "@inhouse/interactive-table": "^0.7.2",
+    "@inhouse/list": "^0.7.6",
     "@inhouse/radio": "^0.7.2",
     "@inhouse/table": "^0.7.5"
   }
