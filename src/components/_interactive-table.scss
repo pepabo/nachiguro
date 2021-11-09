@@ -1,3 +1,36 @@
+/*doc
+---
+title: Interactive Table
+name: interactive-table
+category: Components
+---
+
+商品やユーザーなど、あるオブジェクトの集合とInteractiveにやりとりするためのTableを提供します。
+
+```example
+<table class="ncgr-interactive-table">
+  <tbody>
+    <tr>
+      <th style="width: 80px;">アイテム名</th>
+      <th>価格</th>
+      <th class="-align-end">個数</th>
+    </tr>
+    <tr>
+      <td>Tシャツ</td>
+      <td>2,000円</td>
+      <td class="-align-end">10</td>
+    </tr>
+    <tr>
+      <td>トートバッグ</td>
+      <td>1,000円</td>
+      <td class="-align-end">10</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
 @use '@inhouse/interactive-table/mixins';
 
 .ncgr-interactive-table {
