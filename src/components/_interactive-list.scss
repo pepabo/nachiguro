@@ -1,0 +1,459 @@
+/*doc
+---
+title: InteractiveList
+name: interactive-list
+category: Components
+---
+
+選択可能なリストを表現するコンポーネントです。
+
+```example
+<div class="ncgr-interactive-list">
+  <h1 class="_title">Multi Line</h1>
+  <ul>
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item --disabled">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item --activated">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItem">
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItem" name="SingleLineItem" type="checkbox" value="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemSelected">
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemSelected" name="SingleLineItemSelected" type="checkbox" value="" checked="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_icon"><span class="ncgr-icon" data-icon="home"></span></div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </a>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_icon"><span class="ncgr-icon" data-icon="home"></span></div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </a>
+    </li>
+    <li class="_item -is-draggable" draggable="true">
+      <div>
+        <div class="_leading">
+          <div class="_icon"><span class="ncgr-icon" data-icon="drag_handle"></span></div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item -is-draggable" draggable="true">
+      <div>
+        <div class="_leading">
+          <div class="_icon"><span class="ncgr-icon" data-icon="drag_handle"></span></div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithCheckboxLeading">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithCheckboxLeading" name="SingleLineItemWithCheckboxLeading" type="checkbox" value="">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithCheckboxLeadingTrailing">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithCheckboxLeadingTrailing" name="SingleLineItemWithCheckboxLeadingTrailing" type="checkbox" value="">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithCheckboxLeadingTrailingSelected">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithCheckboxLeadingTrailingSelected" name="SingleLineItemWithCheckboxLeadingTrailingSelected" type="checkbox" value="" checked="">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithRadioLeading">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-radio" id="SingleLineItemWithRadioLeading" name="SingleLineItemWithRadio" type="radio" value="SingleLineItemWithRadioLeading">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithRadioLeadingTrailing">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-radio" id="SingleLineItemWithRadioLeadingTrailing" name="SingleLineItemWithRadio" type="radio" value="SingleLineItemWithRadioLeadingTrailing">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithRadioLeadingTrailingSelected">
+        <div class="_leading">
+          <div class="_input">
+            <input class="ncgr-radio" id="SingleLineItemWithRadioLeadingTrailingSelected" name="SingleLineItemWithRadio" type="radio" value="SingleLineItemWithRadioLeadingTrailingSelected" checked="">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar"><img src="https://picsum.photos/200/300"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar"><img src="https://picsum.photos/200/300"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithAvatar">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/200/300">
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithAvatar" name="SingleLineItemWithAvatar" type="checkbox" value="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithAvatarSelected">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/200/300">
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithAvatarSelected" name="SingleLineItemWithAvatarSelected" type="checkbox" value="" checked="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar"><img src="https://picsum.photos/200/300"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><img src="https://picsum.photos/200/200"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><img src="https://picsum.photos/200/200"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithImage">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/200/200">
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithImage" name="SingleLineItemWithImage" type="checkbox" value="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithImageSelected">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/200/200">
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input class="ncgr-checkbox" id="SingleLineItemWithImageSelected" name="SingleLineItemWithImageSelected" type="checkbox" value="" checked="">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><img src="https://picsum.photos/200/200"></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_right"></span></div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+```
+
+*/
+
+@use '@inhouse/interactive-list/mixins';
+
+.ncgr-interactive-list {
+  @include mixins.style();
+}
