@@ -5,75 +5,23 @@ name: avatar
 category: Components
 ---
 
-ある箇所が特定のユーザーが所有するものであることを表す場合に使用します。大きさはそのセクションでの重要度に合わせて「Small・Medium・Large」の3種類を使い分けます。
-
-ユーザー名が長すぎる場合は一覧画面など次のアクションでユーザー名が取得できる場合に限り、三点リーダーで省略することができます。
-
-さらにユーザー名を伝えることの優先順位が低いと判断できる場合は、ユーザー名自体を省略することも可能です。
+対象のオブジェクトがユーザーに関するものであることを明確にするために使用します。
 
 ```example
-<a class="ncgr-avatar -s" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
-<a class="ncgr-avatar -m" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
-<a class="ncgr-avatar -l" href="#">
-  <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-  <span class="ncgr-avatar__name">surisurikun</span>
-</a>
+<div class="ncgr-avatar -size-s">
+  <img alt="Avatar" src="./images/components/avatar/avatar.png">
+</div>
+<div class="ncgr-avatar -size-m">
+  <img alt="Avatar" src="./images/components/avatar/avatar.png">
+</div>
+<div class="ncgr-avatar -size-l">
+  <img alt="Avatar" src="./images/components/avatar/avatar.png">
+</div>
 ```
 */
 
+@use '@inhouse/avatar/mixins';
+
 .ncgr-avatar {
-  display: inline-block;
-  cursor: pointer;
-  .ncgr-avatar__image {
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    vertical-align: middle;
-    box-sizing: border-box;
-  }
-  .ncgr-avatar__name {
-    color: var(--color-label);
-    vertical-align: middle;
-    font-weight: bold;
-    word-break: break-word;
-  }
-}
-
-.ncgr-avatar.-s {
-  .ncgr-avatar__image {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .ncgr-avatar__name {
-    font-size: 0.8125rem;
-    padding-left: 0;
-  }
-}
-
-.ncgr-avatar.-m {
-  .ncgr-avatar__image {
-    width: 2rem;
-    height: 2rem;
-  }
-  .ncgr-avatar__name {
-    font-size: 1rem;
-    padding-left: 0.25rem;
-  }
-}
-
-.ncgr-avatar.-l {
-  .ncgr-avatar__image {
-    width: 3rem;
-    height: 3rem;
-  }
-  .ncgr-avatar__name {
-    font-size: 1.25rem;
-    padding-left: 0.25rem;
-  }
+  @include mixins.style();
 }
