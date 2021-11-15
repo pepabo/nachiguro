@@ -452,8 +452,34 @@ category: Components
 
 */
 
+@use 'sass:math';
+@use 'sass:map';
 @use '@inhouse/interactive-list/mixins';
+@use '@inhouse/flavor/variables' as flavor;
+@use '@inhouse/adapter/functions' as adapter-functions;
+@use '@inhouse/adapter/mixins' as adapter-mixins;
 
 .ncgr-interactive-list {
   @include mixins.style();
+
+  li {
+    padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
+
+    @each $boundary-size in map.keys(flavor.$boundary-sizes) {
+      @include adapter-mixins.mq-boundary(up, $boundary-size) {
+        padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+      }
+    }
+
+    & > * {
+      padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
+      border-radius: adapter-functions.get-radius-size($level: l);
+
+      @each $boundary-size in map.keys(flavor.$boundary-sizes) {
+        @include adapter-mixins.mq-boundary(up, $boundary-size) {
+          padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+        }
+      }
+    }
+  }
 }
