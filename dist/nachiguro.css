@@ -5649,7 +5649,7 @@ category: Components
 `.ncgr-ol`を指定すると算用数字のリストになります。
 
 ```example
-<ul class="ncgr-ol">
+<ol class="ncgr-ol">
   <li>臨</li>
   <li>兵</li>
   <li>闘</li>
