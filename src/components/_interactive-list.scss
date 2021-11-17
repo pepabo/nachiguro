@@ -462,7 +462,7 @@ category: Components
 .ncgr-interactive-list {
   @include mixins.style();
 
-  li {
+  ._item {
     padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
 
     @each $boundary-size in map.keys(flavor.$boundary-sizes) {
