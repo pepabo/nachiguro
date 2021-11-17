@@ -5142,6 +5142,36 @@ category: Components
     background-position: -1932px 0;
   }
 }
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/*doc
+---
+title: Icon
+name: icon
+category: Components
+---
+
+```example
+<span class="ncgr-icon" data-icon="heart"></span>
+```
+
+*/
+.ncgr-icon {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+}
+.ncgr-icon::after {
+  content: attr(data-icon);
+}
+
 /*doc
 ---
 title: Icon Button
