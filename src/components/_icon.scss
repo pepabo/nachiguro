@@ -1,0 +1,18 @@
+/*doc
+---
+title: Icon
+name: icon
+category: Components
+---
+
+```example
+<span class="ncgr-icon" data-icon="heart"></span>
+```
+
+*/
+
+@use '@inhouse/icon/mixins';
+
+.ncgr-icon {
+  @include mixins.style();
+}
