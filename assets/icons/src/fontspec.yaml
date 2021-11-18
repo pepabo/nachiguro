@@ -1,2 +1,5 @@
 name: Nachiguro-icons
 dest: ../dest
+svg:
+  fontHeight: 1000
+  normalize: true
