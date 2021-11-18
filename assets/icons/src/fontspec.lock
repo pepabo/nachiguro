@@ -1,5 +1,9 @@
 {
   "fileRefs": {
+    "arrow_cross.svg": {
+      "name": "arrow_cross",
+      "codePoint": 61767
+    },
     "arrow_down.svg": {
       "name": "arrow_down",
       "codePoint": 61697
@@ -23,6 +27,10 @@
     "arrow_left.svg": {
       "name": "arrow_left",
       "codePoint": 61702
+    },
+    "arrow_right_left.svg": {
+      "name": "arrow_right_left",
+      "codePoint": 61768
     },
     "arrow_right.svg": {
       "name": "arrow_right",
@@ -95,6 +103,10 @@
     "clip.svg": {
       "name": "clip",
       "codePoint": 61720
+    },
+    "code.svg": {
+      "name": "code",
+      "codePoint": 61769
     },
     "copy.svg": {
       "name": "copy",
@@ -172,6 +184,10 @@
       "name": "home",
       "codePoint": 61737
     },
+    "in.svg": {
+      "name": "in",
+      "codePoint": 61770
+    },
     "info_on_circle.svg": {
       "name": "info_on_circle",
       "codePoint": 61738
@@ -183,6 +199,10 @@
     "launch.svg": {
       "name": "launch",
       "codePoint": 61739
+    },
+    "line.svg": {
+      "name": "line",
+      "codePoint": 61771
     },
     "location_pin.svg": {
       "name": "location_pin",
@@ -215,6 +235,10 @@
     "node.svg": {
       "name": "node",
       "codePoint": 61746
+    },
+    "out.svg": {
+      "name": "out",
+      "codePoint": 61772
     },
     "outside.svg": {
       "name": "outside",
