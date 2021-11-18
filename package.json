@@ -5,7 +5,8 @@
   "main": "src/_nachiguro.scss",
   "scripts": {
     "build": "sass --load-path=node_modules --load-path=src --no-error-css src/styleguide.scss dist/nachiguro.css",
-    "styleguide": "bundle exec hologram && sass --load-path=node_modules  --load-path=src --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css"
+    "styleguide": "bundle exec hologram && sass --load-path=node_modules  --load-path=src --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css",
+    "generate-webfonts": "generate-webfonts assets/icons/src"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
+    "@gyugyu/webfonts-generator": "^0.3.0",
     "sass": "^1.35.2"
   },
   "dependencies": {
