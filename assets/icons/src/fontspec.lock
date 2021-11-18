@@ -136,6 +136,14 @@
       "name": "facebook",
       "codePoint": 61730
     },
+    "first_page.svg": {
+      "name": "first_page",
+      "codePoint": 61763
+    },
+    "folder.svg": {
+      "name": "folder",
+      "codePoint": 61764
+    },
     "funnel.svg": {
       "name": "funnel",
       "codePoint": 61731
@@ -168,6 +176,10 @@
       "name": "info_on_circle",
       "codePoint": 61738
     },
+    "last_page.svg": {
+      "name": "last_page",
+      "codePoint": 61765
+    },
     "launch.svg": {
       "name": "launch",
       "codePoint": 61739
@@ -191,6 +203,10 @@
     "mic.svg": {
       "name": "mic",
       "codePoint": 61744
+    },
+    "minus_on_circle.svg": {
+      "name": "minus_on_circle",
+      "codePoint": 61766
     },
     "minus.svg": {
       "name": "minus",
