@@ -232,12 +232,12 @@ $avatar-border-color: transparent !default;
 $button-color: (
   informative: nachiguro-color.color(blue, 600),
   neutral:     nachiguro-color.color(gray, 700),
-  positive:    nachiguro-color.color(green, 700),
+  positive:    nachiguro-color.color(green, 600),
   notice:      nachiguro-color.color(amber, 700),
-  negative:    nachiguro-color.color(red, 600),
-  attention:   nachiguro-color.color(orange, 600),
+  negative:    nachiguro-color.color(red, 500),
+  attention:   nachiguro-color.color(orange, 500),
   interactive: nachiguro-color.color(blue, 600),
-  favorite:    nachiguro-color.color(red, 600),
+  favorite:    nachiguro-color.color(red, 500),
 ) !default;
 
 $checkbox-color: nachiguro-color.color(blue, 600) !default;
