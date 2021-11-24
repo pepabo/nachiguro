@@ -1,5 +1,9 @@
 {
   "fileRefs": {
+    "apple.svg": {
+      "name": "apple",
+      "codePoint": 61773
+    },
     "arrow_cross.svg": {
       "name": "arrow_cross",
       "codePoint": 61767
@@ -303,6 +307,10 @@
     "twitter.svg": {
       "name": "twitter",
       "codePoint": 61762
+    },
+    "upload.svg": {
+      "name": "upload",
+      "codePoint": 61774
     }
   },
   "version": "0.3.0"
