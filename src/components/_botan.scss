@@ -1,0 +1,277 @@
+/*doc
+---
+title: Botan
+name: botan
+category: Components
+---
+
+`.ncgr-botan` を指定した要素はボタンになります。
+内部は`_body`でマークアップします。
+
+```example
+<botan class="ncgr-botan">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### Size
+
+`.-size-{size}`を指定するとそのサイズのボタンになります。
+
+```example
+<botan class="ncgr-botan -size-xs">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -size-s">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -size-m">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -size-l">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -size-xl">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### Appearance
+
+`.-appearance-{appearance}` を指定するとその見た目のボタンになります。
+
+```example
+<botan class="ncgr-botan -appearance-flat">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -appearance-outlined">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -appearance-solid">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -appearance-white">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -appearance-transparent">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -appearance-hollow">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### State
+
+`.--{state}` を指定すると、その状態のボタンになります。
+
+```example
+<botan class="ncgr-botan --enabled">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan --hover">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan --focused">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan --disabled">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+### Shape
+
+`.-shape-{shape}` を指定するとその形状のボタンになります。
+
+```example
+<botan class="ncgr-botan -shape-square">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -shape-circle">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### Color
+
+`.-color-{intention}` を指定すると、色が変わって意味を持つボタンになります。
+
+```example
+<botan class="ncgr-botan -color-informative">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-neutral">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-positive">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-notice">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-negative">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-attention">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-interactive">
+  <div class="_body">Botan</div>
+</botan>
+<botan class="ncgr-botan -color-favorite">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### Leading
+
+`_body`の直前に`_leading`でIconをマークアップすると前にアイコンがついたボタンになります。
+アイコンには`_icon`クラスを付与します。
+
+```example
+<botan class="ncgr-botan">
+  <div class="_leading">
+    <span class="ncgr-icon _icon" data-icon="heart"></span>
+  </div>
+  <div class="_body">Botan</div>
+</botan>
+```
+
+Leadingのみにしてアイコンのみのボタンにすることもできます。
+アイコンのみのボタンにする場合はボタンの意味がわかりやすいように必ず`aria-label`をつけます。
+
+```example
+<botan aria-label="Favorite" class="ncgr-botan">
+  <div class="_leading">
+    <span class="ncgr-icon _icon" data-icon="heart"></span>
+  </div>
+</botan>
+```
+
+他にもLeadingにはAvatarを入れることができます。
+
+```example
+<botan aria-label="Favorite" class="ncgr-botan">
+  <div class="_leading">
+    <div class="ncgr-avatar -size-xs">
+      <img src="https://picsum.photos/id/177/200/300">
+    </div>
+  </div>
+</botan>
+```
+
+#### Trailing
+
+`_body`の直後に`_trailing`でIconをマークアップすると後にアイコンがついたボタンになります。
+アイコンには`_icon`クラスを付与します。
+
+```example
+<botan class="ncgr-botan">
+  <div class="_body">Botan</div>
+  <div class="_trailing">
+    <span class="ncgr-icon _icon" data-icon="chevron_right"></span>
+  </div>
+</botan>
+```
+
+#### Apple
+
+`.ncgr-apple-botan` を指定すると、Appleの色のボタンになります。
+
+```example
+<botan class="ncgr-apple-botan">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### Twitter
+
+`.ncgr-twitter-botan` を指定すると、Twitterの色のボタンになります。
+
+```example
+<botan class="ncgr-twitter-botan">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### ニコニコ動画
+
+`.ncgr-nicovideo-botan` を指定すると、ニコニコ動画の色のボタンになります。
+
+```example
+<botan class="ncgr-nicovideo-botan">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+#### LINE
+
+`.ncgr-line-botan` を指定すると、LINEの色のボタンになります。
+
+```example
+<botan class="ncgr-line-botan">
+  <div class="_body">Botan</div>
+</botan>
+```
+
+*/
+
+// TODO: 全部置き換えできたら名前をbotanからbuttonにする
+
+@use '@inhouse/button/mixins';
+
+.ncgr-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: neutral,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}
+
+.ncgr-apple-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #000,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}
+
+.ncgr-twitter-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #55ACEE,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}
+
+.ncgr-nicovideo-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #EFB10A,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}
+
+.ncgr-line-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #00C300,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}

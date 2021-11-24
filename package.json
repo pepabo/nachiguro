@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@inhouse/avatar": "^0.13.0",
+    "@inhouse/button": "^0.13.0",
     "@inhouse/checkbox": "^0.13.0",
     "@inhouse/container": "^0.13.0",
     "@inhouse/grid": "^0.13.0",
