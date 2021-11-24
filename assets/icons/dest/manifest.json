@@ -6,6 +6,7 @@
     "woff2": "Nachiguro-icons.woff2"
   },
   "codePoints": {
+    "apple": 61773,
     "arrow_cross": 61767,
     "arrow_down": 61697,
     "arrow_drop_down": 61698,
@@ -81,6 +82,7 @@
     "receipt": 61759,
     "star_border": 61760,
     "star": 61761,
-    "twitter": 61762
+    "twitter": 61762,
+    "upload": 61774
   }
 }
