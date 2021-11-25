@@ -220,6 +220,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 // TODO: 全部置き換えできたら名前をbotanからbuttonにする
 
 @use '@inhouse/button/mixins';
+@use '@inhouse/adapter/functions' as adapter;
 
 .ncgr-botan {
   @include mixins.style((
@@ -230,6 +231,11 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  // NachiguroのユースケースだとOutlinedのborder-colorはintentionの影響がない単純なStroke Colorがよい
+  &.-appearance-outlined {
+    border-color: adapter.get-color(gray, 200) !important;
+  }
 }
 
 .ncgr-apple-botan {
