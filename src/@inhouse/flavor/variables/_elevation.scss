@@ -1,44 +1,157 @@
-$elevation-shadow: (
-  light: (
-    -1: [0 1.5 3 0 0.12,],
-    0:  [0 0 0 0 0,],
-    1:  [0 -0.1 1 0 0.12, 0 1 2 0 0.12],
-    2:  [0 0 1 0 0.12, 0 2 4 0 0.12],
-    3:  [0 0 3 0 0.08, 0 5 4 -4 0.12, 0 5 10 0 0.12],
-    4:  [0 2 5 0 0.08, 0 7 8 -5 0.12, 0 10 25 0 0.12]
+$elevation-shadow-color: #000;
+
+$key-light-shadows: (
+  0: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 0,
+    spread-radius: 0,
+    alpha: 0
   ),
-  dark: (
-    -1: [0 0 0 0 0,],
-    0:  [0 0 0 0 0,],
-    1:  [0 0 0 0 0,],
-    2:  [0 0 0 0 0,],
-    3:  [0 0 0 0 0,],
-    4:  [0 7 8 -5 0.32, 0 10 25 0 0.32]
+  1: (
+    offset-x: 0,
+    offset-y: -0.1px,
+    blur-radius: 1px,
+    spread-radius: 0,
+    alpha: 0.12
   ),
-  vivid: (
-    -1: [0 1.5 3 0 0.35,],
-    0:  [0 0 0 0 0,],
-    1:  [0 1 2 0 0.18,],
-    2:  [0 2 4 0 0.3,],
-    3:  [0 5 4 -4 0.24, 0 5 10 0 0.24],
-    4:  [0 7 8 -5 0.2, 0 10 25 0 0.24]
+  2: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 4px,
+    spread-radius: 0,
+    alpha: 0.12
   ),
-  outlined: (
-    -1: [0 1.5 2 1 0.08,],
-    0:  [0 0 0 0 0,],
-    1:  [0 1 2 0 0.08,],
-    2:  [0 2 4 0 0.12,],
-    3:  [0 5 4 -4 0.12, 0 5 10 0 0.12],
-    4:  [0 7 8 -5 0.12, 0 10 25 0 0.15]
-  )
+  3: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 6px,
+    spread-radius: 0,
+    alpha: 0.08
+  ),
+  4: (
+    offset-x: 0,
+    offset-y: 2px,
+    blur-radius: 6px,
+    spread-radius: 0,
+    alpha: 0.08
+  ),
+  5: (
+    offset-x: 0,
+    offset-y: 4px,
+    blur-radius: 16px,
+    spread-radius: -16px,
+    alpha: 0.28
+  ),
+  6: (
+    offset-x: 0,
+    offset-y: 4px,
+    blur-radius: 40,
+    spread-radius: -28px,
+    alpha: 0.32
+  ),
 ) !default;
 
-$radio-elevation-shadow-levels: (
-  selected: -1,
-  unselected: -1,
-) !default;
+$ambient-light-shadows: (
+  0: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 0,
+    spread-radius: 0,
+    alpha: 0
+  ),
+  1: (
+    offset-x: 0,
+    offset-y: 1px,
+    blur-radius: 2px,
+    spread-radius: 0,
+    alpha: 0.12
+  ),
+  2: (
+    offset-x: 0,
+    offset-y: 4px,
+    blur-radius: 6px,
+    spread-radius: -2px,
+    alpha: 0.12
+  ),
+  3: (
+    offset-x: 0,
+    offset-y: 6px,
+    blur-radius: 7px,
+    spread-radius: -8px,
+    alpha: 0.12
+  ),
+  4: (
+    offset-x: 0,
+    offset-y: 8px,
+    blur-radius: 32px,
+    spread-radius: -12px,
+    alpha: 0.12
+  ),
+  5: (
+    offset-x: 0,
+    offset-y: 12px,
+    blur-radius: 64px,
+    spread-radius: -20,
+    alpha: 0.2
+  ),
+  6: (
+    offset-x: 0,
+    offset-y: 16px,
+    blur-radius: 72px,
+    spread-radius: -24px,
+    alpha: 0.24
+  ),
+);
 
-$checkbox-elevation-shadow-levels: (
-  selected: 0,
-  unselected: -1,
-) !default;
+$adjustment-shadows: (
+  0: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 0,
+    spread-radius: 0,
+    alpha: 0
+  ),
+  1: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 0,
+    spread-radius: 0,
+    alpha: 0
+  ),
+  2: (
+    offset-x: 0,
+    offset-y: 0,
+    blur-radius: 0,
+    spread-radius: 0,
+    alpha: 0
+  ),
+  3: (
+    offset-x: 0,
+    offset-y: 6px,
+    blur-radius: 16px,
+    spread-radius: 2px,
+    alpha: 0.12
+  ),
+  4: (
+    offset-x: 0,
+    offset-y: 10,
+    blur-radius: 28px,
+    spread-radius: 4px,
+    alpha: 0.12
+  ),
+  5: (
+    offset-x: 0,
+    offset-y: 16px,
+    blur-radius: 48px,
+    spread-radius: -8px,
+    alpha: 0.24
+  ),
+  6: (
+    offset-x: 0,
+    offset-y: 24px,
+    blur-radius: 64px,
+    spread-radius: -12px,
+    alpha: 0.28
+  ),
+);

@@ -226,6 +226,8 @@ $image-overlay-color: (
 
 $header-color: nachiguro-color.color(blue, 600) !default;
 
+$skeleton-color: rgba(nachiguro-color.color(black, 1000), 0.2) !default;
+
 $avatar-background-color: nachiguro-color.color(gray, 50) !default;
 $avatar-border-color: transparent !default;
 
