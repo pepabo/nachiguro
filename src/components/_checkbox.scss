@@ -10,7 +10,7 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
 オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
 
 ```example
-<div class="ncgr-interactive-list">
+<div class="ncgr-interactive-list -has-background">
   <ul>
     <li class="_item">
       <label for="koga2">
@@ -42,7 +42,7 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
     </li>
   </ul>
 </div>
-<div class="ncgr-interactive-list">
+<div class="ncgr-interactive-list -has-background">
   <ul>
     <li class="_item">
       <label for="koga3">
