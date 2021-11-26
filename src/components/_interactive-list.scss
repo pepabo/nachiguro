@@ -446,6 +446,25 @@ category: Components
         </div>
       </a>
     </li>
+    <li class="_item">
+      <input class="_input" id="Expansion" name="Expansion" type="checkbox" value="">
+      <label for="Expansion">
+        <div class="_body">
+          <div class="_title">
+            Lorem ipsum dolor sit amet,
+          </div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon"><span class="ncgr-icon" data-icon="chevron_down"></span></div>
+        </div>
+      </label>
+      <div class="_content">
+        Content
+      </div>
+    </li>
   </ul>
 </div>
 ```
@@ -479,6 +498,38 @@ category: Components
         @include adapter-mixins.mq-boundary(up, $boundary-size) {
           padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
         }
+      }
+    }
+
+    & > ._input {
+      display: none;
+    }
+
+    & > ._input ~ ._content {
+      box-sizing: border-box;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.1s ease;
+    }
+
+    & > ._input:checked ~ ._content {
+      max-height: none;
+      padding-top: adapter-functions.get-cell-vertical-gap-size($density: normal);
+      padding-bottom: adapter-functions.get-cell-vertical-gap-size($density: normal);
+      transition: all 0.1s ease;
+    }
+
+    & > ._input ~ * {
+      ._icon {
+        transform: rotate(0);
+        transition: all 0.1s ease;
+      }
+    }
+
+    & > ._input:checked ~ * {
+      ._icon {
+        transform: rotate(-180deg);
+        transition: all 0.1s ease;
       }
     }
   }
