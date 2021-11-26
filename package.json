@@ -29,6 +29,7 @@
     "@inhouse/container": "^0.16.0",
     "@inhouse/grid": "^0.16.0",
     "@inhouse/icon": "^0.16.0",
+    "@inhouse/interactive-list": "^0.16.0",
     "@inhouse/interactive-table": "^0.16.0",
     "@inhouse/list": "^0.16.0",
     "@inhouse/radio": "^0.16.0",
