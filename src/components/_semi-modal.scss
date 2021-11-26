@@ -30,28 +30,38 @@ category: Components
   </div>
   <div class="ncgr-semi-modal__body">
     <div class="ncgr-semi-modal__contents -active">
-      <ul class="ncgr-list-view"> 
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
-      </ul>
+      <div class="ncgr-interactive-list">
+        <ul> 
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
