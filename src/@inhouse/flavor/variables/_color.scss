@@ -506,47 +506,12 @@ $textfield-state-color-matrix: (
   )
 ) !default;
 
-$interactive-list-color-matrix: (
-  border-color: nachiguro-color.color(gray, 400),
-  title: (
-    color: nachiguro-color.color(gray, 800)
-  ),
-  item: (
-    background-color: (
-      enabled: nachiguro-color.color(white, 1000),
-      focused: nachiguro-color.color(gray, 50),
-      hover: nachiguro-color.color(gray, 50),
-      disabled: nachiguro-color.color(white, 1000),
-      selected: nachiguro-color.color(blue, 50)
-    )
-  ),
-  leading: (
-    color: (
-      enabled: nachiguro-color.color(gray, 800),
-      disabled: nachiguro-color.color(gray, 300)
-    )
-  ),
-  trailing: (
-    color: (
-      enabled: nachiguro-color.color(gray, 800),
-      disabled: nachiguro-color.color(gray, 300)
-    )
-  ),
-  body: (
-    title: (
-      color: (
-        enabled: nachiguro-color.color(gray, 800),
-        disabled: nachiguro-color.color(gray, 300)
-      )
-    ),
-    description: (
-      color: (
-        enabled: nachiguro-color.color(gray, 600),
-        disabled: nachiguro-color.color(gray, 300),
-      )
-    )
-  )
-);
+$interactive-list-border-color: nachiguro-color.color(gray, 400);
+$interactive-list-title-color: nachiguro-color.color(gray, 800);
+$interactive-list-edge-element-color: nachiguro-color.color(gray, 800);
+$interactive-list-body-title-color: nachiguro-color.color(gray, 800);
+$interactive-list-body-description-color: nachiguro-color.color(gray, 600);
+$interactive-list-activated-color: nachiguro-color.color(blue, 600);
 
 $interactive-table-color: nachiguro-color.color(gray, 800);
 $interactive-table-th-background-color: nachiguro-color.color(white, 1000);

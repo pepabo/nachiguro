@@ -4,57 +4,75 @@ title: Checkbox
 name: checkbox
 category: Components
 ---
-
 オプションのオン/オフ切り替えなどをする際に使用します。
-List Viewの`leading`や`trailing`の中に入れて使用します。
+Interactive Listの`leading`や`trailing`の中に入れて使用します。
 
 オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
 
 ```example
-<div class="ncgr-list-view">
-  <label class="ncgr-list-tile" for="koga2">
-    <div class="ncgr-list-tile__title">
-      甲賀流
-    </div>
-    <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="koga2">
-      </div>
-    </div>
-  </label>
-  <label class="ncgr-list-tile" for="iga2">
-    <div class="ncgr-list-tile__title">
-      伊賀流
-    </div>
-    <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="iga2">
-      </div>
-    </div>
-  </label>
+<div class="ncgr-interactive-list -has-background">
+  <ul>
+    <li class="_item">
+      <label for="koga2">
+        <div class="_body">
+          <div class="_title">
+            甲賀流
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="koga2">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="iga2">
+        <div class="_body">
+          <div class="_title">
+            伊賀流
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="iga2">
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
 </div>
-<hr class="ncgr-list-divider">
-<div class="ncgr-list-view">
-  <label class="ncgr-list-tile" for="koga3">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox"" id="koga3">
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      甲賀流
-    </div>
-  </label>
-  <label class="ncgr-list-tile" for="iga3">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="iga3">
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      伊賀流
-    </div>
-  </label>
+<div class="ncgr-interactive-list -has-background">
+  <ul>
+    <li class="_item">
+      <label for="koga3">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox"" id="koga3">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            甲賀流
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="iga3">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="iga3">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            伊賀流
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
 </div>
 ```
 */

@@ -24,36 +24,36 @@
         </div>
         <div class="ncgr-semi-modal__body">
           <div class="ncgr-semi-modal__contents -active">
-            <nav>
-              <ul class="ncgr-list-view">
+            <nav class="ncgr-interactive-list">
+              <ul>
                 <% @categories.sort.each do |category| %>
                   <% unless category[0] == 'index' %>
-                    <li>
-                      <a class="ncgr-list-tile" href="<%= category[1] %>">
-                        <div class="ncgr-list-tile__title">
-                          <div class="ncgr-list-tile__primary-title">
+                    <li class="_item">
+                      <a href="<%= category[1] %>">
+                        <div class="_body">
+                          <div class="_title">
                             <%= category[0] %>
                           </div>
                         </div>
                       </a>
-                      <% if category[0] == title %>
-                        <ul>
-                          <% @blocks.each do |block| %>
-                            <li>
-                              <a class="ncgr-list-tile" href="#<%= block[:name] %>">
-                                <div class="ncgr-list-tile__leading">
-                                </div>
-                                <div class="ncgr-list-tile__title">
-                                  <div class="ncgr-list-tile__primary-title">
-                                    <%= block[:title] %>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                          <% end %>
-                        </ul>
-                      <% end %>
                     </li>
+                    <% if category[0] == title %>
+                      <ul>
+                        <% @blocks.each do |block| %>
+                          <li class="_item">
+                            <a href="#<%= block[:name] %>">
+                              <div class="_leading">
+                              </div>
+                              <div class="_body">
+                                <div class="_title">
+                                  <%= block[:title] %>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        <% end %>
+                      </ul>
+                    <% end %>
                   <% end %>
                 <% end %>
               </ul>
