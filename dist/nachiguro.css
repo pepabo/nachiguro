@@ -1369,16 +1369,13 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </div>
-<div class="ncgr-alert -color-danger -appearance-flat">
+<div class="ncgr-alert -color-danger -appearance-flat ncgr-mar-b-8">
   <div class="_body">
     <div>
       発生中のエラー
     </div>
   </div>
 </div>
-
-<hr class="ncgr-list-divider">
-
 <div class="ncgr-alert -color-default -appearance-white ncgr-mar-b-8">
   <div class="_body">
     <div>
@@ -1407,16 +1404,13 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </div>
-<div class="ncgr-alert -color-danger -appearance-white">
+<div class="ncgr-alert -color-danger -appearance-white ncgr-mar-b-8">
   <div class="_body">
     <div>
       発生中のエラー
     </div>
   </div>
 </div>
-
-<hr class="ncgr-list-divider">
-
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_body -align-center">
     <div>
@@ -1445,16 +1439,13 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </div>
-<div class="ncgr-alert -color-danger -appearance-flat">
+<div class="ncgr-alert -color-danger -appearance-flat ncgr-mar-b-8">
   <div class="_body -align-center">
     <div>
       発生中のエラー
     </div>
   </div>
 </div>
-
-<hr class="ncgr-list-divider">
-
 <div class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_body">
     <h4>
@@ -1495,7 +1486,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </div>
-<div class="ncgr-alert -color-danger -appearance-flat">
+<div class="ncgr-alert -color-danger -appearance-flat ncgr-mar-b-8">
   <div class="_body">
     <h4>
       発生中のエラー
@@ -1505,9 +1496,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </div>
-
-<hr class="ncgr-list-divider">
-
 <a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_body">
     <h4>
@@ -1552,7 +1540,7 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </a>
-<a class="ncgr-alert -color-danger -appearance-flat">
+<a class="ncgr-alert -color-danger -appearance-flat ncgr-mar-b-8">
   <div class="_body">
     <h4>
       発生中のエラー
@@ -1563,9 +1551,6 @@ Alert 内にリンクを用いたい場合は、 Alert 自体をaタグで囲み
     </div>
   </div>
 </a>
-
-<hr class="ncgr-list-divider">
-
 <a class="ncgr-alert -color-default -appearance-flat ncgr-mar-b-8">
   <div class="_leading">
     <div class="_icon" >
@@ -43351,57 +43336,75 @@ title: Checkbox
 name: checkbox
 category: Components
 ---
-
 オプションのオン/オフ切り替えなどをする際に使用します。
-List Viewの`leading`や`trailing`の中に入れて使用します。
+Interactive Listの`leading`や`trailing`の中に入れて使用します。
 
 オプションから選択できる項目が２つ以上の場合には(ただし任意選択を除く)、Checkboxの代わりにRadioを使用しましょう。
 
 ```example
-<div class="ncgr-list-view">
-  <label class="ncgr-list-tile" for="koga2">
-    <div class="ncgr-list-tile__title">
-      甲賀流
-    </div>
-    <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="koga2">
-      </div>
-    </div>
-  </label>
-  <label class="ncgr-list-tile" for="iga2">
-    <div class="ncgr-list-tile__title">
-      伊賀流
-    </div>
-    <div class="ncgr-list-tile__trailing">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="iga2">
-      </div>
-    </div>
-  </label>
+<div class="ncgr-interactive-list -has-background">
+  <ul>
+    <li class="_item">
+      <label for="koga2">
+        <div class="_body">
+          <div class="_title">
+            甲賀流
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="koga2">
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="iga2">
+        <div class="_body">
+          <div class="_title">
+            伊賀流
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="iga2">
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
 </div>
-<hr class="ncgr-list-divider">
-<div class="ncgr-list-view">
-  <label class="ncgr-list-tile" for="koga3">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox"" id="koga3">
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      甲賀流
-    </div>
-  </label>
-  <label class="ncgr-list-tile" for="iga3">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-checkbox" type="checkbox" id="iga3">
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      伊賀流
-    </div>
-  </label>
+<div class="ncgr-interactive-list -has-background">
+  <ul>
+    <li class="_item">
+      <label for="koga3">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox"" id="koga3">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            甲賀流
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="iga3">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-checkbox" type="checkbox" id="iga3">
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            伊賀流
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
 </div>
 ```
 */
@@ -44472,27 +44475,37 @@ category: Components
   </div>
   <div class="ncgr-full-modal__body">
     <div class="ncgr-full-modal__contents -active">
-      <ul class="ncgr-list-view"> 
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
+      <div class="ncgr-interactive-list">
+        <ul> 
+          <li class="_item">
+            <div class=_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class=_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class=_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class=_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+        </ul>
       </ul>
     </div>
   </div>
@@ -45938,6 +45951,1152 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 }
 .ncgr-icon-button.-favorite.-bordered {
   border: 1px solid var(--color-default-75);
+}
+
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/* stylelint-disable no-descending-specificity */
+/*doc
+---
+title: InteractiveList
+name: interactive-list
+category: Components
+---
+
+選択可能なリストを表現するコンポーネントです。
+
+```example
+<div class="ncgr-interactive-list">
+  <h1 class="_title">Multi Line</h1>
+  <ul class="_list">
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item --disabled">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item --activated">
+      <div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <button>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item --activated">
+      <button>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItem"
+        ><div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItem"
+              name="SingleLineItem"
+              type="checkbox"
+              value=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemSelected"
+        ><div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemSelected"
+              name="SingleLineItemSelected"
+              type="checkbox"
+              value=""
+              checked=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="home"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="home"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <button>
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="home"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item --activated">
+      <button>
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="home"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item -is-draggable" draggable="true">
+      <div>
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="drag_handle"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item -is-draggable" draggable="true">
+      <div>
+        <div class="_leading">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="drag_handle"></span>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithCheckboxLeading"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithCheckboxLeading"
+              name="SingleLineItemWithCheckboxLeading"
+              type="checkbox"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div></label
+      >
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithCheckboxLeadingTrailing"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithCheckboxLeadingTrailing"
+              name="SingleLineItemWithCheckboxLeadingTrailing"
+              type="checkbox"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithCheckboxLeadingTrailingSelected"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithCheckboxLeadingTrailingSelected"
+              name="SingleLineItemWithCheckboxLeadingTrailingSelected"
+              type="checkbox"
+              value=""
+              checked=""
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div></div
+      ></label>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithRadioLeading"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-radio"
+              id="SingleLineItemWithRadioLeading"
+              name="SingleLineItemWithRadio"
+              type="radio"
+              value="SingleLineItemWithRadioLeading"
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div></label
+      >
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithRadioLeadingTrailing"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-radio"
+              id="SingleLineItemWithRadioLeadingTrailing"
+              name="SingleLineItemWithRadio"
+              type="radio"
+              value="SingleLineItemWithRadioLeadingTrailing"
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithRadioLeadingTrailingSelected"
+        ><div class="_leading">
+          <div class="_input">
+            <input
+              class="ncgr-radio"
+              id="SingleLineItemWithRadioLeadingTrailingSelected"
+              name="SingleLineItemWithRadio"
+              type="radio"
+              value="SingleLineItemWithRadioLeadingTrailingSelected"
+              checked=""
+            />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div></div
+      ></label>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <button>
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithAvatar"
+        ><div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithAvatar"
+              name="SingleLineItemWithAvatar"
+              type="checkbox"
+              value=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithAvatarSelected"
+        ><div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithAvatarSelected"
+              name="SingleLineItemWithAvatarSelected"
+              type="checkbox"
+              value=""
+              checked=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_avatar">
+            <div class="ncgr-avatar">
+              <img src="https://picsum.photos/id/177/200/300" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="_item">
+      <button>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </button>
+    </li>
+    <li class="_item">
+      <label for="SingleLineItemWithImage"
+        ><div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithImage"
+              name="SingleLineItemWithImage"
+              type="checkbox"
+              value=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --selected">
+      <label for="SingleLineItemWithImageSelected"
+        ><div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_input">
+            <input
+              class="ncgr-checkbox"
+              id="SingleLineItemWithImageSelected"
+              name="SingleLineItemWithImageSelected"
+              type="checkbox"
+              value=""
+              checked=""
+            />
+          </div></div
+      ></label>
+    </li>
+    <li class="_item --activated">
+      <a href="#" rel="">
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail">
+              <img src="https://picsum.photos/id/219/200/200" />
+            </div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">Lorem ipsum dolor sit amet,</div>
+          <div class="_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="_trailing">
+          <div class="_icon">
+            <span class="ncgr-icon" data-icon="chevron_right"></span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+```
+
+*/
+.ncgr-interactive-list.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-interactive-list + .ncgr-interactive-list {
+  border-top: 0.0625rem solid #c4cbcf;
+}
+.ncgr-interactive-list > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding-right: 1.5rem;
+  padding-bottom: 0;
+  padding-left: 1.5rem;
+  color: #3a3e40;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-interactive-list > ._title {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-interactive-list > ._title {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-interactive-list > ._title {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+.ncgr-interactive-list ._list {
+  margin: 0;
+  padding: 0.75rem 0;
+  list-style-type: none;
+}
+.ncgr-interactive-list ._item > * {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media screen and (min-width: 480px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 1.5rem;
+  }
+}
+.ncgr-interactive-list ._item > a:focus, .ncgr-interactive-list ._item > a.--focused, .ncgr-interactive-list ._item > button:focus, .ncgr-interactive-list ._item > button.--focused, .ncgr-interactive-list ._item > label:focus, .ncgr-interactive-list ._item > label.--focused {
+  background-color: rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+.ncgr-interactive-list ._item > a:hover, .ncgr-interactive-list ._item > a.--hover, .ncgr-interactive-list ._item > button:hover, .ncgr-interactive-list ._item > button.--hover, .ncgr-interactive-list ._item > label:hover, .ncgr-interactive-list ._item > label.--hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+.ncgr-interactive-list ._item > a {
+  text-decoration: inherit;
+}
+.ncgr-interactive-list ._item > button {
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+  text-align: inherit;
+  border: none;
+}
+.ncgr-interactive-list ._item ._body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.ncgr-interactive-list ._item > * > ._leading {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-width: 2rem;
+  color: #3a3e40;
+}
+.ncgr-interactive-list ._item > * > ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  min-width: 2rem;
+  color: #3a3e40;
+}
+.ncgr-interactive-list ._item ._title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #3a3e40;
+  font-size: 1rem;
+  -webkit-line-clamp: 2;
+}
+.ncgr-interactive-list ._item ._description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #8e9599;
+  font-size: 0.875rem;
+  -webkit-line-clamp: 2;
+}
+.ncgr-interactive-list ._item ._avatar,
+.ncgr-interactive-list ._item ._media {
+  display: flex;
+  align-items: center;
+}
+.ncgr-interactive-list ._item ._avatar {
+  max-height: 3rem;
+}
+.ncgr-interactive-list ._item ._media {
+  max-height: none;
+}
+.ncgr-interactive-list ._item ._media ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-list ._item ._media ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-list ._item ._media.-size-s {
+  max-height: 3rem;
+}
+.ncgr-interactive-list ._item ._media.-size-s ._thumbnail {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-list ._item ._media.-size-s ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-list ._item ._media.-size-m {
+  max-height: none;
+}
+.ncgr-interactive-list ._item ._media.-size-m ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-list ._item ._media.-size-m ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-list ._item ._media.-size-l {
+  max-height: none;
+}
+.ncgr-interactive-list ._item ._media.-size-l ._thumbnail {
+  box-sizing: border-box;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-interactive-list ._item ._media.-size-l ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-interactive-list ._item ._icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+.ncgr-interactive-list ._item.--disabled > * {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.38;
+}
+.ncgr-interactive-list ._item.--disabled > *:hover {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: not-allowed;
+}
+.ncgr-interactive-list ._item.--selected > * {
+  background-color: rgba(18, 156, 229, 0.08);
+}
+.ncgr-interactive-list ._item.--selected > *:focus, .ncgr-interactive-list ._item.--selected > *:hover {
+  background-color: rgba(18, 156, 229, 0.08);
+}
+.ncgr-interactive-list ._item.--activated > * {
+  font-weight: bold;
+  background-color: rgba(18, 156, 229, 0.12);
+}
+.ncgr-interactive-list ._item.--activated > *:focus, .ncgr-interactive-list ._item.--activated > *:hover {
+  background-color: rgba(18, 156, 229, 0.12);
+}
+.ncgr-interactive-list ._item.--activated > * ._leading {
+  color: #067bbf;
+}
+.ncgr-interactive-list ._item.--activated > * ._trailing {
+  color: #067bbf;
+}
+.ncgr-interactive-list ._item.--activated > * ._title {
+  color: #067bbf;
+}
+.ncgr-interactive-list ._item.--activated > * ._description {
+  color: #067bbf;
+}
+.ncgr-interactive-list ._item.-is-draggable {
+  cursor: grab;
+}
+.ncgr-interactive-list ._item.-is-draggable:active, .ncgr-interactive-list ._item.-is-draggable.--dragged {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08), 0 6px 7px -8px rgba(0, 0, 0, 0.12), 0 6px 16px 2px rgba(0, 0, 0, 0.12);
+  cursor: grabbing;
+}
+.ncgr-interactive-list.-density-dense {
+  padding: 0.25rem 0;
+}
+.ncgr-interactive-list.-density-dense > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-interactive-list.-density-dense ._list {
+  padding: 0.25rem 0;
+}
+.ncgr-interactive-list.-density-dense ._leading,
+.ncgr-interactive-list.-density-dense ._body,
+.ncgr-interactive-list.-density-dense ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-list.-density-normal {
+  padding: 0.75rem 0;
+}
+.ncgr-interactive-list.-density-normal > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-interactive-list.-density-normal ._list {
+  padding: 0.75rem 0;
+}
+.ncgr-interactive-list.-density-normal ._leading,
+.ncgr-interactive-list.-density-normal ._body,
+.ncgr-interactive-list.-density-normal ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-list.-density-comfort {
+  padding: 1rem 0;
+}
+.ncgr-interactive-list.-density-comfort > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-interactive-list.-density-comfort ._list {
+  padding: 1rem 0;
+}
+.ncgr-interactive-list.-density-comfort ._leading,
+.ncgr-interactive-list.-density-comfort ._body,
+.ncgr-interactive-list.-density-comfort ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-interactive-list ._item {
+  padding: 0 0.75rem;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-interactive-list ._item {
+    padding: 0 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-interactive-list ._item {
+    padding: 0 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-interactive-list ._item {
+    padding: 0 0.75rem;
+  }
+}
+.ncgr-interactive-list ._item > * {
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-interactive-list ._item > * {
+    padding: 0 0.75rem;
+  }
+}
+.ncgr-interactive-list ._item > ._input {
+  display: none;
+}
+.ncgr-interactive-list ._item > ._input ~ ._content {
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.1s ease;
+}
+.ncgr-interactive-list ._item > ._input:checked ~ ._content {
+  max-height: none;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  transition: all 0.1s ease;
+}
+.ncgr-interactive-list ._item > ._input ~ * ._icon {
+  transform: rotate(0);
+  transition: all 0.1s ease;
+}
+.ncgr-interactive-list ._item > ._input:checked ~ * ._icon {
+  transform: rotate(-180deg);
+  transition: all 0.1s ease;
 }
 
 /* stylelint-disable function-comma-space-after */
@@ -48156,30 +49315,40 @@ category: Components
 ---
 
 オプションの選択をする際に使用します。
-List Viewの`leading`の中に入れて使用します。
+Interactive Listの`leading`の中に入れて使用します。
 
 ```example
-<div class="ncgr-list-view">
-  <label class="ncgr-list-tile" for="koga">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-radio" type="radio" name="ninja" value="koga" id="koga" />
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      甲賀流
-    </div>
-  </label>
-  <label class="ncgr-list-tile" for="iga">
-    <div class="ncgr-list-tile__leading">
-      <div class="ncgr-list-tile__icon">
-        <input class="ncgr-radio" type="radio" name="ninja" value="iga" id="iga" />
-      </div>
-    </div>
-    <div class="ncgr-list-tile__title">
-      伊賀流
-    </div>
-  </label>
+<div class="ncgr-interactive-list">
+  <ul>
+    <li class="_item">
+      <label for="koga">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-radio" type="radio" name="ninja" value="koga" id="koga" />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            甲賀流
+          </div>
+        </div>
+      </label>
+    </li>
+    <li class="_item">
+      <label for="iga">
+        <div class="_leading">
+          <div class="_icon">
+            <input class="ncgr-radio" type="radio" name="ninja" value="iga" id="iga" />
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title">
+            伊賀流
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -48800,28 +49969,38 @@ category: Components
   </div>
   <div class="ncgr-semi-modal__body">
     <div class="ncgr-semi-modal__contents -active">
-      <ul class="ncgr-list-view"> 
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリする
-          </div>
-        </li>
-        <li class="ncgr-list-tile">
-          <div class="ncgr-list-tile__title">
-            スリスリしない
-          </div>
-        </li>
-      </ul>
+      <div class="ncgr-interactive-list">
+        <ul> 
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリする
+              </div>
+            </div>
+          </li>
+          <li class="_item">
+            <div class="_body">
+              <div class="_title">
+                スリスリしない
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
