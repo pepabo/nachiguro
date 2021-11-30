@@ -1772,6 +1772,8 @@ a.ncgr-alert {
   cursor: pointer;
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
 /*doc
 ---
 title: App Bar
@@ -1779,136 +1781,119 @@ name: app-bar
 category: Components
 ---
 
-App Bar には現在の画面に関連する情報とアクションが表示されます。`.ncgr-app-bar`に`-active`を付与することでアクティブな状態になります。
+アプリケーションの最上位のHeaderです。
 
-背景色を透明にしたいときは`- transparent`、`position: sticky;`にしたい場合は、`-sticky`、`position: fixed;`にしたい場合は`-fixed`の Modifier を付与してください。
+アプリケーション本体のタイトル（またはロゴ）の表示し、サービスのブランド名の印象付けを行います。また、アプリケーションの主要アクションを行えるようにします。
 
-`leading`には閉じる、戻るなどの画面のナビゲーションを操作するボタン、`title`、には該当する画面のタイトル、`actions`にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。
+さらに、ナビゲーションを行うこともできます。Headerが逆方向の遷移のみ行えるのに対し、App BarはMenuアイコンのButtonのクリックイベントでNavigation系のコンポーネント（Side NavigationまたはNavigation Drawer）を開閉し、横方向の画面遷移を行えます。
 
 ```example
-<div class="ncgr-app-bar -active">
-  <div class="ncgr-app-bar__leading">
-    <div class="ncgr-icon-button -circle">
-      <i class="fas fa-arrow-left"></i>
-    </div>
-  </div>
-  <div class="ncgr-app-bar__title">
-    メニュー
-  </div>
-  <ul class="ncgr-app-bar__actions">
-    <li>
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-ellipsis-v"></i>
+<header class="ncgr-app-bar -appearance-white -brightness-light -position-static">
+  <div class="_navigation">
+    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="menu"></span>
       </div>
-    </li>
-  </ul>
-</div>
+    </button>
+  </div>
+  <div class="_title">App</div>
+  <div class="_action">
+    <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="funnel"></span>
+      </div>
+    </button>
+    <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="node"></span>
+      </div>
+    </button>
+    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+      </div>
+    </button>
+  </div>
+</header>
+
 ```
 
 */
 .ncgr-app-bar {
-  width: 100%;
-  height: 3.5rem;
-  background-color: var(--color-secondary-grouped-background);
-  display: none;
+  position: static;
+  display: flex;
   align-items: center;
   box-sizing: border-box;
-  z-index: 2147483646;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  transform: translate3d(0, 0, 0);
-}
-@media screen and (min-width: 480px) {
-  .ncgr-app-bar {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ncgr-app-bar {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .ncgr-app-bar {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-  }
-}
-.ncgr-app-bar.-active {
-  display: flex;
-}
-.ncgr-app-bar.-transparent {
-  background-color: transparent;
-}
-.ncgr-app-bar.-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.ncgr-app-bar.-sticky {
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-.ncgr-app-bar__leading {
-  width: 4rem;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-@media screen and (min-width: 480px) {
-  .ncgr-app-bar__leading {
-    width: 4rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ncgr-app-bar__leading {
-    width: 4.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .ncgr-app-bar__leading {
-    width: 4.25rem;
-  }
-}
-
-.ncgr-app-bar__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-self: stretch;
-  flex-grow: 1;
+  width: 100%;
   height: 3.5rem;
-  font-size: 1rem;
+  padding: 0.5rem;
+  color: #3a3e40;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
 }
-
-.ncgr-app-bar__actions {
-  margin: 0;
+.ncgr-app-bar ._title {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
+}
+.ncgr-app-bar ._title img,
+.ncgr-app-bar ._title svg {
+  display: block;
+  max-height: 2rem;
+}
+.ncgr-app-bar ._navigation,
+.ncgr-app-bar ._action {
   display: flex;
-  padding-right: 0.5rem;
-}
-@media screen and (min-width: 480px) {
-  .ncgr-app-bar__actions {
-    padding-right: 0.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ncgr-app-bar__actions {
-    padding-right: 0.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .ncgr-app-bar__actions {
-    padding-right: 0.75rem;
-  }
-}
-.ncgr-app-bar__actions li {
-  display: flex;
-  justify-content: center;
   align-items: center;
+}
+.ncgr-app-bar ._navigation > *:not(button),
+.ncgr-app-bar ._action > *:not(button) {
+  margin: 0 0.5rem;
+}
+.ncgr-app-bar.-appearance-white {
+  color: #3a3e40;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.ncgr-app-bar.-appearance-white.-brightness-light {
+  color: #3a3e40;
+}
+.ncgr-app-bar.-appearance-white.-brightness-dark {
+  color: #3a3e40;
+}
+.ncgr-app-bar.-appearance-filled {
+  color: #fff;
+  background-color: #067bbf;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.ncgr-app-bar.-appearance-filled.-brightness-light {
+  color: #fff;
+}
+.ncgr-app-bar.-appearance-filled.-brightness-dark {
+  color: #fff;
+}
+.ncgr-app-bar.-appearance-transparent {
+  color: #3a3e40;
+  background-color: transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.ncgr-app-bar.-appearance-transparent.-brightness-light {
+  color: #3a3e40;
+}
+.ncgr-app-bar.-appearance-transparent.-brightness-dark {
+  color: #fff;
+}
+.ncgr-app-bar.-position-static {
+  position: static;
+}
+.ncgr-app-bar.-position-fixed {
+  position: fixed;
+}
+.ncgr-app-bar.-position-sticky {
+  position: sticky;
 }
 
 /* stylelint-disable function-comma-space-after */

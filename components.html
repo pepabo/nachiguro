@@ -638,50 +638,72 @@ Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bo
 
 <h1 id="app-bar" class="styleguide">App Bar</h1>
 
-<p>App Bar には現在の画面に関連する情報とアクションが表示されます。<code>.ncgr-app-bar</code>に<code>-active</code>を付与することでアクティブな状態になります。</p>
+<p>アプリケーションの最上位のHeaderです。</p>
 
-<p>背景色を透明にしたいときは<code>- transparent</code>、<code>position: sticky;</code>にしたい場合は、<code>-sticky</code>、<code>position: fixed;</code>にしたい場合は<code>-fixed</code>の Modifier を付与してください。</p>
+<p>アプリケーション本体のタイトル（またはロゴ）の表示し、サービスのブランド名の印象付けを行います。また、アプリケーションの主要アクションを行えるようにします。</p>
 
-<p><code>leading</code>には閉じる、戻るなどの画面のナビゲーションを操作するボタン、<code>title</code>、には該当する画面のタイトル、<code>actions</code>にはオプションや通知欄など、画面内のアクションを促すボタンを設置してください。</p>
+<p>さらに、ナビゲーションを行うこともできます。Headerが逆方向の遷移のみ行えるのに対し、App BarはMenuアイコンのButtonのクリックイベントでNavigation系のコンポーネント（Side NavigationまたはNavigation Drawer）を開閉し、横方向の画面遷移を行えます。</p>
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
-          <div class="ncgr-app-bar -active">
-  <div class="ncgr-app-bar__leading">
-    <div class="ncgr-icon-button -circle">
-      <i class="fas fa-arrow-left"></i>
-    </div>
-  </div>
-  <div class="ncgr-app-bar__title">
-    メニュー
-  </div>
-  <ul class="ncgr-app-bar__actions">
-    <li>
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-ellipsis-v"></i>
+          <header class="ncgr-app-bar -appearance-white -brightness-light -position-static">
+  <div class="_navigation">
+    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="menu"></span>
       </div>
-    </li>
-  </ul>
-</div>
+    </button>
+  </div>
+  <div class="_title">App</div>
+  <div class="_action">
+    <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="funnel"></span>
+      </div>
+    </button>
+    <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="node"></span>
+      </div>
+    </button>
+    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+      <div class="_leading">
+        <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+      </div>
+    </button>
+  </div>
+</header>
+
 
         </div>
         <div class="styleguide__code">
-          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar -active"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__leading"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -circle"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-arrow-left"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__title"</span><span class="nt">&gt;</span>
-    メニュー
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"ncgr-app-bar__actions"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-ellipsis-v"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"ncgr-app-bar -appearance-white -brightness-light -position-static"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"More"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"menu"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_title"</span><span class="nt">&gt;</span>App<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_action"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Filter"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"funnel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Share"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"node"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"More"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"ellipsis_vertical"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+
 </pre>
         </div>
         <div class="styleguide__content">
@@ -6886,7 +6908,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2021年11月29日
+          最終更新日: 2021年11月30日
         </div>
         <div>
           © 2021 SUZURI ❤️from 東京・渋谷
