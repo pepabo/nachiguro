@@ -23,6 +23,7 @@
     "sass": "^1.35.2"
   },
   "dependencies": {
+    "@inhouse/app-bar": "^0.16.2",
     "@inhouse/avatar": "^0.16.2",
     "@inhouse/button": "^0.16.2",
     "@inhouse/checkbox": "^0.16.2",
