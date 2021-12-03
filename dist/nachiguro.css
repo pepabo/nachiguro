@@ -1789,30 +1789,44 @@ category: Components
 
 ```example
 <header class="ncgr-app-bar -appearance-white -brightness-light -position-static --activated">
-  <div class="_navigation">
+  <div class="_leading">
     <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
       <div class="_leading">
         <span class="ncgr-icon _icon" data-icon="menu"></span>
       </div>
     </button>
   </div>
-  <div class="_title">App</div>
-  <div class="_action">
-    <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="funnel"></span>
+  <div class="_body">
+    <h1 class="_title">
+      <a href="#">
+        App
+      </a>
+    </h1>
+  </div>
+  <div class="_trailing">
+    <div class="_list">
+      <div class="_item">
+        <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="funnel"></span>
+          </div>
+        </button>
       </div>
-    </button>
-    <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="node"></span>
+      <div class="_item">
+        <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="node"></span>
+          </div>
+        </button>
       </div>
-    </button>
-    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+      <div class="_item">
+        <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+          </div>
+        </button>
       </div>
-    </button>
+    </div>
   </div>
 </header>
 
@@ -1820,7 +1834,7 @@ category: Components
 
 */
 .ncgr-app-bar {
-  position: static;
+  position: fixed;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -1832,37 +1846,65 @@ category: Components
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
   display: none;
 }
-.ncgr-app-bar ._title {
+.ncgr-app-bar > ._body {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 0.5rem;
+}
+.ncgr-app-bar > ._body img,
+.ncgr-app-bar > ._body svg {
+  display: block;
+  max-height: 2rem;
+}
+.ncgr-app-bar > ._body a {
+  color: #3a3e40;
+  text-decoration: none;
+}
+.ncgr-app-bar > ._body ._title {
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 1.3125rem;
   line-height: 1.5rem;
 }
-.ncgr-app-bar ._title img,
-.ncgr-app-bar ._title svg {
-  display: block;
-  max-height: 2rem;
-}
-.ncgr-app-bar ._navigation,
-.ncgr-app-bar ._action {
+.ncgr-app-bar > ._leading {
   display: flex;
   align-items: center;
 }
-.ncgr-app-bar ._navigation > *:not(button),
-.ncgr-app-bar ._action > *:not(button) {
-  margin: 0 0.5rem;
+.ncgr-app-bar > ._trailing ._list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.ncgr-app-bar > ._trailing ._list ._item {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 0.25rem;
+  padding: 0;
+}
+.ncgr-app-bar > ._trailing ._list ._item:first-child {
+  margin-left: 0;
 }
 .ncgr-app-bar.-appearance-white {
   color: #3a3e40;
   background-color: #fff;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
 }
+.ncgr-app-bar.-appearance-white > ._body a {
+  color: #3a3e40;
+}
 .ncgr-app-bar.-appearance-white.-brightness-light {
   color: #3a3e40;
 }
+.ncgr-app-bar.-appearance-white.-brightness-light > ._body a {
+  color: #3a3e40;
+}
 .ncgr-app-bar.-appearance-white.-brightness-dark {
+  color: #3a3e40;
+}
+.ncgr-app-bar.-appearance-white.-brightness-dark > ._body a {
   color: #3a3e40;
 }
 .ncgr-app-bar.-appearance-filled {
@@ -1870,10 +1912,19 @@ category: Components
   background-color: #067bbf;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
 }
+.ncgr-app-bar.-appearance-filled > ._body a {
+  color: #fff;
+}
 .ncgr-app-bar.-appearance-filled.-brightness-light {
   color: #fff;
 }
+.ncgr-app-bar.-appearance-filled.-brightness-light > ._body a {
+  color: #fff;
+}
 .ncgr-app-bar.-appearance-filled.-brightness-dark {
+  color: #fff;
+}
+.ncgr-app-bar.-appearance-filled.-brightness-dark > ._body a {
   color: #fff;
 }
 .ncgr-app-bar.-appearance-transparent {
@@ -1881,10 +1932,19 @@ category: Components
   background-color: transparent;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
 }
+.ncgr-app-bar.-appearance-transparent > ._body a {
+  color: #3a3e40;
+}
 .ncgr-app-bar.-appearance-transparent.-brightness-light {
   color: #3a3e40;
 }
+.ncgr-app-bar.-appearance-transparent.-brightness-light > ._body a {
+  color: #3a3e40;
+}
 .ncgr-app-bar.-appearance-transparent.-brightness-dark {
+  color: #fff;
+}
+.ncgr-app-bar.-appearance-transparent.-brightness-dark > ._body a {
   color: #fff;
 }
 .ncgr-app-bar.-position-static {
@@ -44273,21 +44333,18 @@ category: Components
 <div class="ncgr-overlay -active">
 </div>
 <div class="ncgr-dialog -active">
-  <div class="ncgr-app-bar -active">
-    <div class="ncgr-app-bar__leading">
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-arrow-left"></i>
+  <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
+    <div class="_leading">
+      <div class="ncgr-button -appearance-transparent -shape-circle">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="arrow_left"></span>
+        </div>
       </div>
     </div>
-    <div class="ncgr-app-bar__title">
-      甲賀流
-    </div>
-    <div class="ncgr-app-bar__actions">
-      <li>
-        <div class="ncgr-icon-button -circle">
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-      </li>
+    <div class="_body">
+      <h1 class="_title">
+        甲賀流
+      </h1>
     </div>
   </div>
   <div class="ncgr-dialog__body">
@@ -44445,22 +44502,19 @@ category: Components
 
 ```code
 <div class="ncgr-full-modal -active">
-  <div class="ncgr-app-bar -active">
-    <div class="ncgr-app-bar__leading">
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-arrow-left"></i>
+  <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
+    <div class="_leading">
+      <div class="ncgr-button -appearance-transparent -shape-circle">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="arrow_left"></span>
+        </div>
       </div>
     </div>
-    <div class="ncgr-app-bar__title">
-      メニュー
+    <div class="_body">
+      <h1 class="_title">
+        メニュー
+      </h1>
     </div>
-    <ul class="ncgr-app-bar__actions">
-      <li>
-        <div class="ncgr-icon-button -circle">
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-      </li>
-    </ul>
   </div>
   <div class="ncgr-full-modal__body">
     <div class="ncgr-full-modal__contents -active">
@@ -49946,14 +50000,18 @@ category: Components
 ```code
 <div class="ncgr-overlay -active"></div>
 <div class="ncgr-semi-modal -active">
-  <div class="ncgr-app-bar -transparent -active">
-    <div class="ncgr-app-bar__leading">
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-arrow-left"></i>
+  <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
+    <div class="_leading">
+      <div class="ncgr-button -appearance-transparent -shape-circle">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="arrow_left"></span>
+        </div>
       </div>
     </div>
-    <div class="ncgr-app-bar__title">
-      メニュー
+    <div class="_body">
+      <h1 class="_title">
+        メニュー
+      </h1>
     </div>
   </div>
   <div class="ncgr-semi-modal__body">
