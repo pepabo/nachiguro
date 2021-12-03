@@ -17,22 +17,19 @@ category: Components
 
 ```code
 <div class="ncgr-full-modal -active">
-  <div class="ncgr-app-bar -active">
-    <div class="ncgr-app-bar__leading">
-      <div class="ncgr-icon-button -circle">
-        <i class="fas fa-arrow-left"></i>
+  <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
+    <div class="_leading">
+      <div class="ncgr-button -appearance-transparent -shape-circle">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="arrow_left"></span>
+        </div>
       </div>
     </div>
-    <div class="ncgr-app-bar__title">
-      メニュー
+    <div class="_body">
+      <h1 class="_title">
+        メニュー
+      </h1>
     </div>
-    <ul class="ncgr-app-bar__actions">
-      <li>
-        <div class="ncgr-icon-button -circle">
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-      </li>
-    </ul>
   </div>
   <div class="ncgr-full-modal__body">
     <div class="ncgr-full-modal__contents -active">
