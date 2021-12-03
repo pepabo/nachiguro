@@ -23,17 +23,17 @@
     "sass": "^1.35.2"
   },
   "dependencies": {
-    "@inhouse/app-bar": "^0.16.3",
-    "@inhouse/avatar": "^0.16.3",
-    "@inhouse/button": "^0.16.3",
-    "@inhouse/checkbox": "^0.16.3",
-    "@inhouse/container": "^0.16.3",
-    "@inhouse/grid": "^0.16.3",
-    "@inhouse/icon": "^0.16.3",
-    "@inhouse/interactive-list": "^0.16.3",
-    "@inhouse/interactive-table": "^0.16.3",
-    "@inhouse/list": "^0.16.3",
-    "@inhouse/radio": "^0.16.3",
-    "@inhouse/table": "^0.16.3"
+    "@inhouse/app-bar": "^0.20.1",
+    "@inhouse/avatar": "^0.20.1",
+    "@inhouse/button": "^0.20.1",
+    "@inhouse/checkbox": "^0.20.1",
+    "@inhouse/container": "^0.20.1",
+    "@inhouse/grid": "^0.20.1",
+    "@inhouse/icon": "^0.20.1",
+    "@inhouse/interactive-list": "^0.20.1",
+    "@inhouse/interactive-table": "^0.20.1",
+    "@inhouse/list": "^0.20.1",
+    "@inhouse/radio": "^0.20.1",
+    "@inhouse/table": "^0.20.1"
   }
 }
