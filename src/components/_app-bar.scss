@@ -13,30 +13,44 @@ category: Components
 
 ```example
 <header class="ncgr-app-bar -appearance-white -brightness-light -position-static --activated">
-  <div class="_navigation">
+  <div class="_leading">
     <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
       <div class="_leading">
         <span class="ncgr-icon _icon" data-icon="menu"></span>
       </div>
     </button>
   </div>
-  <div class="_title">App</div>
-  <div class="_action">
-    <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="funnel"></span>
+  <div class="_body">
+    <h1 class="_title">
+      <a href="#">
+        App
+      </a>
+    </h1>
+  </div>
+  <div class="_trailing">
+    <div class="_list">
+      <div class="_item">
+        <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="funnel"></span>
+          </div>
+        </button>
       </div>
-    </button>
-    <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="node"></span>
+      <div class="_item">
+        <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="node"></span>
+          </div>
+        </button>
       </div>
-    </button>
-    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+      <div class="_item">
+        <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+          </div>
+        </button>
       </div>
-    </button>
+    </div>
   </div>
 </header>
 
