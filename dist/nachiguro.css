@@ -1964,13 +1964,13 @@ category: Components
 /* stylelint-disable indentation */
 @keyframes heartbeat {
   0% {
-    background-color: transparent;
+    opacity: 30%;
   }
   50% {
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 100%;
   }
   100% {
-    background-color: transparent;
+    opacity: 30%;
   }
 }
 /*doc
@@ -2029,13 +2029,13 @@ category: Components
 /* stylelint-disable indentation */
 @keyframes heartbeat {
   0% {
-    background-color: transparent;
+    opacity: 30%;
   }
   50% {
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 100%;
   }
   100% {
-    background-color: transparent;
+    opacity: 30%;
   }
 }
 /* stylelint-disable no-descending-specificity */
@@ -43379,6 +43379,17 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /*doc
 ---
 title: Checkbox
@@ -45998,6 +46009,17 @@ Icon Buttonはある商品やユーザー情報に対してアクションをす
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /* stylelint-disable no-descending-specificity */
 /*doc
 ---
@@ -46893,15 +46915,14 @@ category: Components
   font-size: 0.875rem;
   -webkit-line-clamp: 2;
 }
-.ncgr-interactive-list ._item ._avatar,
-.ncgr-interactive-list ._item ._media {
+.ncgr-interactive-list ._item ._avatar {
   display: flex;
   align-items: center;
-}
-.ncgr-interactive-list ._item ._avatar {
   max-height: 3rem;
 }
 .ncgr-interactive-list ._item ._media {
+  display: flex;
+  align-items: center;
   max-height: none;
 }
 .ncgr-interactive-list ._item ._media ._thumbnail {
@@ -47144,6 +47165,17 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /* stylelint-disable no-descending-specificity */
 /*doc
 ---
@@ -47183,7 +47215,7 @@ category: Components
   white-space: nowrap;
   border-spacing: 0;
 }
-.ncgr-interactive-table thead tr {
+.ncgr-interactive-table tr {
   color: #3a3e40;
 }
 .ncgr-interactive-table thead th {
@@ -47196,29 +47228,23 @@ category: Components
   z-index: 2;
 }
 .ncgr-interactive-table tbody tr {
-  color: #3a3e40;
   background-color: rgba(0, 0, 0, 0);
   cursor: default;
 }
 .ncgr-interactive-table tbody tr:hover, .ncgr-interactive-table tbody tr.--hover {
-  color: #3a3e40;
   background-color: rgba(0, 0, 0, 0.04);
 }
 .ncgr-interactive-table tbody tr.--disabled {
-  color: #3a3e40;
   background-color: rgba(0, 0, 0, 0);
   opacity: 0.38;
 }
 .ncgr-interactive-table tbody tr.--disabled:hover, .ncgr-interactive-table tbody tr.--disabled.--hover {
-  color: #3a3e40;
   background-color: rgba(0, 0, 0, 0);
 }
 .ncgr-interactive-table tbody tr.--selected {
-  color: #3a3e40;
   background-color: rgba(18, 156, 229, 0.08);
 }
 .ncgr-interactive-table tbody tr.--selected:hover, .ncgr-interactive-table tbody tr.--selected.--hover {
-  color: #3a3e40;
   background-color: rgba(18, 156, 229, 0.08);
 }
 .ncgr-interactive-table tbody tr.-is-draggable {
@@ -47228,11 +47254,8 @@ category: Components
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08), 0 6px 7px -8px rgba(0, 0, 0, 0.12), 0 6px 16px 2px rgba(0, 0, 0, 0.12);
   cursor: grabbing;
 }
-.ncgr-interactive-table th,
-.ncgr-interactive-table td {
-  padding: 0 1.5rem;
-}
 .ncgr-interactive-table th {
+  padding: 0 1.5rem;
   font-weight: bold;
   border-color: #c4cbcf;
   border-bottom-width: 0.0625rem;
@@ -47268,6 +47291,7 @@ category: Components
   justify-content: flex-end;
 }
 .ncgr-interactive-table td {
+  padding: 0 1.5rem;
   font-weight: normal;
   border-color: #d5dbde;
   border-bottom-width: 0.0625rem;
@@ -47522,6 +47546,16 @@ category: Components
 .ncgr-ol.-has-background {
   padding: 0.75rem 0;
 }
+.ncgr-ol ul,
+.ncgr-ol ol {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
+}
 .ncgr-ol li {
   box-sizing: border-box;
   margin: 0;
@@ -47548,6 +47582,38 @@ category: Components
   display: block;
   width: 3rem;
   text-align: center;
+}
+.ncgr-ol ul > li::before {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  content: "bullet_circle";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ol ul > li::before::after {
+  content: attr(data-icon);
+}
+.ncgr-ol ol > li::before {
+  font-family: inherit;
+  content: counter(list) ".";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .ncgr-ol.-size-s li {
   box-sizing: border-box;
@@ -47813,36 +47879,6 @@ category: Components
 .ncgr-ol.-density-comfort.-has-background {
   padding: 1rem 0;
 }
-.ncgr-ol ul,
-.ncgr-ol ol {
-  margin: 0;
-  padding: 0;
-  color: #3a3e40;
-  list-style-type: none;
-  counter-reset: list;
-  margin-top: 0.75rem;
-  margin-bottom: calc(-1 * 0.75rem);
-}
-.ncgr-ol ul > li::before {
-  display: inline-block;
-  font-weight: normal;
-  font-family: 'Nachiguro Icons';
-  font-style: normal;
-  line-height: 1;
-  direction: ltr;
-  letter-spacing: normal;
-  white-space: nowrap;
-  text-transform: none;
-  word-wrap: normal;
-  content: "bullet_circle";
-}
-.ncgr-ol ul > li::before::after {
-  content: attr(data-icon);
-}
-.ncgr-ol ol > li::before {
-  font-family: inherit;
-  content: counter(list) ".";
-}
 
 .ncgr-ul {
   margin: 0;
@@ -47853,6 +47889,16 @@ category: Components
 }
 .ncgr-ul.-has-background {
   padding: 0.75rem 0;
+}
+.ncgr-ul ul,
+.ncgr-ul ol {
+  margin: 0;
+  padding: 0;
+  color: #3a3e40;
+  list-style-type: none;
+  counter-reset: list;
+  margin-top: 0.75rem;
+  margin-bottom: calc(-1 * 0.75rem);
 }
 .ncgr-ul li {
   box-sizing: border-box;
@@ -47892,6 +47938,38 @@ category: Components
 }
 .ncgr-ul li::before::after {
   content: attr(data-icon);
+}
+.ncgr-ul ul > li::before {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Nachiguro Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  content: "bullet_circle";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-ul ul > li::before::after {
+  content: attr(data-icon);
+}
+.ncgr-ul ol > li::before {
+  font-family: inherit;
+  content: counter(list) ".";
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .ncgr-ul.-size-s li {
   box-sizing: border-box;
@@ -48156,36 +48234,6 @@ category: Components
 }
 .ncgr-ul.-density-comfort.-has-background {
   padding: 1rem 0;
-}
-.ncgr-ul ul,
-.ncgr-ul ol {
-  margin: 0;
-  padding: 0;
-  color: #3a3e40;
-  list-style-type: none;
-  counter-reset: list;
-  margin-top: 0.75rem;
-  margin-bottom: calc(-1 * 0.75rem);
-}
-.ncgr-ul ul > li::before {
-  display: inline-block;
-  font-weight: normal;
-  font-family: 'Nachiguro Icons';
-  font-style: normal;
-  line-height: 1;
-  direction: ltr;
-  letter-spacing: normal;
-  white-space: nowrap;
-  text-transform: none;
-  word-wrap: normal;
-  content: "bullet_circle";
-}
-.ncgr-ul ul > li::before::after {
-  content: attr(data-icon);
-}
-.ncgr-ul ol > li::before {
-  font-family: inherit;
-  content: counter(list) ".";
 }
 
 /*doc
@@ -49350,6 +49398,17 @@ Product Cardは商品画像が一番目立つように設計します。
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /*doc
 ---
 title: Radio
