@@ -18,10 +18,23 @@ category: Components
   <img alt="Avatar" src="./images/components/avatar/avatar.png">
 </div>
 ```
+
+```example
+<div class="ncgr-skeleton-avatar -size-s">
+</div>
+<div class="ncgr-skeleton-avatar -size-m">
+</div>
+<div class="ncgr-skeleton-avatar -size-l">
+</div>
+```
 */
 
 @use '@inhouse/avatar/mixins';
 
 .ncgr-avatar {
   @include mixins.style();
+}
+
+.ncgr-skeleton-avatar {
+  @include mixins.skeleton-style();
 }
