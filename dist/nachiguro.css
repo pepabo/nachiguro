@@ -1993,6 +1993,15 @@ category: Components
   <img alt="Avatar" src="./images/components/avatar/avatar.png">
 </div>
 ```
+
+```example
+<div class="ncgr-skeleton-avatar -size-s">
+</div>
+<div class="ncgr-skeleton-avatar -size-m">
+</div>
+<div class="ncgr-skeleton-avatar -size-l">
+</div>
+```
 */
 .ncgr-avatar {
   box-sizing: border-box;
@@ -2023,6 +2032,36 @@ category: Components
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.ncgr-skeleton-avatar {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.ncgr-skeleton-avatar.-size-xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-avatar.-size-s {
+  width: 2rem;
+  height: 2rem;
+}
+.ncgr-skeleton-avatar.-size-m {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.ncgr-skeleton-avatar.-size-l {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 /* stylelint-disable function-comma-space-after */
