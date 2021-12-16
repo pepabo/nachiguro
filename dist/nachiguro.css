@@ -46928,6 +46928,111 @@ category: Components
 
 ```
 
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-interactive-list">
+  <ul class="_list">
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_input"><div class="ncgr-skeleton-radio"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar"><div class="ncgr-skeleton-avatar"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar"><div class="ncgr-skeleton-avatar"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><span class="_skeleton"></span></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><span class="_skeleton"></span></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+```
+
 */
 .ncgr-interactive-list.-has-background {
   padding: 0.75rem 0;
@@ -47315,6 +47420,364 @@ category: Components
 .ncgr-interactive-list ._item > ._input:checked ~ * ._icon {
   transform: rotate(-180deg);
   transition: all 0.1s ease;
+}
+
+.ncgr-skeleton-interactive-list.-has-background {
+  padding: 0.75rem 0;
+}
+.ncgr-skeleton-interactive-list + .ncgr-skeleton-interactive-list {
+  border-top: 0.0625rem solid #c4cbcf;
+}
+.ncgr-skeleton-interactive-list > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding-right: 1.5rem;
+  padding-bottom: 0;
+  padding-left: 1.5rem;
+  color: #3a3e40;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-skeleton-interactive-list > ._title {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-skeleton-interactive-list > ._title {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-skeleton-interactive-list > ._title {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+.ncgr-skeleton-interactive-list > ._title ._skeleton {
+  display: flex;
+  align-items: center;
+  max-width: 6rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-list > ._title ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-list ._list {
+  margin: 0;
+  padding: 0.75rem 0;
+  list-style-type: none;
+}
+.ncgr-skeleton-interactive-list ._item > * {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media screen and (min-width: 480px) {
+  .ncgr-skeleton-interactive-list ._item > * {
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-skeleton-interactive-list ._item > * {
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-skeleton-interactive-list ._item > * {
+    padding: 0 1.5rem;
+  }
+}
+.ncgr-skeleton-interactive-list ._item ._body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.ncgr-skeleton-interactive-list ._item > * > ._leading {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-width: 2rem;
+  color: #3a3e40;
+}
+.ncgr-skeleton-interactive-list ._item > * > ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  min-width: 2rem;
+  color: #3a3e40;
+}
+.ncgr-skeleton-interactive-list ._item ._title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #3a3e40;
+  font-size: 1rem;
+  -webkit-line-clamp: 2;
+}
+.ncgr-skeleton-interactive-list ._item ._title ._skeleton {
+  display: flex;
+  align-items: center;
+  max-width: 12rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-list ._item ._title ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-list ._item ._description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #8e9599;
+  font-size: 0.875rem;
+  -webkit-line-clamp: 2;
+}
+.ncgr-skeleton-interactive-list ._item ._description ._skeleton {
+  display: flex;
+  align-items: center;
+  max-width: 8rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-list ._item ._description ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-list ._item ._avatar {
+  display: flex;
+  align-items: center;
+  max-height: 3rem;
+}
+.ncgr-skeleton-interactive-list ._item ._media {
+  display: flex;
+  align-items: center;
+  max-height: none;
+}
+.ncgr-skeleton-interactive-list ._item ._media ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-list ._item ._media ._thumbnail ._skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  aspect-ratio: 1/1;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-s {
+  max-height: 3rem;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-s ._thumbnail {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-s ._thumbnail ._skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  aspect-ratio: 1/1;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-m {
+  max-height: none;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-m ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-m ._thumbnail ._skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  aspect-ratio: 1/1;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-l {
+  max-height: none;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-l ._thumbnail {
+  box-sizing: border-box;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-list ._item ._media.-size-l ._thumbnail ._skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  aspect-ratio: 1/1;
+}
+.ncgr-skeleton-interactive-list ._item ._icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+.ncgr-skeleton-interactive-list.-density-dense {
+  padding: 0.25rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-dense > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-skeleton-interactive-list.-density-dense ._list {
+  padding: 0.25rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-dense ._leading,
+.ncgr-skeleton-interactive-list.-density-dense ._body,
+.ncgr-skeleton-interactive-list.-density-dense ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-list.-density-normal {
+  padding: 0.75rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-normal > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-skeleton-interactive-list.-density-normal ._list {
+  padding: 0.75rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-normal ._leading,
+.ncgr-skeleton-interactive-list.-density-normal ._body,
+.ncgr-skeleton-interactive-list.-density-normal ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-list.-density-comfort {
+  padding: 1rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-comfort > ._title {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-bottom: 0;
+}
+.ncgr-skeleton-interactive-list.-density-comfort ._list {
+  padding: 1rem 0;
+}
+.ncgr-skeleton-interactive-list.-density-comfort ._leading,
+.ncgr-skeleton-interactive-list.-density-comfort ._body,
+.ncgr-skeleton-interactive-list.-density-comfort ._trailing {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* stylelint-disable function-comma-space-after */
