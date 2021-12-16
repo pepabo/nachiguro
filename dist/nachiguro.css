@@ -43601,6 +43601,12 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
   </ul>
 </div>
 ```
+
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-checkbox"></div>
+```
 */
 .ncgr-checkbox {
   position: relative;
@@ -44231,6 +44237,20 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
 }
 .ncgr-checkbox.--mixed:disabled::after::after, .ncgr-checkbox.--mixed.--disabled::after::after {
   content: attr(data-icon);
+}
+
+.ncgr-skeleton-checkbox {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
 }
 
 /*doc
