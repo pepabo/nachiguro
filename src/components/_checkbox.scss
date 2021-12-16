@@ -75,10 +75,20 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
   </ul>
 </div>
 ```
+
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-checkbox"></div>
+```
 */
 
 @use '@inhouse/checkbox/mixins';
 
 .ncgr-checkbox {
   @include mixins.style();
+}
+
+.ncgr-skeleton-checkbox {
+  @include mixins.skeleton-style();
 }
