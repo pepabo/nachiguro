@@ -29,10 +29,101 @@ category: Components
 </table>
 ```
 
+#### Skeleton
+
+```example
+<table class="ncgr-skeleton-interactive-table" arealabel="Products">
+  <thead class="-is-sticky">
+    <tr>
+      <th style="width: 4.5rem"><div class="ncgr-skeleton-checkbox"></div></th>
+      <th style="width: 5.5rem"></th>
+      <th role="columnheader" scope="col" style="width: 6rem">
+        <span class="_skeleton"></span>
+      </th>
+      <th
+        class="-align-end"
+        role="columnheader"
+        scope="col"
+        style="width: 8rem"
+      >
+        <span class="_skeleton"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+```
+
 */
 
 @use '@inhouse/interactive-table/mixins';
 
 .ncgr-interactive-table {
   @include mixins.style();
+}
+
+.ncgr-skeleton-interactive-table {
+  @include mixins.skeleton-style();
 }
