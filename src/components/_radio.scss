@@ -43,10 +43,20 @@ Interactive Listの`leading`の中に入れて使用します。
 </div>
 ```
 
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-radio"></div>
+```
+
 */
 
 @use '@inhouse/radio/mixins';
 
 .ncgr-radio {
   @include mixins.style();
+}
+
+.ncgr-skeleton-radio {
+  @include mixins.skeleton-style();
 }
