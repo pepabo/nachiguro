@@ -751,6 +751,111 @@ category: Components
 
 ```
 
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-interactive-list">
+  <ul class="_list">
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_input"><div class="ncgr-skeleton-radio"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar"><div class="ncgr-skeleton-avatar"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_avatar"><div class="ncgr-skeleton-avatar"></div></div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><span class="_skeleton"></span></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+      </div>
+    </li>
+    <li class="_item">
+      <div>
+        <div class="_leading">
+          <div class="_media -size-s">
+            <div class="_thumbnail"><span class="_skeleton"></span></div>
+          </div>
+        </div>
+        <div class="_body">
+          <div class="_title"><span class="_skeleton"></span></div>
+          <div class="_description"><span class="_skeleton"></span></div>
+        </div>
+        <div class="_trailing">
+          <div class="_input"><div class="ncgr-skeleton-checkbox"></div></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+```
+
 */
 
 @use 'sass:math';
@@ -815,4 +920,8 @@ category: Components
       }
     }
   }
+}
+
+.ncgr-skeleton-interactive-list {
+  @include mixins.skeleton-style();
 }
