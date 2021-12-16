@@ -47825,6 +47825,93 @@ category: Components
 </table>
 ```
 
+#### Skeleton
+
+```example
+<table class="ncgr-skeleton-interactive-table" arealabel="Products">
+  <thead class="-is-sticky">
+    <tr>
+      <th style="width: 4.5rem"><div class="ncgr-skeleton-checkbox"></div></th>
+      <th style="width: 5.5rem"></th>
+      <th role="columnheader" scope="col" style="width: 6rem">
+        <span class="_skeleton"></span>
+      </th>
+      <th
+        class="-align-end"
+        role="columnheader"
+        scope="col"
+        style="width: 8rem"
+      >
+        <span class="_skeleton"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+    <tr>
+      <td><div class="ncgr-skeleton-checkbox"></div></td>
+      <td>
+        <div class="_media">
+          <div class="_thumbnail"><span class="_skeleton"></span></div>
+        </div>
+      </td>
+      <td><span class="_skeleton"></span></td>
+      <td class="-align-end"><span class="_skeleton"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+```
+
 */
 .ncgr-interactive-table {
   width: 100%;
@@ -48016,6 +48103,248 @@ category: Components
 }
 .ncgr-interactive-table.-density-comfort th,
 .ncgr-interactive-table.-density-comfort td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.ncgr-skeleton-interactive-table {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-spacing: 0;
+}
+.ncgr-skeleton-interactive-table tr {
+  color: #3a3e40;
+}
+.ncgr-skeleton-interactive-table thead th {
+  text-align: start;
+  background-color: #fff;
+}
+.ncgr-skeleton-interactive-table thead th > ._skeleton {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table thead th > ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-table thead.-is-sticky th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.ncgr-skeleton-interactive-table tbody tr {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
+}
+.ncgr-skeleton-interactive-table th {
+  padding: 0 1.5rem;
+  font-weight: bold;
+  border-color: #c4cbcf;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table th ._wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ncgr-skeleton-interactive-table th ._control.-order-asc {
+  transform: rotate(0deg);
+}
+.ncgr-skeleton-interactive-table th ._control.-order-desc {
+  transform: rotate(180deg);
+}
+.ncgr-skeleton-interactive-table th.-align-start {
+  text-align: start;
+}
+.ncgr-skeleton-interactive-table th.-align-start ._wrapper {
+  justify-content: flex-start;
+}
+.ncgr-skeleton-interactive-table th.-align-end {
+  text-align: end;
+}
+.ncgr-skeleton-interactive-table th.-align-end ._wrapper {
+  justify-content: flex-end;
+}
+.ncgr-skeleton-interactive-table th > ._skeleton {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table th > ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-table td {
+  padding: 0 1.5rem;
+  font-weight: normal;
+  border-color: #d5dbde;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table td ._wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ncgr-skeleton-interactive-table td ._control.-order-asc {
+  transform: rotate(0deg);
+}
+.ncgr-skeleton-interactive-table td ._control.-order-desc {
+  transform: rotate(180deg);
+}
+.ncgr-skeleton-interactive-table td.-align-start {
+  text-align: start;
+}
+.ncgr-skeleton-interactive-table td.-align-start ._wrapper {
+  justify-content: flex-start;
+}
+.ncgr-skeleton-interactive-table td.-align-end {
+  text-align: end;
+}
+.ncgr-skeleton-interactive-table td.-align-end ._wrapper {
+  justify-content: flex-end;
+}
+.ncgr-skeleton-interactive-table td > ._skeleton {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table td > ._skeleton::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-interactive-table ._media ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-table ._media ._thumbnail ._skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  aspect-ratio: 1/1;
+}
+.ncgr-skeleton-interactive-table ._media.-size-s ._thumbnail {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-table ._media.-size-s ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-skeleton-interactive-table ._media.-size-m ._thumbnail {
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-table ._media.-size-m ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-skeleton-interactive-table ._media.-size-l ._thumbnail {
+  box-sizing: border-box;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border-radius: 0;
+}
+.ncgr-skeleton-interactive-table ._media.-size-l ._thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ncgr-skeleton-interactive-table ._icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+.ncgr-skeleton-interactive-table.-density-dense th,
+.ncgr-skeleton-interactive-table.-density-dense td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table.-density-normal th,
+.ncgr-skeleton-interactive-table.-density-normal td {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ncgr-skeleton-interactive-table.-density-comfort th,
+.ncgr-skeleton-interactive-table.-density-comfort td {
   box-sizing: border-box;
   margin: 0;
   padding-top: 1rem;
