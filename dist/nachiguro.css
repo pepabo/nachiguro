@@ -44379,6 +44379,17 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /*doc
 ---
 title: Container
@@ -44792,6 +44803,17 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /*doc
 ---
 title: Grid
@@ -47462,8 +47484,8 @@ category: Components
 .ncgr-skeleton-interactive-list > ._title ._skeleton {
   display: flex;
   align-items: center;
-  max-width: 6rem;
   height: 1.5rem;
+  max-width: 6rem;
 }
 .ncgr-skeleton-interactive-list > ._title ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
@@ -47559,8 +47581,8 @@ category: Components
 .ncgr-skeleton-interactive-list ._item ._title ._skeleton {
   display: flex;
   align-items: center;
-  max-width: 12rem;
   height: 1.5rem;
+  max-width: 12rem;
 }
 .ncgr-skeleton-interactive-list ._item ._title ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
@@ -47587,8 +47609,8 @@ category: Components
 .ncgr-skeleton-interactive-list ._item ._description ._skeleton {
   display: flex;
   align-items: center;
-  max-width: 8rem;
   height: 1.5rem;
+  max-width: 8rem;
 }
 .ncgr-skeleton-interactive-list ._item ._description ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
@@ -48127,8 +48149,8 @@ category: Components
 .ncgr-skeleton-interactive-table thead th > ._skeleton {
   display: flex;
   align-items: center;
-  width: 6rem;
   height: 1.5rem;
+  max-width: 6rem;
 }
 .ncgr-skeleton-interactive-table thead th > ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
@@ -48192,8 +48214,8 @@ category: Components
 .ncgr-skeleton-interactive-table th > ._skeleton {
   display: flex;
   align-items: center;
-  width: 6rem;
   height: 1.5rem;
+  max-width: 6rem;
 }
 .ncgr-skeleton-interactive-table th > ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
@@ -48248,8 +48270,8 @@ category: Components
 .ncgr-skeleton-interactive-table td > ._skeleton {
   display: flex;
   align-items: center;
-  width: 6rem;
   height: 1.5rem;
+  max-width: 6rem;
 }
 .ncgr-skeleton-interactive-table td > ._skeleton::after {
   background-color: rgba(0, 0, 0, 0.2);
