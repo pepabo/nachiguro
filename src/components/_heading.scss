@@ -107,6 +107,14 @@ $options: (
   }
 }
 
+@function get-sizes() {
+  @return map.keys($heading-font-size-levels);
+}
+
+@function get-boundary-size-levels() {
+  @return map.keys(map.get($heading-font-size-levels, s));
+}
+
 // Heading Private Mixins
 
 @mixin -text-style(
@@ -189,7 +197,7 @@ $options: (
       );
   }
 
-  @each $boundary-size-level in (s, m, l) {
+  @each $boundary-size-level in get-boundary-size-levels() {
     @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
       @include -text-style(
         $size: map.get($options, size),
@@ -198,14 +206,14 @@ $options: (
     }
   }
 
-  @each $size in (s, m, l) {
+  @each $size in get-sizes() {
     &.-size-#{$size} {
       @include -text-style(
         $size: $size,
         $boundary-size-level: s
       );
 
-      @each $boundary-size-level in (s, m, l) {
+      @each $boundary-size-level in get-boundary-size-levels() {
         @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
           @include -text-style(
             $size: $size,
@@ -231,14 +239,14 @@ $options: (
     $boundary-size-level: s
   );
 
-  @each $size in (s, m, l) {
+  @each $size in get-sizes() {
     &.-size-#{$size} {
       @include -skeleton-text-style(
         $size: $size,
         $boundary-size-level: s
       );
 
-      @each $boundary-size-level in (s, m, l) {
+      @each $boundary-size-level in get-boundary-size-levels() {
         @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
           @include -skeleton-text-style(
             $size: $size,
