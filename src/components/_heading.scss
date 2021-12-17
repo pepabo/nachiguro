@@ -10,26 +10,26 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 
 
 ```example
-<h1 class="ncgr-heading -l">忍者スリスリ君</h1>
-<h1 class="ncgr-heading -m">忍者スリスリ君</h1>
-<h1 class="ncgr-heading -s">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-l">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-m">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-s">忍者スリスリ君</h1>
 ```
 
-見出しにボーダーをつける場合はspanで入れ子にして`.ncgr-heading__border`のclassをつけます。
+見出しにボーダーをつける場合はspanで入れ子にして`._border`のclassをつけます。
 
 ```example
-<h1 class="ncgr-heading -l">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-l">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading -m">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-m">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading -s">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-s">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
@@ -37,69 +37,169 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 
 */
 
+@use 'sass:map';
+@use '@inhouse/adapter/functions' as adapter-functions;
+@use '@inhouse/adapter/mixins' as adapter-mixins;
+
+// Flavor variables
+
+$heading-font-size-levels: (
+  s: (
+    s: m,
+    m: l,
+    l: xl
+  ),
+  m: (
+    s: l,
+    m: xl,
+    l: xxl
+  ),
+  l: (
+    s: xl,
+    m: xxl,
+    l: xxxl
+  )
+);
+
+// Adapter functions
+
+@function get-heading-font-size-level(
+  $size: m,
+  $boundary-size-level: m
+) {
+  @return
+    map.get(
+      map.get(
+        $heading-font-size-levels,
+        $size
+      ),
+      $boundary-size-level
+    );
+}
+
+// Heading Variables
+
+$options: (
+  size: m,
+  brightness: light
+);
+
+// Heading Functions
+
+@function get-color(
+  $brightness: light
+) {
+  @if $brightness == light {
+    @return adapter-functions.get-semantic-color(
+      $intention: neutral,
+      $level: 800
+    );
+  } @else if $brightness == dark {
+    @return adapter-functions.get-color(white, 1000);
+  }
+}
+
+// Heading Private Mixins
+
+@mixin -text-style(
+  $size: m,
+  $boundary-size-level: s
+) {
+  font-size:
+    adapter-functions.get-font-size(
+      $level: get-heading-font-size-level(
+        $size: $size,
+        $boundary-size-level: $boundary-size-level
+      ),
+    );
+  line-height:
+    adapter-functions.get-line-height(
+      $level: get-heading-font-size-level(
+        $size: $size,
+        $boundary-size-level: $boundary-size-level
+      ),
+      $density: normal
+    );
+}
+
+@mixin -color-ruleset(
+  $brightness: light
+) {
+  color:
+    get-color(
+      $brightness: $brightness
+    );
+
+  a {
+    color:
+      get-color(
+        $brightness: $brightness
+      );
+  }
+
+  ._border {
+    border-bottom-color:
+      get-color(
+        $brightness: $brightness
+      );
+  }
+}
+
 .ncgr-heading {
-  font-weight: bold;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  color: var(--color-label);
-  a {
-    color: var(--color-label);
-  }
-}
+  font-weight: bold;
 
-.ncgr-heading__border {
-  display: inline-block;
-}
+  @include -text-style(
+    $size: map.get($options, size),
+    $boundary-size-level: s
+  );
 
-.ncgr-heading.-l {
-  font-size: 2.875rem;
-  @include mediaquery(mobile) {
-    font-size: 1.75rem;
-  }
-  .ncgr-heading__border {
-    border-bottom: 0.25rem solid var(--color-label);
-    padding-bottom: 0.5rem;
-  }
-}
+  @include -color-ruleset(
+    $brightness: map.get($options, brightness)
+  );
 
-.ncgr-heading.-m {
-  font-size: 1.875rem;
-  @include mediaquery(mobile) {
-    font-size: 1.25rem;
+  ._border {
+    display: inline-block;
+    border-style: solid;
+    border-bottom-width:
+      adapter-functions.get-line-width-size(
+        $level: xl
+      );
   }
-  .ncgr-heading__border {
-    border-bottom: 0.1875rem solid var(--color-label);
-    padding-bottom: 0.5rem;
-  }
-}
 
-.ncgr-heading.-s {
-  font-size: 1.125rem;
-  @include mediaquery(mobile) {
-    font-size: 1rem;
+  @each $boundary-size-level in (s, m, l) {
+    @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
+      @include -text-style(
+        $size: map.get($options, size),
+        $boundary-size-level: $boundary-size-level
+      );
+    }
   }
-  .ncgr-heading__border {
-    border-bottom: 0.125rem solid var(--color-label);
-    padding-bottom: 0.5rem;
-  }
-}
 
-.ncgr-heading.-dark {
-  color: var(--color-white);
-  a {
-    color: var(--color-white);
-  }
-  .ncgr-heading__border {
-    border-bottom: 0.25rem solid var(--color-white);
-  }
-}
+  @each $size in (s, m, l) {
+    &.-size-#{$size} {
+      @include -text-style(
+        $size: $size,
+        $boundary-size-level: s
+      );
 
-.controller-developer-apps {
-  .ncgr-heading {
-    color: var(--color-white);
-    a {
-      color: var(--color-white);
+      @each $boundary-size-level in (s, m, l) {
+        @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
+          @include -text-style(
+            $size: $size,
+            $boundary-size-level: $boundary-size-level
+          );
+        }
+      }
+    }
+  }
+
+  @each $brightness in adapter-functions.get-brightnesses() {
+    &.-brightness-#{$brightness} {
+      @include -color-ruleset(
+        $brightness: $brightness
+      );
     }
   }
 }
