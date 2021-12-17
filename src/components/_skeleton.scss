@@ -1,0 +1,80 @@
+/*doc
+---
+title: Skeleton
+name: Skeleton
+category: Components
+---
+
+任意のSkeletonを作成できます。
+
+```example
+<div class="ncgr-skeleton" style="width: 3rem; height: 3rem;"></div>
+```
+
+Skeleton Textを作成できます。
+
+`-size-{size}` Modifierをつけると、そのサイズになります。
+
+```example
+<span class="ncgr-skeleton-text -size-xxs"></span>
+<span class="ncgr-skeleton-text -size-xs"></span>
+<span class="ncgr-skeleton-text -size-s"></span>
+<span class="ncgr-skeleton-text -size-m"></span>
+<span class="ncgr-skeleton-text -size-l"></span>
+<span class="ncgr-skeleton-text -size-xl"></span>
+<span class="ncgr-skeleton-text -size-xxl"></span>
+<span class="ncgr-skeleton-text -size-xxxl"></span>
+```
+
+`-density-{density}` Modifierをつけると、その密度になります。
+
+```example
+<span class="ncgr-skeleton-text -density-dense"></span>
+<span class="ncgr-skeleton-text -density-normal"></span>
+<span class="ncgr-skeleton-text -density-comfort"></span>
+```
+
+*/
+
+@use 'sass:map';
+@use '@inhouse/adapter/functions' as adapter-functions;
+@use '@inhouse/adapter/mixins' as adapter-mixins;
+@use '@inhouse/skeleton/mixins' as skeleton;
+
+.ncgr-skeleton {
+  @include skeleton.style();
+}
+
+.ncgr-skeleton-text {
+  @include adapter-mixins.skeleton-text(
+    $level: m,
+    $density: normal
+  );
+
+  @each $density in adapter-functions.get-densities() {
+    &.-density-#{$density} {
+      @include adapter-mixins.skeleton-text(
+        $level: m,
+        $density: $density
+      );
+    }
+  }
+
+  @each $size in (xxs, xs, s, m, l, xl, xxl, xxxl) {
+    &.-size-#{$size} {
+      @include adapter-mixins.skeleton-text(
+        $level: $size,
+        $density: normal
+      );
+    }
+
+    @each $density in adapter-functions.get-densities() {
+      &.-size-#{$size}.-density-#{$density} {
+        @include adapter-mixins.skeleton-text(
+          $level: $size,
+          $density: $density
+        );
+      }
+    }
+  }
+}
