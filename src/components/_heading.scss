@@ -35,6 +35,14 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 </h1>
 ```
 
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-heading -size-l"></div>
+<div class="ncgr-skeleton-heading -size-m"></div>
+<div class="ncgr-skeleton-heading -size-s"></div>
+```
+
 */
 
 @use 'sass:map';
@@ -122,6 +130,19 @@ $options: (
     );
 }
 
+@mixin -skeleton-text-style(
+  $size: m,
+  $boundary-size-level: s
+) {
+  @include adapter-mixins.skeleton-text(
+    $level: get-heading-font-size-level(
+      $size: $size,
+      $boundary-size-level: $boundary-size-level
+    ),
+    $density: normal
+  );
+}
+
 @mixin -color-ruleset(
   $brightness: light
 ) {
@@ -200,6 +221,31 @@ $options: (
       @include -color-ruleset(
         $brightness: $brightness
       );
+    }
+  }
+}
+
+.ncgr-skeleton-heading {
+  @include -skeleton-text-style(
+    $size: map.get($options, size),
+    $boundary-size-level: s
+  );
+
+  @each $size in (s, m, l) {
+    &.-size-#{$size} {
+      @include -skeleton-text-style(
+        $size: $size,
+        $boundary-size-level: s
+      );
+
+      @each $boundary-size-level in (s, m, l) {
+        @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
+          @include -skeleton-text-style(
+            $size: $size,
+            $boundary-size-level: $boundary-size-level
+          );
+        }
+      }
     }
   }
 }
