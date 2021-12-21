@@ -51448,6 +51448,752 @@ category: Components
   outline: 0;
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
+/*doc
+---
+title: Skeleton
+name: Skeleton
+category: Components
+---
+
+任意のSkeletonを作成できます。
+
+```example
+<div class="ncgr-skeleton" style="width: 3rem; height: 3rem;"></div>
+```
+
+Skeleton Textを作成できます。
+
+`-size-{size}` Modifierをつけると、そのサイズになります。
+
+```example
+<span class="ncgr-skeleton-text -size-xxs"></span>
+<span class="ncgr-skeleton-text -size-xs"></span>
+<span class="ncgr-skeleton-text -size-s"></span>
+<span class="ncgr-skeleton-text -size-m"></span>
+<span class="ncgr-skeleton-text -size-l"></span>
+<span class="ncgr-skeleton-text -size-xl"></span>
+<span class="ncgr-skeleton-text -size-xxl"></span>
+<span class="ncgr-skeleton-text -size-xxxl"></span>
+```
+
+`-density-{density}` Modifierをつけると、その密度になります。
+
+```example
+<span class="ncgr-skeleton-text -density-dense"></span>
+<span class="ncgr-skeleton-text -density-normal"></span>
+<span class="ncgr-skeleton-text -density-comfort"></span>
+```
+
+*/
+.ncgr-skeleton {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.ncgr-skeleton-text {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxs {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-xxs::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.6875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxs.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+.ncgr-skeleton-text.-size-xxs.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.6875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxs.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-xxs.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.6875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxs.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-xxs.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.6875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xs {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-xs::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xs.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+.ncgr-skeleton-text.-size-xs.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xs.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-xs.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xs.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-xs.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-s {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-s::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-s.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-s.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-s.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-s.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-s.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-size-s.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 0.875rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-m {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-m::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-m.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+}
+.ncgr-skeleton-text.-size-m.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-m.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-m.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-m.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-size-m.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-l {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-size-l::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-l.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.ncgr-skeleton-text.-size-l.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-l.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-size-l.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-l.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.ncgr-skeleton-text.-size-l.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xl {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.ncgr-skeleton-text.-size-xl::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.3125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xl.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-text.-size-xl.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.3125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xl.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.ncgr-skeleton-text.-size-xl.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.3125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xl.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xl.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.3125rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxl {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xxl::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.625rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxl.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+}
+.ncgr-skeleton-text.-size-xxl.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.625rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxl.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xxl.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.625rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxl.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.ncgr-skeleton-text.-size-xxl.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.625rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxxl {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xxxl::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 2rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxxl.-density-dense {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xxxl.-density-dense::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 2rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxxl.-density-normal {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.ncgr-skeleton-text.-size-xxxl.-density-normal::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 2rem;
+  content: "";
+}
+.ncgr-skeleton-text.-size-xxxl.-density-comfort {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+}
+.ncgr-skeleton-text.-size-xxxl.-density-comfort::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 2rem;
+  content: "";
+}
+
 /*doc
 ---
 title: Square Radio
