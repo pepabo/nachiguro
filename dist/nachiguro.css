@@ -45777,6 +45777,19 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
   }
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+@keyframes heartbeat {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 /*doc
 ---
 title: Heading
@@ -45789,101 +45802,426 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 
 
 ```example
-<h1 class="ncgr-heading -l">忍者スリスリ君</h1>
-<h1 class="ncgr-heading -m">忍者スリスリ君</h1>
-<h1 class="ncgr-heading -s">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-l">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-m">忍者スリスリ君</h1>
+<h1 class="ncgr-heading -size-s">忍者スリスリ君</h1>
 ```
 
-見出しにボーダーをつける場合はspanで入れ子にして`.ncgr-heading__border`のclassをつけます。
+見出しにボーダーをつける場合はspanで入れ子にして`._border`のclassをつけます。
 
 ```example
-<h1 class="ncgr-heading -l">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-l">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading -m">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-m">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
-<h1 class="ncgr-heading -s">
-  <span class="ncgr-heading__border">
+<h1 class="ncgr-heading -size-s">
+  <span class="_border">
     忍者スリスリ君
   </span>
 </h1>
+```
+
+#### Skeleton
+
+```example
+<div class="ncgr-skeleton-heading -size-l"></div>
+<div class="ncgr-skeleton-heading -size-m"></div>
+<div class="ncgr-skeleton-heading -size-s"></div>
 ```
 
 */
 .ncgr-heading {
-  font-weight: bold;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  color: var(--color-label);
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #3a3e40;
 }
 .ncgr-heading a {
-  color: var(--color-label);
+  color: #3a3e40;
 }
-
-.ncgr-heading__border {
+.ncgr-heading ._border {
+  border-bottom-color: #3a3e40;
+}
+.ncgr-heading ._border {
   display: inline-block;
+  border-style: solid;
+  border-bottom-width: 0.25rem;
 }
-
-.ncgr-heading.-l {
-  font-size: 2.875rem;
-}
-@media screen and (max-width: 480px) {
-  .ncgr-heading.-l {
-    font-size: 1.75rem;
+@media screen and (min-width: 480px) {
+  .ncgr-heading {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
-.ncgr-heading.-l .ncgr-heading__border {
-  border-bottom: 0.25rem solid var(--color-label);
-  padding-bottom: 0.5rem;
-}
-
-.ncgr-heading.-m {
-  font-size: 1.875rem;
-}
-@media screen and (max-width: 480px) {
-  .ncgr-heading.-m {
-    font-size: 1.25rem;
+@media screen and (min-width: 768px) {
+  .ncgr-heading {
+    font-size: 1.3125rem;
+    line-height: 2rem;
   }
 }
-.ncgr-heading.-m .ncgr-heading__border {
-  border-bottom: 0.1875rem solid var(--color-label);
-  padding-bottom: 0.5rem;
+@media screen and (min-width: 1280px) {
+  .ncgr-heading {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
 }
-
-.ncgr-heading.-s {
-  font-size: 1.125rem;
+.ncgr-heading.-size-s {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
-@media screen and (max-width: 480px) {
-  .ncgr-heading.-s {
+@media screen and (min-width: 480px) {
+  .ncgr-heading.-size-s {
     font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
-.ncgr-heading.-s .ncgr-heading__border {
-  border-bottom: 0.125rem solid var(--color-label);
-  padding-bottom: 0.5rem;
+@media screen and (min-width: 768px) {
+  .ncgr-heading.-size-s {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-heading.-size-s {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+  }
+}
+.ncgr-heading.-size-m {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-heading.-size-m {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-heading.-size-m {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-heading.-size-m {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+.ncgr-heading.-size-l {
+  font-size: 1.3125rem;
+  line-height: 2rem;
+}
+@media screen and (min-width: 480px) {
+  .ncgr-heading.-size-l {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-heading.-size-l {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-heading.-size-l {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+.ncgr-heading.-brightness-light {
+  color: #3a3e40;
+}
+.ncgr-heading.-brightness-light a {
+  color: #3a3e40;
+}
+.ncgr-heading.-brightness-light ._border {
+  border-bottom-color: #3a3e40;
+}
+.ncgr-heading.-brightness-dark {
+  color: #fff;
+}
+.ncgr-heading.-brightness-dark a {
+  color: #fff;
+}
+.ncgr-heading.-brightness-dark ._border {
+  border-bottom-color: #fff;
 }
 
-.ncgr-heading.-dark {
-  color: var(--color-white);
+.ncgr-skeleton-heading {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
 }
-.ncgr-heading.-dark a {
-  color: var(--color-white);
+.ncgr-skeleton-heading::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
 }
-.ncgr-heading.-dark .ncgr-heading__border {
-  border-bottom: 0.25rem solid var(--color-white);
+.ncgr-skeleton-heading.-size-s {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
 }
-
-.controller-developer-apps .ncgr-heading {
-  color: var(--color-white);
+.ncgr-skeleton-heading.-size-s::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1rem;
+  content: "";
 }
-.controller-developer-apps .ncgr-heading a {
-  color: var(--color-white);
+@media screen and (min-width: 480px) {
+  .ncgr-skeleton-heading.-size-s {
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+  }
+  .ncgr-skeleton-heading.-size-s::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-skeleton-heading.-size-s {
+    display: flex;
+    align-items: center;
+    height: 1.75rem;
+  }
+  .ncgr-skeleton-heading.-size-s::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.125rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-skeleton-heading.-size-s {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+  }
+  .ncgr-skeleton-heading.-size-s::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.3125rem;
+    content: "";
+  }
+}
+.ncgr-skeleton-heading.-size-m {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+}
+.ncgr-skeleton-heading.-size-m::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.125rem;
+  content: "";
+}
+@media screen and (min-width: 480px) {
+  .ncgr-skeleton-heading.-size-m {
+    display: flex;
+    align-items: center;
+    height: 1.75rem;
+  }
+  .ncgr-skeleton-heading.-size-m::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.125rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-skeleton-heading.-size-m {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+  }
+  .ncgr-skeleton-heading.-size-m::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.3125rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-skeleton-heading.-size-m {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+  }
+  .ncgr-skeleton-heading.-size-m::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.625rem;
+    content: "";
+  }
+}
+.ncgr-skeleton-heading.-size-l {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.ncgr-skeleton-heading.-size-l::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: block;
+  width: 100%;
+  height: 1.3125rem;
+  content: "";
+}
+@media screen and (min-width: 480px) {
+  .ncgr-skeleton-heading.-size-l {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+  }
+  .ncgr-skeleton-heading.-size-l::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.3125rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 768px) {
+  .ncgr-skeleton-heading.-size-l {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+  }
+  .ncgr-skeleton-heading.-size-l::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 1.625rem;
+    content: "";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ncgr-skeleton-heading.-size-l {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+  }
+  .ncgr-skeleton-heading.-size-l::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    display: block;
+    width: 100%;
+    height: 2rem;
+    content: "";
+  }
 }
 
 /*doc
