@@ -25,11 +25,11 @@
   "dependencies": {
     "@inhouse/adapter": "^0.26.0",
     "@inhouse/app-bar": "^0.26.0",
-    "@inhouse/adapter": "^0.26.0",
     "@inhouse/avatar": "^0.26.0",
     "@inhouse/button": "^0.26.0",
     "@inhouse/checkbox": "^0.26.0",
     "@inhouse/container": "^0.26.0",
+    "@inhouse/flavor": "npm:@inhouse/nachiguro-flavor@0.1.0",
     "@inhouse/grid": "^0.26.0",
     "@inhouse/icon": "^0.26.0",
     "@inhouse/interactive-list": "^0.26.0",
@@ -37,7 +37,6 @@
     "@inhouse/list": "^0.26.0",
     "@inhouse/skeleton": "^0.26.0",
     "@inhouse/radio": "^0.26.0",
-    "@inhouse/skeleton": "^0.26.0",
     "@inhouse/table": "^0.26.0"
   }
 }
