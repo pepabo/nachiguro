@@ -1,0 +1,3 @@
+// adapterは、nachiguro-flavorが適用された@inhouse/adapterを再エクスポートするレイヤーです。
+// Nachiguroの利用者がInhouseを直接触らず 'nachiguro/adapter'を使うようにするためのものです。
+@forward '@inhouse/adapter';
