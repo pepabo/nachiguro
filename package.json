@@ -38,5 +38,10 @@
     "@inhouse/skeleton": "^0.26.0",
     "@inhouse/radio": "^0.26.0",
     "@inhouse/table": "^0.26.0"
+  },
+  "peerDependencies": {
+    "@inhouse/adapter": "^0.26.0",
+    "@inhouse/flavor": "^0.1.0",
+    "sass": "^1.33.0"
   }
 }
