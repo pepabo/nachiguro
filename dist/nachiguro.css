@@ -51259,7 +51259,7 @@ sectionの背景色は`.ncgr-section--background`、`.ncgr-section--secondary-ba
 
 /*doc
 ---
-title: Selectbox
+title: Selectbox (Deprecated)
 name: selectbox
 category: Components
 ---
@@ -53036,7 +53036,7 @@ category: Components
 
 /*doc
 ---
-title: Textfield
+title: Textfield (Deprecated)
 name: textfield
 category: Components
 ---
@@ -53306,6 +53306,1504 @@ error・successの場合は以下のようにマークアップします。
   line-height: 32px;
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/*doc
+---
+title: Text field
+name: text-field
+category: Components
+---
+
+`.ncgr-text-field` を指定した要素はText fieldになります。
+
+```example
+<div class="ncgr-text-field">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">日付</label>
+  <div class="_control">
+    <input class="_input" type="date" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">時間</label>
+  <div class="_control">
+    <input class="_input" type="time" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">数字</label>
+  <div class="_control">
+    <input class="_input" type="number" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">自己紹介</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Size
+
+`.-size-{size}`を指定するとそのサイズになります。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Color
+
+`.-color-{intention}` を指定すると、色が変わって意味を持ちます。
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Width
+
+`.-width-{width}` を指定すると、親要素に対しての幅を決定できます。
+
+```example
+<div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -width-full">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-half">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-third">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### State
+
+`.--{state}` を指定すると、その状態になります。
+
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" disabled placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。" disabled></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe" disabled>
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Leading
+
+`_input`の直前に`_leading`をいれることができます。
+
+##### Icon
+
+Iconには`_icon`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+##### Text
+
+Textには`_text`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+#### Trailing
+
+`_input`の直後に`_trailing`をいれることができます。
+
+##### Icon
+
+Iconには`_icon`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -color-positive -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-negative -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+```
+
+##### Text
+
+Textには`_text`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+##### Button
+
+Buttonには`_button`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-xs">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-s">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-m">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-l">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+*/
+/* Flavor */
+/* Variables */
+/* Functions */
+/* Mixins */
+.ncgr-text-field {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
+  opacity: 1;
+  position: relative;
+  width: calc(100% / 1);
+  min-height: 2.5rem;
+}
+.ncgr-text-field ._label {
+  background-color: #fff;
+  color: #3a3e40;
+  height: 0.125rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  z-index: 2;
+  line-height: 0;
+  margin-left: calc(-1 * 0.125rem);
+}
+.ncgr-text-field ._control {
+  display: flex;
+  gap: calc($text-field-horizontal-spacing / 2);
+  align-items: stretch;
+  flex-grow: 1;
+}
+.ncgr-text-field ._control > *:first-child {
+  padding-left: 0.75rem;
+}
+.ncgr-text-field ._control > *:last-child {
+  padding-right: 0.75rem;
+}
+.ncgr-text-field ._control > ._input {
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0.125rem;
+  cursor: text;
+}
+.ncgr-text-field ._control > ._input::placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field ._control > ._input::-ms-input-placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field ._control > textarea._input {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  resize: vertical;
+}
+.ncgr-text-field ._control > select._input {
+  cursor: default;
+}
+.ncgr-text-field ._control > ._leading, .ncgr-text-field ._control > ._trailing {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field ._control > ._leading > ._icon, .ncgr-text-field ._control > ._leading > ._text, .ncgr-text-field ._control > ._trailing > ._icon, .ncgr-text-field ._control > ._trailing > ._text {
+  color: #8e9599;
+  font-size: 1rem;
+}
+.ncgr-text-field ._control > ._leading > ._button, .ncgr-text-field ._control > ._trailing > ._button {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-informative {
+  color: #129ce5;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-neutral {
+  color: #adb4bb;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-positive {
+  color: #1fcc26;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-notice {
+  color: #fac743;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-negative {
+  color: #d92e1e;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-attention {
+  color: #f28622;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-interactive {
+  color: #129ce5;
+}
+.ncgr-text-field ._control > ._trailing > ._icon.-color-favorite {
+  color: #d92e1e;
+}
+.ncgr-text-field.-color-neutral {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
+}
+.ncgr-text-field.-color-positive {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #1fcc26;
+}
+.ncgr-text-field.-color-negative {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d92e1e;
+}
+.ncgr-text-field.-color-notice {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #fac743;
+}
+.ncgr-text-field.-size-xs {
+  min-height: 1.5rem;
+}
+.ncgr-text-field.-size-xs ._control > ._input {
+  font-size: 0.75rem;
+}
+.ncgr-text-field.-size-xs ._control > ._leading > ._icon, .ncgr-text-field.-size-xs ._control > ._leading > ._text, .ncgr-text-field.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field.-size-xs ._control > ._trailing > ._text {
+  font-size: 0.75rem;
+}
+.ncgr-text-field.-size-s {
+  min-height: 2rem;
+}
+.ncgr-text-field.-size-s ._control > ._input {
+  font-size: 0.875rem;
+}
+.ncgr-text-field.-size-s ._control > ._leading > ._icon, .ncgr-text-field.-size-s ._control > ._leading > ._text, .ncgr-text-field.-size-s ._control > ._trailing > ._icon, .ncgr-text-field.-size-s ._control > ._trailing > ._text {
+  font-size: 0.875rem;
+}
+.ncgr-text-field.-size-m {
+  min-height: 2.5rem;
+}
+.ncgr-text-field.-size-m ._control > ._input {
+  font-size: 1rem;
+}
+.ncgr-text-field.-size-m ._control > ._leading > ._icon, .ncgr-text-field.-size-m ._control > ._leading > ._text, .ncgr-text-field.-size-m ._control > ._trailing > ._icon, .ncgr-text-field.-size-m ._control > ._trailing > ._text {
+  font-size: 1rem;
+}
+.ncgr-text-field.-size-l {
+  min-height: 3rem;
+}
+.ncgr-text-field.-size-l ._control > ._input {
+  font-size: 1.125rem;
+}
+.ncgr-text-field.-size-l ._control > ._leading > ._icon, .ncgr-text-field.-size-l ._control > ._leading > ._text, .ncgr-text-field.-size-l ._control > ._trailing > ._icon, .ncgr-text-field.-size-l ._control > ._trailing > ._text {
+  font-size: 1.125rem;
+}
+.ncgr-text-field.-size-xl {
+  min-height: 3.5rem;
+}
+.ncgr-text-field.-size-xl ._control > ._input {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field.-size-xl ._control > ._leading > ._icon, .ncgr-text-field.-size-xl ._control > ._leading > ._text, .ncgr-text-field.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field.-size-xl ._control > ._trailing > ._text {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field.-width-auto {
+  width: auto;
+}
+.ncgr-text-field.-width-full {
+  width: calc(100% / 1);
+}
+.ncgr-text-field.-width-half {
+  width: calc(100% / 2);
+}
+.ncgr-text-field.-width-third {
+  width: calc(100% / 3);
+}
+.ncgr-text-field:hover, .ncgr-text-field.--hover {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #d5dbde;
+  opacity: 1;
+  position: relative;
+  width: calc(100% / 1);
+  min-height: 2.5rem;
+}
+.ncgr-text-field:hover ._label, .ncgr-text-field.--hover ._label {
+  background-color: #fff;
+  color: #3a3e40;
+  height: 0.125rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  z-index: 2;
+  line-height: 0;
+  margin-left: calc(-1 * 0.125rem);
+}
+.ncgr-text-field:hover ._control, .ncgr-text-field.--hover ._control {
+  display: flex;
+  gap: calc($text-field-horizontal-spacing / 2);
+  align-items: stretch;
+  flex-grow: 1;
+}
+.ncgr-text-field:hover ._control > *:first-child, .ncgr-text-field.--hover ._control > *:first-child {
+  padding-left: 0.75rem;
+}
+.ncgr-text-field:hover ._control > *:last-child, .ncgr-text-field.--hover ._control > *:last-child {
+  padding-right: 0.75rem;
+}
+.ncgr-text-field:hover ._control > ._input, .ncgr-text-field.--hover ._control > ._input {
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0.125rem;
+  cursor: text;
+}
+.ncgr-text-field:hover ._control > ._input::placeholder, .ncgr-text-field.--hover ._control > ._input::placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:hover ._control > ._input::-ms-input-placeholder, .ncgr-text-field.--hover ._control > ._input::-ms-input-placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:hover ._control > textarea._input, .ncgr-text-field.--hover ._control > textarea._input {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  resize: vertical;
+}
+.ncgr-text-field:hover ._control > select._input, .ncgr-text-field.--hover ._control > select._input {
+  cursor: default;
+}
+.ncgr-text-field:hover ._control > ._leading, .ncgr-text-field:hover ._control > ._trailing, .ncgr-text-field.--hover ._control > ._leading, .ncgr-text-field.--hover ._control > ._trailing {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:hover ._control > ._leading > ._icon, .ncgr-text-field:hover ._control > ._leading > ._text, .ncgr-text-field:hover ._control > ._trailing > ._icon, .ncgr-text-field:hover ._control > ._trailing > ._text, .ncgr-text-field.--hover ._control > ._leading > ._icon, .ncgr-text-field.--hover ._control > ._leading > ._text, .ncgr-text-field.--hover ._control > ._trailing > ._icon, .ncgr-text-field.--hover ._control > ._trailing > ._text {
+  color: #8e9599;
+  font-size: 1rem;
+}
+.ncgr-text-field:hover ._control > ._leading > ._button, .ncgr-text-field:hover ._control > ._trailing > ._button, .ncgr-text-field.--hover ._control > ._leading > ._button, .ncgr-text-field.--hover ._control > ._trailing > ._button {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-informative {
+  color: #129ce5;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-neutral {
+  color: #adb4bb;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-positive {
+  color: #1fcc26;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-notice {
+  color: #fac743;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-negative {
+  color: #d92e1e;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-attention {
+  color: #f28622;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-interactive {
+  color: #129ce5;
+}
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-favorite {
+  color: #d92e1e;
+}
+.ncgr-text-field:hover.-color-neutral, .ncgr-text-field.--hover.-color-neutral {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #d5dbde;
+}
+.ncgr-text-field:hover.-color-positive, .ncgr-text-field.--hover.-color-positive {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #1fcc26;
+}
+.ncgr-text-field:hover.-color-negative, .ncgr-text-field.--hover.-color-negative {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #d92e1e;
+}
+.ncgr-text-field:hover.-color-notice, .ncgr-text-field.--hover.-color-notice {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #fac743;
+}
+.ncgr-text-field:hover.-size-xs, .ncgr-text-field.--hover.-size-xs {
+  min-height: 1.5rem;
+}
+.ncgr-text-field:hover.-size-xs ._control > ._input, .ncgr-text-field.--hover.-size-xs ._control > ._input {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:hover.-size-xs ._control > ._leading > ._icon, .ncgr-text-field:hover.-size-xs ._control > ._leading > ._text, .ncgr-text-field:hover.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field:hover.-size-xs ._control > ._trailing > ._text, .ncgr-text-field.--hover.-size-xs ._control > ._leading > ._icon, .ncgr-text-field.--hover.-size-xs ._control > ._leading > ._text, .ncgr-text-field.--hover.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field.--hover.-size-xs ._control > ._trailing > ._text {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:hover.-size-s, .ncgr-text-field.--hover.-size-s {
+  min-height: 2rem;
+}
+.ncgr-text-field:hover.-size-s ._control > ._input, .ncgr-text-field.--hover.-size-s ._control > ._input {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:hover.-size-s ._control > ._leading > ._icon, .ncgr-text-field:hover.-size-s ._control > ._leading > ._text, .ncgr-text-field:hover.-size-s ._control > ._trailing > ._icon, .ncgr-text-field:hover.-size-s ._control > ._trailing > ._text, .ncgr-text-field.--hover.-size-s ._control > ._leading > ._icon, .ncgr-text-field.--hover.-size-s ._control > ._leading > ._text, .ncgr-text-field.--hover.-size-s ._control > ._trailing > ._icon, .ncgr-text-field.--hover.-size-s ._control > ._trailing > ._text {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:hover.-size-m, .ncgr-text-field.--hover.-size-m {
+  min-height: 2.5rem;
+}
+.ncgr-text-field:hover.-size-m ._control > ._input, .ncgr-text-field.--hover.-size-m ._control > ._input {
+  font-size: 1rem;
+}
+.ncgr-text-field:hover.-size-m ._control > ._leading > ._icon, .ncgr-text-field:hover.-size-m ._control > ._leading > ._text, .ncgr-text-field:hover.-size-m ._control > ._trailing > ._icon, .ncgr-text-field:hover.-size-m ._control > ._trailing > ._text, .ncgr-text-field.--hover.-size-m ._control > ._leading > ._icon, .ncgr-text-field.--hover.-size-m ._control > ._leading > ._text, .ncgr-text-field.--hover.-size-m ._control > ._trailing > ._icon, .ncgr-text-field.--hover.-size-m ._control > ._trailing > ._text {
+  font-size: 1rem;
+}
+.ncgr-text-field:hover.-size-l, .ncgr-text-field.--hover.-size-l {
+  min-height: 3rem;
+}
+.ncgr-text-field:hover.-size-l ._control > ._input, .ncgr-text-field.--hover.-size-l ._control > ._input {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:hover.-size-l ._control > ._leading > ._icon, .ncgr-text-field:hover.-size-l ._control > ._leading > ._text, .ncgr-text-field:hover.-size-l ._control > ._trailing > ._icon, .ncgr-text-field:hover.-size-l ._control > ._trailing > ._text, .ncgr-text-field.--hover.-size-l ._control > ._leading > ._icon, .ncgr-text-field.--hover.-size-l ._control > ._leading > ._text, .ncgr-text-field.--hover.-size-l ._control > ._trailing > ._icon, .ncgr-text-field.--hover.-size-l ._control > ._trailing > ._text {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:hover.-size-xl, .ncgr-text-field.--hover.-size-xl {
+  min-height: 3.5rem;
+}
+.ncgr-text-field:hover.-size-xl ._control > ._input, .ncgr-text-field.--hover.-size-xl ._control > ._input {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:hover.-size-xl ._control > ._leading > ._icon, .ncgr-text-field:hover.-size-xl ._control > ._leading > ._text, .ncgr-text-field:hover.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field:hover.-size-xl ._control > ._trailing > ._text, .ncgr-text-field.--hover.-size-xl ._control > ._leading > ._icon, .ncgr-text-field.--hover.-size-xl ._control > ._leading > ._text, .ncgr-text-field.--hover.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field.--hover.-size-xl ._control > ._trailing > ._text {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:hover.-width-auto, .ncgr-text-field.--hover.-width-auto {
+  width: auto;
+}
+.ncgr-text-field:hover.-width-full, .ncgr-text-field.--hover.-width-full {
+  width: calc(100% / 1);
+}
+.ncgr-text-field:hover.-width-half, .ncgr-text-field.--hover.-width-half {
+  width: calc(100% / 2);
+}
+.ncgr-text-field:hover.-width-third, .ncgr-text-field.--hover.-width-third {
+  width: calc(100% / 3);
+}
+.ncgr-text-field:focus-within, .ncgr-text-field.--focused {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 4px rgba(173, 180, 187, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #d5dbde;
+  opacity: 1;
+  position: relative;
+  width: calc(100% / 1);
+  min-height: 2.5rem;
+}
+.ncgr-text-field:focus-within ._label, .ncgr-text-field.--focused ._label {
+  background-color: #fff;
+  color: #3a3e40;
+  height: 0.125rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  z-index: 2;
+  line-height: 0;
+  margin-left: calc(-1 * 0.125rem);
+}
+.ncgr-text-field:focus-within ._control, .ncgr-text-field.--focused ._control {
+  display: flex;
+  gap: calc($text-field-horizontal-spacing / 2);
+  align-items: stretch;
+  flex-grow: 1;
+}
+.ncgr-text-field:focus-within ._control > *:first-child, .ncgr-text-field.--focused ._control > *:first-child {
+  padding-left: 0.75rem;
+}
+.ncgr-text-field:focus-within ._control > *:last-child, .ncgr-text-field.--focused ._control > *:last-child {
+  padding-right: 0.75rem;
+}
+.ncgr-text-field:focus-within ._control > ._input, .ncgr-text-field.--focused ._control > ._input {
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0.125rem;
+  cursor: text;
+}
+.ncgr-text-field:focus-within ._control > ._input::placeholder, .ncgr-text-field.--focused ._control > ._input::placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:focus-within ._control > ._input::-ms-input-placeholder, .ncgr-text-field.--focused ._control > ._input::-ms-input-placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:focus-within ._control > textarea._input, .ncgr-text-field.--focused ._control > textarea._input {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  resize: vertical;
+}
+.ncgr-text-field:focus-within ._control > select._input, .ncgr-text-field.--focused ._control > select._input {
+  cursor: default;
+}
+.ncgr-text-field:focus-within ._control > ._leading, .ncgr-text-field:focus-within ._control > ._trailing, .ncgr-text-field.--focused ._control > ._leading, .ncgr-text-field.--focused ._control > ._trailing {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:focus-within ._control > ._leading > ._icon, .ncgr-text-field:focus-within ._control > ._leading > ._text, .ncgr-text-field:focus-within ._control > ._trailing > ._icon, .ncgr-text-field:focus-within ._control > ._trailing > ._text, .ncgr-text-field.--focused ._control > ._leading > ._icon, .ncgr-text-field.--focused ._control > ._leading > ._text, .ncgr-text-field.--focused ._control > ._trailing > ._icon, .ncgr-text-field.--focused ._control > ._trailing > ._text {
+  color: #8e9599;
+  font-size: 1rem;
+}
+.ncgr-text-field:focus-within ._control > ._leading > ._button, .ncgr-text-field:focus-within ._control > ._trailing > ._button, .ncgr-text-field.--focused ._control > ._leading > ._button, .ncgr-text-field.--focused ._control > ._trailing > ._button {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-informative {
+  color: #129ce5;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-neutral {
+  color: #adb4bb;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-positive {
+  color: #1fcc26;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-notice {
+  color: #fac743;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-negative {
+  color: #d92e1e;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-attention {
+  color: #f28622;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-interactive {
+  color: #129ce5;
+}
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-favorite {
+  color: #d92e1e;
+}
+.ncgr-text-field:focus-within.-color-neutral, .ncgr-text-field.--focused.-color-neutral {
+  box-shadow: 0 0 0 4px rgba(173, 180, 187, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #d5dbde;
+}
+.ncgr-text-field:focus-within.-color-positive, .ncgr-text-field.--focused.-color-positive {
+  box-shadow: 0 0 0 4px rgba(31, 204, 38, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #1fcc26;
+}
+.ncgr-text-field:focus-within.-color-negative, .ncgr-text-field.--focused.-color-negative {
+  box-shadow: 0 0 0 4px rgba(217, 46, 30, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #d92e1e;
+}
+.ncgr-text-field:focus-within.-color-notice, .ncgr-text-field.--focused.-color-notice {
+  box-shadow: 0 0 0 4px rgba(250, 199, 67, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #fac743;
+}
+.ncgr-text-field:focus-within.-size-xs, .ncgr-text-field.--focused.-size-xs {
+  min-height: 1.5rem;
+}
+.ncgr-text-field:focus-within.-size-xs ._control > ._input, .ncgr-text-field.--focused.-size-xs ._control > ._input {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:focus-within.-size-xs ._control > ._leading > ._icon, .ncgr-text-field:focus-within.-size-xs ._control > ._leading > ._text, .ncgr-text-field:focus-within.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field:focus-within.-size-xs ._control > ._trailing > ._text, .ncgr-text-field.--focused.-size-xs ._control > ._leading > ._icon, .ncgr-text-field.--focused.-size-xs ._control > ._leading > ._text, .ncgr-text-field.--focused.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field.--focused.-size-xs ._control > ._trailing > ._text {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:focus-within.-size-s, .ncgr-text-field.--focused.-size-s {
+  min-height: 2rem;
+}
+.ncgr-text-field:focus-within.-size-s ._control > ._input, .ncgr-text-field.--focused.-size-s ._control > ._input {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:focus-within.-size-s ._control > ._leading > ._icon, .ncgr-text-field:focus-within.-size-s ._control > ._leading > ._text, .ncgr-text-field:focus-within.-size-s ._control > ._trailing > ._icon, .ncgr-text-field:focus-within.-size-s ._control > ._trailing > ._text, .ncgr-text-field.--focused.-size-s ._control > ._leading > ._icon, .ncgr-text-field.--focused.-size-s ._control > ._leading > ._text, .ncgr-text-field.--focused.-size-s ._control > ._trailing > ._icon, .ncgr-text-field.--focused.-size-s ._control > ._trailing > ._text {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:focus-within.-size-m, .ncgr-text-field.--focused.-size-m {
+  min-height: 2.5rem;
+}
+.ncgr-text-field:focus-within.-size-m ._control > ._input, .ncgr-text-field.--focused.-size-m ._control > ._input {
+  font-size: 1rem;
+}
+.ncgr-text-field:focus-within.-size-m ._control > ._leading > ._icon, .ncgr-text-field:focus-within.-size-m ._control > ._leading > ._text, .ncgr-text-field:focus-within.-size-m ._control > ._trailing > ._icon, .ncgr-text-field:focus-within.-size-m ._control > ._trailing > ._text, .ncgr-text-field.--focused.-size-m ._control > ._leading > ._icon, .ncgr-text-field.--focused.-size-m ._control > ._leading > ._text, .ncgr-text-field.--focused.-size-m ._control > ._trailing > ._icon, .ncgr-text-field.--focused.-size-m ._control > ._trailing > ._text {
+  font-size: 1rem;
+}
+.ncgr-text-field:focus-within.-size-l, .ncgr-text-field.--focused.-size-l {
+  min-height: 3rem;
+}
+.ncgr-text-field:focus-within.-size-l ._control > ._input, .ncgr-text-field.--focused.-size-l ._control > ._input {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:focus-within.-size-l ._control > ._leading > ._icon, .ncgr-text-field:focus-within.-size-l ._control > ._leading > ._text, .ncgr-text-field:focus-within.-size-l ._control > ._trailing > ._icon, .ncgr-text-field:focus-within.-size-l ._control > ._trailing > ._text, .ncgr-text-field.--focused.-size-l ._control > ._leading > ._icon, .ncgr-text-field.--focused.-size-l ._control > ._leading > ._text, .ncgr-text-field.--focused.-size-l ._control > ._trailing > ._icon, .ncgr-text-field.--focused.-size-l ._control > ._trailing > ._text {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:focus-within.-size-xl, .ncgr-text-field.--focused.-size-xl {
+  min-height: 3.5rem;
+}
+.ncgr-text-field:focus-within.-size-xl ._control > ._input, .ncgr-text-field.--focused.-size-xl ._control > ._input {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:focus-within.-size-xl ._control > ._leading > ._icon, .ncgr-text-field:focus-within.-size-xl ._control > ._leading > ._text, .ncgr-text-field:focus-within.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field:focus-within.-size-xl ._control > ._trailing > ._text, .ncgr-text-field.--focused.-size-xl ._control > ._leading > ._icon, .ncgr-text-field.--focused.-size-xl ._control > ._leading > ._text, .ncgr-text-field.--focused.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field.--focused.-size-xl ._control > ._trailing > ._text {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:focus-within.-width-auto, .ncgr-text-field.--focused.-width-auto {
+  width: auto;
+}
+.ncgr-text-field:focus-within.-width-full, .ncgr-text-field.--focused.-width-full {
+  width: calc(100% / 1);
+}
+.ncgr-text-field:focus-within.-width-half, .ncgr-text-field.--focused.-width-half {
+  width: calc(100% / 2);
+}
+.ncgr-text-field:focus-within.-width-third, .ncgr-text-field.--focused.-width-third {
+  width: calc(100% / 3);
+}
+.ncgr-text-field:disabled, .ncgr-text-field.--disabled {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
+  opacity: 0.38;
+  position: relative;
+  width: calc(100% / 1);
+  min-height: 2.5rem;
+}
+.ncgr-text-field:disabled ._label, .ncgr-text-field.--disabled ._label {
+  background-color: #fff;
+  color: #3a3e40;
+  height: 0.125rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  z-index: 2;
+  line-height: 0;
+  margin-left: calc(-1 * 0.125rem);
+}
+.ncgr-text-field:disabled ._control, .ncgr-text-field.--disabled ._control {
+  display: flex;
+  gap: calc($text-field-horizontal-spacing / 2);
+  align-items: stretch;
+  flex-grow: 1;
+}
+.ncgr-text-field:disabled ._control > *:first-child, .ncgr-text-field.--disabled ._control > *:first-child {
+  padding-left: 0.75rem;
+}
+.ncgr-text-field:disabled ._control > *:last-child, .ncgr-text-field.--disabled ._control > *:last-child {
+  padding-right: 0.75rem;
+}
+.ncgr-text-field:disabled ._control > ._input, .ncgr-text-field.--disabled ._control > ._input {
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0.125rem;
+  cursor: not-allowed;
+}
+.ncgr-text-field:disabled ._control > ._input::placeholder, .ncgr-text-field.--disabled ._control > ._input::placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:disabled ._control > ._input::-ms-input-placeholder, .ncgr-text-field.--disabled ._control > ._input::-ms-input-placeholder {
+  color: #d5dbde;
+}
+.ncgr-text-field:disabled ._control > textarea._input, .ncgr-text-field.--disabled ._control > textarea._input {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  resize: vertical;
+}
+.ncgr-text-field:disabled ._control > select._input, .ncgr-text-field.--disabled ._control > select._input {
+  cursor: not-allowed;
+}
+.ncgr-text-field:disabled ._control > ._leading, .ncgr-text-field:disabled ._control > ._trailing, .ncgr-text-field.--disabled ._control > ._leading, .ncgr-text-field.--disabled ._control > ._trailing {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:disabled ._control > ._leading > ._icon, .ncgr-text-field:disabled ._control > ._leading > ._text, .ncgr-text-field:disabled ._control > ._trailing > ._icon, .ncgr-text-field:disabled ._control > ._trailing > ._text, .ncgr-text-field.--disabled ._control > ._leading > ._icon, .ncgr-text-field.--disabled ._control > ._leading > ._text, .ncgr-text-field.--disabled ._control > ._trailing > ._icon, .ncgr-text-field.--disabled ._control > ._trailing > ._text {
+  color: #8e9599;
+  font-size: 1rem;
+}
+.ncgr-text-field:disabled ._control > ._leading > ._button, .ncgr-text-field:disabled ._control > ._trailing > ._button, .ncgr-text-field.--disabled ._control > ._leading > ._button, .ncgr-text-field.--disabled ._control > ._trailing > ._button {
+  display: flex;
+  align-items: center;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-informative {
+  color: #129ce5;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-neutral {
+  color: #adb4bb;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-positive {
+  color: #1fcc26;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-notice {
+  color: #fac743;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-negative {
+  color: #d92e1e;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-attention {
+  color: #f28622;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-interactive {
+  color: #129ce5;
+}
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-favorite {
+  color: #d92e1e;
+}
+.ncgr-text-field:disabled.-color-neutral, .ncgr-text-field.--disabled.-color-neutral {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
+}
+.ncgr-text-field:disabled.-color-positive, .ncgr-text-field.--disabled.-color-positive {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #1fcc26;
+}
+.ncgr-text-field:disabled.-color-negative, .ncgr-text-field.--disabled.-color-negative {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d92e1e;
+}
+.ncgr-text-field:disabled.-color-notice, .ncgr-text-field.--disabled.-color-notice {
+  box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #fac743;
+}
+.ncgr-text-field:disabled.-size-xs, .ncgr-text-field.--disabled.-size-xs {
+  min-height: 1.5rem;
+}
+.ncgr-text-field:disabled.-size-xs ._control > ._input, .ncgr-text-field.--disabled.-size-xs ._control > ._input {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:disabled.-size-xs ._control > ._leading > ._icon, .ncgr-text-field:disabled.-size-xs ._control > ._leading > ._text, .ncgr-text-field:disabled.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field:disabled.-size-xs ._control > ._trailing > ._text, .ncgr-text-field.--disabled.-size-xs ._control > ._leading > ._icon, .ncgr-text-field.--disabled.-size-xs ._control > ._leading > ._text, .ncgr-text-field.--disabled.-size-xs ._control > ._trailing > ._icon, .ncgr-text-field.--disabled.-size-xs ._control > ._trailing > ._text {
+  font-size: 0.75rem;
+}
+.ncgr-text-field:disabled.-size-s, .ncgr-text-field.--disabled.-size-s {
+  min-height: 2rem;
+}
+.ncgr-text-field:disabled.-size-s ._control > ._input, .ncgr-text-field.--disabled.-size-s ._control > ._input {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:disabled.-size-s ._control > ._leading > ._icon, .ncgr-text-field:disabled.-size-s ._control > ._leading > ._text, .ncgr-text-field:disabled.-size-s ._control > ._trailing > ._icon, .ncgr-text-field:disabled.-size-s ._control > ._trailing > ._text, .ncgr-text-field.--disabled.-size-s ._control > ._leading > ._icon, .ncgr-text-field.--disabled.-size-s ._control > ._leading > ._text, .ncgr-text-field.--disabled.-size-s ._control > ._trailing > ._icon, .ncgr-text-field.--disabled.-size-s ._control > ._trailing > ._text {
+  font-size: 0.875rem;
+}
+.ncgr-text-field:disabled.-size-m, .ncgr-text-field.--disabled.-size-m {
+  min-height: 2.5rem;
+}
+.ncgr-text-field:disabled.-size-m ._control > ._input, .ncgr-text-field.--disabled.-size-m ._control > ._input {
+  font-size: 1rem;
+}
+.ncgr-text-field:disabled.-size-m ._control > ._leading > ._icon, .ncgr-text-field:disabled.-size-m ._control > ._leading > ._text, .ncgr-text-field:disabled.-size-m ._control > ._trailing > ._icon, .ncgr-text-field:disabled.-size-m ._control > ._trailing > ._text, .ncgr-text-field.--disabled.-size-m ._control > ._leading > ._icon, .ncgr-text-field.--disabled.-size-m ._control > ._leading > ._text, .ncgr-text-field.--disabled.-size-m ._control > ._trailing > ._icon, .ncgr-text-field.--disabled.-size-m ._control > ._trailing > ._text {
+  font-size: 1rem;
+}
+.ncgr-text-field:disabled.-size-l, .ncgr-text-field.--disabled.-size-l {
+  min-height: 3rem;
+}
+.ncgr-text-field:disabled.-size-l ._control > ._input, .ncgr-text-field.--disabled.-size-l ._control > ._input {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:disabled.-size-l ._control > ._leading > ._icon, .ncgr-text-field:disabled.-size-l ._control > ._leading > ._text, .ncgr-text-field:disabled.-size-l ._control > ._trailing > ._icon, .ncgr-text-field:disabled.-size-l ._control > ._trailing > ._text, .ncgr-text-field.--disabled.-size-l ._control > ._leading > ._icon, .ncgr-text-field.--disabled.-size-l ._control > ._leading > ._text, .ncgr-text-field.--disabled.-size-l ._control > ._trailing > ._icon, .ncgr-text-field.--disabled.-size-l ._control > ._trailing > ._text {
+  font-size: 1.125rem;
+}
+.ncgr-text-field:disabled.-size-xl, .ncgr-text-field.--disabled.-size-xl {
+  min-height: 3.5rem;
+}
+.ncgr-text-field:disabled.-size-xl ._control > ._input, .ncgr-text-field.--disabled.-size-xl ._control > ._input {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:disabled.-size-xl ._control > ._leading > ._icon, .ncgr-text-field:disabled.-size-xl ._control > ._leading > ._text, .ncgr-text-field:disabled.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field:disabled.-size-xl ._control > ._trailing > ._text, .ncgr-text-field.--disabled.-size-xl ._control > ._leading > ._icon, .ncgr-text-field.--disabled.-size-xl ._control > ._leading > ._text, .ncgr-text-field.--disabled.-size-xl ._control > ._trailing > ._icon, .ncgr-text-field.--disabled.-size-xl ._control > ._trailing > ._text {
+  font-size: 1.3125rem;
+}
+.ncgr-text-field:disabled.-width-auto, .ncgr-text-field.--disabled.-width-auto {
+  width: auto;
+}
+.ncgr-text-field:disabled.-width-full, .ncgr-text-field.--disabled.-width-full {
+  width: calc(100% / 1);
+}
+.ncgr-text-field:disabled.-width-half, .ncgr-text-field.--disabled.-width-half {
+  width: calc(100% / 2);
+}
+.ncgr-text-field:disabled.-width-third, .ncgr-text-field.--disabled.-width-third {
+  width: calc(100% / 3);
+}
+
 /*doc
 ---
 title: Text Link
@@ -53369,9 +54867,14 @@ category: Components
 
 ```example
 <div style="position: relative;">
-  <div class="ncgr-textfield ncgr-mar-b-16">
-    <label class="ncgr-textfield__label" for="name">名前</label>
-    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  <div class="ncgr-text-field -color-negative">
+    <label class="_label" for="name">名前</label>
+    <div class="_control">
+      <input class="_input" type="text" name="name" placeholder="スリスリ君">
+      <div class="_trailing">
+        <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      </div>
+    </div>
   </div>
   <div class="ncgr-tooltip -top -active" role="tooltip">
     名前は8文字以上で入力してください

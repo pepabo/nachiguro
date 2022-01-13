@@ -6721,7 +6721,7 @@ Interactive Listの<code>leading</code>の中に入れて使用します。</p>
         </div>
         <div class="styleguide__content">
 
-<h1 id="selectbox" class="styleguide">Selectbox</h1>
+<h1 id="selectbox" class="styleguide">Selectbox (Deprecated)</h1>
 
 <p>色やサイズなどの複数の選択肢からオプションの選択ができます。このコンポーネントは3つ以上の選択肢が存在する場合にのみ使用できます。2つまでの選択肢のときは一覧性が低くなってしまうので、Radioを使用するようにしましょう。</p>
         </div><!-- end of .styleguide__content -->
@@ -7174,6 +7174,1610 @@ Interactive Listの<code>leading</code>の中に入れて使用します。</p>
         </div>
         <div class="styleguide__content">
 
+<h1 id="text-field" class="styleguide">Text field</h1>
+
+<p><code>.ncgr-text-field</code> を指定した要素はText fieldになります。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">日付</label>
+  <div class="_control">
+    <input class="_input" type="date" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">時間</label>
+  <div class="_control">
+    <input class="_input" type="time" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">数字</label>
+  <div class="_control">
+    <input class="_input" type="number" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">自己紹介</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>日付<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>時間<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"time"</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>数字<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>自己紹介<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>Size</h4>
+
+<p><code>.-size-{size}</code>を指定するとそのサイズになります。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>Color</h4>
+
+<p><code>.-color-{intention}</code> を指定すると、色が変わって意味を持ちます。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-neutral"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-notice"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-neutral"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-notice"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-neutral"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>Width</h4>
+
+<p><code>.-width-{width}</code> を指定すると、親要素に対しての幅を決定できます。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-full"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-half"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-third"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-full"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-half"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field  -width-third"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -width-full">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-half">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-third">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -width-full"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -width-half"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -width-third"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>State</h4>
+
+<p><code>.--{state}</code> を指定すると、その状態になります。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" disabled placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --enabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --hover"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --focused"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">disabled</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。" disabled></textarea>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --enabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --hover"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --focused"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"例）忍ぶれど 色に出でにけり SUZURIです。"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field --enabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe" disabled>
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --enabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --hover"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --focused"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field --disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"tribe"</span><span class="nt">&gt;</span>種族<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">id=</span><span class="s">"tribe"</span> <span class="na">name=</span><span class="s">"tribe"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">"selected"</span> <span class="na">value=</span><span class="s">"01"</span><span class="nt">&gt;</span>忍者<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"02"</span><span class="nt">&gt;</span>人間<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"arrow_drop_down"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>Leading</h4>
+
+<p><code>_input</code>の直前に<code>_leading</code>をいれることができます。</p>
+
+<h5>Icon</h5>
+
+<p>Iconには<code>_icon</code>クラスを付与します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"magnifying_glass"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"magnifying_glass"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"magnifying_glass"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"magnifying_glass"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"magnifying_glass"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h5>Text</h5>
+
+<p>Textには<code>_text</code>クラスを付与します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        $
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        $
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        $
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        $
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        $
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h4>Trailing</h4>
+
+<p><code>_input</code>の直後に<code>_trailing</code>をいれることができます。</p>
+
+<h5>Icon</h5>
+
+<p>Iconには<code>_icon</code>クラスを付与します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -color-positive -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-positive"</span> <span class="na">data-icon=</span><span class="s">"check"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-positive"</span> <span class="na">data-icon=</span><span class="s">"check"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-positive"</span> <span class="na">data-icon=</span><span class="s">"check"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-positive"</span> <span class="na">data-icon=</span><span class="s">"check"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-positive -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-positive"</span> <span class="na">data-icon=</span><span class="s">"check"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -color-negative -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h5>Text</h5>
+
+<p>Textには<code>_text</code>クラスを付与します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        .com
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        .com
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        .com
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        .com
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_text"</span><span class="nt">&gt;</span>
+        .com
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
+<h5>Button</h5>
+
+<p>Buttonには<code>_button</code>クラスを付与します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__preview">
+          <div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-xs">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-s">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-m">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-l">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="styleguide__code">
+          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Delete"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle -size-xs"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"cross_on_circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Delete"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle -size-s"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"cross_on_circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Delete"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle -size-m"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"cross_on_circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -size-xl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Delete"</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-transparent -shape-circle -size-l"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon"</span> <span class="na">data-icon=</span><span class="s">"cross_on_circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="text-link" class="styleguide">Text Link</h1>
 
 <p>テキストリンクをマークアップするときに使います。</p>
@@ -7210,7 +8814,7 @@ Interactive Listの<code>leading</code>の中に入れて使用します。</p>
         </div>
         <div class="styleguide__content">
 
-<h1 id="textfield" class="styleguide">Textfield</h1>
+<h1 id="textfield" class="styleguide">Textfield (Deprecated)</h1>
 
 <p>テキストフィールドのラベルはモバイルにおける省スペース化のため、テキストフィールドの枠上部に重なる形で配置します。
 Material Designではラベルがプレースホルダーの位置から上部にアニメーションしながら移動しますが、ラベルとプレースホルダーの意味付けが曖昧になるため、アニメーションさせません。
@@ -7306,9 +8910,14 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
         </div><!-- end of .styleguide__content -->
         <div class="styleguide__preview">
           <div style="position: relative;">
-  <div class="ncgr-textfield ncgr-mar-b-16">
-    <label class="ncgr-textfield__label" for="name">名前</label>
-    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  <div class="ncgr-text-field -color-negative">
+    <label class="_label" for="name">名前</label>
+    <div class="_control">
+      <input class="_input" type="text" name="name" placeholder="スリスリ君">
+      <div class="_trailing">
+        <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      </div>
+    </div>
   </div>
   <div class="ncgr-tooltip -top -active" role="tooltip">
     名前は8文字以上で入力してください
@@ -7318,9 +8927,14 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
         </div>
         <div class="styleguide__code">
           <pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"position: relative;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-textfield ncgr-mar-b-16"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"ncgr-textfield__label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"ncgr-textfield__input invalid"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"例）スリスリ君"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-text-field -color-negative"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"_label"</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>名前<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_control"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"_input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"スリスリ君"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_trailing"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon _icon -color-negative"</span> <span class="na">data-icon=</span><span class="s">"exclamation_on_triangle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-tooltip -top -active"</span> <span class="na">role=</span><span class="s">"tooltip"</span><span class="nt">&gt;</span>
     名前は8文字以上で入力してください
@@ -7450,7 +9064,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
-          最終更新日: 2022年1月6日
+          最終更新日: 2022年1月13日
         </div>
         <div>
           © 2022 SUZURI ❤️from 東京・渋谷
@@ -7859,7 +9473,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               </div>
                               <div class="_body">
                                 <div class="_title">
-                                  Selectbox
+                                  Selectbox (Deprecated)
                                 </div>
                               </div>
                             </a>
@@ -7962,6 +9576,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                           </li>
                         
                           <li class="_item">
+                            <a href="#text-field">
+                              <div class="_leading">
+                              </div>
+                              <div class="_body">
+                                <div class="_title">
+                                  Text field
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        
+                          <li class="_item">
                             <a href="#text-link">
                               <div class="_leading">
                               </div>
@@ -7979,7 +9605,7 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               </div>
                               <div class="_body">
                                 <div class="_title">
-                                  Textfield
+                                  Textfield (Deprecated)
                                 </div>
                               </div>
                             </a>
