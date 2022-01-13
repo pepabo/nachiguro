@@ -1,0 +1,1147 @@
+/*doc
+---
+title: Text field
+name: text-field
+category: Components
+---
+
+`.ncgr-text-field` を指定した要素はText fieldになります。
+
+```example
+<div class="ncgr-text-field">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">日付</label>
+  <div class="_control">
+    <input class="_input" type="date" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">時間</label>
+  <div class="_control">
+    <input class="_input" type="time" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">数字</label>
+  <div class="_control">
+    <input class="_input" type="number" name="name">
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="name">自己紹介</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Size
+
+`.-size-{size}`を指定するとそのサイズになります。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Color
+
+`.-color-{intention}` を指定すると、色が変わって意味を持ちます。
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field -color-notice">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-neutral">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Width
+
+`.-width-{width}` を指定すると、親要素に対しての幅を決定できます。
+
+```example
+<div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field  -width-full">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-half">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field  -width-third">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -width-full">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-half">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -width-third">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### State
+
+`.--{state}` を指定すると、その状態になります。
+
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" disabled placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。"></textarea>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <textarea class="_input" name="name" rows="6" placeholder="例）忍ぶれど 色に出でにけり SUZURIです。" disabled></textarea>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field --enabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --hover">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --focused">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe">
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field --disabled">
+  <label class="_label" for="tribe">種族</label>
+  <div class="_control">
+    <select class="_input" id="tribe" name="tribe" disabled>
+      <option selected="selected" value="01">忍者</option>
+      <option value="02">人間</option>
+    </select>
+    <div class="_trailing">
+      <span class="ncgr-icon _icon" data-icon="arrow_drop_down"></span>
+    </div>
+  </div>
+</div>
+```
+
+#### Leading
+
+`_input`の直前に`_leading`をいれることができます。
+
+##### Icon
+
+Iconには`_icon`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <span class="ncgr-icon _icon" data-icon="magnifying_glass"></span>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+##### Text
+
+Textには`_text`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <div class="_leading">
+      <div class="_text">
+        $
+      </div>
+    </div>
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+#### Trailing
+
+`_input`の直後に`_trailing`をいれることができます。
+
+##### Icon
+
+Iconには`_icon`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -color-positive -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-positive -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-positive" data-icon="check"></span>
+    </div>
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -color-negative -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -color-negative -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+    </div>
+  </div>
+</div>
+```
+
+##### Text
+
+Textには`_text`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-xs">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_text">
+        .com
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+##### Button
+
+Buttonには`_button`クラスを付与します。
+
+```example
+<div class="ncgr-text-field -size-s">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-xs">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-m">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-s">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-l">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-m">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -size-xl">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+    <div class="_trailing">
+      <div class="_button">
+        <button aria-label="Delete" class="ncgr-botan -appearance-transparent -shape-circle -size-l">
+          <div class="_leading">
+            <span class="ncgr-icon _icon" data-icon="cross_on_circle"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+*/
+
+@use 'sass:map';
+@use '@inhouse/adapter/functions' as adapter;
+
+/* Flavor */
+
+// Color
+$text-field-background-color: adapter.get-color(white, 1000);
+$text-field-border-color: adapter.get-color(gray, 300);
+$text-field-edge-element-text-color: adapter.get-semantic-color(neutral, 600);
+$text-field-placeholder-text-color: adapter.get-semantic-color(neutral, 300);
+
+// Sizing
+$text-field-horizontal-spacing: adapter.get-spacing-size($level: s);
+$text-field-border-width: adapter.get-line-width-size($level: l);
+$text-field-label-font-size: adapter.get-font-size($level: xs);
+
+/* Variables */
+
+$default-options: (
+  color: neutral,
+  size: m,
+  width: full
+);
+
+/* Functions */
+
+@function -get-border-color(
+  $color: neutral,
+  $state: enabled
+) {
+  @return $text-field-border-color;
+}
+
+@function -get-cursor(
+  $type: text-field,
+  $state: enabled
+) {
+  @if $state == disabled {
+    @return not-allowed;
+  } @else {
+    @if $type == select {
+      @return default;
+    } @else {
+      @return text;
+    }
+  }
+}
+
+@function -get-opacity($state: enabled) {
+  @if $state == disabled {
+    @return adapter.get-disabled-opacity-value();
+  } @else {
+    @return 1;
+  }
+}
+
+@function -get-box-shadow(
+  $color: neutral,
+  $state: enabled
+) {
+  $focus-ring:
+    -get-focus-ring(
+      $color: $color,
+      $state: $state
+    );
+  $border-overlay: -get-border-overlay($state: $state);
+  $border:
+    -get-border(
+      $color: $color,
+      $state: $state
+    );
+
+  @if $state == focused {
+    @return $focus-ring, $border-overlay, $border;
+  } @else {
+    @return $border-overlay, $border;
+  }
+}
+
+@function -get-focus-ring(
+  $color: $color,
+  $state: enabled
+) {
+  @return adapter.get-focus-ring-value(
+    $color: adapter.get-semantic-color(
+      $intention: $color,
+      $level: 500
+    )
+  );
+}
+
+@function -get-border(
+  $color: $color,
+  $state: enabled
+) {
+  $border-width: $text-field-border-width;
+  $border-color:
+    -get-border-color(
+      $color: $color,
+      $state: $state
+    );
+
+  @return inset 0 0 0 $border-width $border-color;
+}
+
+@function -get-border-color(
+  $color: $color,
+  $state: enabled
+) {
+  @if $color == neutral {
+    @return adapter.get-semantic-color($color, 300);
+  } @else {
+    @return adapter.get-semantic-color($color, 500);
+  }
+}
+
+@function -get-border-overlay($state: enabled) {
+  $border-width: $text-field-border-width;
+  $border-color: adapter.get-background-overlay-color(
+    $brightness: light,
+    $state: $state
+  );
+
+  @return inset 0 0 0 $border-width $border-color;
+}
+
+/* Mixins */
+
+@mixin style($options: $default-options) {
+  @include -ruleset(
+    $color: map.get($options, color),
+    $size: map.get($options, size),
+    $width: map.get($options, width),
+    $state: enabled
+  );
+
+  &:hover,
+  &.--hover {
+    @include -ruleset(
+      $color: map.get($options, color),
+      $size: map.get($options, size),
+      $width: map.get($options, width),
+      $state: hover
+    );
+  }
+
+  &:focus-within,
+  &.--focused {
+    @include -ruleset(
+      $color: map.get($options, color),
+      $size: map.get($options, size),
+      $width: map.get($options, width),
+      $state: focused
+    );
+  }
+
+  &:disabled,
+  &.--disabled {
+    @include -ruleset(
+      $color: map.get($options, color),
+      $size: map.get($options, size),
+      $width: map.get($options, width),
+      $state: disabled
+    );
+  }
+}
+
+@mixin -ruleset(
+  $color: neutral,
+  $size: m,
+  $width: full,
+  $state: enabled
+) {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-color: $text-field-background-color;
+  border-radius: adapter.get-radius-size($level: l);
+  box-shadow:
+    -get-box-shadow(
+      $color: $color,
+      $state: $state
+    );
+  opacity: -get-opacity($state: $state);
+  position: relative;
+  width: adapter.get-width($width: $width);
+  min-height: adapter.get-interactive-component-size($level: $size);
+
+  ._label {
+    background-color: $text-field-background-color;
+    color: adapter.get-color(gray, 800);
+    height: $text-field-border-width;
+    font-weight: bold;
+    font-size: $text-field-label-font-size;
+    padding: 0 adapter.get-spacing-size($level: xxs);
+    position: absolute;
+    left: $text-field-horizontal-spacing;
+    top: 0;
+    z-index: 2;
+    line-height: 0;
+    margin-left: calc(-1 * #{adapter.get-sizing-scale-size($level: 2)});
+  }
+
+  ._control {
+    display: flex;
+    gap: calc($text-field-horizontal-spacing / 2);
+    align-items: stretch;
+    flex-grow: 1;
+
+    & > *:first-child {
+      padding-left: $text-field-horizontal-spacing;
+    }
+  
+    & > *:last-child {
+      padding-right: $text-field-horizontal-spacing; 
+    }
+
+    & > ._input {
+      box-sizing: border-box;
+      appearance: none;
+      border-radius: adapter.get-radius-size($level: l);
+      font-size: adapter.get-font-size($level: m);
+      border: none;
+      outline: none;
+      flex-grow: 1;
+      width: 100%;
+      margin: $text-field-border-width;
+      cursor:
+        -get-cursor(
+          $type: text-field,
+          $state: $state
+        );
+  
+      &::placeholder {
+        color: $text-field-placeholder-text-color;
+      }
+  
+      &::-ms-input-placeholder {
+        color: $text-field-placeholder-text-color;
+      }
+    }
+  
+    & > textarea._input {
+      padding-top: adapter.get-spacing-size($level: xxs);
+      padding-bottom: adapter.get-spacing-size($level: xxs);
+      resize: vertical;
+    }
+  
+    & > select._input {
+      cursor:
+        -get-cursor(
+          $type: select,
+          $state: $state
+        );
+    }
+
+    & > ._leading,
+    & > ._trailing {
+      display: flex;
+      align-items: center;
+
+      & > ._icon,
+      & > ._text {
+        color: $text-field-edge-element-text-color;
+        font-size:
+          adapter.get-font-size(
+            $level: map.get($options, size)
+          );
+      }
+      
+      & > ._button {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    & > ._trailing {
+      & > ._icon {
+        @each $color in adapter.get-semantic-intentions() {
+          &.-color-#{$color} {
+            color:
+              adapter.get-semantic-color(
+                $intention: $color,
+                $level: 500
+              );
+          }
+        }
+      }
+    }
+  }
+
+  @each $color in neutral, positive, negative, notice {
+    &.-color-#{$color} {
+      box-shadow:
+        -get-box-shadow(
+          $color: $color,
+          $state: $state
+        );
+    }
+  }
+
+  @each $size in adapter.get-interactive-component-sizes() {
+    &.-size-#{$size} {
+      min-height: adapter.get-interactive-component-size($level: $size);
+
+      ._control {
+        & > ._input {
+          font-size: adapter.get-font-size($level: $size);
+        }
+
+        & > ._leading,
+        & > ._trailing {
+          & > ._icon,
+          & > ._text {
+            font-size: adapter.get-font-size($level: $size);
+          }
+        }
+      }
+    }
+  }
+
+  @each $width in adapter.get-widths() {
+    &.-width-#{$width} {
+      width: adapter.get-width($width: $width);
+    }
+  }
+}
+
+.ncgr-text-field {
+  @include style;
+}
