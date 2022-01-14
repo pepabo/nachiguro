@@ -640,8 +640,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -650,8 +650,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -661,8 +661,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -672,8 +672,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -683,8 +683,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -696,8 +696,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -706,8 +706,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -717,8 +717,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -728,8 +728,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -739,8 +739,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -1157,7 +1157,7 @@ $default-options: (
     & > ._trailing {
       & > ._icon {
         @each $color in adapter.get-semantic-intentions() {
-          & > *.-color-#{$color} {
+          &.-color-#{$color} {
             color:
               adapter.get-semantic-color(
                 $intention: $color,
