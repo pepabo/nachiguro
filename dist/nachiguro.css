@@ -53950,8 +53950,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -53960,8 +53960,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -53971,8 +53971,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -53982,8 +53982,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -53993,8 +53993,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-positive" data-icon="check"></span>
+      <div class="_icon -color-positive">
+        <span class="ncgr-icon" data-icon="check"></span>
       </div>
     </div>
   </div>
@@ -54006,8 +54006,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -54016,8 +54016,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -54027,8 +54027,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -54038,8 +54038,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -54049,8 +54049,8 @@ Iconには`_icon`クラスを付与します。
   <div class="_control">
     <input class="_input" type="text" name="name" placeholder="スリスリ君">
     <div class="_trailing">
-      <div class="_icon">
-        <span class="ncgr-icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      <div class="_icon -color-negative">
+        <span class="ncgr-icon" data-icon="exclamation_on_triangle"></span>
       </div>
     </div>
   </div>
@@ -54265,28 +54265,28 @@ Buttonには`_button`クラスを付与します。
   color: #8e9599;
   font-size: 1rem;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-informative {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-informative {
   color: #129ce5;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-neutral {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-neutral {
   color: #adb4bb;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-positive {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-positive {
   color: #1fcc26;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-notice {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-notice {
   color: #fac743;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-negative {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-negative {
   color: #d92e1e;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-attention {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-attention {
   color: #f28622;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-interactive {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-interactive {
   color: #129ce5;
 }
-.ncgr-text-field ._control > ._trailing > ._icon > *.-color-favorite {
+.ncgr-text-field ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
 .ncgr-text-field.-color-neutral {
@@ -54434,28 +54434,28 @@ Buttonには`_button`クラスを付与します。
   color: #8e9599;
   font-size: 1rem;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-informative, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-informative {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-informative {
   color: #129ce5;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-neutral, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-neutral {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-neutral {
   color: #adb4bb;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-positive, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-positive {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-positive {
   color: #1fcc26;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-notice, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-notice {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-notice {
   color: #fac743;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-negative, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-negative {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-negative {
   color: #d92e1e;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-attention, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-attention {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-attention {
   color: #f28622;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-interactive, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-interactive {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-interactive {
   color: #129ce5;
 }
-.ncgr-text-field:hover ._control > ._trailing > ._icon > *.-color-favorite, .ncgr-text-field.--hover ._control > ._trailing > ._icon > *.-color-favorite {
+.ncgr-text-field:hover ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
 .ncgr-text-field:hover.-color-neutral, .ncgr-text-field.--hover.-color-neutral {
@@ -54603,28 +54603,28 @@ Buttonには`_button`クラスを付与します。
   color: #8e9599;
   font-size: 1rem;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-informative, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-informative {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-informative {
   color: #129ce5;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-neutral, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-neutral {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-neutral {
   color: #adb4bb;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-positive, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-positive {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-positive {
   color: #1fcc26;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-notice, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-notice {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-notice {
   color: #fac743;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-negative, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-negative {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-negative {
   color: #d92e1e;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-attention, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-attention {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-attention {
   color: #f28622;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-interactive, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-interactive {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-interactive {
   color: #129ce5;
 }
-.ncgr-text-field:focus-within ._control > ._trailing > ._icon > *.-color-favorite, .ncgr-text-field.--focused ._control > ._trailing > ._icon > *.-color-favorite {
+.ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
 .ncgr-text-field:focus-within.-color-neutral, .ncgr-text-field.--focused.-color-neutral {
@@ -54772,28 +54772,28 @@ Buttonには`_button`クラスを付与します。
   color: #8e9599;
   font-size: 1rem;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-informative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-informative {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-informative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-informative {
   color: #129ce5;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-neutral, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-neutral {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-neutral, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-neutral {
   color: #adb4bb;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-positive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-positive {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-positive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-positive {
   color: #1fcc26;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-notice, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-notice {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-notice, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-notice {
   color: #fac743;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-negative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-negative {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-negative, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-negative {
   color: #d92e1e;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-attention, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-attention {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-attention, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-attention {
   color: #f28622;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-interactive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-interactive {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-interactive, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-interactive {
   color: #129ce5;
 }
-.ncgr-text-field:disabled ._control > ._trailing > ._icon > *.-color-favorite, .ncgr-text-field.--disabled ._control > ._trailing > ._icon > *.-color-favorite {
+.ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
 .ncgr-text-field:disabled.-color-neutral, .ncgr-text-field.--disabled.-color-neutral {
