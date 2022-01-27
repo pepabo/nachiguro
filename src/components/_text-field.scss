@@ -1125,6 +1125,8 @@ $default-options: (
     }
   
     & > select._input {
+      -webkit-appearance: none;
+      appearance: none;
       cursor:
         -get-cursor(
           $type: select,
