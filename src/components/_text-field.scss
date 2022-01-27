@@ -1096,6 +1096,7 @@ $default-options: (
     & > ._input {
       box-sizing: border-box;
       appearance: none;
+      -webkit-appearance: none;
       border-radius: adapter.get-radius-size($level: l);
       font-size: adapter.get-font-size($level: m);
       border: none;
