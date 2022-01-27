@@ -54230,6 +54230,7 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field ._control > ._input {
   box-sizing: border-box;
   appearance: none;
+  -webkit-appearance: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54399,6 +54400,7 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field:hover ._control > ._input, .ncgr-text-field.--hover ._control > ._input {
   box-sizing: border-box;
   appearance: none;
+  -webkit-appearance: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54568,6 +54570,7 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field:focus-within ._control > ._input, .ncgr-text-field.--focused ._control > ._input {
   box-sizing: border-box;
   appearance: none;
+  -webkit-appearance: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54737,6 +54740,7 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field:disabled ._control > ._input, .ncgr-text-field.--disabled ._control > ._input {
   box-sizing: border-box;
   appearance: none;
+  -webkit-appearance: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
