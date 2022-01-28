@@ -54231,6 +54231,7 @@ Buttonには`_button`クラスを付与します。
   box-sizing: border-box;
   appearance: none;
   -webkit-appearance: none;
+  background-color: transparent;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54401,6 +54402,7 @@ Buttonには`_button`クラスを付与します。
   box-sizing: border-box;
   appearance: none;
   -webkit-appearance: none;
+  background-color: transparent;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54571,6 +54573,7 @@ Buttonには`_button`クラスを付与します。
   box-sizing: border-box;
   appearance: none;
   -webkit-appearance: none;
+  background-color: transparent;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
@@ -54741,6 +54744,7 @@ Buttonには`_button`クラスを付与します。
   box-sizing: border-box;
   appearance: none;
   -webkit-appearance: none;
+  background-color: transparent;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: none;
