@@ -1097,6 +1097,7 @@ $default-options: (
       box-sizing: border-box;
       appearance: none;
       -webkit-appearance: none;
+      background-color: transparent;
       border-radius: adapter.get-radius-size($level: l);
       font-size: adapter.get-font-size($level: m);
       border: none;
