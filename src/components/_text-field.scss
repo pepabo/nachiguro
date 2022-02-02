@@ -385,6 +385,48 @@ category: Components
 </div>
 ```
 
+#### Align
+
+`.-align-{align}` を指定すると、inputのテキストの揃え位置を決定できます。
+
+```example
+<div class="ncgr-text-field -align-start">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -align-end">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -align-start">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="∞">
+    <div class="_trailing">
+      <div class="_text">
+        個
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -align-end">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="∞">
+    <div class="_trailing">
+      <div class="_text">
+        個
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 #### State
 
 `.--{state}` を指定すると、その状態になります。
@@ -1166,6 +1208,16 @@ $default-options: (
                 $level: 500
               );
           }
+        }
+      }
+    }
+  }
+
+  @each $align in start, end {
+    &.-align-#{$align} {
+      & > ._control {
+        & > ._input {
+          text-align: $align;
         }
       }
     }
