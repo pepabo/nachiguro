@@ -53695,6 +53695,48 @@ category: Components
 </div>
 ```
 
+#### Align
+
+`.-align-{align}` を指定すると、inputのテキストの揃え位置を決定できます。
+
+```example
+<div class="ncgr-text-field -align-start">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+<div class="ncgr-text-field -align-end">
+  <label class="_label" for="name">名前</label>
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="スリスリ君">
+  </div>
+</div>
+```
+
+```example
+<div class="ncgr-text-field -align-start">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="∞">
+    <div class="_trailing">
+      <div class="_text">
+        個
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ncgr-text-field -align-end">
+  <div class="_control">
+    <input class="_input" type="text" name="name" placeholder="∞">
+    <div class="_trailing">
+      <div class="_text">
+        個
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 #### State
 
 `.--{state}` を指定すると、その状態になります。
@@ -54291,6 +54333,12 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
+.ncgr-text-field.-align-start > ._control > ._input {
+  text-align: start;
+}
+.ncgr-text-field.-align-end > ._control > ._input {
+  text-align: end;
+}
 .ncgr-text-field.-color-neutral {
   box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
 }
@@ -54461,6 +54509,12 @@ Buttonには`_button`クラスを付与します。
 }
 .ncgr-text-field:hover ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--hover ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
+}
+.ncgr-text-field:hover.-align-start > ._control > ._input, .ncgr-text-field.--hover.-align-start > ._control > ._input {
+  text-align: start;
+}
+.ncgr-text-field:hover.-align-end > ._control > ._input, .ncgr-text-field.--hover.-align-end > ._control > ._input {
+  text-align: end;
 }
 .ncgr-text-field:hover.-color-neutral, .ncgr-text-field.--hover.-color-neutral {
   box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0.04), inset 0 0 0 0.125rem #d5dbde;
@@ -54633,6 +54687,12 @@ Buttonには`_button`クラスを付与します。
 .ncgr-text-field:focus-within ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--focused ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
 }
+.ncgr-text-field:focus-within.-align-start > ._control > ._input, .ncgr-text-field.--focused.-align-start > ._control > ._input {
+  text-align: start;
+}
+.ncgr-text-field:focus-within.-align-end > ._control > ._input, .ncgr-text-field.--focused.-align-end > ._control > ._input {
+  text-align: end;
+}
 .ncgr-text-field:focus-within.-color-neutral, .ncgr-text-field.--focused.-color-neutral {
   box-shadow: 0 0 0 4px rgba(173, 180, 187, 0.15), inset 0 0 0 0.125rem rgba(0, 0, 0, 0.12), inset 0 0 0 0.125rem #d5dbde;
 }
@@ -54803,6 +54863,12 @@ Buttonには`_button`クラスを付与します。
 }
 .ncgr-text-field:disabled ._control > ._trailing > ._icon.-color-favorite, .ncgr-text-field.--disabled ._control > ._trailing > ._icon.-color-favorite {
   color: #d92e1e;
+}
+.ncgr-text-field:disabled.-align-start > ._control > ._input, .ncgr-text-field.--disabled.-align-start > ._control > ._input {
+  text-align: start;
+}
+.ncgr-text-field:disabled.-align-end > ._control > ._input, .ncgr-text-field.--disabled.-align-end > ._control > ._input {
+  text-align: end;
 }
 .ncgr-text-field:disabled.-color-neutral, .ncgr-text-field.--disabled.-color-neutral {
   box-shadow: inset 0 0 0 0.125rem rgba(0, 0, 0, 0), inset 0 0 0 0.125rem #d5dbde;
