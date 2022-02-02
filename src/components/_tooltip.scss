@@ -9,9 +9,14 @@ category: Components
 
 ```example
 <div style="position: relative;">
-  <div class="ncgr-textfield ncgr-mar-b-16">
-    <label class="ncgr-textfield__label" for="name">名前</label>
-    <input class="ncgr-textfield__input invalid" type="text" name="name" placeholder="例）スリスリ君">
+  <div class="ncgr-text-field -color-negative">
+    <label class="_label" for="name">名前</label>
+    <div class="_control">
+      <input class="_input" type="text" name="name" placeholder="スリスリ君">
+      <div class="_trailing">
+        <span class="ncgr-icon _icon -color-negative" data-icon="exclamation_on_triangle"></span>
+      </div>
+    </div>
   </div>
   <div class="ncgr-tooltip -top -active" role="tooltip">
     名前は8文字以上で入力してください
