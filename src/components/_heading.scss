@@ -48,6 +48,7 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 @use 'sass:map';
 @use '@inhouse/adapter/functions' as adapter-functions;
 @use '@inhouse/adapter/mixins' as adapter-mixins;
+@use '@inhouse/skeleton/mixins' as skeleton;
 
 // Flavor variables
 
@@ -134,7 +135,7 @@ $options: (
   $size: m,
   $boundary-size-level: s
 ) {
-  @include adapter-mixins.skeleton-text(
+  @include skeleton.skeleton-text(
     $level: get-heading-font-size-level(
       $size: $size,
       $boundary-size-level: $boundary-size-level

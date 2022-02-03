@@ -46,14 +46,14 @@ Skeleton Textを作成できます。
 }
 
 .ncgr-skeleton-text {
-  @include adapter-mixins.skeleton-text(
+  @include skeleton.skeleton-text(
     $level: m,
     $density: normal
   );
 
   @each $density in adapter-functions.get-densities() {
     &.-density-#{$density} {
-      @include adapter-mixins.skeleton-text(
+      @include skeleton.skeleton-text(
         $level: m,
         $density: $density
       );
@@ -62,7 +62,7 @@ Skeleton Textを作成できます。
 
   @each $size in (xxs, xs, s, m, l, xl, xxl, xxxl) {
     &.-size-#{$size} {
-      @include adapter-mixins.skeleton-text(
+      @include skeleton.skeleton-text(
         $level: $size,
         $density: normal
       );
@@ -70,7 +70,7 @@ Skeleton Textを作成できます。
 
     @each $density in adapter-functions.get-densities() {
       &.-size-#{$size}.-density-#{$density} {
-        @include adapter-mixins.skeleton-text(
+        @include skeleton.skeleton-text(
           $level: $size,
           $density: $density
         );
