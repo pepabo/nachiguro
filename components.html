@@ -9157,80 +9157,6 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
 </pre>
         </div>
         <div class="styleguide__content">
-
-<h1 id="user-card" class="styleguide">User Card</h1>
-
-<p>「User Card」の上部にはクリエイターさんの商品を4枚並べ、そのクリエイターさんがどのようなラインナップのアイテムを販売しているかわかるようにします。</p>
-
-<p>その下にはどのユーザーを示すカードなのか印象づけるためアバター画像を配置します。</p>
-
-<p>また、さらにクリエイターさんの情報を伝えるため、プロフィール文を2行表示します。文字数がオーバーする場合は三点リーダーで省略します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <div class="ncgr-user-card">
-  <div class="ncgr-user-card__products-wrap">
-    <div class="ncgr-user-card__products">
-      <a class="ncgr-user-card__product" href="#">
-        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-1.jpg">
-      </a>
-      <a class="ncgr-user-card__product" href="#">
-        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-2.jpg">
-      </a>
-      <a class="ncgr-user-card__product" href="#">
-        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-3.jpg">
-      </a>
-      <a class="ncgr-user-card__product" href="#">
-        <img class="ncgr-user-card__product-image" src="./images/components/user-card/product-4.jpg">
-      </a>
-    </div>
-  </div>
-  <div class="ncgr-user-card__info">
-    <a class="ncgr-user-card__avatar">
-      <img class="ncgr-user-card__avatar-image" src="./images/components/user-card/avatar.png">
-    </a>
-    <a class="ncgr-user-card__name" href="#">
-      忍者スリスリくん ( surisurikun )
-    </a>
-    <p class="ncgr-user-card__profile ncgr-mar-t-8">
-      こんにちは！SUZURI の公式忍者・スリスリくんです。キミも忍者にならないか？
-    </p>
-  </div>
-</div>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__products-wrap"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__products"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-1.jpg"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-2.jpg"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-3.jpg"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__product-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/product-4.jpg"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-user-card__info"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__avatar"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-user-card__avatar-image"</span> <span class="na">src=</span><span class="s">"./images/components/user-card/avatar.png"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-user-card__name"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      忍者スリスリくん ( surisurikun )
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ncgr-user-card__profile ncgr-mar-t-8"</span><span class="nt">&gt;</span>
-      こんにちは！SUZURI の公式忍者・スリスリくんです。キミも忍者にならないか？
-    <span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
       </div><!-- end of .styleguide__content -->
       <footer class="ncgr-pad-t-64 ncgr-pad-r-16 ncgr-pad-b-64 ncgr-pad-l-16 ncgr-align-center">
         <div class="ncgr-typography-small ncgr-mar-b-8">
@@ -9788,18 +9714,6 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               <div class="_body">
                                 <div class="_title">
                                   Uploader
-                                </div>
-                              </div>
-                            </a>
-                          </li>
-                        
-                          <li class="_item">
-                            <a href="#user-card">
-                              <div class="_leading">
-                              </div>
-                              <div class="_body">
-                                <div class="_title">
-                                  User Card
                                 </div>
                               </div>
                             </a>
