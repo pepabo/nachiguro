@@ -44285,17 +44285,6 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
-@keyframes heartbeat {
-  0% {
-    opacity: 30%;
-  }
-  50% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 30%;
-  }
-}
 /*doc
 ---
 title: Container
@@ -44709,17 +44698,6 @@ category: Components
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
-@keyframes heartbeat {
-  0% {
-    opacity: 30%;
-  }
-  50% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 30%;
-  }
-}
 /*doc
 ---
 title: Grid
