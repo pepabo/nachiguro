@@ -23,20 +23,20 @@
     "sass": "^1.35.2"
   },
   "dependencies": {
-    "@inhouse/adapter": "^0.31.0",
-    "@inhouse/app-bar": "^0.31.0",
-    "@inhouse/avatar": "^0.31.0",
-    "@inhouse/button": "^0.31.0",
-    "@inhouse/checkbox": "^0.31.0",
-    "@inhouse/container": "^0.31.0",
+    "@inhouse/adapter": "^0.32.0",
+    "@inhouse/app-bar": "^0.32.0",
+    "@inhouse/avatar": "^0.32.0",
+    "@inhouse/button": "^0.32.0",
+    "@inhouse/checkbox": "^0.32.0",
+    "@inhouse/container": "^0.32.0",
     "@inhouse/flavor": "npm:@inhouse/nachiguro-flavor@0.2.0",
-    "@inhouse/grid": "^0.31.0",
-    "@inhouse/icon": "^0.31.0",
-    "@inhouse/interactive-list": "^0.31.0",
-    "@inhouse/interactive-table": "^0.31.0",
-    "@inhouse/list": "^0.31.0",
-    "@inhouse/skeleton": "^0.31.0",
-    "@inhouse/radio": "^0.31.0",
-    "@inhouse/table": "^0.31.0"
+    "@inhouse/grid": "^0.32.0",
+    "@inhouse/icon": "^0.32.0",
+    "@inhouse/interactive-list": "^0.32.0",
+    "@inhouse/interactive-table": "^0.32.0",
+    "@inhouse/list": "^0.32.0",
+    "@inhouse/skeleton": "^0.32.0",
+    "@inhouse/radio": "^0.32.0",
+    "@inhouse/table": "^0.32.0"
   }
 }
