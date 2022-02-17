@@ -1959,6 +1959,9 @@ category: Components
 .ncgr-app-bar.--activated {
   display: flex;
 }
+.ncgr-app-bar > ._trailing ._list ._item {
+  position: relative;
+}
 
 /* stylelint-disable function-comma-space-after */
 /* stylelint-disable indentation */
