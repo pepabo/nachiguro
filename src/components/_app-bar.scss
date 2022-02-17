@@ -68,5 +68,14 @@ category: Components
   &.--activated {
     display: flex;
   }
+
+  // BadgeがInhouseに実装されてButtonにつけられるようになったら消す
+  & > ._trailing {
+    ._list {
+      ._item {
+        position: relative;
+      }
+    }
+  }
 }
 
