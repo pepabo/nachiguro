@@ -17,17 +17,19 @@ category: Components
 </div>
 <div class="ncgr-dialog -active">
   <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
-    <div class="_leading">
-      <div class="ncgr-button -appearance-transparent -shape-circle">
-        <div class="_leading">
-          <span class="ncgr-icon" data-icon="arrow_left"></span>
+    <div class="_content">
+      <div class="_leading">
+        <div class="ncgr-button -appearance-transparent -shape-circle">
+          <div class="_leading">
+            <span class="ncgr-icon" data-icon="arrow_left"></span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="_body">
-      <h1 class="_title">
-        甲賀流
-      </h1>
+      <div class="_body">
+        <h1 class="_title">
+          甲賀流
+        </h1>
+      </div>
     </div>
   </div>
   <div class="ncgr-dialog__body">

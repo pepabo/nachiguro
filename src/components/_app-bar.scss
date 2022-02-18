@@ -13,42 +13,44 @@ category: Components
 
 ```example
 <header class="ncgr-app-bar -appearance-white -brightness-light -position-static --activated">
-  <div class="_leading">
-    <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
-      <div class="_leading">
-        <span class="ncgr-icon _icon" data-icon="menu"></span>
-      </div>
-    </button>
-  </div>
-  <div class="_body">
-    <h1 class="_title">
-      <a href="#">
-        App
-      </a>
-    </h1>
-  </div>
-  <div class="_trailing">
-    <div class="_list">
-      <div class="_item">
-        <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
-          <div class="_leading">
-            <span class="ncgr-icon _icon" data-icon="funnel"></span>
-          </div>
-        </button>
-      </div>
-      <div class="_item">
-        <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
-          <div class="_leading">
-            <span class="ncgr-icon _icon" data-icon="node"></span>
-          </div>
-        </button>
-      </div>
-      <div class="_item">
-        <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
-          <div class="_leading">
-            <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
-          </div>
-        </button>
+  <div class="_content">
+    <div class="_leading">
+      <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+        <div class="_leading">
+          <span class="ncgr-icon _icon" data-icon="menu"></span>
+        </div>
+      </button>
+    </div>
+    <div class="_body">
+      <h1 class="_title">
+        <a href="#">
+          App
+        </a>
+      </h1>
+    </div>
+    <div class="_trailing">
+      <div class="_list">
+        <div class="_item">
+          <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+            <div class="_leading">
+              <span class="ncgr-icon _icon" data-icon="funnel"></span>
+            </div>
+          </button>
+        </div>
+        <div class="_item">
+          <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+            <div class="_leading">
+              <span class="ncgr-icon _icon" data-icon="node"></span>
+            </div>
+          </button>
+        </div>
+        <div class="_item">
+          <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+            <div class="_leading">
+              <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -66,7 +68,18 @@ category: Components
   display: none;
 
   &.--activated {
-    display: flex;
+    display: block;
+  }
+
+  // BadgeがInhouseに実装されてButtonにつけられるようになったら消す
+  & > ._content {
+    & > ._trailing {
+      ._list {
+        ._item {
+          position: relative;
+        }
+      }
+    }
   }
 }
 
