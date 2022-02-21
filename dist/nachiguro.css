@@ -1837,6 +1837,7 @@ category: Components
 */
 .ncgr-app-bar {
   position: fixed;
+  z-index: 2000;
   width: 100%;
   color: #3a3e40;
   background-color: #fff;
@@ -1845,9 +1846,10 @@ category: Components
 }
 .ncgr-app-bar > ._content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
-  height: 3.5rem;
+  min-height: 3.5rem;
   padding: 0.5rem;
 }
 .ncgr-app-bar > ._content > ._body {
@@ -1879,6 +1881,7 @@ category: Components
 }
 .ncgr-app-bar > ._content > ._trailing ._list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -1887,11 +1890,11 @@ category: Components
 .ncgr-app-bar > ._content > ._trailing ._list ._item {
   display: flex;
   align-items: center;
-  margin: 0 0 0 0.25rem;
+  margin: 0 0.25rem 0 0;
   padding: 0;
 }
-.ncgr-app-bar > ._content > ._trailing ._list ._item:first-child {
-  margin-left: 0;
+.ncgr-app-bar > ._content > ._trailing ._list ._item:last-child {
+  margin-right: 0;
 }
 .ncgr-app-bar.-appearance-white {
   color: #3a3e40;
@@ -1953,14 +1956,17 @@ category: Components
 .ncgr-app-bar.-appearance-transparent.-brightness-dark > ._content > ._body a {
   color: #fff;
 }
-.ncgr-app-bar.-position-static {
-  position: static;
+.ncgr-app-bar.-position-relative {
+  position: relative;
+  z-index: 20;
 }
 .ncgr-app-bar.-position-fixed {
   position: fixed;
+  z-index: 2000;
 }
 .ncgr-app-bar.-position-sticky {
   position: sticky;
+  z-index: 2000;
 }
 .ncgr-app-bar.--activated {
   display: block;
