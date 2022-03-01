@@ -1,0 +1,185 @@
+/*doc
+---
+title: Side Navigation
+name: side-navigation
+category: Components
+---
+
+デスクトップや大型タブレットなどの大きな画面かつ横方向の画面遷移が必要な場合に使用します。画面の端に3つ以上の遷移先が表示されます。
+
+```example
+<aside class="ncgr-side-navigation --activated">
+  <div class="_header">
+    <div class="ncgr-interactive-list -density-normal">
+      <ul class="_list">
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_avatar">
+                <div class="ncgr-avatar">
+                  <img src="https://picsum.photos/id/177/200/300" />
+                </div>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                User
+              </div>
+            </div>
+            <div class="_trailing">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="arrow_drop_down"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav>
+    <div class="ncgr-interactive-list -density-normal">
+      <ul class="_list">
+        <li class="_item --activated">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="home"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                ホーム
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="magnifying_glass"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                検索
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="heart"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                お気に入り
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="bell"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                通知
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="person"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                あなた
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="gear"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                設定
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ncgr-interactive-list -density-normal">
+      <h2 class="_title">ブックマーク</h2>
+      <ul class="_list">
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="star"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                ブックマーク
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="star"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                ブックマーク
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="_item">
+          <a href="#" rel="">
+            <div class="_leading">
+              <div class="_icon">
+                <span class="ncgr-icon" data-icon="star"></span>
+              </div>
+            </div>
+            <div class="_body">
+              <div class="_title">
+                ブックマーク
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</aside>
+
+```
+*/
+
+@use '@inhouse/side-navigation/mixins';
+
+.ncgr-side-navigation {
+  @include mixins.style();
+}
