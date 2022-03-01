@@ -35,6 +35,7 @@
     "@inhouse/interactive-list": "^0.34.0",
     "@inhouse/interactive-table": "^0.34.0",
     "@inhouse/list": "^0.34.0",
+    "@inhouse/side-navigation": "^0.34.0",
     "@inhouse/skeleton": "^0.34.0",
     "@inhouse/radio": "^0.34.0",
     "@inhouse/table": "^0.34.0"
