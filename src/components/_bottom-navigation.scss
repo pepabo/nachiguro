@@ -1,0 +1,58 @@
+/*doc
+---
+title: Bottom Navigation
+name: bottom-navigation
+category: Components
+---
+
+画面の下部に3〜5つの遷移先が表示されます。各ItemはIconまたは画像とラベルテキストで構成されます。ItemをタップするとそのItemが示す最上位の遷移先に移動します。
+
+```code
+<nav class="ncgr-bottom-navigation">
+  <ul class="_list">
+    <li class="_item">
+      <button class="_action --activated">
+        <div class="_icon"><span class="ncgr-icon" data-icon="home"></span></div>
+        <div class="_text">ホーム</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon">
+          <span class="ncgr-icon" data-icon="magnifying_glass"></span>
+        </div>
+        <div class="_text">検索</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon"><span class="ncgr-icon" data-icon="heart"></span></div>
+        <div class="_text">お気に入り</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon"><span class="ncgr-icon" data-icon="bell"></span></div>
+        <div class="_text">通知</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon">
+          <span class="ncgr-icon" data-icon="person"></span>
+        </div>
+        <div class="_text">あなた</div>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+```
+
+*/
+
+@use '@inhouse/bottom-navigation/mixins';
+
+.ncgr-bottom-navigation {
+  @include mixins.style();
+}
