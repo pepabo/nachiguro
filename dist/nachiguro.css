@@ -42780,6 +42780,190 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   width: calc(100% / 3);
 }
 
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable indentation */
+/*doc
+---
+title: Bottom Navigation
+name: bottom-navigation
+category: Components
+---
+
+画面の下部に3〜5つの遷移先が表示されます。各ItemはIconまたは画像とラベルテキストで構成されます。ItemをタップするとそのItemが示す最上位の遷移先に移動します。
+
+```code
+<nav class="ncgr-bottom-navigation">
+  <ul class="_list">
+    <li class="_item">
+      <button class="_action --activated">
+        <div class="_icon"><span class="ncgr-icon" data-icon="home"></span></div>
+        <div class="_text">ホーム</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon">
+          <span class="ncgr-icon" data-icon="magnifying_glass"></span>
+        </div>
+        <div class="_text">検索</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon"><span class="ncgr-icon" data-icon="heart"></span></div>
+        <div class="_text">お気に入り</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon"><span class="ncgr-icon" data-icon="bell"></span></div>
+        <div class="_text">通知</div>
+      </button>
+    </li>
+    <li class="_item">
+      <button class="_action">
+        <div class="_icon">
+          <span class="ncgr-icon" data-icon="person"></span>
+        </div>
+        <div class="_text">あなた</div>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+```
+
+*/
+.ncgr-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.12), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.ncgr-bottom-navigation ._list {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ncgr-bottom-navigation ._item {
+  max-width: 10.5rem;
+}
+.ncgr-bottom-navigation ._item:first-child:nth-last-child(3), .ncgr-bottom-navigation ._item:first-child:nth-last-child(3) ~ ._item {
+  width: 33.3333333333%;
+}
+.ncgr-bottom-navigation ._item:first-child:nth-last-child(4), .ncgr-bottom-navigation ._item:first-child:nth-last-child(4) ~ ._item {
+  width: 25%;
+}
+.ncgr-bottom-navigation ._item:first-child:nth-last-child(5), .ncgr-bottom-navigation ._item:first-child:nth-last-child(5) ~ ._item {
+  width: 20%;
+}
+.ncgr-bottom-navigation ._action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  color: #8e9599;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-bottom-navigation ._action:hover, .ncgr-bottom-navigation ._action.--hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.ncgr-bottom-navigation ._action:focus, .ncgr-bottom-navigation ._action.--focused {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.ncgr-bottom-navigation ._action.--activated {
+  color: #067bbf;
+  opacity: 1;
+}
+.ncgr-bottom-navigation ._icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+.ncgr-bottom-navigation ._text {
+  width: 100%;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ncgr-bottom-navigation.-appearance-white {
+  background-color: #fff;
+}
+.ncgr-bottom-navigation.-appearance-white ._action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  color: #8e9599;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 1;
+}
+.ncgr-bottom-navigation.-appearance-white ._action:hover, .ncgr-bottom-navigation.-appearance-white ._action.--hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.ncgr-bottom-navigation.-appearance-white ._action:focus, .ncgr-bottom-navigation.-appearance-white ._action.--focused {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.ncgr-bottom-navigation.-appearance-white ._action.--activated {
+  color: #067bbf;
+  opacity: 1;
+}
+.ncgr-bottom-navigation.-appearance-filled {
+  background-color: #067bbf;
+}
+.ncgr-bottom-navigation.-appearance-filled ._action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.38;
+}
+.ncgr-bottom-navigation.-appearance-filled ._action:hover, .ncgr-bottom-navigation.-appearance-filled ._action.--hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.ncgr-bottom-navigation.-appearance-filled ._action:focus, .ncgr-bottom-navigation.-appearance-filled ._action.--focused {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.ncgr-bottom-navigation.-appearance-filled ._action.--activated {
+  color: #fff;
+  opacity: 1;
+}
+
 /*doc
 ---
 title: Breadcrumbs

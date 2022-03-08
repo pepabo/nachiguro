@@ -1200,6 +1200,54 @@ Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bo
         </div>
         <div class="styleguide__content">
 
+<h1 id="bottom-navigation" class="styleguide">Bottom Navigation</h1>
+
+<p>画面の下部に3〜5つの遷移先が表示されます。各ItemはIconまたは画像とラベルテキストで構成されます。ItemをタップするとそのItemが示す最上位の遷移先に移動します。</p>
+        </div><!-- end of .styleguide__content -->
+        <div class="styleguide__code">
+          <pre>&lt;nav class="ncgr-bottom-navigation"&gt;
+  &lt;ul class="_list"&gt;
+    &lt;li class="_item"&gt;
+      &lt;button class="_action --activated"&gt;
+        &lt;div class="_icon"&gt;&lt;span class="ncgr-icon" data-icon="home"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="_text"&gt;ホーム&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="_item"&gt;
+      &lt;button class="_action"&gt;
+        &lt;div class="_icon"&gt;
+          &lt;span class="ncgr-icon" data-icon="magnifying_glass"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="_text"&gt;検索&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="_item"&gt;
+      &lt;button class="_action"&gt;
+        &lt;div class="_icon"&gt;&lt;span class="ncgr-icon" data-icon="heart"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="_text"&gt;お気に入り&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="_item"&gt;
+      &lt;button class="_action"&gt;
+        &lt;div class="_icon"&gt;&lt;span class="ncgr-icon" data-icon="bell"&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="_text"&gt;通知&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="_item"&gt;
+      &lt;button class="_action"&gt;
+        &lt;div class="_icon"&gt;
+          &lt;span class="ncgr-icon" data-icon="person"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="_text"&gt;あなた&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+</pre>
+        </div>
+        <div class="styleguide__content">
+
 <h1 id="breadcrumbs" class="styleguide">Breadcrumbs</h1>
 
 <p>パンくずリストのコンポーネントです。
@@ -9532,6 +9580,18 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               <div class="_body">
                                 <div class="_title">
                                   Botan
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        
+                          <li class="_item">
+                            <a href="#bottom-navigation">
+                              <div class="_leading">
+                              </div>
+                              <div class="_body">
+                                <div class="_title">
+                                  Bottom Navigation
                                 </div>
                               </div>
                             </a>
