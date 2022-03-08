@@ -26,6 +26,7 @@
     "@inhouse/adapter": "^0.34.0",
     "@inhouse/app-bar": "^0.34.0",
     "@inhouse/avatar": "^0.34.0",
+    "@inhouse/bottom-navigation": "^0.34.0",
     "@inhouse/button": "^0.34.0",
     "@inhouse/checkbox": "^0.34.0",
     "@inhouse/container": "^0.34.0",
