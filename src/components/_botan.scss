@@ -195,6 +195,16 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 </button>
 ```
 
+#### Facebook
+
+`.ncgr-facebook-botan` を指定すると、Facebookの色のボタンになります。
+
+```example
+<button class="ncgr-facebook-botan">
+  <div class="_body">Botan</div>
+</button>
+```
+
 #### ニコニコ動画
 
 `.ncgr-nicovideo-botan` を指定すると、ニコニコ動画の色のボタンになります。
@@ -266,6 +276,17 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     appearance: solid,
     brightness: light,
     color: #55ACEE,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+}
+
+.ncgr-facebook-botan {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #1877f2,
     size: m,
     shape: square,
     width: auto,
