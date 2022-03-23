@@ -1,16 +1,16 @@
 /*doc
 ---
-title: Botan
-name: botan
+title: button
+name: button
 category: Components
 ---
 
-`.ncgr-botan` を指定した要素はボタンになります。
+`.ncgr-button` を指定した要素はボタンになります。
 内部は`_body`でマークアップします。
 
 ```example
-<button class="ncgr-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-button">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -19,20 +19,20 @@ category: Components
 `.-size-{size}`を指定するとそのサイズのボタンになります。
 
 ```example
-<button class="ncgr-botan -size-xs">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -size-xs">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -size-s">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -size-s">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -size-m">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -size-m">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -size-l">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -size-l">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -size-xl">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -size-xl">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -41,23 +41,23 @@ category: Components
 `.-appearance-{appearance}` を指定するとその見た目のボタンになります。
 
 ```example
-<button class="ncgr-botan -appearance-flat">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-flat">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -appearance-outlined">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-outlined">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -appearance-solid">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-solid">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -appearance-white">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-white">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -appearance-transparent">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-transparent">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -appearance-hollow">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -appearance-hollow">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -66,17 +66,17 @@ category: Components
 `.--{state}` を指定すると、その状態のボタンになります。
 
 ```example
-<button class="ncgr-botan --enabled">
-  <div class="_body">Botan</div>
+<button class="ncgr-button --enabled">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan --hover">
-  <div class="_body">Botan</div>
+<button class="ncgr-button --hover">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan --focused">
-  <div class="_body">Botan</div>
+<button class="ncgr-button --focused">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan --disabled">
-  <div class="_body">Botan</div>
+<button class="ncgr-button --disabled">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -85,11 +85,11 @@ category: Components
 `.-shape-{shape}` を指定するとその形状のボタンになります。
 
 ```example
-<button class="ncgr-botan -shape-square">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -shape-square">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -shape-circle">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -shape-circle">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -98,29 +98,29 @@ category: Components
 `.-color-{intention}` を指定すると、色が変わって意味を持つボタンになります。
 
 ```example
-<button class="ncgr-botan -color-informative">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-informative">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-neutral">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-neutral">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-positive">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-positive">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-notice">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-notice">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-negative">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-negative">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-attention">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-attention">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-interactive">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-interactive">
+  <div class="_body">button</div>
 </button>
-<button class="ncgr-botan -color-favorite">
-  <div class="_body">Botan</div>
+<button class="ncgr-button -color-favorite">
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -130,11 +130,11 @@ category: Components
 アイコンには`_icon`クラスを付与します。
 
 ```example
-<button class="ncgr-botan">
+<button class="ncgr-button">
   <div class="_leading">
     <span class="ncgr-icon _icon" data-icon="heart"></span>
   </div>
-  <div class="_body">Botan</div>
+  <div class="_body">button</div>
 </button>
 ```
 
@@ -142,7 +142,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 アイコンのみのボタンにする場合はボタンの意味がわかりやすいように必ず`aria-label`をつけます。
 
 ```example
-<button aria-label="Favorite" class="ncgr-botan">
+<button aria-label="Favorite" class="ncgr-button">
   <div class="_leading">
     <span class="ncgr-icon _icon" data-icon="heart"></span>
   </div>
@@ -152,7 +152,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 他にもLeadingにはAvatarを入れることができます。
 
 ```example
-<button aria-label="Favorite" class="ncgr-botan">
+<button aria-label="Favorite" class="ncgr-button">
   <div class="_leading">
     <div class="ncgr-avatar -size-xs">
       <img src="https://picsum.photos/id/177/200/300">
@@ -167,8 +167,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 アイコンには`_icon`クラスを付与します。
 
 ```example
-<button class="ncgr-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-button">
+  <div class="_body">button</div>
   <div class="_trailing">
     <span class="ncgr-icon _icon" data-icon="chevron_right"></span>
   </div>
@@ -177,70 +177,70 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 
 #### Apple
 
-`.ncgr-apple-botan` を指定すると、Appleの色のボタンになります。
+`.ncgr-apple-button` を指定すると、Appleの色のボタンになります。
 
 ```example
-<button class="ncgr-apple-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-apple-button">
+  <div class="_body">button</div>
 </button>
 ```
 
 #### Twitter
 
-`.ncgr-twitter-botan` を指定すると、Twitterの色のボタンになります。
+`.ncgr-twitter-button` を指定すると、Twitterの色のボタンになります。
 
 ```example
-<button class="ncgr-twitter-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-twitter-button">
+  <div class="_body">button</div>
 </button>
 ```
 
 #### Facebook
 
-`.ncgr-facebook-botan` を指定すると、Facebookの色のボタンになります。
+`.ncgr-facebook-button` を指定すると、Facebookの色のボタンになります。
 
 ```example
-<button class="ncgr-facebook-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-facebook-button">
+  <div class="_body">button</div>
 </button>
 ```
 
 #### ニコニコ動画
 
-`.ncgr-nicovideo-botan` を指定すると、ニコニコ動画の色のボタンになります。
+`.ncgr-nicovideo-button` を指定すると、ニコニコ動画の色のボタンになります。
 
 ```example
-<button class="ncgr-nicovideo-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-nicovideo-button">
+  <div class="_body">button</div>
 </button>
 ```
 
 #### LINE
 
-`.ncgr-line-botan` を指定すると、LINEの色のボタンになります。
+`.ncgr-line-button` を指定すると、LINEの色のボタンになります。
 
 ```example
-<button class="ncgr-line-botan">
-  <div class="_body">Botan</div>
+<button class="ncgr-line-button">
+  <div class="_body">button</div>
 </button>
 ```
 
 #### Skeleton
 
 ```example
-<div class="ncgr-skeleton-botan">
+<div class="ncgr-skeleton-button">
 </div>
 ```
 
 
 */
 
-// TODO: 全部置き換えできたら名前をbotanからbuttonにする
+// TODO: 全部置き換えできたら名前をbuttonからbuttonにする
 
 @use '@inhouse/button/mixins';
 @use '@inhouse/adapter/functions' as adapter;
 
-.ncgr-botan {
+.ncgr-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
@@ -256,11 +256,11 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   }
 }
 
-.ncgr-skeleton-botan {
+.ncgr-skeleton-button {
   @include mixins.skeleton-style();
 }
 
-.ncgr-apple-botan {
+.ncgr-apple-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
@@ -271,7 +271,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   ));
 }
 
-.ncgr-twitter-botan {
+.ncgr-twitter-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
@@ -282,7 +282,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   ));
 }
 
-.ncgr-facebook-botan {
+.ncgr-facebook-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
@@ -293,7 +293,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   ));
 }
 
-.ncgr-nicovideo-botan {
+.ncgr-nicovideo-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
@@ -304,7 +304,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
   ));
 }
 
-.ncgr-line-botan {
+.ncgr-line-button {
   @include mixins.style((
     appearance: solid,
     brightness: light,
