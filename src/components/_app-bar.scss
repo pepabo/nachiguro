@@ -15,7 +15,7 @@ category: Components
 <header class="ncgr-app-bar -appearance-white -brightness-light -position-static --activated">
   <div class="_content">
     <div class="_leading">
-      <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+      <button aria-label="More" class="ncgr-button -appearance-transparent -shape-circle">
         <div class="_leading">
           <span class="ncgr-icon _icon" data-icon="menu"></span>
         </div>
@@ -31,21 +31,21 @@ category: Components
     <div class="_trailing">
       <div class="_list">
         <div class="_item">
-          <button aria-label="Filter" class="ncgr-botan -appearance-transparent -shape-circle">
+          <button aria-label="Filter" class="ncgr-button -appearance-transparent -shape-circle">
             <div class="_leading">
               <span class="ncgr-icon _icon" data-icon="funnel"></span>
             </div>
           </button>
         </div>
         <div class="_item">
-          <button aria-label="Share" class="ncgr-botan -appearance-transparent -shape-circle">
+          <button aria-label="Share" class="ncgr-button -appearance-transparent -shape-circle">
             <div class="_leading">
               <span class="ncgr-icon _icon" data-icon="node"></span>
             </div>
           </button>
         </div>
         <div class="_item">
-          <button aria-label="More" class="ncgr-botan -appearance-transparent -shape-circle">
+          <button aria-label="More" class="ncgr-button -appearance-transparent -shape-circle">
             <div class="_leading">
               <span class="ncgr-icon _icon" data-icon="ellipsis_vertical"></span>
             </div>

@@ -18,9 +18,13 @@ category: Components
       <li>サイズは15MB以下ですか？</li>
       <li>権利侵害していませんか？</li>
     </ul>
-    <button class="ncgr-button ncgr-button--primary ncgr-button--fluid">
-      <i class="fas fa-upload"></i>
-      画像をアップロード
+    <button class="ncgr-button -color-interactive">
+      <div class="_leading">
+        <span class="ncgr-icon" data-icon="upload"></span>
+      </div>
+      <div class="_body">
+        画像をアップロード
+      </div>
     </button>
   </div>
 </div>
