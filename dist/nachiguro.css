@@ -49589,17 +49589,20 @@ category: Components
   </section>
   <footer class="ncgr-card__footer ncgr-pad-16">
     <div class="ncgr-card__avatar">
-      <a class="ncgr-avatar -m" href="#">
-        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-        <span class="ncgr-avatar__name">surisurikun</span>
-      </a>
+      <div class="ncgr-avatar -size-m">
+        <img src="./images/components/avatar/avatar.png">
+      </div>
     </div>
     <div class="ncgr-card__actions">
-      <a class="ncgr-icon-button -dark" href="#">
-        <i class="fa fa-trash"></i>
+      <a class="ncgr-botan -appearance-flat" href="#">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="garbage_can"></span>
+        </div>
       </a>
-      <a class="ncgr-icon-button -dark" href="#">
-        <i class="fas fa-pencil-alt"></i>
+      <a class="ncgr-botan -appearance-flat" href="#">
+        <div>
+          <span class="ncgr-icon" data-icon="pencil"></span>
+        </div>
       </a>
     </div>
   </footer>
@@ -52464,157 +52467,6 @@ category: Components
 }
 .ncgr-icon::after {
   content: attr(data-icon);
-}
-
-/*doc
----
-title: Icon Button
-name: icon-button
-category: Components
----
-
-Icon Buttonはある商品やユーザー情報に対してアクションをするボタンに使用します。
-
-一般的にモバイルでのタップターゲットは44px以上確保するとよいと言われていますが、ボタンそのものの大きさを44px以上にするとアイテムの画像と比較したボタンの領域が大きくなりすぎるため、外周のpaddingを2px以上確保していることでタップターゲットが確保できているとみなします。
-
-```example
-<button class="ncgr-icon-button -circle">
-  <i class="fa fa-bell"></i>
-</button>
-```
-
-強制的に明るい背景にしたい場合は `-light` Modifier を使用します。
-
-```example
-<button class="ncgr-icon-button -light">
-  <i class="fa fa-folder"></i>
-</button>
-```
-
-明度の高い画像の上に乗せるときなどに、ボタンのタップできる範囲を明確にしたい場合は `-bordered` Modifier を使用します。
-
-```example
-<button class="ncgr-icon-button -light -bordered">
-  <i class="fa fa-folder"></i>
-</button>
-```
-
-強制的に暗い背景色を敷きたい場合は `-dark` Modifier を使用します。主にログインしているユーザー自身（管理者）のアクション（編集・削除）に使用します。
-
-```example
-<button class="ncgr-icon-button -dark">
-  <i class="fas fa-pencil-alt"></i>
-</button>
-```
-
-ズッキュンボタンには `-favorite -bordered` Modifier を使用します。
-
-```example
-<button class="ncgr-icon-button -favorite -bordered">
-  <i class="fa fa-heart"></i>
-  <span class="ncgr-pad-l-4">246</span>
-</button>
-```
-
-プロフィール画像やカバー画像などの画像をアップロードする箇所には `-circle -dark` Modifier を使用します。
-
-```example
-<button class="ncgr-icon-button -circle -dark">
-  <i class="fas fa-pencil-alt"></i>
-</button>
-```
-
-*/
-.ncgr-icon-button {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  height: 2.5rem;
-  text-align: center;
-  width: auto;
-  border-radius: 0.5rem;
-  line-height: 2.5rem;
-  min-width: 2.5rem;
-  transition: all 0.2s ease-in-out;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: var(--color-label);
-  font-size: 1rem;
-  padding: 0 0.5rem 0 0.5rem;
-}
-.ncgr-icon-button:hover {
-  background-color: var(--color-tertiary-grouped-background);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-icon-button:hover {
-    background: transparent;
-  }
-  .ncgr-icon-button:focus, .ncgr-icon-button:active {
-    background: var(--color-tertiary-grouped-background);
-  }
-}
-.ncgr-icon-button.-bordered {
-  border: 1px solid var(--color-separator);
-}
-.ncgr-icon-button.-circle {
-  border-radius: 1.25rem;
-}
-.ncgr-icon-button.-light {
-  background-color: var(--color-white);
-  color: var(--color-default-900);
-}
-.ncgr-icon-button.-light:hover {
-  background-color: var(--color-default-50);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-icon-button.-light:hover {
-    background: transparent;
-  }
-  .ncgr-icon-button.-light:focus, .ncgr-icon-button.-light:active {
-    background: var(--color-default-50);
-  }
-}
-.ncgr-icon-button.-light.-bordered {
-  border: 1px solid var(--color-default-75);
-}
-.ncgr-icon-button.-dark {
-  background-color: var(--color-default-900);
-  color: var(--color-white);
-}
-.ncgr-icon-button.-dark:hover {
-  background-color: var(--color-default-700);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-icon-button.-dark:hover {
-    background: transparent;
-  }
-  .ncgr-icon-button.-dark:focus, .ncgr-icon-button.-dark:active {
-    background: var(--color-default-700);
-  }
-}
-.ncgr-icon-button.-dark.-bordered {
-  border: 1px solid var(--color-default-900);
-}
-.ncgr-icon-button.-favorite {
-  background-color: var(--color-white);
-  color: var(--color-danger-300);
-}
-.ncgr-icon-button.-favorite:hover {
-  background-color: var(--color-default-50);
-}
-@media screen and (max-width: 768px) {
-  .ncgr-icon-button.-favorite:hover {
-    background: transparent;
-  }
-  .ncgr-icon-button.-favorite:focus, .ncgr-icon-button.-favorite:active {
-    background: var(--color-default-50);
-  }
-}
-.ncgr-icon-button.-favorite.-bordered {
-  border: 1px solid var(--color-default-75);
 }
 
 /* stylelint-disable function-comma-space-after */

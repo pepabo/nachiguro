@@ -1604,17 +1604,20 @@ Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bo
   </section>
   <footer class="ncgr-card__footer ncgr-pad-16">
     <div class="ncgr-card__avatar">
-      <a class="ncgr-avatar -m" href="#">
-        <img class="ncgr-avatar__image" src="./images/components/avatar/avatar.png">
-        <span class="ncgr-avatar__name">surisurikun</span>
-      </a>
+      <div class="ncgr-avatar -size-m">
+        <img src="./images/components/avatar/avatar.png">
+      </div>
     </div>
     <div class="ncgr-card__actions">
-      <a class="ncgr-icon-button -dark" href="#">
-        <i class="fa fa-trash"></i>
+      <a class="ncgr-botan -appearance-flat" href="#">
+        <div class="_leading">
+          <span class="ncgr-icon" data-icon="garbage_can"></span>
+        </div>
       </a>
-      <a class="ncgr-icon-button -dark" href="#">
-        <i class="fas fa-pencil-alt"></i>
+      <a class="ncgr-botan -appearance-flat" href="#">
+        <div>
+          <span class="ncgr-icon" data-icon="pencil"></span>
+        </div>
       </a>
     </div>
   </footer>
@@ -1634,17 +1637,20 @@ Title 内で h1~h6 のいずれかの Heading を用いると font-weight が bo
   <span class="nt">&lt;/section&gt;</span>
   <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"ncgr-card__footer ncgr-pad-16"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card__avatar"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-avatar -m"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ncgr-avatar__image"</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-avatar__name"</span><span class="nt">&gt;</span>surisurikun<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-avatar -size-m"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"./images/components/avatar/avatar.png"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ncgr-card__actions"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -dark"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-trash"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-flat"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"_leading"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon"</span> <span class="na">data-icon=</span><span class="s">"garbage_can"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -dark"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"ncgr-botan -appearance-flat"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon"</span> <span class="na">data-icon=</span><span class="s">"pencil"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/footer&gt;</span>
@@ -3161,108 +3167,6 @@ h1からh6、どのタグに関わらず大きさを調整できます。</p>
         </div>
         <div class="styleguide__code">
           <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-icon"</span> <span class="na">data-icon=</span><span class="s">"heart"</span><span class="nt">&gt;&lt;/span&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<h1 id="icon-button" class="styleguide">Icon Button</h1>
-
-<p>Icon Buttonはある商品やユーザー情報に対してアクションをするボタンに使用します。</p>
-
-<p>一般的にモバイルでのタップターゲットは44px以上確保するとよいと言われていますが、ボタンそのものの大きさを44px以上にするとアイテムの画像と比較したボタンの領域が大きくなりすぎるため、外周のpaddingを2px以上確保していることでタップターゲットが確保できているとみなします。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -circle">
-  <i class="fa fa-bell"></i>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -circle"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-bell"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<p>強制的に明るい背景にしたい場合は <code>-light</code> Modifier を使用します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -light">
-  <i class="fa fa-folder"></i>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -light"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-folder"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<p>明度の高い画像の上に乗せるときなどに、ボタンのタップできる範囲を明確にしたい場合は <code>-bordered</code> Modifier を使用します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -light -bordered">
-  <i class="fa fa-folder"></i>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -light -bordered"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-folder"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<p>強制的に暗い背景色を敷きたい場合は <code>-dark</code> Modifier を使用します。主にログインしているユーザー自身（管理者）のアクション（編集・削除）に使用します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -dark">
-  <i class="fas fa-pencil-alt"></i>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<p>ズッキュンボタンには <code>-favorite -bordered</code> Modifier を使用します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -favorite -bordered">
-  <i class="fa fa-heart"></i>
-  <span class="ncgr-pad-l-4">246</span>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -favorite -bordered"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-heart"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"ncgr-pad-l-4"</span><span class="nt">&gt;</span>246<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
-</pre>
-        </div>
-        <div class="styleguide__content">
-
-<p>プロフィール画像やカバー画像などの画像をアップロードする箇所には <code>-circle -dark</code> Modifier を使用します。</p>
-        </div><!-- end of .styleguide__content -->
-        <div class="styleguide__preview">
-          <button class="ncgr-icon-button -circle -dark">
-  <i class="fas fa-pencil-alt"></i>
-</button>
-
-        </div>
-        <div class="styleguide__code">
-          <pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ncgr-icon-button -circle -dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-pencil-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span>
 </pre>
         </div>
         <div class="styleguide__content">
@@ -9497,11 +9401,13 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
     </div><!-- end of .ncgr-container -->
     
       <section id="js-menu" class="ncgr-semi-modal">
-        <div class="ncgr-app-bar -appearance-transparent -position-static --activated">
+        <div class="ncgr-app-bar -appearance-transparent -position-relative --activated">
           <div class="_content">
             <div class="_leading">
-              <div id="js-menu-close-button" class="ncgr-icon-button -circle">
-                <span class="ncgr-icon" data-icon="cross"></span>
+              <div id="js-menu-close-button" class="ncgr-botan -appearance-transparent -shape-circle">
+                <div class="_leading">
+                  <span class="ncgr-icon" data-icon="cross"></span>
+                </div>
               </div>
             </div>
             <div class="_body">
@@ -9754,18 +9660,6 @@ SUZURIではあらゆるプラットフォームで同様の体験を提供す�
                               <div class="_body">
                                 <div class="_title">
                                   Icon
-                                </div>
-                              </div>
-                            </a>
-                          </li>
-                        
-                          <li class="_item">
-                            <a href="#icon-button">
-                              <div class="_leading">
-                              </div>
-                              <div class="_body">
-                                <div class="_title">
-                                  Icon Button
                                 </div>
                               </div>
                             </a>
