@@ -1856,7 +1856,8 @@ category: Components
   display: flex;
   flex-grow: 1;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 .ncgr-app-bar > ._content > ._body img,
 .ncgr-app-bar > ._content > ._body svg {
