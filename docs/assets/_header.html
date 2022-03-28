@@ -14,17 +14,18 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <header class="ncgr-header ncgr-header--fixed">
-      <div class="ncgr-header__inner">
-        <div class="ncgr-header__row">
-          <div class="ncgr-header__brand ncgr-header__brand--developer">
-            <a class="ncgr-header__brand-link" href="index.html">
+    <header class="ncgr-app-bar -appearance-white -position-static --activated">
+      <div class="_content">
+        <div class="_body">
+          <h1 class="_title">
+            <a href="index.html">
               <%= @config['pepagram']['title'] %>
             </a>
-          </div>
-          <div class="ncgr-header__spacer"></div>
-          <div class="ncgr-header__navigation">
-            <div id="js-menu-toggle-button" class="ncgr-header__navigation-link ncgr-pad-r-16 ncgr-pad-l-16">
+          </h1>
+        </div>
+        <div class="_trailing">
+          <div class="_list">
+            <div id="js-menu-toggle-button" class="_item" style="cursor: pointer;">
               メニュー
             </div>
           </div>
