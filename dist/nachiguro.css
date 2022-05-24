@@ -50335,6 +50335,11 @@ category: Components
     height: -webkit-fill-available;
     height: fill-available;
   }
+  @supports (-webkit-touch-callout: none) {
+    .ncgr-full-modal {
+      transform: translateY(120vh);
+    }
+  }
 }
 .ncgr-full-modal .ncgr-full-modal__body,
 .ncgr-full-modal .ncgr-full-modal__footer {
