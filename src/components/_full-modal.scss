@@ -97,6 +97,9 @@ category: Components
   @include mediaquery(tablet) {
     height: -webkit-fill-available;
     height: fill-available;
+    @supports (-webkit-touch-callout: none) {
+      transform: translateY(120vh);
+    }
   }
   .ncgr-full-modal__body,
   .ncgr-full-modal__footer {
