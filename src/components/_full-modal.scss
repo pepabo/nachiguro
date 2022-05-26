@@ -36,7 +36,7 @@ category: Components
   <div class="ncgr-full-modal__body">
     <div class="ncgr-full-modal__contents -active">
       <div class="ncgr-interactive-list">
-        <ul> 
+        <ul>
           <li class="_item">
             <div class=_body">
               <div class="_title">
@@ -108,6 +108,11 @@ category: Components
   &.-active {
     transform: translateY(0);
   }
+  &.-no-fill {
+    @supports (-webkit-touch-callout: none) {
+      height:100vh;
+    }
+  }
 }
 
 .ncgr-full-modal__body {
@@ -143,5 +148,10 @@ category: Components
   padding: 0.5rem;
   @include mediaquery(tablet) {
     margin-bottom: env(safe-area-inset-bottom);
+  }
+  &.-padding-bottom {
+    @supports (-webkit-touch-callout: none) {
+      padding-bottom: 140px;
+    }
   }
 }
