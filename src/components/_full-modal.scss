@@ -151,9 +151,9 @@ category: Components
   }
   &.-padding-bottom {
     @include mediaquery(tablet) {
-      padding-bottom: 170px;
+      padding-bottom: 10.5rem;
       @supports (-webkit-touch-callout: none) {
-        padding-bottom: 140px;
+        padding-bottom: 8.25rem;
       }
     }
   }
