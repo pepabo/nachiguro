@@ -150,7 +150,7 @@ category: Components
     margin-bottom: env(safe-area-inset-bottom);
   }
   &.-padding-bottom {
-    @supports (-webkit-touch-callout: none) {
+    @include mediaquery(tablet) {
       padding-bottom: 140px;
     }
   }
