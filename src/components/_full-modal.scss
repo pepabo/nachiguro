@@ -109,8 +109,8 @@ category: Components
     transform: translateY(0);
   }
   &.-no-fill {
-    @supports (-webkit-touch-callout: none) {
-      height:100vh;
+    @include mediaquery(tablet) {
+      height: 100vh;
     }
   }
 }
