@@ -252,7 +252,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 
   // NachiguroのユースケースだとOutlinedのborder-colorはintentionの影響がない単純なStroke Colorがよい
   &.-appearance-outlined {
-    border-color: adapter.get-color(gray, 200) !important;
+    border-color: adapter.get-border-color($brightness: light, $name: mid_emphasis) !important;
   }
 }
 

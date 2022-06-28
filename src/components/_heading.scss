@@ -104,7 +104,7 @@ $options: (
       $level: 800
     );
   } @else if $brightness == dark {
-    @return adapter-functions.get-color(white, 1000);
+    @return adapter-functions.get-option-color(white, 1000);
   }
 }
 
@@ -185,7 +185,7 @@ $options: (
     display: inline-block;
     border-style: solid;
     border-bottom-width:
-      adapter-functions.get-line-width-size(
+      adapter-functions.get-border-size(
         $level: xl
       );
   }
