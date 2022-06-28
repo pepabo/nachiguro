@@ -98,22 +98,10 @@ category: Components
 `.-color-{intention}` を指定すると、色が変わって意味を持つボタンになります。
 
 ```example
-<button class="ncgr-button -color-informative">
-  <div class="_body">button</div>
-</button>
 <button class="ncgr-button -color-neutral">
   <div class="_body">button</div>
 </button>
-<button class="ncgr-button -color-positive">
-  <div class="_body">button</div>
-</button>
-<button class="ncgr-button -color-notice">
-  <div class="_body">button</div>
-</button>
 <button class="ncgr-button -color-negative">
-  <div class="_body">button</div>
-</button>
-<button class="ncgr-button -color-attention">
   <div class="_body">button</div>
 </button>
 <button class="ncgr-button -color-interactive">
