@@ -30,7 +30,7 @@
     "@inhouse/button": "^0.38.0",
     "@inhouse/checkbox": "^0.38.0",
     "@inhouse/container": "^0.38.0",
-    "@inhouse/flavor": "npm:@inhouse/nachiguro-flavor@0.3.1",
+    "@inhouse/flavor": "npm:@inhouse/nachiguro-flavor@0.4.0",
     "@inhouse/grid": "^0.38.0",
     "@inhouse/icon": "^0.38.0",
     "@inhouse/interactive-list": "^0.38.0",
