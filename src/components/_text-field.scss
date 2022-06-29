@@ -924,10 +924,10 @@ Buttonには`_button`クラスを付与します。
 /* Flavor */
 
 // Color
-$text-field-background-color: adapter.get-option-color(white, 1000);
-$text-field-border-color: adapter.get-option-color(gray, 300);
-$text-field-edge-element-text-color: adapter.get-semantic-color(neutral, 600);
-$text-field-placeholder-text-color: adapter.get-semantic-color(neutral, 300);
+$text-field-background-color: adapter.get-surface-color($brightness: light, $priority: primary);
+$text-field-border-color: adapter.get-text-color($brightness: light, $name: mid_emphasis);
+$text-field-edge-element-text-color: adapter.get-text-color($brightness: light, $name: mid_emphasis);
+$text-field-placeholder-text-color: adapter.get-text-color($brightness: light, $name: low_emphasis);
 
 // Sizing
 $text-field-horizontal-spacing: adapter.get-spacing-size($level: s);
@@ -1092,7 +1092,7 @@ $default-options: (
 
   ._label {
     background-color: $text-field-background-color;
-    color: adapter.get-option-color(gray, 800);
+    color: adapter.get-text-color($brightness: light, $name: high_emphasis);
     height: $text-field-border-width;
     font-weight: bold;
     font-size: $text-field-label-font-size;

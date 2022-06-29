@@ -95,19 +95,6 @@ $options: (
 
 // Heading Functions
 
-@function get-color(
-  $brightness: light
-) {
-  @if $brightness == light {
-    @return adapter-functions.get-semantic-color(
-      $intention: neutral,
-      $level: 800
-    );
-  } @else if $brightness == dark {
-    @return adapter-functions.get-option-color(white, 1000);
-  }
-}
-
 @function get-sizes() {
   @return map.keys($heading-font-size-levels);
 }
@@ -148,21 +135,24 @@ $options: (
   $brightness: light
 ) {
   color:
-    get-color(
-      $brightness: $brightness
+    adapter-functions.get-text-color(
+      $brightness: $brightness,
+      $name: high_emphasis
     );
 
   a {
     color:
-      get-color(
-        $brightness: $brightness
+      adapter-functions.get-text-color(
+        $brightness: $brightness,
+        $name: high_emphasis
       );
   }
 
   ._border {
     border-bottom-color:
-      get-color(
-        $brightness: $brightness
+      adapter-functions.get-text-color(
+        $brightness: $brightness,
+        $name: high_emphasis
       );
   }
 }
