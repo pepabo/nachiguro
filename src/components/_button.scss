@@ -228,6 +228,164 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 @use '@inhouse/button/mixins';
 @use '@inhouse/adapter/functions' as adapter;
 
+@mixin -appearance-style($appearance, $brightness, $color, $state) {
+  @if $appearance == solid {
+    box-shadow: inset adapter.get-solid-button-shadow-box-shadow();
+  } @else {
+    box-shadow: inherit;
+  }
+}
+
+@mixin -appearance-state-ruleset($appearance, $brightness, $color) {
+  &:hover,
+  &.--hover {
+    @include -appearance-style(
+      $appearance: $appearance,
+      $brightness: $brightness,
+      $color: $color,
+      $state: hover
+    );
+  }
+
+  &:focus,
+  &.--focused {
+    @include -appearance-style(
+      $appearance: $appearance,
+      $brightness: $brightness,
+      $color: $color,
+      $state: focused
+    );
+  }
+
+  &:disabled,
+  &.--disabled {
+    @include -appearance-style(
+      $appearance: $appearance,
+      $brightness: $brightness,
+      $color: $color,
+      $state: disabled
+    );
+
+    cursor: default;
+    opacity: adapter.get-disabled-surface-opacity();
+  }
+}
+
+@mixin -modifier() {
+  @include -appearance-style(
+    $appearance: solid,
+    $brightness: light,
+    $color: neutral,
+    $state: enabled
+  );
+  @include -appearance-state-ruleset(
+    $appearance: solid,
+    $brightness: light,
+    $color: neutral,
+  );
+
+  @each $appearance in adapter.get-button-appearances() {
+    &.-appearance-#{"" + $appearance} {
+      @include -appearance-style(
+        $appearance: $appearance,
+        $brightness: light,
+        $color: neutral,
+        $state: enabled
+      );
+      @include -appearance-state-ruleset(
+        $appearance: $appearance,
+        $brightness: light,
+        $color: neutral,
+      );
+    }
+  }
+
+  @each $intention in adapter.get-button-colors() {
+    &.-color-#{$intention} {
+      @include -appearance-style(
+        $appearance: solid,
+        $brightness: light,
+        $color: $intention,
+        $state: enabled
+      );
+      @include -appearance-state-ruleset(
+        $appearance: solid,
+        $brightness: light,
+        $color: $intention,
+      );
+    }
+
+    @each $appearance in adapter.get-button-appearances() {
+      &.-color-#{$intention}.-appearance-#{"" + $appearance} {
+        @include -appearance-style(
+          $appearance: $appearance,
+          $brightness: light,
+          $color: $intention,
+          $state: enabled
+        );
+        @include -appearance-state-ruleset(
+          $appearance: $appearance,
+          $brightness: light,
+          $color: $intention,
+        );
+      }
+    }
+  }
+
+  @each $brightness in adapter.get-brightnesses() {
+    &.-brightness-#{$brightness} {
+      @include -appearance-style(
+        $appearance: solid,
+        $brightness: $brightness,
+        $color: neutral,
+        $state: enabled
+      );
+      @include -appearance-state-ruleset(
+        $appearance: solid,
+        $brightness: $brightness,
+        $color: neutral,
+      );
+    }
+
+    @each $appearance in adapter.get-button-appearances() {
+      &.-brightness-#{$brightness}.-appearance-#{"" + $appearance} {
+        @include -appearance-style(
+          $appearance: $appearance,
+          $brightness: $brightness,
+          $color: neutral,
+          $state: enabled
+        );
+        @include -appearance-state-ruleset(
+          $appearance: $appearance,
+          $brightness: $brightness,
+          $color: neutral,
+        );
+      }
+
+      @each $intention in adapter.get-button-colors() {
+        &.-brightness-#{$brightness}.-appearance-#{"" + $appearance}.-color-#{$intention} {
+          @include -appearance-style(
+            $appearance: $appearance,
+            $brightness: $brightness,
+            $color: $intention,
+            $state: enabled
+          );
+          @include -appearance-state-ruleset(
+            $appearance: $appearance,
+            $brightness: $brightness,
+            $color: $intention,
+          );
+        }
+      }
+    }
+  }
+
+  // NachiguroのユースケースだとOutlinedのborder-colorはintentionの影響がない単純なStroke Colorがよい
+  &.-appearance-outlined {
+    border-color: adapter.get-border-color($brightness: light, $name: mid_emphasis) !important;
+  }
+}
+
 .ncgr-button {
   @include mixins.style((
     appearance: solid,
@@ -238,14 +396,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     width: auto,
   ));
 
-  // NachiguroのユースケースだとOutlinedのborder-colorはintentionの影響がない単純なStroke Colorがよい
-  &.-appearance-outlined {
-    border-color: adapter.get-border-color($brightness: light, $name: mid_emphasis) !important;
-  }
-}
-
-.ncgr-skeleton-button {
-  @include mixins.skeleton-style();
+  @include -modifier();
 }
 
 .ncgr-apple-button {
@@ -257,6 +408,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  @include -modifier();
 }
 
 .ncgr-twitter-button {
@@ -268,6 +421,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  @include -modifier();
 }
 
 .ncgr-facebook-button {
@@ -279,6 +434,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  @include -modifier();
 }
 
 .ncgr-nicovideo-button {
@@ -290,6 +447,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  @include -modifier();
 }
 
 .ncgr-line-button {
@@ -301,4 +460,10 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     shape: square,
     width: auto,
   ));
+
+  @include -modifier();
+}
+
+.ncgr-skeleton-button {
+  @include mixins.skeleton-style();
 }
