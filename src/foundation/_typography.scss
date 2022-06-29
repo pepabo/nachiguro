@@ -1,6 +1,8 @@
 @use '@inhouse/flavor/mixins';
 
-@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css");
+@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
 @font-face {
   font-weight: 400;
   font-family: "Nachiguro Icons";
