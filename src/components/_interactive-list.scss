@@ -870,7 +870,9 @@ category: Components
 
   ._item {
     padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
-    background-color: var(--color-white);
+    a {
+      background-color: var(--color-white);
+    }
 
     @each $boundary-size in adapter-functions.get-boundary-sizes() {
       @include adapter-mixins.mq-boundary(up, $boundary-size) {
