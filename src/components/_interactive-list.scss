@@ -876,8 +876,7 @@ category: Components
 
     @each $boundary-size in adapter-functions.get-boundary-sizes() {
       @include adapter-mixins.mq-boundary(up, $boundary-size) {
-        padding: 0
-          math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+        padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
       }
     }
 
@@ -887,8 +886,7 @@ category: Components
 
       @each $boundary-size in adapter-functions.get-boundary-sizes() {
         @include adapter-mixins.mq-boundary(up, $boundary-size) {
-          padding: 0
-            math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+          padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
         }
       }
     }
@@ -906,12 +904,8 @@ category: Components
 
     & > ._input:checked ~ ._content {
       max-height: none;
-      padding-top: adapter-functions.get-cell-vertical-spacing-size(
-        $density: normal
-      );
-      padding-bottom: adapter-functions.get-cell-vertical-spacing-size(
-        $density: normal
-      );
+      padding-top: adapter-functions.get-cell-vertical-spacing-size($density: normal);
+      padding-bottom: adapter-functions.get-cell-vertical-spacing-size($density: normal);
       transition: all 0.1s ease;
     }
 
