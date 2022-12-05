@@ -19,11 +19,11 @@ category: Components
     <meta itemprop="position" content="1" />
   </li>
   <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-    <div class="ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item">
+    <a class="ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item">
       <span itemprop="name">
         アイテム
       </span>
-    </div>
+    </a>
     <meta itemprop="position" content="2" />
   </li>
 </ol>
@@ -48,10 +48,6 @@ category: Components
   }
 }
 
-.ncgr-breadcrumbs__item_02 {
-  display: inline-block;
-}
-
 .ncgr-breadcrumbs__link {
   color: var(--color-primary-500);
   display: inline-block;
@@ -61,6 +57,6 @@ category: Components
   }
   &--active {
     color: var(--color-label);
-    text-decoration: none;
+    pointer-events: none;
   }
 }
