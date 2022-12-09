@@ -13,13 +13,13 @@ category: Components
   <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
     <a class="ncgr-breadcrumbs__link" itemtype="http://schema.org/Thing" itemprop="item" href="#">
       <span itemprop="name">
-        トップ
+        SUZURI
       </span>
     </a>
     <meta itemprop="position" content="1" />
   </li>
   <li class="ncgr-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-    <a class="ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item" href="#">
+    <a class="ncgr-breadcrumbs__link ncgr-breadcrumbs__link--active" itemtype="http://schema.org/Thing" itemprop="item">
       <span itemprop="name">
         アイテム
       </span>
@@ -37,23 +37,26 @@ category: Components
 .ncgr-breadcrumbs__item {
   display: inline-block;
   &:after {
-    content: '_';
+    content: '>';
+    margin: 0 4px;
   }
   &:last-child {
     &:after {
       content: '';
+      margin: 0;
     }
   }
 }
 
 .ncgr-breadcrumbs__link {
-  color: var(--color-secondary-label);
+  color: var(--color-primary-500);
   display: inline-block;
   &:hover {
-    color: var(--color-label);
+    color: var(--color-primary-700);
+    text-decoration: underline;
   }
   &--active {
     color: var(--color-label);
-    font-weight: bold;
+    pointer-events: none;
   }
 }
