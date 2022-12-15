@@ -95,8 +95,7 @@ category: Components
   transform: translateY(100vh);
   z-index: 2147483645;
   @include mediaquery(tablet) {
-    height: -webkit-fill-available;
-    height: fill-available;
+    height: stretch;
     @supports (-webkit-touch-callout: none) {
       transform: translateY(120vh);
     }
