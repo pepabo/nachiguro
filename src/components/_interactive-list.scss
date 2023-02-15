@@ -871,7 +871,7 @@ category: Components
   ._item {
     padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
 
-    @each $boundary-size in map.keys(flavor.$boundary-sizes) {
+    @each $boundary-size in adapter-functions.get-boundary-sizes() {
       @include adapter-mixins.mq-boundary(up, $boundary-size) {
         padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
       }
@@ -881,7 +881,7 @@ category: Components
       padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
       border-radius: adapter-functions.get-radius-size($level: l);
 
-      @each $boundary-size in map.keys(flavor.$boundary-sizes) {
+      @each $boundary-size in adapter-functions.get-boundary-sizes() {
         @include adapter-mixins.mq-boundary(up, $boundary-size) {
           padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
         }
@@ -901,8 +901,8 @@ category: Components
 
     & > ._input:checked ~ ._content {
       max-height: none;
-      padding-top: adapter-functions.get-cell-vertical-gap-size($density: normal);
-      padding-bottom: adapter-functions.get-cell-vertical-gap-size($density: normal);
+      padding-top: adapter-functions.get-cell-vertical-spacing-size($density: normal);
+      padding-bottom: adapter-functions.get-cell-vertical-spacing-size($density: normal);
       transition: all 0.1s ease;
     }
 
