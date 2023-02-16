@@ -42935,7 +42935,7 @@ category: Components
   <div class="ncgr-full-modal__body">
     <div class="ncgr-full-modal__contents -active">
       <div class="ncgr-interactive-list">
-        <ul> 
+        <ul>
           <li class="_item">
             <div class=_body">
               <div class="_title">
@@ -43011,6 +43011,11 @@ category: Components
 .ncgr-full-modal.-active {
   transform: translateY(0);
 }
+@media screen and (max-width: 768px) {
+  .ncgr-full-modal.-no-fill {
+    height: 100vh;
+  }
+}
 
 .ncgr-full-modal__body {
   position: relative;
@@ -43047,6 +43052,16 @@ category: Components
 @media screen and (max-width: 768px) {
   .ncgr-full-modal__footer {
     margin-bottom: env(safe-area-inset-bottom);
+  }
+}
+@media screen and (max-width: 768px) {
+  .ncgr-full-modal__footer.-padding-bottom {
+    padding-bottom: 10.5rem;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .ncgr-full-modal__footer.-padding-bottom {
+      padding-bottom: 8.25rem;
+    }
   }
 }
 
