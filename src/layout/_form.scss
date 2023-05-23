@@ -1,3 +1,5 @@
+@use 'foundation/breakpoint' as *;
+
 .ncgr-form__layout {
   display: flex;
   @include mediaquery(mobile) {

@@ -604,6 +604,8 @@ category: Components
 
 */
 
+@use 'foundation/breakpoint' as *;
+
 // Nachiguro Variables
 $boundaries: (
   s: 480px,
