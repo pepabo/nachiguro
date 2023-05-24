@@ -81,7 +81,7 @@ category: Components
 
 */
 
-@use 'foundation/breakpoint' as *;
+@use '../foundation/breakpoint' as *;
 
 .ncgr-full-modal {
   background-color: var(--color-secondary-grouped-background);

@@ -72,8 +72,8 @@ category: Components
 
 */
 
-@use 'foundation/breakpoint' as *;
-@use 'foundation/shadow' as *;
+@use '../foundation/breakpoint' as *;
+@use '../foundation/shadow' as *;
 
 .ncgr-card {
   background-color: var(--color-secondary-grouped-background);

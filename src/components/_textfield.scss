@@ -57,7 +57,7 @@ error・successの場合は以下のようにマークアップします。
 
 */
 
-@use 'foundation/breakpoint' as *;
+@use '../foundation/breakpoint' as *;
 
 .ncgr-textfield {
   // data-hint属性に対してdisplay: inline-block;が指定されているのですべて置き換えたら消す。

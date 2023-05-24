@@ -32,7 +32,7 @@ category: Components
 
 */
 
-@use 'foundation/breakpoint' as *;
+@use '../foundation/breakpoint' as *;
 
 .ncgr-uploader {
   background-color: var(--color-tertiary-grouped-background);

@@ -53,8 +53,8 @@ category: Components
 
 */
 
-@use 'foundation/breakpoint' as *;
-@use 'foundation/shadow' as *;
+@use '../foundation/breakpoint' as *;
+@use '../foundation/shadow' as *;
 
 // Variables
 $dialog-width: 30rem;

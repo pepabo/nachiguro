@@ -50,7 +50,7 @@ html 要素に以下の class を指定することで、スマホ版と PC 版�
 
 */
 
-@use 'foundation/breakpoint' as *;
+@use '../foundation/breakpoint' as *;
 
 .if-phone-show,
 .if-tablet-show,
