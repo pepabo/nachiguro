@@ -4,7 +4,8 @@
   "description": "SUZURI CSS Framework",
   "main": "src/_nachiguro.scss",
   "scripts": {
-    "build": "sass --load-path=node_modules --load-path=src --no-error-css src/styleguide.scss dist/nachiguro.css",
+    "build": "sass --load-path=node_modules --future-deprecation import src/styleguide.scss dist/nachiguro.css",
+    "watch": "sass -w --load-path=node_modules --future-deprecation import src/styleguide.scss:dist/nachiguro.css",
     "styleguide": "bundle exec hologram && sass --load-path=node_modules  --load-path=src --no-error-css src/styleguide.scss styleguide/dist/nachiguro.css",
     "generate-webfonts": "generate-webfonts assets/icons/src"
   },
@@ -20,7 +21,10 @@
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
     "@gyugyu/webfonts-generator": "^0.3.0",
-    "sass": "^1.35.2"
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^9.0.0"
   },
   "dependencies": {
     "@inhouse/adapter": "^0.39.0",
@@ -36,9 +40,9 @@
     "@inhouse/interactive-list": "^0.39.0",
     "@inhouse/interactive-table": "^0.39.0",
     "@inhouse/list": "^0.39.0",
+    "@inhouse/radio": "^0.39.0",
     "@inhouse/side-navigation": "^0.39.0",
     "@inhouse/skeleton": "^0.39.0",
-    "@inhouse/radio": "^0.39.0",
     "@inhouse/table": "^0.39.0"
   }
 }
