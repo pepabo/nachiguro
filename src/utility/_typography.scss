@@ -23,6 +23,8 @@ category: Utility
 
 */
 
+@use '../foundation/breakpoint' as *;
+
 .ncgr-typography-normal {
   font-weight: normal;
 }

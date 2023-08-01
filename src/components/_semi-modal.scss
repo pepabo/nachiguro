@@ -75,6 +75,9 @@ category: Components
 
 */
 
+@use '../foundation/breakpoint' as *;
+@use '../foundation/shadow' as *;
+
 .ncgr-semi-modal {
   background-color: transparent;
   position: fixed;

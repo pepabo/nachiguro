@@ -24,6 +24,8 @@ category: Components
 
 */
 
+@use '../foundation/breakpoint' as *;
+
 .ncgr-square-radio {
   cursor: pointer;
   display: inline-block;

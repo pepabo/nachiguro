@@ -49,6 +49,9 @@ html 要素に以下の class を指定することで、スマホ版と PC 版�
 スマホから見たときは「スリ」と「スリ」のあいだで改行して、PC から見たときは「スリ」と「スリ」のあいだで改行しません。
 
 */
+
+@use '../foundation/breakpoint' as *;
+
 .if-phone-show,
 .if-tablet-show,
 .if-pc-show {

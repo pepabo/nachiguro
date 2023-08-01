@@ -129,77 +129,81 @@ random関数は使用しないでください。
 
 */
 
-@import 'sass-helpers';
+$ncgr-sprockets: null !default;
+$ncgr-assets-prefix: null !default;
+
+@use 'sass-helpers' with (
+  $ncgr-sprockets: $ncgr-sprockets,
+  $ncgr-assets-prefix: $ncgr-assets-prefix
+);
 
 //「Foundation」は、スタイルシートを読み込む順番が変わると、意図しない表示になる可能性があります。
-@import 'foundation/animation';
-@import 'foundation/breakpoint';
-@import 'foundation/color';
-@import 'foundation/normalize';
-@import 'foundation/reset';
-@import 'foundation/shadow';
-@import 'foundation/typography';
+@use 'foundation/animation';
+@use 'foundation/color';
+@use 'foundation/normalize';
+@use 'foundation/reset';
+@use 'foundation/typography';
 
 //「Component」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
-@import 'components/alert';
-@import 'components/app-bar';
-@import 'components/avatar';
-@import 'components/bottom-navigation';
-@import 'components/breadcrumbs';
-@import 'components/button';
-@import 'components/card';
-@import 'components/checkbox';
-@import 'components/color-selector';
-@import 'components/container';
-@import 'components/credit-card-icon';
-@import 'components/dialog';
-@import 'components/full-modal';
-@import 'components/grid';
-@import 'components/heading';
-@import 'components/hint';
-@import 'components/icon';
-@import 'components/interactive-list';
-@import 'components/interactive-table';
-@import 'components/image';
-@import 'components/label';
-@import 'components/list';
-@import 'components/list-view';
-@import 'components/overlay';
-@import 'components/pagenation';
-@import 'components/price-slider';
-@import 'components/radio';
-@import 'components/section';
-@import 'components/selectbox';
-@import 'components/semi-modal';
-@import 'components/separator';
-@import 'components/sequence';
-@import 'components/side-navigation';
-@import 'components/skeleton';
-@import 'components/square-radio';
-@import 'components/switch';
-@import 'components/tab';
-@import 'components/table';
-@import 'components/textfield';
-@import 'components/text-field';
-@import 'components/text-link';
-@import 'components/tooltip';
-@import 'components/uploader';
+@use 'components/alert';
+@use 'components/app-bar';
+@use 'components/avatar';
+@use 'components/bottom-navigation';
+@use 'components/breadcrumbs';
+@use 'components/button';
+@use 'components/card';
+@use 'components/checkbox';
+@use 'components/color-selector';
+@use 'components/container';
+@use 'components/credit-card-icon';
+@use 'components/dialog';
+@use 'components/full-modal';
+@use 'components/grid';
+@use 'components/heading';
+@use 'components/hint';
+@use 'components/icon';
+@use 'components/interactive-list';
+@use 'components/interactive-table';
+@use 'components/image';
+@use 'components/label';
+@use 'components/list';
+@use 'components/list-view';
+@use 'components/overlay';
+@use 'components/pagenation';
+@use 'components/price-slider';
+@use 'components/radio';
+@use 'components/section';
+@use 'components/selectbox';
+@use 'components/semi-modal';
+@use 'components/separator';
+@use 'components/sequence';
+@use 'components/side-navigation';
+@use 'components/skeleton';
+@use 'components/square-radio';
+@use 'components/switch';
+@use 'components/tab';
+@use 'components/table';
+@use 'components/textfield';
+@use 'components/text-field';
+@use 'components/text-link';
+@use 'components/tooltip';
+@use 'components/uploader';
 
 //「Layout」には、ページ・セクション・レイアウトごとのスタイルシートを指定する。
-@import 'layout/footer';
-@import 'layout/form';
+@use 'layout/footer';
+@use 'layout/form';
 
 //「Utility」には、抽象化したさまざまなところで利用できる要素・パーツごとのスタイルシートを指定する。
-@import 'utility/align';
-@import 'utility/border';
-@import 'utility/cursor';
-@import 'utility/device';
-@import 'utility/is-hidden';
-@import 'utility/is-sr-only';
-@import 'utility/is-transparent';
-@import 'utility/is-visible';
-@import 'utility/mar';
-@import 'utility/pad';
-@import 'utility/typography';
-@import 'utility/width';
-@import 'utility/ellipsis';
+@use 'utility/align';
+@use 'utility/border';
+@use 'utility/cursor';
+@use 'utility/device';
+@use 'utility/is-hidden';
+@use 'utility/is-sr-only';
+@use 'utility/is-transparent';
+@use 'utility/is-visible';
+@use 'utility/mar';
+@use 'utility/pad';
+@use 'utility/typography' as *;
+@use 'utility/width';
+@use 'utility/ellipsis';

@@ -20,6 +20,8 @@ category: Components
 
 */
 
+@use '../foundation/breakpoint' as *;
+
 .ncgr-selectbox {
   position: relative;
   display: inline-block;

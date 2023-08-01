@@ -921,6 +921,9 @@ Buttonには`_button`クラスを付与します。
 @use 'sass:map';
 @use '@inhouse/adapter/functions' as adapter;
 
+@use '../foundation/breakpoint' as *;
+@use '../foundation/shadow' as *;
+
 /* Flavor */
 
 // Color
@@ -1177,7 +1180,7 @@ $default-options: (
         color: $text-field-edge-element-text-color;
         font-size:
           adapter.get-font-size(
-            $level: map.get($options, size)
+            $level: $size
           );
       }
     }

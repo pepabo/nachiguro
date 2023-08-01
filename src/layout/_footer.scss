@@ -1,3 +1,5 @@
+@use '../foundation/breakpoint' as *;
+
 .ncgr-footer__section {
   background: var(--color-black);
   color: var(--color-white);
