@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/pepabo/nachiguro#readme",
   "devDependencies": {
-    "@gyugyu/webfonts-generator": "^0.3.0",
+    "@gyugyu/webfonts-generator": "^0.4.0",
     "sass": "^1.62.1",
     "stylelint": "^15.6.2",
     "stylelint-config-standard": "^33.0.0",
