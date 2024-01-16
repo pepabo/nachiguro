@@ -308,6 +308,10 @@
       "name": "twitter",
       "codePoint": 61762
     },
+    "x.svg": {
+      "name": "x",
+      "codePoint": 61763
+    },
     "upload.svg": {
       "name": "upload",
       "codePoint": 61774
