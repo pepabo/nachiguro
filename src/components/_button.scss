@@ -183,6 +183,16 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 </button>
 ```
 
+#### X（旧：Twitter）
+
+`.ncgr-x-button` を指定すると、Xの色のボタンになります。
+
+```example
+<button class="ncgr-x-button">
+  <div class="_body">button</div>
+</button>
+```
+
 #### Facebook
 
 `.ncgr-facebook-button` を指定すると、Facebookの色のボタンになります。
@@ -417,6 +427,19 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
     appearance: solid,
     brightness: light,
     color: #55ACEE,
+    size: m,
+    shape: square,
+    width: auto,
+  ));
+
+  @include -modifier();
+}
+
+.ncgr-x-button {
+  @include mixins.style((
+    appearance: solid,
+    brightness: light,
+    color: #000,
     size: m,
     shape: square,
     width: auto,
