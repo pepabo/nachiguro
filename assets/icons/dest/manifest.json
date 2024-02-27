@@ -6,6 +6,7 @@
     "woff2": "Nachiguro-icons.woff2"
   },
   "codePoints": {
+    "amazon": 61776,
     "apple": 61773,
     "arrow_cross": 61767,
     "arrow_down": 61697,
@@ -42,6 +43,7 @@
     "ellipsis_horizontal_on_circle": 61726,
     "ellipsis_horizontal": 61727,
     "ellipsis_vertical": 61728,
+    "exclamation_on_circle": 61777,
     "exclamation_on_triangle": 61729,
     "facebook": 61730,
     "first_page": 61763,
@@ -49,6 +51,7 @@
     "funnel": 61731,
     "garbage_can": 61732,
     "gear": 61733,
+    "google": 61778,
     "hatena_bookmark": 61734,
     "heart_border": 61735,
     "heart": 61736,
@@ -79,6 +82,7 @@
     "qr_code_scanner": 61756,
     "qr_code": 61757,
     "question_on_circle": 61758,
+    "question": 61779,
     "receipt": 61759,
     "star_border": 61760,
     "star": 61761,

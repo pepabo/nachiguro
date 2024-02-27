@@ -1,5 +1,9 @@
 {
   "fileRefs": {
+    "amazon.svg": {
+      "name": "amazon",
+      "codePoint": 61776
+    },
     "apple.svg": {
       "name": "apple",
       "codePoint": 61773
@@ -144,6 +148,10 @@
       "name": "ellipsis_vertical",
       "codePoint": 61728
     },
+    "exclamation_on_circle.svg": {
+      "name": "exclamation_on_circle",
+      "codePoint": 61777
+    },
     "exclamation_on_triangle.svg": {
       "name": "exclamation_on_triangle",
       "codePoint": 61729
@@ -171,6 +179,10 @@
     "gear.svg": {
       "name": "gear",
       "codePoint": 61733
+    },
+    "google.svg": {
+      "name": "google",
+      "codePoint": 61778
     },
     "hatena_bookmark.svg": {
       "name": "hatena_bookmark",
@@ -292,6 +304,10 @@
       "name": "question_on_circle",
       "codePoint": 61758
     },
+    "question.svg": {
+      "name": "question",
+      "codePoint": 61779
+    },
     "receipt.svg": {
       "name": "receipt",
       "codePoint": 61759
@@ -317,5 +333,5 @@
       "codePoint": 61775
     }
   },
-  "version": "0.3.0"
+  "version": "0.4.0"
 }
