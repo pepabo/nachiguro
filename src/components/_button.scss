@@ -235,8 +235,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 
 // TODO: 全部置き換えできたら名前をbuttonからbuttonにする
 
-@use '@inhouse/button/mixins';
-@use '@inhouse/adapter/functions' as adapter;
+@use '@pepabo-inhouse/button/mixins';
+@use '@pepabo-inhouse/adapter/functions' as adapter;
 
 @mixin -appearance-style($appearance, $brightness, $color, $state) {
   @if $appearance == solid {

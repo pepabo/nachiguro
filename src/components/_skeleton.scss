@@ -37,9 +37,9 @@ Skeleton Textを作成できます。
 */
 
 @use 'sass:map';
-@use '@inhouse/adapter/functions' as adapter-functions;
-@use '@inhouse/adapter/mixins' as adapter-mixins;
-@use '@inhouse/skeleton/mixins' as skeleton;
+@use '@pepabo-inhouse/adapter/functions' as adapter-functions;
+@use '@pepabo-inhouse/adapter/mixins' as adapter-mixins;
+@use '@pepabo-inhouse/skeleton/mixins' as skeleton;
 
 .ncgr-skeleton {
   @include skeleton.style();

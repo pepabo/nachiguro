@@ -178,7 +178,7 @@ category: Components
 ```
 */
 
-@use '@inhouse/side-navigation/mixins';
+@use '@pepabo-inhouse/side-navigation/mixins';
 
 .ncgr-side-navigation {
   @include mixins.style();

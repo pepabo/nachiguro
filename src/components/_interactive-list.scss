@@ -860,10 +860,10 @@ category: Components
 
 @use 'sass:math';
 @use 'sass:map';
-@use '@inhouse/interactive-list/mixins';
-@use '@inhouse/flavor/variables' as flavor;
-@use '@inhouse/adapter/functions' as adapter-functions;
-@use '@inhouse/adapter/mixins' as adapter-mixins;
+@use '@pepabo-inhouse/interactive-list/mixins';
+@use '@pepabo-inhouse/flavor/variables' as flavor;
+@use '@pepabo-inhouse/adapter/functions' as adapter-functions;
+@use '@pepabo-inhouse/adapter/mixins' as adapter-mixins;
 
 .ncgr-interactive-list {
   @include mixins.style();

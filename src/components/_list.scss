@@ -39,7 +39,7 @@ category: Components
 
 */
 
-@use '@inhouse/list/mixins';
+@use '@pepabo-inhouse/list/mixins';
 
 .ncgr-ol {
   @include mixins.style();
