@@ -83,12 +83,12 @@ Interactive Listの`leading`や`trailing`の中に入れて使用します。
 ```
 */
 
-@use '@pepabo-inhouse/checkbox/mixins';
+@use "@pepabo-inhouse/checkbox" as checkbox;
 
 .ncgr-checkbox {
-  @include mixins.style();
+  @include checkbox.style();
 }
 
 .ncgr-skeleton-checkbox {
-  @include mixins.skeleton-style();
+  @include checkbox.skeleton-style();
 }

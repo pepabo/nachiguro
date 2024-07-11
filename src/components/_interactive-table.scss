@@ -118,12 +118,12 @@ category: Components
 
 */
 
-@use '@pepabo-inhouse/interactive-table/mixins';
+@use "@pepabo-inhouse/interactive-table" as interactive-table;
 
 .ncgr-interactive-table {
-  @include mixins.style();
+  @include interactive-table.style();
 }
 
 .ncgr-skeleton-interactive-table {
-  @include mixins.skeleton-style();
+  @include interactive-table.skeleton-style();
 }

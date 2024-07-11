@@ -45,8 +45,8 @@ Containerはグリッドシステムを使用する場合に必要です。
 
 */
 
-@use '@pepabo-inhouse/container/mixins';
+@use "@pepabo-inhouse/container" as container;
 
 .ncgr-container {
-  @include mixins.style();
+  @include container.style();
 }

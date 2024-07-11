@@ -860,29 +860,28 @@ category: Components
 
 @use 'sass:math';
 @use 'sass:map';
-@use '@pepabo-inhouse/interactive-list/mixins';
-@use '@pepabo-inhouse/adapter/functions' as adapter-functions;
-@use '@pepabo-inhouse/adapter/mixins' as adapter-mixins;
+@use "@pepabo-inhouse/interactive-list" as interactive-list;
+@use "@pepabo-inhouse/adapter" as adapter;
 
 .ncgr-interactive-list {
-  @include mixins.style();
+  @include interactive-list.style();
 
   ._item {
-    padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
+    padding: 0 math.div(adapter.get-gap-size($level: m), 2);
 
-    @each $boundary-size in adapter-functions.get-boundary-sizes() {
-      @include adapter-mixins.mq-boundary(up, $boundary-size) {
-        padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+    @each $boundary-size in adapter.get-boundary-sizes() {
+      @include adapter.mq-boundary(up, $boundary-size) {
+        padding: 0 math.div(adapter.get-gap-size($level: $boundary-size), 2);
       }
     }
 
     & > * {
-      padding: 0 math.div(adapter-functions.get-gap-size($level: m), 2);
-      border-radius: adapter-functions.get-radius-size($level: l);
+      padding: 0 math.div(adapter.get-gap-size($level: m), 2);
+      border-radius: adapter.get-radius-size($level: l);
 
-      @each $boundary-size in adapter-functions.get-boundary-sizes() {
-        @include adapter-mixins.mq-boundary(up, $boundary-size) {
-          padding: 0 math.div(adapter-functions.get-gap-size($level: $boundary-size), 2);
+      @each $boundary-size in adapter.get-boundary-sizes() {
+        @include adapter.mq-boundary(up, $boundary-size) {
+          padding: 0 math.div(adapter.get-gap-size($level: $boundary-size), 2);
         }
       }
     }
@@ -900,8 +899,8 @@ category: Components
 
     & > ._input:checked ~ ._content {
       max-height: none;
-      padding-top: adapter-functions.get-cell-vertical-spacing-size($density: normal);
-      padding-bottom: adapter-functions.get-cell-vertical-spacing-size($density: normal);
+      padding-top: adapter.get-cell-vertical-spacing-size($density: normal);
+      padding-bottom: adapter.get-cell-vertical-spacing-size($density: normal);
       transition: all 0.1s ease;
     }
 
@@ -922,5 +921,5 @@ category: Components
 }
 
 .ncgr-skeleton-interactive-list {
-  @include mixins.skeleton-style();
+  @include interactive-list.skeleton-style();
 }

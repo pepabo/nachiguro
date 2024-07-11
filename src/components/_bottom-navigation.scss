@@ -51,8 +51,8 @@ category: Components
 
 */
 
-@use '@pepabo-inhouse/bottom-navigation/mixins';
+@use "@pepabo-inhouse/bottom-navigation" as bottom-navigation;
 
 .ncgr-bottom-navigation {
-  @include mixins.style();
+  @include bottom-navigation.style();
 }

@@ -919,7 +919,7 @@ Buttonには`_button`クラスを付与します。
 */
 
 @use 'sass:map';
-@use '@pepabo-inhouse/adapter/functions' as adapter;
+@use '@pepabo-inhouse/adapter' as adapter;
 
 @use '../foundation/breakpoint' as *;
 @use '../foundation/shadow' as *;

@@ -530,12 +530,12 @@ Gridコンポーネントは`.ncgr-row`, `.ncgr-col`でレイアウトと整列�
 
 */
 
-@use '@pepabo-inhouse/grid/mixins';
+@use "@pepabo-inhouse/grid" as grid;
 
 .ncgr-row {
-  @include mixins.row();
+  @include grid.row();
 }
 
 .ncgr-col {
-  @include mixins.col();
+  @include grid.col();
 }

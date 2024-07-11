@@ -37,9 +37,8 @@ Skeleton Textを作成できます。
 */
 
 @use 'sass:map';
-@use '@pepabo-inhouse/adapter/functions' as adapter-functions;
-@use '@pepabo-inhouse/adapter/mixins' as adapter-mixins;
-@use '@pepabo-inhouse/skeleton/mixins' as skeleton;
+@use '@pepabo-inhouse/adapter' as adapter;
+@use '@pepabo-inhouse/skeleton' as skeleton;
 
 .ncgr-skeleton {
   @include skeleton.style();
@@ -51,7 +50,7 @@ Skeleton Textを作成できます。
     $density: normal
   );
 
-  @each $density in adapter-functions.get-densities() {
+  @each $density in adapter.get-densities() {
     &.-density-#{$density} {
       @include skeleton.skeleton-text(
         $level: m,
@@ -68,7 +67,7 @@ Skeleton Textを作成できます。
       );
     }
 
-    @each $density in adapter-functions.get-densities() {
+    @each $density in adapter.get-densities() {
       &.-size-#{$size}.-density-#{$density} {
         @include skeleton.skeleton-text(
           $level: $size,

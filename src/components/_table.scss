@@ -28,8 +28,8 @@ category: Components
 
 */
 
-@use '@pepabo-inhouse/table/mixins';
+@use "@pepabo-inhouse/table" as table;
 
 .ncgr-table {
-  @include mixins.style();
+  @include table.style();
 }
