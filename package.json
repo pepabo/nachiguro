@@ -37,7 +37,7 @@
     "@pepabo-inhouse/components-web": "1.1.0",
     "@pepabo-inhouse/container": "1.1.0",
     "@pepabo-inhouse/description-list": "1.1.0",
-    "@pepabo-inhouse/flavor": "1.1.0",
+    "@pepabo-inhouse/flavor": "npm:@pepabo-inhouse/nachiguro-flavor@1.0.0",
     "@pepabo-inhouse/grid": "1.1.0",
     "@pepabo-inhouse/icon": "1.1.0",
     "@pepabo-inhouse/interactive-list": "1.1.0",
