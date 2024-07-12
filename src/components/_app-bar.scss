@@ -60,10 +60,10 @@ category: Components
 
 */
 
-@use "@pepabo-inhouse/app-bar" as app-bar;
+@use '@pepabo-inhouse/app-bar/mixins';
 
 .ncgr-app-bar {
-  @include app-bar.style();
+  @include mixins.style();
 
   display: none;
 

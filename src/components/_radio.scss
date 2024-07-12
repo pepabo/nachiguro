@@ -51,12 +51,12 @@ Interactive Listの`leading`の中に入れて使用します。
 
 */
 
-@use "@pepabo-inhouse/radio" as radio;
+@use '@pepabo-inhouse/radio/mixins';
 
 .ncgr-radio {
-  @include radio.style();
+  @include mixins.style();
 }
 
 .ncgr-skeleton-radio {
-  @include radio.skeleton-style();
+  @include mixins.skeleton-style();
 }

@@ -29,12 +29,12 @@ category: Components
 ```
 */
 
-@use "@pepabo-inhouse/avatar" as avatar;
+@use '@pepabo-inhouse/avatar/mixins';
 
 .ncgr-avatar {
-  @include avatar.style();
+  @include mixins.style();
 }
 
 .ncgr-skeleton-avatar {
-  @include avatar.skeleton-style();
+  @include mixins.skeleton-style();
 }

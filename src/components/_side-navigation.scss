@@ -178,8 +178,8 @@ category: Components
 ```
 */
 
-@use "@pepabo-inhouse/side-navigation" as side-navigation;
+@use '@pepabo-inhouse/side-navigation/mixins';
 
 .ncgr-side-navigation {
-  @include side-navigation.style();
+  @include mixins.style();
 }

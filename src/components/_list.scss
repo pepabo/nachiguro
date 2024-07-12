@@ -39,14 +39,14 @@ category: Components
 
 */
 
-@use "@pepabo-inhouse/list" as list;
+@use '@pepabo-inhouse/list/mixins';
 
 .ncgr-ol {
-  @include list.style();
+  @include mixins.style();
 }
 
 .ncgr-ul {
-  @include list.style((
+  @include mixins.style((
     density: normal,
     list-style-type: disc,
     size: m,

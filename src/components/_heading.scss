@@ -46,8 +46,9 @@ h1からh6、どのタグに関わらず大きさを調整できます。
 */
 
 @use 'sass:map';
-@use "@pepabo-inhouse/adapter" as adapter;
-@use '@pepabo-inhouse/skeleton' as skeleton;
+@use '@pepabo-inhouse/adapter/functions' as adapter-functions;
+@use '@pepabo-inhouse/adapter/mixins' as adapter-mixins;
+@use '@pepabo-inhouse/skeleton/mixins' as skeleton;
 
 // Flavor variables
 
@@ -108,7 +109,7 @@ $options: (
   $size: m,
   $boundary-size-level: s
 ) {
-  @include adapter.text(
+  @include adapter-mixins.text(
     $level: get-heading-font-size-level(
       $size: $size,
       $boundary-size-level: $boundary-size-level
@@ -134,14 +135,14 @@ $options: (
   $brightness: light
 ) {
   color:
-    adapter.get-text-color(
+    adapter-functions.get-text-color(
       $brightness: $brightness,
       $name: high_emphasis
     );
 
   a {
     color:
-      adapter.get-text-color(
+      adapter-functions.get-text-color(
         $brightness: $brightness,
         $name: high_emphasis
       );
@@ -149,7 +150,7 @@ $options: (
 
   ._border {
     border-bottom-color:
-      adapter.get-text-color(
+      adapter-functions.get-text-color(
         $brightness: $brightness,
         $name: high_emphasis
       );
@@ -174,13 +175,13 @@ $options: (
     display: inline-block;
     border-style: solid;
     border-bottom-width:
-      adapter.get-border-size(
+      adapter-functions.get-border-size(
         $level: xl
       );
   }
 
   @each $boundary-size-level in get-boundary-size-levels() {
-    @include adapter.mq-boundary(up, $boundary-size-level) {
+    @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
       @include -text-style(
         $size: map.get($options, size),
         $boundary-size-level: $boundary-size-level
@@ -196,7 +197,7 @@ $options: (
       );
 
       @each $boundary-size-level in get-boundary-size-levels() {
-        @include adapter.mq-boundary(up, $boundary-size-level) {
+        @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
           @include -text-style(
             $size: $size,
             $boundary-size-level: $boundary-size-level
@@ -206,7 +207,7 @@ $options: (
     }
   }
 
-  @each $brightness in adapter.get-brightnesses() {
+  @each $brightness in adapter-functions.get-brightnesses() {
     &.-brightness-#{$brightness} {
       @include -color-ruleset(
         $brightness: $brightness
@@ -229,7 +230,7 @@ $options: (
       );
 
       @each $boundary-size-level in get-boundary-size-levels() {
-        @include adapter.mq-boundary(up, $boundary-size-level) {
+        @include adapter-mixins.mq-boundary(up, $boundary-size-level) {
           @include -skeleton-text-style(
             $size: $size,
             $boundary-size-level: $boundary-size-level

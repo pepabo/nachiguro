@@ -235,8 +235,8 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 
 // TODO: 全部置き換えできたら名前をbuttonからbuttonにする
 
-@use "@pepabo-inhouse/button" as button;
-@use '@pepabo-inhouse/adapter' as adapter;
+@use '@pepabo-inhouse/button/mixins';
+@use '@pepabo-inhouse/adapter/functions' as adapter;
 
 @mixin -appearance-style($appearance, $brightness, $color, $state) {
   @if $appearance == solid {
@@ -397,7 +397,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: neutral,
@@ -410,7 +410,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-apple-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #000,
@@ -423,7 +423,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-twitter-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #55ACEE,
@@ -436,7 +436,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-x-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #000,
@@ -449,7 +449,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-facebook-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #1877f2,
@@ -462,7 +462,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-nicovideo-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #EFB10A,
@@ -475,7 +475,7 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-line-button {
-  @include button.style((
+  @include mixins.style((
     appearance: solid,
     brightness: light,
     color: #00C300,
@@ -488,5 +488,5 @@ Leadingのみにしてアイコンのみのボタンにすることもできま�
 }
 
 .ncgr-skeleton-button {
-  @include button.skeleton-style();
+  @include mixins.skeleton-style();
 }
