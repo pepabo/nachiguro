@@ -91,14 +91,17 @@ category: Components
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   height: 100vh;
+  -webkit-transform: translateY(100vh);
   transform: translateY(100vh);
   z-index: 2147483645;
   @include mediaquery(tablet) {
     height: stretch;
     @supports (-webkit-touch-callout: none) {
+      -webkit-transform: translateY(120vh);
       transform: translateY(120vh);
     }
   }
@@ -107,6 +110,7 @@ category: Components
     z-index: 2147483645;
   }
   &.-active {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   &.-no-fill {
@@ -128,13 +132,16 @@ category: Components
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transform: translateX(100vw);
   transform: translateX(100vw);
   overflow-y: scroll;
   width: 100vw;
   height: 100%;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--color-secondary-grouped-background);
   &.-active {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
