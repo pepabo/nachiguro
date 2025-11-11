@@ -60,7 +60,7 @@ category: Components
 
 */
 
-@use '@inhouse/app-bar/mixins';
+@use '@pepabo-inhouse/app-bar/mixins';
 
 .ncgr-app-bar {
   @include mixins.style();
