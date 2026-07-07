@@ -118,7 +118,7 @@ category: Components
 
 */
 
-@use '@inhouse/interactive-table/mixins';
+@use '@pepabo-inhouse/interactive-table/mixins';
 
 .ncgr-interactive-table {
   @include mixins.style();

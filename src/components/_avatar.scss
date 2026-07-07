@@ -29,7 +29,7 @@ category: Components
 ```
 */
 
-@use '@inhouse/avatar/mixins';
+@use '@pepabo-inhouse/avatar/mixins';
 
 .ncgr-avatar {
   @include mixins.style();

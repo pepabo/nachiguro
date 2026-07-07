@@ -28,7 +28,7 @@ category: Components
 
 */
 
-@use '@inhouse/table/mixins';
+@use '@pepabo-inhouse/table/mixins';
 
 .ncgr-table {
   @include mixins.style();

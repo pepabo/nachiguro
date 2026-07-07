@@ -11,7 +11,7 @@ category: Components
 
 */
 
-@use '@inhouse/icon/mixins';
+@use '@pepabo-inhouse/icon/mixins';
 
 .ncgr-icon {
   @include mixins.style();
