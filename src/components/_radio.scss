@@ -51,7 +51,7 @@ Interactive Listの`leading`の中に入れて使用します。
 
 */
 
-@use '@inhouse/radio/mixins';
+@use '@pepabo-inhouse/radio/mixins';
 
 .ncgr-radio {
   @include mixins.style();
