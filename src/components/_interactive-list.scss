@@ -888,19 +888,41 @@ category: Components
       }
     }
 
+    // 開閉用のチェックボックスは見た目だけ隠す。
+    // display: none だと Tab で到達できず、キーボードでは開閉できなくなる。
+    // 中身は .ncgr-is-sr-only と同じ（ユーティリティは利用側から付けられないため直に書く）
     & > ._input {
-      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+      opacity: 0;
+    }
+
+    // チェックボックスが見えないので、フォーカスの位置はラベル側に出す
+    & > ._input:focus-visible ~ label {
+      outline: adapter-functions.get-border-size($level: l) solid
+        var(--color-primary-500);
+      outline-offset: - adapter-functions.get-border-size($level: l);
     }
 
     & > ._input ~ ._content {
       box-sizing: border-box;
       max-height: 0;
       overflow: hidden;
+      // 高さを潰すだけでは閉じた中身にフォーカスが入り、読み上げの対象にも残る
+      visibility: hidden;
       transition: all 0.1s ease;
     }
 
     & > ._input:checked ~ ._content {
       max-height: none;
+      visibility: visible;
       padding-top: adapter-functions.get-cell-vertical-spacing-size($density: normal);
       padding-bottom: adapter-functions.get-cell-vertical-spacing-size($density: normal);
       transition: all 0.1s ease;
